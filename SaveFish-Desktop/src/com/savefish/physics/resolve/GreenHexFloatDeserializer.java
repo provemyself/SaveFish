@@ -8,7 +8,6 @@ package com.savefish.physics.resolve;
  *******************************/
 
 import java.lang.reflect.Type;
-import java.util.logging.Logger;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -17,8 +16,6 @@ import com.google.gson.JsonParseException;
 
 public class GreenHexFloatDeserializer implements
 		JsonDeserializer<GreenHexFloat> {
-
-	Logger logger = Logger.getAnonymousLogger();
 
 	@Override
 	public GreenHexFloat deserialize(JsonElement json, Type arg1,

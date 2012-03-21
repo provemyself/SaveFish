@@ -36,7 +36,6 @@ import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
 import com.badlogic.gdx.physics.box2d.joints.WheelJointDef;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.savefish.util.GreenLogger;
 
 public class GreenWorldFactory {
 
@@ -101,8 +100,6 @@ public class GreenWorldFactory {
 				.replace("filter-categoryBits", "filter_categoryBits")
 				.replace("filter-maskBits", "filter_maskBits")
 				.replace("filter-groupIndex", "filter_groupIndex");
-
-		GreenLogger.getInstance().getLogger().log(Level.INFO, jsonWorld);
 		return jsonWorld;
 	}
 

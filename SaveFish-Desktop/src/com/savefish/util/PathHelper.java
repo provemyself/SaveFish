@@ -10,12 +10,12 @@ package com.savefish.util;
 import java.io.File;
 
 public class PathHelper {
-	
-	public static String getFontPath(String fileName){
+
+	public static String getFontPath(String fileName) {
 		String fontPath = "fonts" + File.separator + fileName;
 		return fontPath;
 	}
-	
+
 	/**
 	 * @description 根据文件名获取地图文件路径
 	 * @param fileName
@@ -26,7 +26,7 @@ public class PathHelper {
 		String mapPath = "maps" + File.separator + fileName;
 		return mapPath;
 	}
-	
+
 	/**
 	 * @description 根据文件名获取背景音乐文件路径
 	 * @param fileName
@@ -37,12 +37,17 @@ public class PathHelper {
 		String musicPath = "music" + File.separator + fileName;
 		return musicPath;
 	}
-	
-	public static String getParticlePath(String fileName){
-		String particlePath = "particles" + File.separator + fileName;
-		return particlePath;
+
+	public static String getParticleFilePath(String fileName) {
+		String particleFilePath = "particles" + File.separator + fileName;
+		return particleFilePath;
 	}
-	
+
+	public static String getParticleImagePath() {
+		String particleImagePath = "particles" + File.separator + "images";
+		return particleImagePath;
+	}
+
 	/**
 	 * @description 根据文件名获取音效文件路径
 	 * @param fileName

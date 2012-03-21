@@ -8,8 +8,6 @@ package com.savefish.physics.resolve;
  *******************************/
 
 import java.lang.reflect.Type;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -18,13 +16,10 @@ import com.google.gson.JsonParseException;
 
 public class GreenVector2Deserializer implements JsonDeserializer<GreenVector2> {
 
-	Logger logger = Logger.getLogger("com.tulip.test.physics");
-
 	@Override
 	public GreenVector2 deserialize(JsonElement element, Type type,
 			JsonDeserializationContext context) throws JsonParseException {
 		String val = element.toString();
-		logger.log(Level.INFO, val);
 		if (val.matches("\\{.*\\}")) {
 			String[] strs = val.split(",");
 			return new GreenVector2(this.toFloat(strs[0]),
