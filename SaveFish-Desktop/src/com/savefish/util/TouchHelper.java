@@ -8,7 +8,7 @@ package com.savefish.util;
  *******************************/
 
 import com.badlogic.gdx.math.Vector2;
-import com.savefish.constant.Constants;
+import com.savefish.constant.Constant;
 
 public class TouchHelper {
 	/**
@@ -18,7 +18,7 @@ public class TouchHelper {
 	 * @return 位置向量
 	 */
 	public static Vector2 toRenderCoordinate(float x, float y) {
-		return new Vector2(x, Constants.screen.SCREEN_HEIGHT - y);
+		return new Vector2(x, Constant.screen.SCREEN_HEIGHT - y);
 	}
 
 	/**
@@ -27,6 +27,6 @@ public class TouchHelper {
 	 * @return 位置向量
 	 */
 	public static Vector2 toRenderCoordinate(Vector2 source) {
-		return new Vector2(source.x, (Constants.screen.SCREEN_HEIGHT - source.y));
+		return new Vector2(source.x, (Constant.screen.SCREEN_HEIGHT - source.y));
 	}
 }

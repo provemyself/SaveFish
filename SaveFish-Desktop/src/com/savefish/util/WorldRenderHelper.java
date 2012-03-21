@@ -8,7 +8,7 @@ package com.savefish.util;
  *******************************/
 
 import com.badlogic.gdx.math.Vector2;
-import com.savefish.constant.Constants;
+import com.savefish.constant.Constant;
 
 public class WorldRenderHelper {
 
@@ -20,8 +20,8 @@ public class WorldRenderHelper {
 	 */
 	public static Vector2 toRenderCoordinate(float x, float y) {
 		return new Vector2(
-				(x * Constants.physics.RATE + Constants.screen.SCREEN_HALF_WIDTH),
-				y * Constants.physics.RATE);
+				(x * Constant.physics.RATE + Constant.screen.SCREEN_HALF_WIDTH),
+				y * Constant.physics.RATE);
 	}
 
 	/**
@@ -31,8 +31,8 @@ public class WorldRenderHelper {
 	 */
 	public static Vector2 toRenderCoordinate(Vector2 source) {
 		return new Vector2(
-				(source.x * Constants.physics.RATE + Constants.screen.SCREEN_HALF_WIDTH),
-				source.y * Constants.physics.RATE);
+				(source.x * Constant.physics.RATE + Constant.screen.SCREEN_HALF_WIDTH),
+				source.y * Constant.physics.RATE);
 	}
 
 	/**
@@ -42,8 +42,8 @@ public class WorldRenderHelper {
 	 * @return 位置向量
 	 */
 	public static Vector2 toWorldCoordinate(float x, float y) {
-		return new Vector2((x - Constants.screen.SCREEN_HALF_WIDTH)
-				/ Constants.physics.RATE, y / Constants.physics.RATE);
+		return new Vector2((x - Constant.screen.SCREEN_HALF_WIDTH)
+				/ Constant.physics.RATE, y / Constant.physics.RATE);
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class WorldRenderHelper {
 	 * @return 位置向量
 	 */
 	public static Vector2 toWorldCoordinate(Vector2 source) {
-		return new Vector2((source.x - Constants.screen.SCREEN_HALF_WIDTH)
-				/ Constants.physics.RATE, source.y / Constants.physics.RATE);
+		return new Vector2((source.x - Constant.screen.SCREEN_HALF_WIDTH)
+				/ Constant.physics.RATE, source.y / Constant.physics.RATE);
 	}
 }
