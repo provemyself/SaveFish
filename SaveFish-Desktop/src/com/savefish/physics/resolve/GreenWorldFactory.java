@@ -8,7 +8,6 @@ package com.savefish.physics.resolve;
 
 import java.util.ArrayList;
 import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
@@ -36,6 +35,7 @@ import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
 import com.badlogic.gdx.physics.box2d.joints.WheelJointDef;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.savefish.util.logger.GreenLogger;
 
 public class GreenWorldFactory {
 
@@ -69,10 +69,12 @@ public class GreenWorldFactory {
 	 * @return
 	 */
 	private static GreenWorld createGreenWorld(String path) {
-		Logger logger = Logger.getAnonymousLogger();
 		if ((null == path) || path.equals(""))
 			return null;
-		logger.log(Level.INFO, path);
+
+		GreenLogger.getInstance().logp(Level.INFO,
+				GreenWorldFactory.class.getName(), "createGreenWorld",
+				"地图路径: " + path);
 
 		String mapText = Gdx.files.internal(path).readString();
 		String jsonWorld = standardizeMap(mapText);

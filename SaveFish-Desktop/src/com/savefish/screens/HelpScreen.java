@@ -68,7 +68,5 @@ public class HelpScreen implements Screen {
 		// TODO Auto-generated method stub
 		return HelpScreen.class.getName();
 	}
-	
-	
 
 }

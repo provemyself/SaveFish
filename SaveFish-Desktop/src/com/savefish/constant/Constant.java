@@ -1,5 +1,7 @@
 package com.savefish.constant;
 
+import java.io.File;
+
 /********************************
  * Description: 该类对项目中的常量进行 
  * *************分类管理 
@@ -47,19 +49,42 @@ public final class Constant {
 	}
 
 	public static final class asset {
-		public static final String TEXTURES_BASE_PATH = "textures/";
-		public static final String SOUNDS_BASE_PATH = "sounds/";
-		public static final String PARTICLES_BASE_PATH = "particles/";
-		public static final String MUSICS_BASE_PATH = "musics/";
-		public static final String MAPS_BASE_PATH = "maps/";
-		public static final String FONTS_BASE_PATH = "fonts/";
-		public static final String PIXMAPS_BASE_PATH = "pixmaps/";
+		//文件路径分割符
+		public static final String SEPARATOR = File.separator;
+		
+		//文件基路径
+		public static final String TEXTURES_BASE_PATH = "textures" + SEPARATOR;
+		public static final String SOUNDS_BASE_PATH = "sounds" + SEPARATOR;
+		public static final String PARTICLES_BASE_PATH = "particles" + SEPARATOR;
+		public static final String MUSICS_BASE_PATH = "musics" + SEPARATOR;
+		public static final String MAPS_BASE_PATH = "maps" + SEPARATOR;
+		public static final String FONTS_BASE_PATH = "fonts" + SEPARATOR;
+		public static final String PIXMAPS_BASE_PATH = "pixmaps" + SEPARATOR;
 
+		//背景音乐
 		public static final String MUSIC = "annie.mp3";
+		
+		//音效
 		public static final String SOUND = "glass.wav";
 
-		// 下面的纹理主要用于测试，临时设置
+		// 纹理
 		public static final String QUIT = "quit.png";
 		public static final String START = "start.png";
+		
+		//地图:第一大关
+		public static final String PREVENT_FIRST = "prevent_first.json";
+		public static final String PREVENT_SECOND = "prevent_second.json";
+		public static final String PREVENT_THIRD = "prevent_third.json";
+		public static final String PREVENT_FOURTH = "prevent_fourth.json";
+		public static final String PREVETN_FIFTH = "prevent_fifth.json";
+		public static final String PREVENT_SIXTH = "prevent_sixth.json";
+		
+		//地图:第二关
+		public static final String CLEAR_FIRST = "clear_first.json";
+		public static final String CLEAR_SECOND = "clear_second.json";
+		public static final String CLEAR_THIRD = "clear_third.json";
+		public static final String CLEAR_FOURTH = "clear_fourth.json";
+		public static final String CLEAR_FIFTH = "clear_fifth.json";
+		public static final String CLEAR_SIXTH = "clear_sixth.json";
 	}
 }

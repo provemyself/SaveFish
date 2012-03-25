@@ -11,7 +11,6 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.savefish.constant.Constant;
 import com.savefish.physics.resolve.GreenWorldFactory;
-import com.savefish.util.PathHelper;
 import com.savefish.util.logger.GreenLogger;
 
 public class GameScreen implements Screen {
@@ -54,8 +53,8 @@ public class GameScreen implements Screen {
 	private World world;
 
 	private void initWorld() throws Exception {
-		world = GreenWorldFactory.creatWorld(PathHelper
-				.getMapPath("firstMap.json"));
+		world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
+				+ Constant.asset.PREVENT_FIRST);
 	}
 
 	private Box2DDebugRenderer render;
@@ -73,6 +72,7 @@ public class GameScreen implements Screen {
 	@Override
 	public void render(float delta) {
 		GreenLogger.getInstance().log(Level.INFO, "render world!");
+
 		this.world.step(Gdx.app.getGraphics().getDeltaTime(), 3, 3);
 		GL10 gl = Gdx.app.getGraphics().getGL10();
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
@@ -110,4 +110,11 @@ public class GameScreen implements Screen {
 		this.render = null;
 		this.world = null;
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return GameScreen.class.getName();
+	}
+
 }
