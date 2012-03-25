@@ -1,5 +1,7 @@
 package com.savefish.screens;
 
+import java.util.logging.Level;
+
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -13,6 +15,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
+import com.savefish.util.logger.GreenLogger;
 
 public class MainMenuScreen implements Screen {
 
@@ -42,7 +45,10 @@ public class MainMenuScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
-		// System.out.println("render called!");
+		GreenLogger.getInstance().logp(Level.INFO,
+				MainMenuScreen.class.getName(), "render",
+				delta + "s called!", delta);
+
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		stage.act(Gdx.graphics.getDeltaTime());
 		stage.draw();
@@ -51,34 +57,50 @@ public class MainMenuScreen implements Screen {
 
 	@Override
 	public void resize(int width, int height) {
-		// System.out.println("resize called!");
 		this.stage.setViewport(width, height, true);
+
+		GreenLogger.getInstance().logp(Level.INFO,
+				MainMenuScreen.class.getName(), "resize",
+				"width: " + width + ", height: " + height);
 	}
 
 	@Override
 	public void show() {
-		// System.out.println("show called!");
+		GreenLogger.getInstance().logp(Level.INFO,
+				MainMenuScreen.class.getName(), "show", "called!");
 	}
 
 	@Override
 	public void hide() {
-		// System.out.println("hide called!");
+		GreenLogger.getInstance().logp(Level.INFO,
+				MainMenuScreen.class.getName(), "hide", "called!");
 	}
 
 	@Override
 	public void pause() {
-		// System.out.println("pause called!");
+		GreenLogger.getInstance().logp(Level.INFO,
+				MainMenuScreen.class.getName(), "pause", "called!");
 	}
 
 	@Override
 	public void resume() {
-		// System.out.println("resume called!");
+		GreenLogger.getInstance().logp(Level.INFO,
+				MainMenuScreen.class.getName(), "resume", "called!");
 	}
 
 	@Override
 	public void dispose() {
-		// System.out.println("dispose called!");
 		this.stage.dispose();
+
+		GreenLogger.getInstance().logp(Level.INFO,
+				MainMenuScreen.class.getName(), "dispose", "called!");
+	}
+	
+	
+
+	@Override
+	public String toString() {
+		return MainMenuScreen.class.getName();
 	}
 
 	private void initialize() {
@@ -90,7 +112,8 @@ public class MainMenuScreen implements Screen {
 	}
 
 	private void initTexture() {
-		this.startTexture = Assets.getInstance().getTexture(Constant.asset.START);
+		this.startTexture = Assets.getInstance().getTexture(
+				Constant.asset.START);
 		this.quitTexture = Assets.getInstance().getTexture(Constant.asset.QUIT);
 	}
 

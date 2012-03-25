@@ -63,4 +63,10 @@ public class AboutScreen implements Screen {
 
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return AboutScreen.class.getName();
+	}
+
 }

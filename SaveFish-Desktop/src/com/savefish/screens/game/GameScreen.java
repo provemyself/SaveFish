@@ -1,5 +1,7 @@
 package com.savefish.screens.game;
 
+import java.util.logging.Level;
+
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -21,7 +23,6 @@ public class GameScreen implements Screen {
 			try {
 				gs = new GameScreen(game);
 			} catch (Exception e) {
-				GreenLogger.getInstance().info(e.toString(), e);
 			}
 		}
 		return gs;
@@ -71,7 +72,7 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
-		GreenLogger.getInstance().info("GameScreen render");
+		GreenLogger.getInstance().log(Level.INFO, "render world!");
 		this.world.step(Gdx.app.getGraphics().getDeltaTime(), 3, 3);
 		GL10 gl = Gdx.app.getGraphics().getGL10();
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
@@ -79,36 +80,31 @@ public class GameScreen implements Screen {
 		this.camera.update();
 		this.camera.apply(gl);
 		this.render.render(world, this.camera.combined);
+
 	}
 
 	@Override
 	public void resize(int width, int height) {
-		GreenLogger.getInstance().info("GameScreen resize");
 	}
 
 	@Override
 	public void show() {
-		GreenLogger.getInstance().info("GameScreen show");
 	}
 
 	@Override
 	public void hide() {
-		GreenLogger.getInstance().info("GameScreen hide");
 	}
 
 	@Override
 	public void pause() {
-		GreenLogger.getInstance().info("GameScreen pause");
 	}
 
 	@Override
 	public void resume() {
-		GreenLogger.getInstance().info("GameScreen resume");
 	}
 
 	@Override
 	public void dispose() {
-		GreenLogger.getInstance().info("GameScreen dispose");
 		this.render.dispose();
 		this.world.dispose();
 		this.render = null;

@@ -63,4 +63,12 @@ public class HelpScreen implements Screen {
 
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return HelpScreen.class.getName();
+	}
+	
+	
+
 }

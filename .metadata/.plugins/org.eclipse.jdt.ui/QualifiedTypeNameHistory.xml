@@ -20,7 +20,6 @@
 <fullyQualifiedTypeName name="com.savefish.constant.Constants.logger"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.utils.Logger"/>
 <fullyQualifiedTypeName name="com.savefish.service.GreenLogger"/>
-<fullyQualifiedTypeName name="com.savefish.util.logger.GreenLogger"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Game"/>
 <fullyQualifiedTypeName name="com.savefish.service.ApplicationManager"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.Stage"/>
@@ -32,4 +31,7 @@
 <fullyQualifiedTypeName name="com.tulip.text.TestApplcation"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Image"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Gdx"/>
+<fullyQualifiedTypeName name="com.savefish.util.logger.GreenLogger"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
 </qualifiedTypeNameHistroy>
