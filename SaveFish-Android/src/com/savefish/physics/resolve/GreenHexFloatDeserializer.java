@@ -17,8 +17,6 @@ import com.google.gson.JsonParseException;
 public class GreenHexFloatDeserializer implements
 		JsonDeserializer<GreenHexFloat> {
 
-//	Logger logger = Logger.getAnonymousLogger();
-
 	@Override
 	public GreenHexFloat deserialize(JsonElement json, Type arg1,
 			JsonDeserializationContext arg2) throws JsonParseException {
