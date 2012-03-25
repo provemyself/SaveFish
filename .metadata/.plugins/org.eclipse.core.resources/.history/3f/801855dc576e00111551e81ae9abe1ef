@@ -1,0 +1,21 @@
+package com.savefish.service;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import com.badlogic.gdx.Game;
+import com.savefish.screens.GameScreen;
+
+public class ApplicationManager extends Game {
+
+	Logger logger = Logger.getLogger("com.savefish");
+
+	@Override
+	public void create() {
+		try {
+			setScreen(new GameScreen(this));
+		} catch (Exception e) {
+			logger.log(Level.WARNING, e.toString(), e);
+		}
+	}
+}

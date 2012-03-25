@@ -1,0 +1,16 @@
+package com.tulip.test;
+
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+
+public class TestApplcation extends Game {
+	
+	private Stage stage = null;
+
+	@Override
+	public void create() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

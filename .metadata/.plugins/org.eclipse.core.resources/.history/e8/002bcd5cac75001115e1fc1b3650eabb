@@ -1,0 +1,31 @@
+package com.savefish.screens.actors;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+
+public class ActiveImage extends Image {
+
+	public ActiveImage(Texture texture) {
+		super(texture);
+	}
+
+	@Override
+	public boolean touchDown(float x, float y, int pointer) {
+		this.x = x + 10;
+		this.y = y + 10;
+		return super.touchDown(x, y, pointer);
+	}
+
+	@Override
+	public void touchUp(float x, float y, int pointer) {
+		this.x = x - 10;
+		this.y = y - 10;
+		super.touchUp(x, y, pointer);
+	}
+
+	@Override
+	public void touchDragged(float x, float y, int pointer) {
+		super.touchDragged(x, y, pointer);
+	}
+
+}

@@ -1,0 +1,20 @@
+1332326406608	Delete element
+1332328399426	Rename type 'LoggerManager'
+1332328739008	Rename package 'com.savefish.util.log'
+1332328746708	Move compilation unit
+1332328755177	Move compilation unit
+1332330188429	Delete element
+1332330978979	Delete element
+1332332257454	Delete element
+1332332993058	Rename package 'com.savefish.physics.contact'
+1332333024289	Rename type 'ContactProcessor'
+1332333040243	Rename type 'CollisionUtil'
+1332333050966	Rename type 'DetectFilter'
+1332333077666	Rename type 'FilterData'
+1332334218357	Rename type 'Constants'
+1332334255751	Move compilation unit
+1332334267966	Move compilation unit
+1332334384811	Delete element
+1332345513111	Delete elements
+1332574080254	Copy packages
+1332591895179	Delete element

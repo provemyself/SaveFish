@@ -1,0 +1,13 @@
+package com.tulip.test;
+
+import com.badlogic.gdx.Game;
+
+public class TestApplcation extends Game {
+
+	@Override
+	public void create() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
