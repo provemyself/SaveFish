@@ -1,7 +1,5 @@
 package com.savefish.constant;
 
-import java.io.File;
-
 /********************************
  * Description: 该类对项目中的常量进行 *************分类管理 Author : 王志伟 Date : 2012/03/08
  *******************************/
@@ -13,8 +11,10 @@ public final class Constant {
 		public static final float TIME_STEP = 2.0f / 60.0f;// 模拟现实世界的频率
 		public static final int ITERATION = 10;// 迭代次数
 		public static final int CAMERA_VIEW_WIDTH = screen.SCREEN_WIDTH / RATE;// 相机视点宽度
-		public static final int CAMERA_VIEW_HEIGHT = screen.SCREEN_HEIGHT
-				/ RATE;// 相机视点高度
+		public static final int CAMERA_VIEW_HEIGHT = screen.SCREEN_HEIGHT / RATE;// 相机视点高度
+		public static final int CAMERA_X = CAMERA_VIEW_WIDTH / 2;
+		public static final int CAMERA_Y = CAMERA_VIEW_HEIGHT / 2 - 1;
+		public static final int CAMERA_Z = 10;
 	}
 
 	public static final class screen {
@@ -46,18 +46,14 @@ public final class Constant {
 	}
 
 	public static final class asset {
-		// 文件路径分割符
-		public static final String SEPARATOR = File.separator;
-
 		// 文件基路径
-		public static final String TEXTURES_BASE_PATH = "textures" + SEPARATOR;
-		public static final String SOUNDS_BASE_PATH = "sounds" + SEPARATOR;
-		public static final String PARTICLES_BASE_PATH = "particles"
-				+ SEPARATOR;
-		public static final String MUSICS_BASE_PATH = "musics" + SEPARATOR;
-		public static final String MAPS_BASE_PATH = "maps" + SEPARATOR;
-		public static final String FONTS_BASE_PATH = "fonts" + SEPARATOR;
-		public static final String PIXMAPS_BASE_PATH = "pixmaps" + SEPARATOR;
+		public static final String TEXTURES_BASE_PATH = "textures/";
+		public static final String SOUNDS_BASE_PATH = "sounds/";
+		public static final String PARTICLES_BASE_PATH = "particles/";
+		public static final String MUSICS_BASE_PATH = "musics/";
+		public static final String MAPS_BASE_PATH = "maps/";
+		public static final String FONTS_BASE_PATH = "fonts/";
+		public static final String PIXMAPS_BASE_PATH = "pixmaps/";
 
 		// 背景音乐
 		public static final String MUSIC = "annie.mp3";
