@@ -134,7 +134,6 @@ public class GameScreen implements Screen {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return GameScreen.class.getName();
 	}
 

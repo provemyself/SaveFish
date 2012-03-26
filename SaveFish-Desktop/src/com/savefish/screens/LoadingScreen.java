@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
+import com.savefish.service.InitializedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class LoadingScreen implements Screen {
@@ -19,8 +20,10 @@ public class LoadingScreen implements Screen {
 		GreenLogger.getInstance().logp(Level.INFO,
 				LoadingScreen.class.getName(), "getInstance", "called!");
 
-		if (null == loadingScreen)
+		if (null == loadingScreen) {
 			loadingScreen = new LoadingScreen(game);
+			InitializedScreen.screens.add(loadingScreen);
+		}
 		return loadingScreen;
 	}
 
@@ -31,7 +34,7 @@ public class LoadingScreen implements Screen {
 		this.loadingTexture = new Texture(
 				Gdx.files.internal("textures/loading.png"));
 		this.loadingImage = new Image(loadingTexture);
-		
+
 	}
 
 	private Stage stage = null;
@@ -80,7 +83,7 @@ public class LoadingScreen implements Screen {
 	public void show() {
 		GreenLogger.getInstance().logp(Level.INFO,
 				LoadingScreen.class.getName(), "show", "called!");
-		
+
 		this.initStage();
 	}
 
@@ -106,7 +109,7 @@ public class LoadingScreen implements Screen {
 	public void dispose() {
 		GreenLogger.getInstance().logp(Level.INFO,
 				LoadingScreen.class.getName(), "dispose", "called!");
-		if(this.stage != null)
+		if (this.stage != null)
 			this.stage.dispose();
 		game = null;
 	}

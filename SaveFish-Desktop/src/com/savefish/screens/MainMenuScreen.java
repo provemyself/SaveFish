@@ -14,6 +14,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
+import com.savefish.service.InitializedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class MainMenuScreen implements Screen {
@@ -21,8 +22,10 @@ public class MainMenuScreen implements Screen {
 	private static MainMenuScreen mainMenuScreen = null;
 
 	public static MainMenuScreen getInstance(Game game) {
-		if (null == mainMenuScreen)
+		if (null == mainMenuScreen) {
 			mainMenuScreen = new MainMenuScreen(game);
+			InitializedScreen.screens.add(mainMenuScreen);
+		}
 		return mainMenuScreen;
 	}
 

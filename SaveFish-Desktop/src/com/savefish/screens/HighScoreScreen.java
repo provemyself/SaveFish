@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
+import com.savefish.service.InitializedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class HighScoreScreen implements Screen {
@@ -19,8 +20,10 @@ public class HighScoreScreen implements Screen {
 	private static HighScoreScreen highScoreScreen = null;
 
 	public static HighScoreScreen getInstance(Game game) {
-		if (null == highScoreScreen)
+		if (null == highScoreScreen) {
 			highScoreScreen = new HighScoreScreen(game);
+			InitializedScreen.screens.add(highScoreScreen);
+		}
 		return highScoreScreen;
 	}
 

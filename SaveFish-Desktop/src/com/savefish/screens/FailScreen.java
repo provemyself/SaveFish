@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.savefish.service.InitializedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class FailScreen implements Screen {
@@ -14,8 +15,10 @@ public class FailScreen implements Screen {
 	private static FailScreen failScreen = null;
 
 	public static FailScreen getInstance(Game game) {
-		if (null == failScreen)
+		if (null == failScreen) {
 			failScreen = new FailScreen(game);
+			InitializedScreen.screens.add(failScreen);
+		}
 		return failScreen;
 	}
 
@@ -75,10 +78,10 @@ public class FailScreen implements Screen {
 	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
-		GreenLogger.getInstance().logp(Level.INFO,
-				FailScreen.class.getName(), "dispose", "called!");
-		
-		if(this.stage != null)
+		GreenLogger.getInstance().logp(Level.INFO, FailScreen.class.getName(),
+				"dispose", "called!");
+
+		if (this.stage != null)
 			this.stage.dispose();
 		game = null;
 	}

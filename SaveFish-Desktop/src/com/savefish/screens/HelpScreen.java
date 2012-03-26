@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.savefish.service.InitializedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class HelpScreen implements Screen {
@@ -14,8 +15,10 @@ public class HelpScreen implements Screen {
 	private static HelpScreen helpScreen = null;
 
 	public static HelpScreen getInstance(Game game) {
-		if (null == helpScreen)
+		if (null == helpScreen){
 			helpScreen = new HelpScreen(game);
+			InitializedScreen.screens.add(helpScreen);
+		}
 		return helpScreen;
 	}
 
