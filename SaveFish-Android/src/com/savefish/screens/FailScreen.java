@@ -4,10 +4,11 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
 
 public class FailScreen implements Screen {
-	
+
 	private static FailScreen fs = null;
-	public static FailScreen getInstance(Game game){
-		if(null == fs)
+
+	public static FailScreen getInstance(Game game) {
+		if (null == fs)
 			fs = new FailScreen(game);
 		return fs;
 	}
@@ -60,6 +61,12 @@ public class FailScreen implements Screen {
 	public void dispose() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return FailScreen.class.getName();
 	}
 
 }

@@ -1,51 +1,96 @@
 package com.savefish.util.logger;
 
-import com.badlogic.gdx.utils.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import com.savefish.constant.Constant;
 
 public class GreenLogger {
 
 	private Logger logger = null;
 
-	private static GreenLogger gl = new GreenLogger();
-
 	private GreenLogger() {
-		logger = new Logger(Constant.logger.LOGGER_NAME);
+		logger = Logger.getLogger(Constant.logger.LOGGER_NAME);
 	}
 
+	private static GreenLogger gl = null;
+
 	public static GreenLogger getInstance() {
+		if (null == gl)
+			gl = new GreenLogger();
 		return gl;
 	}
 
-	public void debug(String message) {
-		logger.debug(message);
+	public void log(Level level, String msg) {
+		logger.log(level, msg);
 	}
 
-	public void debug(String message, Exception exception) {
-		logger.debug(message, exception);
+	public void log(Level level, String msg, Object param1) {
+		logger.log(level, msg, param1);
 	}
 
-	public void error(String message) {
-		logger.error(message);
+	public void log(Level level, String msg, Object params[]) {
+		logger.log(level, msg, params);
 	}
 
-	public void error(String message, Throwable exception) {
-		logger.error(message, exception);
+	public void log(Level level, String msg, Throwable thrown) {
+		logger.log(level, msg, thrown);
 	}
 
-	public void info(String message) {
-		logger.info(message);
+	public void entering(String sourceClass, String sourceMethod) {
+		logger.entering(sourceClass, sourceMethod);
 	}
 
-	public void info(String message, Exception exception) {
-		logger.info(message, exception);
+	public void logp(Level level, String sourceClass, String sourceMethod,
+			String msg) {
+		logger.logp(level, sourceClass, sourceMethod, msg);
 	}
 
-	public int getLevel() {
-		return logger.getLevel();
+	public void logp(Level level, String sourceClass, String sourceMethod,
+			String msg, Object param1) {
+		logger.logp(level, sourceClass, sourceMethod, msg, param1);
 	}
 
-	public void setLevel(int level) {
-		logger.setLevel(level);
+	public void logp(Level level, String sourceClass, String sourceMethod,
+			String msg, Object params[]) {
+		logger.logp(level, sourceClass, sourceMethod, msg, params);
+	}
+
+	public void logp(Level level, String sourceClass, String sourceMethod,
+			String msg, Throwable thrown) {
+		logger.logp(level, sourceClass, sourceMethod, msg, thrown);
+	}
+
+	public void entering(String sourceClass, String sourceMethod, Object param1) {
+		logger.entering(sourceClass, sourceMethod, param1);
+	}
+
+	public void entering(String sourceClass, String sourceMethod,
+			Object params[]) {
+		logger.entering(sourceClass, sourceMethod, params);
+	}
+
+	public void exiting(String sourceClass, String sourceMethod) {
+		logger.exiting(sourceClass, sourceMethod);
+	}
+
+	public void exiting(String sourceClass, String sourceMethod, Object result) {
+		logger.exiting(sourceClass, sourceMethod, result);
+	}
+
+	public void severe(String msg) {
+		logger.severe(msg);
+	}
+
+	public void warning(String msg) {
+		logger.warning(msg);
+	}
+
+	public void info(String msg) {
+		logger.info(msg);
+	}
+
+	public void setLevel(Level newLevel) throws SecurityException {
+		logger.setLevel(newLevel);
 	}
 }

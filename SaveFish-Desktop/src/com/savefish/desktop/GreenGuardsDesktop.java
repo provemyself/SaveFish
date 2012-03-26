@@ -6,9 +6,11 @@ import com.savefish.service.ApplicationManager;
 
 public class GreenGuardsDesktop {
 
+	public static LwjglApplication saveFish = null;
+
 	public static void main(String[] argv) {
-		new LwjglApplication(new ApplicationManager(), Constant.game.GAME_NAME,
-				Constant.screen.SCREEN_WIDTH, Constant.screen.SCREEN_HEIGHT,
-				false);
+		saveFish = new LwjglApplication(new ApplicationManager(),
+				Constant.game.GAME_NAME, Constant.screen.SCREEN_WIDTH,
+				Constant.screen.SCREEN_HEIGHT, false);
 	}
 }

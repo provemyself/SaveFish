@@ -1,8 +1,9 @@
 package com.savefish.util.logger;
 
-public class GreenLoggerManager {
+import java.util.logging.Level;
 
-	public static void filterLogByLevel(int level) {
+public class GreenLoggerManager {
+	public static void filterLogByLevel(Level level) {
 		GreenLogger.getInstance().setLevel(level);
 	}
 }

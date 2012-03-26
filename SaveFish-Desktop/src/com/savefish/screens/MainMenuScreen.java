@@ -8,7 +8,6 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.ClickListener;
@@ -27,12 +26,9 @@ public class MainMenuScreen implements Screen {
 		return mainMenuScreen;
 	}
 
-	@SuppressWarnings("unused")
 	private Game game = null;
 
 	private Stage stage = null;
-	private Texture startTexture = null;
-	private Texture quitTexture = null;
 	private Image startImage = null;
 	private Image quitImage = null;
 	private Music bgMusic = null;
@@ -40,17 +36,17 @@ public class MainMenuScreen implements Screen {
 
 	private MainMenuScreen(Game game) {
 		this.game = game;
-		this.initialize();
+
 	}
 
 	@Override
 	public void render(float delta) {
 		GreenLogger.getInstance().logp(Level.INFO,
-				MainMenuScreen.class.getName(), "render",
-				delta + "s called!", delta);
+				MainMenuScreen.class.getName(), "render", delta + "s called!",
+				delta);
 
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		stage.act(Gdx.graphics.getDeltaTime());
+		stage.act(delta);
 		stage.draw();
 		Gdx.input.setInputProcessor(stage);
 	}
@@ -68,6 +64,8 @@ public class MainMenuScreen implements Screen {
 	public void show() {
 		GreenLogger.getInstance().logp(Level.INFO,
 				MainMenuScreen.class.getName(), "show", "called!");
+
+		this.initialize();
 	}
 
 	@Override
@@ -90,13 +88,13 @@ public class MainMenuScreen implements Screen {
 
 	@Override
 	public void dispose() {
-		this.stage.dispose();
-
 		GreenLogger.getInstance().logp(Level.INFO,
 				MainMenuScreen.class.getName(), "dispose", "called!");
+		if (this.stage != null)
+			this.stage.dispose();
+		game = null;
+
 	}
-	
-	
 
 	@Override
 	public String toString() {
@@ -104,26 +102,21 @@ public class MainMenuScreen implements Screen {
 	}
 
 	private void initialize() {
-		this.initTexture();
 		this.initImage();
 		this.initStage();
 		this.initBgMusic();
 		this.initSound();
 	}
 
-	private void initTexture() {
-		this.startTexture = Assets.getInstance().getTexture(
-				Constant.asset.START);
-		this.quitTexture = Assets.getInstance().getTexture(Constant.asset.QUIT);
-	}
-
 	private void initImage() {
-		this.startImage = new Image(startTexture);
+		this.startImage = new Image(Assets.getInstance().getTexture(
+				Constant.asset.START));
 		this.startImage.x = 10;
 		this.startImage.y = 10;
 		this.startImage.setClickListener(new StartImageListener());
 
-		this.quitImage = new Image(quitTexture);
+		this.quitImage = new Image(Assets.getInstance().getTexture(
+				Constant.asset.QUIT));
 		this.quitImage.x = 200;
 		this.quitImage.y = 200;
 		this.quitImage.setClickListener(new QuitImageListener());
@@ -144,10 +137,14 @@ public class MainMenuScreen implements Screen {
 
 		@Override
 		public void click(Actor actor, float x, float y) {
+
+			GreenLogger.getInstance().logp(Level.INFO,
+					MainMenuScreen.class.getName(), "click", "click");
+
 			sound.play();
 			bgMusic.stop();
+			game.dispose();
 		}
-
 	}
 
 	private void initStage() {

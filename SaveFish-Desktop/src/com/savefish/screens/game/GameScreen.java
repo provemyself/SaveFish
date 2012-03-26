@@ -22,12 +22,18 @@ public class GameScreen implements Screen {
 			try {
 				gs = new GameScreen(game);
 			} catch (Exception e) {
+				GreenLogger.getInstance().logp(Level.WARNING,
+						GameScreen.class.getName(), "getInstance",
+						e.toString(), e);
 			}
 		}
 		return gs;
 	}
 
 	private GameScreen(Game game) throws Exception {
+		GreenLogger.getInstance().logp(Level.WARNING,
+				GameScreen.class.getName(), "GameScreen", "called!");
+		
 		this.initGame(game);
 		this.initCamera();
 		this.initWorld();
@@ -39,12 +45,18 @@ public class GameScreen implements Screen {
 	private Game game;
 
 	private void initGame(Game game) {
+		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
+				"initGame", "called!");
+
 		this.game = game;
 	}
 
 	private OrthographicCamera camera;
 
 	private void initCamera() {
+		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
+				"initCamera", "called!");
+		
 		camera = new OrthographicCamera(Constant.physics.CAMERA_VIEW_WIDTH,
 				Constant.physics.CAMERA_VIEW_HEIGHT);
 		camera.position.set(24, 15, 0);
@@ -53,6 +65,9 @@ public class GameScreen implements Screen {
 	private World world;
 
 	private void initWorld() throws Exception {
+		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
+				"initWorld", "called!");
+		
 		world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
 				+ Constant.asset.PREVENT_FIRST);
 	}
@@ -60,12 +75,18 @@ public class GameScreen implements Screen {
 	private Box2DDebugRenderer render;
 
 	private void initRender() {
+		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
+				"initRender", "called!");
+		
 		render = new Box2DDebugRenderer();
 	}
 
 	private ParticleStage particle;
 
 	private void initStages() {
+		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
+				"initStages", "called!");
+		
 		this.particle = new ParticleStage();
 	}
 

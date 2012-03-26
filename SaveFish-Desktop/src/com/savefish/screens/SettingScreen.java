@@ -1,16 +1,19 @@
 package com.savefish.screens;
 
+import java.util.logging.Level;
+
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
+import com.savefish.util.logger.GreenLogger;
 
 public class SettingScreen implements Screen {
 
-	private static SettingScreen ss = null;
+	private static SettingScreen settingScreen = null;
 
 	public static SettingScreen getInstance(Game game) {
-		if (null == ss)
-			ss = new SettingScreen(game);
-		return ss;
+		if (null == settingScreen)
+			settingScreen = new SettingScreen(game);
+		return settingScreen;
 	}
 
 	@SuppressWarnings("unused")
@@ -60,7 +63,9 @@ public class SettingScreen implements Screen {
 	@Override
 	public void dispose() {
 		// TODO Auto-generated method stub
-
+		GreenLogger.getInstance().logp(Level.INFO,
+				SettingScreen.class.getName(), "dispose", "called!");
+		game = null;
 	}
 
 	@Override
@@ -68,5 +73,4 @@ public class SettingScreen implements Screen {
 		// TODO Auto-generated method stub
 		return SettingScreen.class.getName();
 	}
-
 }

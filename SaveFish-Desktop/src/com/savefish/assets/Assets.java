@@ -87,6 +87,18 @@ public class Assets {
 			return null;
 	}
 
+	public void unload(String fileName) {
+		this.assetManager.unload(fileName);
+	}
+
+	public void clear() {
+		this.assetManager.clear();
+	}
+	
+	public void dispose(){
+		this.assetManager.dispose();
+	}
+
 	private void load() {
 		this.loadTexture();
 		this.loadBitmapFont();
@@ -100,6 +112,12 @@ public class Assets {
 				+ Constant.asset.QUIT, Texture.class);
 		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
 				+ Constant.asset.START, Texture.class);
+		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
+				+ Constant.asset.MENU_128_64, Texture.class);
+		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
+				+ Constant.asset.NEXT_128_64, Texture.class);
+		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
+				+ Constant.asset.EXIT, Texture.class);
 	}
 
 	private void loadBitmapFont() {

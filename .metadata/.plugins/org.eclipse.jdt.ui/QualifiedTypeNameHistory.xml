@@ -4,9 +4,6 @@
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.Color"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.ParticleEffect"/>
 <fullyQualifiedTypeName name="com.savefish.screens.ParticleScreen"/>
-<fullyQualifiedTypeName name="java.util.logging.Logger"/>
-<fullyQualifiedTypeName name="java.util.logging.Level"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.files.FileHandle"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.InputProcessor"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Screen"/>
@@ -31,7 +28,16 @@
 <fullyQualifiedTypeName name="com.tulip.text.TestApplcation"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Image"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Gdx"/>
-<fullyQualifiedTypeName name="com.savefish.util.logger.GreenLogger"/>
+<fullyQualifiedTypeName name="com.savefish.util.logger.TestLogger"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="com.savefish.util.logger.GreenLoggerManager"/>
 <fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant.logger"/>
+<fullyQualifiedTypeName name="com.savefish.assets.Assets"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="com.savefish.screens.game.GameScreen"/>
+<fullyQualifiedTypeName name="com.savefish.util.logger.GreenLogger"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
 <fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
+<fullyQualifiedTypeName name="com.savefish.screens.LoadingScreen"/>
 </qualifiedTypeNameHistroy>

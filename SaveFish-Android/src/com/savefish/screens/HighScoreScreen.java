@@ -63,4 +63,10 @@ public class HighScoreScreen implements Screen {
 
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return HighScoreScreen.class.getName();
+	}
+
 }

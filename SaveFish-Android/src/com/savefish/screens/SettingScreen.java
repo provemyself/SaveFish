@@ -63,4 +63,10 @@ public class SettingScreen implements Screen {
 
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return SettingScreen.class.getName();
+	}
+
 }

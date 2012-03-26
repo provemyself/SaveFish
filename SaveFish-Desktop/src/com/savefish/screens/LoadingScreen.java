@@ -31,14 +31,25 @@ public class LoadingScreen implements Screen {
 		this.loadingTexture = new Texture(
 				Gdx.files.internal("textures/loading.png"));
 		this.loadingImage = new Image(loadingTexture);
+		
 	}
 
 	private Stage stage = null;
 	private Texture loadingTexture = null;
 	private Image loadingImage = null;
 
+	private void initStage() {
+		this.stage = new Stage(Gdx.graphics.getWidth(),
+				Gdx.graphics.getHeight(), true);
+		this.stage.addActor(loadingImage);
+	}
+
 	@Override
 	public void render(float delta) {
+		Gdx.gl10.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		stage.act(delta);
+		stage.draw();
+
 		GreenLogger.getInstance().logp(Level.INFO,
 				LoadingScreen.class.getName(), "render", "render called!",
 				delta);
@@ -49,15 +60,13 @@ public class LoadingScreen implements Screen {
 					"Loading complete!");
 
 			Assets.getInstance().setComplete(true);
-			this.game.setScreen(MainMenuScreen.getInstance(game));
+			this.game.setScreen(HighScoreScreen.getInstance(game));
 		} else {
 			GreenLogger.getInstance().logp(Level.INFO,
 					LoadingScreen.class.getName(), "render",
 					Assets.getInstance().getProgress() + " loaded!");
 		}
-		Gdx.gl10.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		stage.act(Gdx.graphics.getDeltaTime());
-		stage.draw();
+
 	}
 
 	@Override
@@ -71,10 +80,8 @@ public class LoadingScreen implements Screen {
 	public void show() {
 		GreenLogger.getInstance().logp(Level.INFO,
 				LoadingScreen.class.getName(), "show", "called!");
-
-		this.stage = new Stage(Gdx.graphics.getWidth(),
-				Gdx.graphics.getHeight(), true);
-		this.stage.addActor(loadingImage);
+		
+		this.initStage();
 	}
 
 	@Override
@@ -99,6 +106,9 @@ public class LoadingScreen implements Screen {
 	public void dispose() {
 		GreenLogger.getInstance().logp(Level.INFO,
 				LoadingScreen.class.getName(), "dispose", "called!");
+		if(this.stage != null)
+			this.stage.dispose();
+		game = null;
 	}
 
 	@Override

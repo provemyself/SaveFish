@@ -63,4 +63,10 @@ public class WinScreen implements Screen {
 
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return WinScreen.class.getName();
+	}
+
 }

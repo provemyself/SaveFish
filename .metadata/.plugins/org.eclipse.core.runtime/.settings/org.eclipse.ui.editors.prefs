@@ -23,6 +23,7 @@ occurrenceIndicationColor=0,0,0
 overviewRuler_migration=migrated_3.1
 printMarginColor=43,145,175
 pydevOccurrenceIndicationColor=0,0,0
+quickdiff.quickDiff=false
 searchResultIndicationColor=0,96,128
 secondaryIPColor=32,32,48
 writeOccurrenceIndicationColor=0,0,0
