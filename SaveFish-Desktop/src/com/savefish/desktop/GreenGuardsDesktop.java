@@ -11,6 +11,6 @@ public class GreenGuardsDesktop {
 	public static void main(String[] argv) {
 		saveFish = new LwjglApplication(new ApplicationManager(),
 				Constant.game.GAME_NAME, 512,
-				512, false);
+				320, false);
 	}
 }

@@ -50,6 +50,10 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void resize(int width, int height) {
+
+		GreenLogger.getInstance().logp(Level.WARNING,
+				GameScreen.class.getName(), "resize", "called!");
+
 		this.backGroundStage.setViewport(width, height, true);
 		this.middleStage.setViewport(width, height, true);
 		this.foreGroundStage.setViewport(width, height, true);
@@ -99,16 +103,9 @@ public class GameScreen implements Screen {
 		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
 				"initStages", "called!");
 
-		this.backGroundStage = new BackgroundStage(Gdx.graphics.getWidth(),
-				Gdx.graphics.getHeight(), true);
-		try {
-			this.middleStage = new MiddleStage(Gdx.graphics.getWidth(),
-					Gdx.graphics.getHeight(), true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		this.foreGroundStage = new ForegroundStage();
+		this.backGroundStage = BackgroundStage.getInstance();
+		this.middleStage = MiddleStage.getInstance();
+		this.foreGroundStage = ForegroundStage.getInstance();
 	}
 
 }
