@@ -11,7 +11,8 @@ public final class Constant {
 		public static final float TIME_STEP = 2.0f / 60.0f;// 模拟现实世界的频率
 		public static final int ITERATION = 10;// 迭代次数
 		public static final int CAMERA_VIEW_WIDTH = screen.SCREEN_WIDTH / RATE;// 相机视点宽度
-		public static final int CAMERA_VIEW_HEIGHT = screen.SCREEN_HEIGHT / RATE;// 相机视点高度
+		public static final int CAMERA_VIEW_HEIGHT = screen.SCREEN_HEIGHT
+				/ RATE;// 相机视点高度
 		public static final int CAMERA_X = CAMERA_VIEW_WIDTH / 2;
 		public static final int CAMERA_Y = CAMERA_VIEW_HEIGHT / 2 - 1;
 		public static final int CAMERA_Z = 10;
@@ -67,6 +68,14 @@ public final class Constant {
 		public static final String MENU_128_64 = "menu_128_64.png";
 		public static final String NEXT_128_64 = "next_128_64.png";
 		public static final String EXIT = "exit.png";
+
+		// 游戏场景的背景图片
+		public static final String BACKGROUND_ONE = "background_one.png";
+		public static final String BACKGROUND_TWO = "background_two.png";
+		public static final String BACKGOUND_THREE = "background_three.png";
+		public static final String BACKGROUND_FOUR = "background_four.png";
+		public static final String BACKGROUND_FIVE = "background_five.png";
+		public static final String BACKGROUND_SIX = "background_six.png";
 
 		// 地图:第一大关
 		public static final String PREVENT_FIRST = "prevent_first.json";

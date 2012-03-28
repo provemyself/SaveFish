@@ -40,7 +40,7 @@ public class ApplicationManager extends Game {
 	public void dispose() {
 		GreenLogger.getInstance().logp(Level.INFO,
 				ApplicationManager.class.getName(), "dispose", "called!");
-		
+
 		disposeScreens();
 		Assets.getInstance().dispose();
 		GreenGuardsDesktop.saveFish.exit();

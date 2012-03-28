@@ -94,8 +94,8 @@ public class Assets {
 	public void clear() {
 		this.assetManager.clear();
 	}
-	
-	public void dispose(){
+
+	public void dispose() {
 		this.assetManager.dispose();
 	}
 
@@ -118,6 +118,8 @@ public class Assets {
 				+ Constant.asset.NEXT_128_64, Texture.class);
 		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
 				+ Constant.asset.EXIT, Texture.class);
+		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
+				+ Constant.asset.BACKGROUND_ONE, Texture.class);
 	}
 
 	private void loadBitmapFont() {

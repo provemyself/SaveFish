@@ -30,3 +30,10 @@
 1332788046670	Delete elements
 1332788056729	Delete elements
 1332788127008	Delete element
+1332912655852	Rename type 'GameStage'
+1332912685828	Rename type 'ParticleStage'
+1332915274527	Rename field 'particle'
+1332915289425	Rename field 'gameStage'
+1332916514164	Rename field 'gs'
+1332918569693	Rename type 'IEventAggregator'
+1332934160689	Delete elements

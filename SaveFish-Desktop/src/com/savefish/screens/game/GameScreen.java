@@ -4,24 +4,26 @@ import java.util.logging.Level;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.GL10;
 import com.savefish.util.logger.GreenLogger;
 
 public class GameScreen implements Screen {
 
-	private static GameScreen gs = null;
+	private static GameScreen gameScreen = null;
 
 	public static GameScreen getInstance(Game game) {
-		if (null == gs) {
+		if (null == gameScreen) {
 			try {
-				gs = new GameScreen(game);
+				gameScreen = new GameScreen(game);
 			} catch (Exception e) {
 				GreenLogger.getInstance().logp(Level.WARNING,
 						GameScreen.class.getName(), "getInstance",
 						e.toString(), e);
 			}
 		}
-		return gs;
+		return gameScreen;
 	}
 
 	private GameScreen(Game game) throws Exception {
@@ -32,19 +34,25 @@ public class GameScreen implements Screen {
 		this.initStages();
 	}
 
-	@SuppressWarnings("unused")
-	private ParticleStage particle;
-	private GameStage gameStage;
-
 	@Override
 	public void render(float delta) {
 		GreenLogger.getInstance().log(Level.INFO, "render world!");
-		this.gameStage.render(delta);
+
+		GL10 gl = Gdx.graphics.getGL10();
+		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		this.backGroundStage.render(delta);
+		this.middleStage.render(delta, gl);
+		this.foreGroundStage.render();
+
+		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
+				middleStage, foreGroundStage));
 	}
 
 	@Override
 	public void resize(int width, int height) {
-		this.gameStage.setViewport(width, height, true);
+		this.backGroundStage.setViewport(width, height, true);
+		this.middleStage.setViewport(width, height, true);
+		this.foreGroundStage.setViewport(width, height, true);
 	}
 
 	@Override
@@ -65,7 +73,7 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void dispose() {
-		this.gameStage.dispose();
+		this.middleStage.dispose();
 	}
 
 	@Override
@@ -83,17 +91,24 @@ public class GameScreen implements Screen {
 		this.game = game;
 	}
 
+	private BackgroundStage backGroundStage;
+	private MiddleStage middleStage;
+	private ForegroundStage foreGroundStage;
+
 	private void initStages() {
 		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
 				"initStages", "called!");
 
-		this.particle = new ParticleStage();
+		this.backGroundStage = new BackgroundStage(Gdx.graphics.getWidth(),
+				Gdx.graphics.getHeight(), true);
 		try {
-			this.gameStage = new GameStage(Gdx.graphics.getWidth(),
+			this.middleStage = new MiddleStage(Gdx.graphics.getWidth(),
 					Gdx.graphics.getHeight(), true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
+		this.foreGroundStage = new ForegroundStage();
 	}
 
 }
