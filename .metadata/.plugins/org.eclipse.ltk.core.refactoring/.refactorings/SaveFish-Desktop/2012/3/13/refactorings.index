@@ -38,3 +38,6 @@
 1332918569693	Rename type 'IEventAggregator'
 1332934160689	Delete elements
 1332937969271	Delete element
+1333008521666	Rename type 'ShareScore'
+1333008613033	Rename type 'WeiboEnum'
+1333008699604	Move compilation unit

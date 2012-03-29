@@ -13,7 +13,7 @@ import com.savefish.util.logger.GreenLoggerManager;
 public class ApplicationManager extends Game {
 
 	public ApplicationManager() {
-		GreenLoggerManager.filterLogByLevel(Level.WARNING);
+		GreenLoggerManager.filterLogByLevel(Level.INFO);
 	}
 
 	@Override

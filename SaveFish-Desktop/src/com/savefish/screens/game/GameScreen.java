@@ -42,7 +42,7 @@ public class GameScreen implements Screen {
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		this.backGroundStage.render(delta);
 		this.middleStage.render(delta, gl);
-		this.foreGroundStage.render();
+		this.foreGroundStage.render(delta);
 
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage));
@@ -77,7 +77,9 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void dispose() {
+		backGroundStage.dispose();
 		this.middleStage.dispose();
+		this.foreGroundStage.dispose();
 	}
 
 	@Override

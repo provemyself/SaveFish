@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=SaveFish-Desktop/libs\/gdx.jar&lt;com.badlogic.gdx.scenes.scene2d(Stage.class[Stage" modifiers="33" timestamp="1330607870000"/>
 <typeInfo handle="=SaveFish-Desktop/libs\/gdx.jar&lt;com.badlogic.gdx(Screen.class[Screen" modifiers="1537" timestamp="1330607870000"/>
 <typeInfo handle="=SaveFish-Android/libs\/gdx.jar&lt;com.badlogic.gdx(Game.class[Game" modifiers="1057" timestamp="1330607870000"/>
 <typeInfo handle="=SaveFish-Desktop/libs\/gdx.jar&lt;com.badlogic.gdx.scenes.scene2d.ui(Image.class[Image" modifiers="33" timestamp="1330607870000"/>
+<typeInfo handle="=SaveFish-Desktop/libs\/gdx.jar&lt;com.badlogic.gdx.scenes.scene2d(Stage.class[Stage" modifiers="33" timestamp="1330607870000"/>
+<typeInfo handle="=SaveFish-Desktop/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;javax.swing.event(ListDataListener.class[ListDataListener" modifiers="1537" timestamp="1329979723000"/>
 </typeInfoHistroy>

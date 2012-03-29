@@ -1,8 +1,0 @@
-package com.savefish.service;
-
-public class GreenLoggerManager {
-
-	public static void filterLogByLevel(int level){
-		GreenLogger.getInstance().setLevel(level);
-	}
-}
