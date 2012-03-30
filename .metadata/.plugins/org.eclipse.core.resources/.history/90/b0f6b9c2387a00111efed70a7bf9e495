@@ -1,0 +1,79 @@
+package com.savefish.screens.game;
+
+import java.util.logging.Level;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.savefish.assets.Assets;
+import com.savefish.constant.Constant;
+import com.savefish.util.logger.GreenLogger;
+
+public class BackgroundStage extends Stage {
+
+	private static BackgroundStage backgroundStage = null;
+
+	public static BackgroundStage getInstance() {
+		if (null == backgroundStage)
+			backgroundStage = new BackgroundStage();
+		return backgroundStage;
+	}
+
+	private BackgroundStage() {
+		super(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
+		this.setBackground(Constant.asset.BACKGROUND_ONE);
+	}
+
+	public void render(float delta) {
+		this.act(delta);
+		this.draw();
+	}
+
+	public void dispose() {
+		this.backgroundImage = null;
+		backgroundStage = null;
+	}
+
+	private Image backgroundImage = null;
+
+	public void setBackground(String fileName) {
+		this.backgroundImage = new Image(Assets.getInstance().getTexture(
+				fileName));
+		this.resizeActors(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		this.clear();
+		this.addActor(backgroundImage);
+
+	}
+
+	public void resizeActors(float width, float height) {
+		this.backgroundImage.width = width;
+		this.backgroundImage.height = height;
+	}
+
+	@Override
+	public boolean touchDown(int x, int y, int pointer, int button) {
+		GreenLogger.getInstance().logp(Level.INFO,
+				BackgroundStage.class.getName(), "touchDown", "called");
+
+		return super.touchDown(x, y, pointer, button);
+	}
+
+	@Override
+	public boolean touchUp(int x, int y, int pointer, int button) {
+		GreenLogger.getInstance().logp(Level.INFO,
+				BackgroundStage.class.getName(), "touchUp", "called");
+
+		return super.touchUp(x, y, pointer, button);
+	}
+
+	@Override
+	public boolean touchDragged(int x, int y, int pointer) {
+		return super.touchDragged(x, y, pointer);
+	}
+
+	@Override
+	public boolean touchMoved(int x, int y) {
+		return super.touchMoved(x, y);
+	}
+
+}

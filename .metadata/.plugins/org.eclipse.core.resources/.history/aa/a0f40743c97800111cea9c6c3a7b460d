@@ -1,0 +1,5 @@
+package com.savefish.event;
+
+public interface Listener<T> extends Listenerable {
+	public void handle(T message);
+}

@@ -1,0 +1,42 @@
+package com.savefish.physics.collision;
+
+/********************************
+ * Description: 该类是碰撞侦听器，负责
+ *              处理碰撞逻辑
+ * Author     : 王志伟
+ * Date       : 2012/03/09
+ *******************************/
+
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Contact;
+import com.badlogic.gdx.physics.box2d.ContactImpulse;
+import com.badlogic.gdx.physics.box2d.ContactListener;
+import com.badlogic.gdx.physics.box2d.Manifold;
+
+@SuppressWarnings("unused")
+public class CollisionListener implements ContactListener {
+
+	@Override
+	public void beginContact(Contact contact) {
+
+		Body bodyA = contact.getFixtureA().getBody();
+		Body bodyB = contact.getFixtureB().getBody();
+	}
+
+	@Override
+	public void endContact(Contact contact) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void preSolve(Contact contact, Manifold oldManifold) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void postSolve(Contact contact, ContactImpulse impulse) {
+		// TODO Auto-generated method stub
+	}
+
+}

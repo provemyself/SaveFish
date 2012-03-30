@@ -1,0 +1,21 @@
+package com.savefish.util.logger;
+
+import java.util.logging.Logger;
+
+public class GreenLogger {
+	
+	private Logger logger = null;
+	
+	private GreenLogger(){
+		logger = Logger.getAnonymousLogger();
+	}
+	
+	private static GreenLogger gl = null;
+	
+	public static GreenLogger getInstance(){
+		if(null == gl)
+			gl = new GreenLogger();
+		return gl;
+	}
+
+}

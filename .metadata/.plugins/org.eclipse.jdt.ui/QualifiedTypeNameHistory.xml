@@ -44,7 +44,6 @@
 <fullyQualifiedTypeName name="com.savefish.screens.game.GameScreen"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Image"/>
 <fullyQualifiedTypeName name="com.savefish.assets.Assets"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
 <fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
 <fullyQualifiedTypeName name="com.savefish.screens.LoadingScreen"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.InputMultiplexer"/>
@@ -54,4 +53,11 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.physics.box2d.Body"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
+<fullyQualifiedTypeName name="java.awt.DisplayMode"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant.screen"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant.game"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.backends.lwjgl.LwjglApplication"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.backends.android.AndroidApplication"/>
 </qualifiedTypeNameHistroy>

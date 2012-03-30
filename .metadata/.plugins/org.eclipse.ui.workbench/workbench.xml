@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="33" version="2.0">
+<workbench progressCount="30" version="2.0">
 <workbenchAdvisor/>
 <window height="746" maximized="true" width="1016" x="302" y="112">
 <fastViewData fastViewLocation="1024"/>
@@ -21,7 +21,7 @@
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="68" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -74,35 +74,10 @@
 <part id="34"/>
 <part id="35"/>
 <part id="36"/>
-<part id="37"/>
-<part id="38"/>
-<part id="39"/>
-<part id="40"/>
-<part id="41"/>
-<part id="42"/>
-<part id="43"/>
-<part id="44"/>
-<part id="45"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HighScoreScreen.java" partName="HighScoreScreen.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/HighScoreScreen.java" title="HighScoreScreen.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/HighScoreScreen.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/HighScoreScreen.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1897" selectionTopPixel="934"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HelpScreen.java" partName="HelpScreen.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/HelpScreen.java" title="HelpScreen.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/HelpScreen.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/HelpScreen.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="586" selectionTopPixel="161"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FailScreen.java" partName="FailScreen.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/FailScreen.java" title="FailScreen.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/FailScreen.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/FailScreen.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="239" selectionTopPixel="1457"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AboutScreen.java" partName="AboutScreen.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/AboutScreen.java" title="AboutScreen.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/AboutScreen.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/AboutScreen.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="331" selectionTopPixel="226"/>
-</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadingScreen.java" partName="LoadingScreen.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/LoadingScreen.java" title="LoadingScreen.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/LoadingScreen.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/LoadingScreen.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="290" selectionTopPixel="205"/>
@@ -115,17 +90,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/SettingScreen.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="497" selectionTopPixel="103"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameScreen.java" partName="GameScreen.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/game/GameScreen.java" title="GameScreen.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/game/GameScreen.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/game/GameScreen.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1784" selectionTopPixel="1071"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ForegroundStage.java" partName="ForegroundStage.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/game/ForegroundStage.java" title="ForegroundStage.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/game/ForegroundStage.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/game/ForegroundStage.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1384" selectionTopPixel="489"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationManager.java" partName="ApplicationManager.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/service/ApplicationManager.java" title="ApplicationManager.java" tooltip="SaveFish-Desktop/src/com/savefish/service/ApplicationManager.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/service/ApplicationManager.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="480" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationManager.java" partName="ApplicationManager.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/desktop/ApplicationManager.java" title="ApplicationManager.java" tooltip="SaveFish-Desktop/src/com/savefish/desktop/ApplicationManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/desktop/ApplicationManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1143" selectionTopPixel="675"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GreenLogger.java" partName="GreenLogger.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/util/logger/GreenLogger.java" title="GreenLogger.java" tooltip="SaveFish-Desktop/src/com/savefish/util/logger/GreenLogger.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/util/logger/GreenLogger.java"/>
@@ -151,9 +118,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/constant/Constant.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3688" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaveFishActivity.java" partName="SaveFishActivity.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/src/com/savefish/android/SaveFishActivity.java" title="SaveFishActivity.java" tooltip="SaveFish-Android/src/com/savefish/android/SaveFishActivity.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaveFishActivity.java" partName="SaveFishActivity.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/src/com/savefish/android/SaveFishActivity.java" title="SaveFishActivity.java" tooltip="SaveFish-Android/src/com/savefish/android/SaveFishActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/src/com/savefish/android/SaveFishActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="429" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="250" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationManager.java" partName="ApplicationManager.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/src/com/savefish/service/ApplicationManager.java" title="ApplicationManager.java" tooltip="SaveFish-Android/src/com/savefish/service/ApplicationManager.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/src/com/savefish/service/ApplicationManager.java"/>
@@ -167,21 +134,13 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/util/WorldRenderHelper.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GreenGuardsDesktop.java" partName="GreenGuardsDesktop.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/desktop/GreenGuardsDesktop.java" title="GreenGuardsDesktop.java" tooltip="SaveFish-Desktop/src/com/savefish/desktop/GreenGuardsDesktop.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/desktop/GreenGuardsDesktop.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="219" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InitializedScreen.java" partName="InitializedScreen.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/service/InitializedScreen.java" title="InitializedScreen.java" tooltip="SaveFish-Desktop/src/com/savefish/service/InitializedScreen.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/service/InitializedScreen.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="92" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MiddleStage.java" partName="MiddleStage.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/game/MiddleStage.java" title="MiddleStage.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/game/MiddleStage.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/game/MiddleStage.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2933" selectionTopPixel="1649"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DesktopLauncher.java" partName="DesktopLauncher.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/desktop/DesktopLauncher.java" title="DesktopLauncher.java" tooltip="SaveFish-Desktop/src/com/savefish/desktop/DesktopLauncher.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/desktop/DesktopLauncher.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="159" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.ui.DefaultTextEditor" name="prevent_first.json" partName="prevent_first.json" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/assets/maps/prevent_first.json" title="prevent_first.json" tooltip="SaveFish-Android/assets/maps/prevent_first.json" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/assets/maps/prevent_first.json"/>
-<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="970" selectionTopPixel="410"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="51966" selectionTopPixel="32866"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BackgroundStage.java" partName="BackgroundStage.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/screens/game/BackgroundStage.java" title="BackgroundStage.java" tooltip="SaveFish-Desktop/src/com/savefish/screens/game/BackgroundStage.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/game/BackgroundStage.java"/>
@@ -194,22 +153,6 @@
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GameState.java" partName="GameState.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/logic/GameState.java" title="GameState.java" tooltip="SaveFish-Desktop/src/com/savefish/logic/GameState.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/logic/GameState.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="58" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Particle.java" partName="Particle.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/service/Particle.java" title="Particle.java" tooltip="SaveFish-Desktop/src/com/savefish/service/Particle.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/service/Particle.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1164" selectionTopPixel="480"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Share.java" partName="Share.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/service/Share.java" title="Share.java" tooltip="SaveFish-Desktop/src/com/savefish/service/Share.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/service/Share.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="165" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sharable.java" partName="Sharable.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/service/Sharable.java" title="Sharable.java" tooltip="SaveFish-Desktop/src/com/savefish/service/Sharable.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/service/Sharable.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="98" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WeiboType.java" partName="WeiboType.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/service/WeiboType.java" title="WeiboType.java" tooltip="SaveFish-Desktop/src/com/savefish/service/WeiboType.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/service/WeiboType.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="79" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CollisionFilter.java" partName="CollisionFilter.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Desktop/src/com/savefish/physics/collision/CollisionFilter.java" title="CollisionFilter.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/collision/CollisionFilter.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/physics/collision/CollisionFilter.java"/>
@@ -263,18 +206,25 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/screens/game/GameRender.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="62" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Game.java" partName="Game.java" path="/media/学习与娱乐/Ubuntu-backup/EclipseJeeWorkspace/Learn_Android/src/com/fivezeroone/application/Game.java" title="Game.java" tooltip="Learn_Android/src/com/fivezeroone/application/Game.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Learn_Android/src/com/fivezeroone/application/Game.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="170" selectionTopPixel="0"/>
-</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Learn_AndroidActivity.java" partName="Learn_AndroidActivity.java" path="/media/学习与娱乐/Ubuntu-backup/EclipseJeeWorkspace/Learn_Android/src/com/fivezeroone/application/Learn_AndroidActivity.java" title="Learn_AndroidActivity.java" tooltip="Learn_Android/src/com/fivezeroone/application/Learn_AndroidActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Learn_Android/src/com/fivezeroone/application/Learn_AndroidActivity.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Assets.java" partName="Assets.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Core/src/com/savefish/assets/Assets.java" title="Assets.java" tooltip="SaveFish-Core/src/com/savefish/assets/Assets.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Core/src/com/savefish/assets/Assets.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="258" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationManager.java" partName="ApplicationManager.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/src/com/savefish/android/ApplicationManager.java" title="ApplicationManager.java" tooltip="SaveFish-Android/src/com/savefish/android/ApplicationManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/src/com/savefish/android/ApplicationManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="470" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="SaveFish-Android Manifest" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/AndroidManifest.xml" title="SaveFish-Android Manifest" tooltip="SaveFish-Android/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/AndroidManifest.xml"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy">
-<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" input="=SaveFish-Desktop/libs\/gdx.jar&lt;com.badlogic.gdx.scenes.scene2d(Stage.class[Stage" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" selection="=SaveFish-Desktop/libs\/gdx.jar&lt;com.badlogic.gdx.scenes.scene2d(Stage.class[Stage" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
+<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" input="=SaveFish-Android/libs\/gdx-backend-android.jar&lt;com.badlogic.gdx.backends.android(AndroidApplication.class[AndroidApplication" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" selection="=SaveFish-Android/libs\/gdx-backend-android.jar&lt;com.badlogic.gdx.backends.android(AndroidApplication.class[AndroidApplication" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
 </view>
 <view id="com.android.ide.eclipse.ddms.views.ThreadView" partName="Threads">
 <viewState/>
@@ -304,7 +254,9 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (1 item)"/>
+<category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="310" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -352,7 +304,9 @@
 <view id="com.android.ide.eclipse.ddms.views.AllocTrackerView" partName="Allocation Tracker">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
 <view id="com.android.ide.eclipse.ddms.views.DeviceView" partName="Devices">
 <viewState/>
 </view>
@@ -382,7 +336,9 @@
 <view id="com.android.ide.eclipse.ddms.views.EmulatorControlView" partName="Emulator Control">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
 <perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
@@ -678,10 +634,11 @@
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.22361624" ratioLeft="303" ratioRight="1052" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7387247" ratioLeft="475" ratioRight="168" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.26273063" ratioLeft="356" ratioRight="999" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.55365473" ratioLeft="356" ratioRight="287" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -833,170 +790,160 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/logic/GameState.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/logic/GameLevel.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/logic/CurrentGameLevel.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/screens/game/MiddleStage.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/service/ApplicationManager.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/SaveFish-Android/assets/maps/prevent_first.json"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/screens/game/GameRender.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/assets/Assets.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/constant/Constant.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/screens/game/BackgroundStage.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/screens/game/ForegroundStage.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/screens/game/GameScreen.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Learn_Android/src/com/fivezeroone/application/Game.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Learn_Android/src/com/fivezeroone/application/Learn_AndroidActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/desktop/DesktopLauncher.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Desktop/src/com/savefish/desktop/ApplicationManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Core/src/com/savefish/desktop/ApplicationManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Android/src/com/savefish/android/SaveFishActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Android/src/com/savefish/android/ApplicationManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/SaveFish-Android/AndroidManifest.xml"/>
 </editors>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="348" y="0"/>
 </item>
-<item historyLabel="GameState.java" index="0">
-<position info="not_deleted" x="58" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="413" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="348" y="0"/>
 </item>
-<item historyLabel="CurrentGameLevel.java" index="2">
-<position info="not_deleted" x="61" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="413" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="348" y="0"/>
 </item>
-<item historyLabel="GameState.java" index="0">
-<position info="not_deleted" x="58" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="413" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="348" y="0"/>
 </item>
-<item historyLabel="CurrentGameLevel.java" index="2">
-<position info="not_deleted" x="61" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="413" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="395" y="0"/>
 </item>
-<item historyLabel="GameState.java" index="0">
-<position info="not_deleted" x="58" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="413" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="395" y="0"/>
 </item>
-<item historyLabel="CurrentGameLevel.java" index="2">
-<position info="not_deleted" x="64" y="0"/>
+<item historyLabel="ApplicationManager.java" index="2">
+<position info="not_deleted" x="496" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="327" y="0"/>
 </item>
-<item historyLabel="CurrentGameLevel.java" index="2">
-<position info="not_deleted" x="64" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="391" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="324" y="0"/>
 </item>
-<item historyLabel="CurrentGameLevel.java" index="2">
-<position info="not_deleted" x="64" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="391" y="0"/>
 </item>
-<item historyLabel="GameState.java" index="0">
-<position info="not_deleted" x="58" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="347" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="288" y="0"/>
 </item>
-<item historyLabel="CurrentGameLevel.java" index="2">
-<position info="not_deleted" x="64" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="247" y="0"/>
 </item>
-<item historyLabel="GameLevel.java" index="1">
-<position info="not_deleted" x="54" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="288" y="0"/>
 </item>
-<item historyLabel="GameState.java" index="0">
-<position info="not_deleted" x="58" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="247" y="0"/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="1436" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="288" y="0"/>
 </item>
 <item historyLabel="ApplicationManager.java" index="4">
-<position info="not_deleted" x="480" y="0"/>
-</item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="460" y="0"/>
-</item>
-<item historyLabel="MiddleStage.java" index="3">
 <position/>
 </item>
-<item historyLabel="prevent_first.json" index="5">
-<position info="not_deleted" x="970" y="15"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="247" y="0"/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="659" y="0"/>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="339" y="0"/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="2846" y="0"/>
-</item>
-<item historyLabel="MiddleStage.java" index="3">
+<item historyLabel="SaveFishActivity.java" index="3">
 <position/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
+<item historyLabel="SaveFishActivity.java" index="3">
 <position/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
+<item historyLabel="SaveFishActivity.java" index="3">
 <position/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
+<item historyLabel="ApplicationManager.java" index="4">
 <position/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="2750" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="1143" y="0"/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
+<item historyLabel="ApplicationManager.java" index="4">
+<position info="not_deleted" x="1107" y="0"/>
+</item>
+<item historyLabel="SaveFishActivity.java" index="3">
 <position/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
+<item historyLabel="ApplicationManager.java" index="4">
 <position/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="2795" y="0"/>
-</item>
-<item historyLabel="MiddleStage.java" index="3">
+<item historyLabel="SaveFishActivity.java" index="3">
 <position/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="2213" y="0"/>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="179" y="0"/>
 </item>
-<item historyLabel="GameRender.java" index="6">
-<position info="not_deleted" x="62" y="0"/>
+<item historyLabel="ApplicationManager.java" index="1">
+<position info="not_deleted" x="1143" y="0"/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="2213" y="0"/>
+<item historyLabel="DesktopLauncher.java" index="0">
+<position info="not_deleted" x="159" y="0"/>
 </item>
-<item historyLabel="Assets.java" index="7">
-<position info="not_deleted" x="771" y="0"/>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="179" y="0"/>
 </item>
-<item historyLabel="Constant.java" index="8">
-<position info="not_deleted" x="3696" y="0"/>
+<item historyLabel="SaveFish-Android Manifest" index="5"/>
+<item historyLabel="ApplicationManager.java" index="4">
+<position info="not_deleted" x="838" y="0"/>
 </item>
-<item historyLabel="BackgroundStage.java" index="9">
-<position info="not_deleted" x="1170" y="0"/>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="385" y="0"/>
 </item>
-<item historyLabel="ForegroundStage.java" index="10">
-<position info="not_deleted" x="1384" y="0"/>
+<item historyLabel="ApplicationManager.java" index="4">
+<position/>
 </item>
-<item historyLabel="GameRender.java" index="6">
-<position info="not_deleted" x="62" y="0"/>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="158" y="18"/>
 </item>
-<item historyLabel="GameScreen.java" index="11">
-<position info="not_deleted" x="1784" y="0"/>
+<item historyLabel="ApplicationManager.java" index="4">
+<position info="not_deleted" x="1243" y="0"/>
 </item>
-<item historyLabel="MiddleStage.java" index="3">
-<position info="not_deleted" x="2237" y="0"/>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="365" y="0"/>
 </item>
-<item historyLabel="Game.java" index="12">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="ApplicationManager.java" index="4">
+<position/>
 </item>
-<item historyLabel="Learn_AndroidActivity.java" index="13">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="ApplicationManager.java" index="4">
+<position info="not_deleted" x="668" y="0"/>
 </item>
-<item active="true" historyLabel="Game.java" index="12">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="241" y="0"/>
+</item>
+<item historyLabel="ApplicationManager.java" index="4">
+<position info="not_deleted" x="470" y="0"/>
+</item>
+<item active="true" historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="241" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -1016,6 +963,18 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="SaveFish-Android/AndroidManifest.xml">
+<persistable path="/SaveFish-Android/AndroidManifest.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationManager.java" tooltip="SaveFish-Core/src/com/savefish/desktop/ApplicationManager.java">
+<persistable path="/SaveFish-Core/src/com/savefish/desktop/ApplicationManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationManager.java" tooltip="SaveFish-Android/src/com/savefish/android/ApplicationManager.java">
+<persistable path="/SaveFish-Android/src/com/savefish/android/ApplicationManager.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Assets.java" tooltip="SaveFish-Core/src/com/savefish/assets/Assets.java">
+<persistable path="/SaveFish-Core/src/com/savefish/assets/Assets.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Learn_AndroidActivity.java" tooltip="Learn_Android/src/com/fivezeroone/application/Learn_AndroidActivity.java">
 <persistable path="/Learn_Android/src/com/fivezeroone/application/Learn_AndroidActivity.java"/>
 </file>
@@ -1048,18 +1007,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GreenEdgeShape.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/resolve/GreenEdgeShape.java">
 <persistable path="/SaveFish-Desktop/src/com/savefish/physics/resolve/GreenEdgeShape.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GreenBody.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/resolve/GreenBody.java">
-<persistable path="/SaveFish-Desktop/src/com/savefish/physics/resolve/GreenBody.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CollisionListener.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/collision/CollisionListener.java">
-<persistable path="/SaveFish-Desktop/src/com/savefish/physics/collision/CollisionListener.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CollisionFilterData.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/collision/CollisionFilterData.java">
-<persistable path="/SaveFish-Desktop/src/com/savefish/physics/collision/CollisionFilterData.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CollisionFilter.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/collision/CollisionFilter.java">
-<persistable path="/SaveFish-Desktop/src/com/savefish/physics/collision/CollisionFilter.java"/>
 </file>
 </mruList>
 </workbench>

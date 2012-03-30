@@ -1,0 +1,35 @@
+package com.savefish.screens.game;
+
+import java.util.logging.Level;
+
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.savefish.assets.Assets;
+import com.savefish.constant.Constant;
+import com.savefish.util.logger.GreenLogger;
+
+public class BackgroundStage extends Stage {
+
+	public BackgroundStage(float width, float height, boolean stretch) {
+		super(width, height, stretch);
+		this.initBackgroundImage();
+		this.addActor(backgroundImage);
+	}
+
+	private Image backgroundImage = null;
+
+	private void initBackgroundImage() {
+		if (null == Assets.getInstance().getTexture("back.png"))
+			GreenLogger.getInstance().logp(Level.INFO,
+					BackgroundStage.class.getName(), "initBackgroundImage",
+					"null");
+		this.backgroundImage = new Image(Assets.getInstance().getTexture(
+				Constant.asset.BACKGROUND));
+
+	}
+
+	public void render(float delta) {
+		this.act(delta);
+		this.draw();
+	}
+}

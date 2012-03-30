@@ -1,0 +1,5 @@
+package com.savefish.event;
+
+public class ConcreteListener implements Listener<T> {
+
+}

@@ -1,0 +1,10 @@
+package com.savefish.screens.game;
+
+import com.badlogic.gdx.scenes.scene2d.Stage;
+
+public interface SingletonStage {
+
+	public static Stage getInstance();
+
+	public Stage getInstance(float width, float height, boolean strech);
+}

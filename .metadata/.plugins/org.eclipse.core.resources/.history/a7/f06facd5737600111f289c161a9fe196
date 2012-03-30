@@ -1,0 +1,5 @@
+package com.savefish.util.logger;
+
+public class GreenLoggerManager {
+
+}

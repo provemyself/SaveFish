@@ -1,0 +1,13 @@
+package com.savefish.android;
+
+import com.badlogic.gdx.Game;
+
+public class ApplicationManager extends Game{
+
+	@Override
+	public void create() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

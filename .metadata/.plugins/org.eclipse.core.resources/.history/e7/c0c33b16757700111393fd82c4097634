@@ -1,0 +1,147 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000338ce, pid=3866, tid=2340854640
+#
+# JRE version: 6.0_23-b23
+# Java VM: OpenJDK Server VM (20.0-b11 mixed mode linux-x86 )
+# Derivative: IcedTea6 1.11pre
+# Distribution: Ubuntu 11.10, package 6b23~pre11-0ubuntu1.11.10.2
+# Problematic frame:
+# C  0x000338ce
+[error occurred during error reporting (printing problematic frame), id 0xb]
+
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-6/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x8bafd400):  JavaThread "LWJGL Application" [_thread_in_native, id=3894, stack(0x8b819000,0x8b86a000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x000338ce
+
+Registers:
+EAX=0x8b868d08, EBX=0x0081eff4, ECX=0x8ba5a468, EDX=0x8bafd520
+ESP=0x8b868cec, EBP=0x8b868d28, ESI=0x8bafd520, EDI=0x8bafd400
+EIP=0x000338ce, EFLAGS=0x00210202, CR2=0x000338ce
+
+Top of Stack: (sp=0x8b868cec)
+0x8b868cec:   008057b0 8bafd520 8b868d08 8bafd400
+0x8b868cfc:   011b1f78 0167dff4 0167dff4 00010004
+0x8b868d0c:   011eb5d0 8b868d24 8bafd400 aa4024d0
+0x8b868d1c:   001bf4c0 00000019 8b868d40 8b868d58
+0x8b868d2c:   b47f5ede 8bafd520 8b868d40 8b868d44
+0x8b868d3c:   b47faca4 8cc62390 8b868d48 aa4024d0
+0x8b868d4c:   8cc64938 3dbd2f6c 00000001 aa4024d0
+0x8b868d5c:   b4819a30 05000002 00000000 0000003c 
+
+Instructions: (pc=0x000338ce)
+0x000338ae:   
+[error occurred during error reporting (printing registers, top of stack, instructions near pc), id 0xb]
+
+Register to memory mapping:
+
+EAX=0x8b868d08 is pointing into the stack for thread: 0x8bafd400
+EBX=
+[error occurred during error reporting (printing register info), id 0xb]
+
+Stack: [0x8b819000,0x8b86a000],  sp=0x8b868cec,  free space=319k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x000338ce
+[error occurred during error reporting (printing native stack), id 0xb]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J  org.lwjgl.opengl.LinuxDisplay.nUnlockAWT()V
+J  org.lwjgl.opengl.Display.update()V
+J  com.badlogic.gdx.backends.lwjgl.LwjglApplication.mainLoop()V
+j  com.badlogic.gdx.backends.lwjgl.LwjglApplication$1.run()V+27
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x8af4e800 JavaThread "DestroyJavaVM" [_thread_blocked, id=3873, stack(0xb776f000,0xb77c0000)]
+=>0x8bafd400 JavaThread "LWJGL Application" [_thread_in_native, id=3894, stack(0x8b819000,0x8b86a000)]
+  0x8bae8c00 JavaThread "AWT-XAWT" daemon [_thread_blocked, id=3885, stack(0x8b86a000,0x8b8bb000)]
+  0x8ba71400 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3884, stack(0x8b9af000,0x8ba00000)]
+  0x08a3ec00 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=3882, stack(0x8bbb7000,0x8bc08000)]
+  0x08a3b800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=3881, stack(0x8bc08000,0x8bc89000)]
+  0x08a39800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=3880, stack(0x8bc89000,0x8bd0a000)]
+  0x08a38000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3879, stack(0x8bd0a000,0x8bd5b000)]
+  0x08a25800 JavaThread "Finalizer" daemon [_thread_blocked, id=3878, stack(0x8c08c000,0x8c0dd000)]
+  0x08a24000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3877, stack(0x8c0dd000,0x8c12e000)]
+
+Other Threads:
+  0x08a20000 VMThread [stack: 0x8c12e000,0x8c1af000] [id=3876]
+  0x08a40c00 WatcherThread [stack: 0x8bb36000,0x8bbb7000] [id=3883]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 9408K, used 2924K [0xa9c00000, 0xaae60000, 0xb46a0000)
+  eden space 8128K, 23% used [0xa9c00000,0xa9dd3880,0xaa3f0000)
+  from space 1280K, 82% used [0xaa3f0000,0xaa4f7a18,0xaa530000)
+  to   space 1280K, 0% used [0xaad20000,0xaad20000,0xaae60000)
+ PSOldGen        total 21504K, used 480K [0x946a0000, 0x95ba0000, 0xa9c00000)
+  object space 21504K, 2% used [0x946a0000,0x947183b8,0x95ba0000)
+ PSPermGen       total 16384K, used 8792K [0x8c6a0000, 0x8d6a0000, 0x946a0000)
+  object space 16384K, 53% used [0x8c6a0000,0x8cf36198,0x8d6a0000)
+
+Code Cache  [0xb476f000, 0xb49af000, 0xb776f000)
+ total_blobs=482 nmethods=209 adapters=228 free_code_cache=49562816 largest_free_block=6208
+
+Dynamic libraries:
+00110000-00138000 r-xp 00000000 08:0b 134943     /lib/i386-linux-gnu/libm-2.13.so
+00138000-00139000 r--p 00028000 08:0b 134943     /lib/i386-linux-gnu/libm-2.13.so
+00139000-0013a000 rw-p 00029000 08:0b 134943     /lib/i386-linux-gnu/libm-2.13.so
+0013a000-00156000 r-xp 00000000 08:0b 134956     /lib/i386-linux-gnu/libgcc_s.so.1
+00156000-00157000 r--p 0001b000 08:0b 134956     /lib/i386-linux-gnu/libgcc_s.so.1
+00157000-00158000 rw-p 0001c000 08:0b 134956     /lib/i386-linux-gnu/libgcc_s.so.1
+00158000-0015f000 r-xp 00000000 08:0b 135037     /lib/i386-linux-gnu/librt-2.13.so
+0015f000-00160000 r--p 00006000 08:0b 135037     /lib/i386-linux-gnu/librt-2.13.so
+00160000-00161000 rw-p 00007000 08:0b 135037     /lib/i386-linux-gnu/librt-2.13.so
+00161000-00187000 r-xp 00000000 08:0b 920175     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+00187000-00188000 r--p 00025000 08:0b 920175     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+00188000-0018a000 rw-p 00026000 08:0b 920175     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libjava.so
+0018a000-001d6000 r-xp 00000000 08:0b 920062     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/xawt/libmawt.so
+001d6000-001d7000 r--p 0004b000 08:0b 920062     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/xawt/libmawt.so
+001d7000-001d9000 rw-p 0004c000 08:0b 920062     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/xawt/libmawt.so
+001d9000-001da000 rw-p 00000000 00:00 0 
+001da000-001eb000 r-xp 00000000 08:0b 919194     /usr/lib/i386-linux-gnu/libXext.so.6.4.0
+001eb000-001ec000 r--p 00010000 08:0b 919194     /usr/lib/i386-linux-gnu/libXext.so.6.4.0
+001ec000-001ed000 rw-p 00011000 08:0b 919194     /usr/lib/i386-linux-gnu/libXext.so.6.4.0
+001ed000-001f2000 r-xp 00000000 08:0b 789591     /usr/lib/libXtst.so.6.1.0
+001f2000-001f3000 r--p 00004000 08:0b 789591     /usr/lib/libXtst.so.6.1.0
+001f3000-001f4000 rw-p 00005000 08:0b 789591     /usr/lib/libXtst.so.6.1.0
+001f4000-001fb000 r-xp 00000000 08:0b 929868     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+001fb000-001fc000 r--p 00006000 08:0b 929868     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+001fc000-001fd000 rw-p 00007000 08:0b 929868     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libzip.so
+001fd000-00267000 r-xp 00000000 08:0b 1718532    /tmp/libgdx/2336279410/libgdx.so
+00267000-00268000 ---p 0006a000 08:0b 1718532    /tmp/libgdx/2336279410/libgdx.so
+00268000-00269000 r--p 0006a000 08:0b 1718532    /tmp/libgdx/2336279410/libgdx.so
+00269000-0026a000 rw-p 0006b000 08:0b 1718532    /tmp/libgdx/2336279410/libgdx.so
+0026a000-00287000 r-xp 00000000 08:0b 919482     /usr/lib/i386-linux-gnu/libxcb.so.1.1.0
+00287000-00288000 r--p 0001c000 08:0b 919482     /usr/lib/i386-linux-gnu/libxcb.so.1.1.0
+00288000-00289000 rw-p 0001d000 08:0b 919482     /usr/lib/i386-linux-gnu/libxcb.so.1.1.0
+00289000-0028e000 r-xp 00000000 08:0b 919192     /usr/lib/i386-linux-gnu/libXdmcp.so.6.0.0
+0028e000-0028f000 r--p 00004000 08:0b 919192     /usr/lib/i386-linux-gnu/libXdmcp.so.6.0.0
+0028f000-00290000 rw-p 00005000 08:0b 919192     /usr/lib/i386-linux-gnu/libXdmcp.so.6.0.0
+00290000-002ca000 r-xp 00000000 08:0b 920122     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libfontmanager.so
+002ca000-002cb000 r--p 00039000 08:0b 920122     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libfontmanager.so
+002cb000-002cc000 rw-p 0003a000 08:0b 920122     /usr/lib/jvm/java-6-openjdk/jre/lib/i386/libfontmanager.so
+002cc000-002d5000 r-xp 00000000 08:0b 919188     /usr/lib/i386-linux-gnu/libXcursor.so.1.0.2
+002d5000-002d6000 r--p 00008000 08:0b 919188     /usr/lib/i386-linux-gnu/libXcursor.so.1.0.2
+002d6000-002d7000 rw-p 00009000 08:0b 919188     /usr/lib/i386-linux-gnu/libXcursor.so.1.0.2
+002d7000-002d9000 r-xp 00000000 08:0b 919190     /usr/lib/i386-linux-gnu/libXdamage.so.1.1.0
+002d9000-002da000 r--p 00001000 08:0b 919190     /usr/lib/i386-linux-gnu/libXdamage.so.1.1.0
+002da000-002db000 rw-p 00002000 08:0b 919190     /usr/lib/i386-linux-gnu/libXdamage.so.1.1.0
+002db000-002dc000 rwxp 00000000 00:00 0 
+002dc000-002e4000 r-xp 00000000 08:0b 135004     /lib/i386-linux-gnu/libnss_compat-2.13.so
+002e4000-002e5000 r--p 00007000 08:0b 135004     /lib/i386-linux-gnu/libnss_compat-2.13.so
+002e5000-002e6000 rw-p 00008000 08:0b 135004     /lib/i386-linux-gnu/libnss_compat

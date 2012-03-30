@@ -1,0 +1,99 @@
+package com.savefish.screens;
+
+import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.ui.ClickListener;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.savefish.assets.Assets;
+import com.savefish.constant.Constant;
+
+public class HighScoreScreen implements Screen {
+
+	private static HighScoreScreen hss = null;
+
+	public static HighScoreScreen getInstance(Game game) {
+		if (null == hss)
+			hss = new HighScoreScreen(game);
+		return hss;
+	}
+
+	@SuppressWarnings("unused")
+	private Game game;
+
+	private HighScoreScreen(Game game) {
+		super();
+		this.game = game;
+		this.initImage();
+	}
+
+	private Image nextImage = null;
+	private Image menuImage = null;
+
+	private void initImage() {
+		this.nextImage = new Image(Assets.getInstance().getTexture(
+				Constant.asset.NEXT_128_64));
+		this.menuImage = new Image(Assets.getInstance().getTexture(
+				Constant.asset.MENU_128_64));
+		this.menuImage.setClickListener(new MenuImageListener());
+	}
+
+	class MenuImageListener implements ClickListener {
+
+		@Override
+		public void click(Actor actor, float x, float y) {
+			// TODO Auto-generated method stub
+			game.setScreen(MainMenuScreen.getInstance(game));
+		}
+
+	}
+
+	@Override
+	public void render(float delta) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resize(int width, int height) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void hide() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return HighScoreScreen.class.getName();
+	}
+
+}

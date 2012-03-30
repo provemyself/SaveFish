@@ -1,0 +1,74 @@
+package com.savefish.util.logger;
+//package com.savefish.util.logger;
+//
+//import java.util.logging.Logger;
+//
+//import com.badlogic.gdx.Gdx;
+//
+//public class GreenLogger {
+//
+//	private final String tag;
+//	private int level;
+//
+//	private static GreenLogger logger = null;
+//
+//	public static GreenLogger getInstance(String tag) {
+//		if (null == logger)
+//			logger = new GreenLogger(tag);
+//		return logger;
+//	}
+//
+//	public static GreenLogger getInstance(String tag, int level) {
+//		if (null == logger)
+//			logger = new GreenLogger(tag, level);
+//		return logger;
+//	}
+//
+//	private GreenLogger(String tag) {
+//		this(tag, ERROR);
+//	}
+//
+//	private GreenLogger(String tag, int level) {
+//		this.tag = tag;
+//		this.level = level;
+//	}
+//
+//	public void debug(String message) {
+//		if (level >= DEBUG)
+//			Gdx.app.debug(tag, message);
+//	}
+//
+//	public void debug(String message, Exception exception) {
+//		if (level >= DEBUG)
+//			Logger.getAnonymousLogger().log(Level., msg, thrown)
+//	}
+//
+//	public void info(String message) {
+//		
+//		if (level >= INFO)
+//			Logger.getAnonymousLogger().info(message);
+//	}
+//
+//	public void info(String message, Exception exception) {
+//		if (level >= INFO)
+//			Gdx.app.log(tag, message, exception);
+//	}
+//
+//	public void error(String message) {
+//		if (level >= ERROR)
+//			Gdx.app.error(tag, message);
+//	}
+//
+//	public void error(String message, Throwable exception) {
+//		if (level >= ERROR)
+//			Gdx.app.error(tag, message, exception);
+//	}
+//
+//	public void setLevel(int level) {
+//		this.level = level;
+//	}
+//
+//	public int getLevel() {
+//		return level;
+//	}
+//}

@@ -1,0 +1,120 @@
+package com.savefish.screens.game;
+
+import java.util.Iterator;
+import java.util.logging.Level;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.savefish.constant.Constant;
+import com.savefish.physics.resolve.GreenWorldFactory;
+import com.savefish.util.logger.GreenLogger;
+
+public class MiddleStage extends Stage {
+
+	private static MiddleStage middleStage = null;
+
+	public static MiddleStage getInstance() {
+		if (null == middleStage)
+			try {
+				middleStage = new MiddleStage();
+			} catch (Exception e) {
+				GreenLogger.getInstance()
+						.logp(Level.INFO, MiddleStage.class.getName(),
+								"getInstance", "called", e);
+			}
+		return middleStage;
+	}
+
+	private MiddleStage() throws Exception {
+		super(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
+		this.initCamera();
+		this.initRender();
+		this.initWorld();
+	}
+
+	private OrthographicCamera camera;
+
+	private void initCamera() {
+		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
+				"initCamera", "called!");
+
+		camera = new OrthographicCamera(Constant.physics.CAMERA_VIEW_WIDTH,
+				Constant.physics.CAMERA_VIEW_HEIGHT);
+		camera.position.set(Constant.physics.CAMERA_X,
+				Constant.physics.CAMERA_Y, Constant.physics.CAMERA_Z);
+	}
+
+	private World world;
+
+	private void initWorld() throws Exception {
+		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
+				"initWorld", "called!");
+
+		world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
+				+ Constant.asset.PREVENT_FIRST);
+	}
+
+	private Box2DDebugRenderer render;
+
+	private void initRender() {
+		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
+				"initRender", "called!");
+
+		render = new Box2DDebugRenderer();
+	}
+
+	public void render(float delta, GL10 gl) {
+		this.world.step(delta, 3, 3);
+		this.camera.update();
+		this.camera.apply(gl);
+		this.render.render(world, this.camera.combined);
+	}
+
+	@Override
+	public void dispose() {
+		this.render.dispose();
+		this.world.dispose();
+		super.dispose();
+	}
+
+	@Override
+	public boolean touchDown(int x, int y, int pointer, int button) {
+		GreenLogger.getInstance().logp(Level.INFO, MiddleStage.class.getName(),
+				"touchDown", "called");
+
+		String bodyName = "Snakehead_2.png";
+		Iterator<Body> iters = this.world.getBodies();
+		while (iters.hasNext()) {
+			Body temp = iters.next();
+			GreenLogger.getInstance().warning((iters.next() instanceof Body) +"");
+			String name = (String) temp.getFixtureList().get(0).getUserData();
+			if (name.equals(bodyName))
+				GreenLogger.getInstance().warning("FOUND!");
+		}
+
+		return super.touchDown(x, y, pointer, button);
+	}
+
+	@Override
+	public boolean touchUp(int x, int y, int pointer, int button) {
+		GreenLogger.getInstance().logp(Level.INFO, MiddleStage.class.getName(),
+				"touchUp", "called");
+		return super.touchUp(x, y, pointer, button);
+	}
+
+	@Override
+	public boolean touchDragged(int x, int y, int pointer) {
+		return super.touchDragged(x, y, pointer);
+	}
+
+	@Override
+	public boolean touchMoved(int x, int y) {
+		return super.touchMoved(x, y);
+	}
+
+}

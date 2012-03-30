@@ -1,0 +1,11 @@
+package com.savefish.event;
+
+public class ConcreteListener<T> implements Listener<T> {
+
+	@Override
+	public void handle(T message) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
