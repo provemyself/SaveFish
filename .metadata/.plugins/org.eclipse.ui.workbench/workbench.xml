@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="30" version="2.0">
+<workbench progressCount="33" version="2.0">
 <workbenchAdvisor/>
 <window height="746" maximized="true" width="1016" x="302" y="112">
 <fastViewData fastViewLocation="1024"/>
@@ -21,7 +21,7 @@
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="40" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -74,6 +74,7 @@
 <part id="34"/>
 <part id="35"/>
 <part id="36"/>
+<part id="37"/>
 </presentation>
 </folder>
 </info>
@@ -118,9 +119,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Desktop/src/com/savefish/constant/Constant.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3688" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaveFishActivity.java" partName="SaveFishActivity.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/src/com/savefish/android/SaveFishActivity.java" title="SaveFishActivity.java" tooltip="SaveFish-Android/src/com/savefish/android/SaveFishActivity.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaveFishActivity.java" partName="SaveFishActivity.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/src/com/savefish/android/SaveFishActivity.java" title="SaveFishActivity.java" tooltip="SaveFish-Android/src/com/savefish/android/SaveFishActivity.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/src/com/savefish/android/SaveFishActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="250" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="364" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApplicationManager.java" partName="ApplicationManager.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/src/com/savefish/service/ApplicationManager.java" title="ApplicationManager.java" tooltip="SaveFish-Android/src/com/savefish/service/ApplicationManager.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/src/com/savefish/service/ApplicationManager.java"/>
@@ -221,6 +222,14 @@
 <editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="SaveFish-Android Manifest" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/AndroidManifest.xml" title="SaveFish-Android Manifest" tooltip="SaveFish-Android/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/AndroidManifest.xml"/>
 </editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadingScreen.java" partName="LoadingScreen.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Core/src/com/savefish/screens/LoadingScreen.java" title="LoadingScreen.java" tooltip="SaveFish-Core/src/com/savefish/screens/LoadingScreen.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Core/src/com/savefish/screens/LoadingScreen.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="55" selectionOffset="1883" selectionTopPixel="895"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestApplication.java" partName="TestApplication.java" path="/home/zhujianxin/workspace/GreenGuards/SaveFish-Android/src/com/savefish/android/TestApplication.java" title="TestApplication.java" tooltip="SaveFish-Android/src/com/savefish/android/TestApplication.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SaveFish-Android/src/com/savefish/android/TestApplication.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy">
@@ -253,11 +262,6 @@
 <view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="310" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -501,41 +505,57 @@
 <view id="com.android.ide.eclipse.ddms.views.AllocTrackerView"/>
 <view id="com.android.ide.eclipse.ddms.views.FileExplorerView"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="devices">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.DeviceView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.DeviceView" label="Devices"/>
+<layout>
+<mainWindow>
+<info folder="true" part="devices">
+<folder activePageID="com.android.ide.eclipse.ddms.views.DeviceView" appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.DeviceView" label="Devices"/>
 <page content="com.android.ide.eclipse.ddms.views.DeviceView:*" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="devices">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="devices">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="logcat" ratio="0.785381" ratioLeft="505" ratioRight="138" relationship="4" relative="devices">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<info folder="true" part="logcat" ratio="0.35303265" ratioLeft="227" ratioRight="416" relationship="4" relative="devices">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="com.android.ide.eclipse.ddms.views.LogCatView:*" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.3594096" ratioLeft="487" ratioRight="868" relationship="2" relative="devices"/>
-<info folder="true" part="ddms-detail" ratio="0.49947423" ratioLeft="475" ratioRight="476" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.FileExplorerView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.ThreadView" label="Threads"/>
+<info folder="true" part="ddms-detail" ratio="0.49947423" ratioLeft="475" ratioRight="476" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.android.ide.eclipse.ddms.views.FileExplorerView" appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.ThreadView" label="Threads"/>
 <page content="com.android.ide.eclipse.ddms.views.HeapView" label="Heap"/>
 <page content="com.android.ide.eclipse.ddms.views.AllocTrackerView" label="Allocation Tracker"/>
 <page content="com.android.ide.eclipse.ddms.views.FileExplorerView" label="File Explorer"/>
 <page content="com.android.ide.eclipse.ddms.views.ThreadView:*" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="emulator" ratio="0.5" ratioLeft="258" ratioRight="258" relationship="4" relative="devices">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.EmulatorControlView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.EmulatorControlView" label="Emulator Control"/>
+<info folder="true" part="emulator" ratio="0.5" ratioLeft="258" ratioRight="258" relationship="4" relative="devices">
+<folder activePageID="com.android.ide.eclipse.ddms.views.EmulatorControlView" appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.EmulatorControlView" label="Emulator Control"/>
 <page content="com.android.ide.eclipse.ddms.views.EmulatorControlView:*" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -613,6 +633,7 @@
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -637,13 +658,14 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.26273063" ratioLeft="356" ratioRight="999" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.55365473" ratioLeft="356" ratioRight="287" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info part="org.eclipse.ui.editorss" ratio="0.25682658" ratioLeft="348" ratioRight="1007" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.49300155" ratioLeft="317" ratioRight="326" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -652,6 +674,7 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
@@ -796,25 +819,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Android/src/com/savefish/android/SaveFishActivity.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Android/src/com/savefish/android/ApplicationManager.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/SaveFish-Android/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Core/src/com/savefish/screens/LoadingScreen.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Android/src/com/savefish/android/ApplicationManager.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/SaveFish-Android/src/com/savefish/android/TestApplication.java"/>
 </editors>
-<item historyLabel="ApplicationManager.java" index="1">
-<position info="not_deleted" x="348" y="0"/>
-</item>
-<item historyLabel="DesktopLauncher.java" index="0">
-<position info="not_deleted" x="413" y="0"/>
-</item>
-<item historyLabel="ApplicationManager.java" index="1">
-<position info="not_deleted" x="348" y="0"/>
-</item>
-<item historyLabel="DesktopLauncher.java" index="0">
-<position info="not_deleted" x="413" y="0"/>
-</item>
-<item historyLabel="ApplicationManager.java" index="1">
-<position info="not_deleted" x="348" y="0"/>
-</item>
-<item historyLabel="DesktopLauncher.java" index="0">
-<position info="not_deleted" x="413" y="0"/>
-</item>
 <item historyLabel="ApplicationManager.java" index="1">
 <position info="not_deleted" x="348" y="0"/>
 </item>
@@ -942,8 +950,26 @@
 <item historyLabel="ApplicationManager.java" index="4">
 <position info="not_deleted" x="470" y="0"/>
 </item>
-<item active="true" historyLabel="SaveFishActivity.java" index="3">
+<item historyLabel="SaveFishActivity.java" index="3">
 <position info="not_deleted" x="241" y="0"/>
+</item>
+<item historyLabel="LoadingScreen.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ApplicationManager.java" index="7">
+<position info="not_deleted" x="470" y="0"/>
+</item>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="230" y="0"/>
+</item>
+<item historyLabel="TestApplication.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SaveFishActivity.java" index="3">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item active="true" historyLabel="TestApplication.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -963,6 +989,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestApplication.java" tooltip="SaveFish-Android/src/com/savefish/android/TestApplication.java">
+<persistable path="/SaveFish-Android/src/com/savefish/android/TestApplication.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoadingScreen.java" tooltip="SaveFish-Core/src/com/savefish/screens/LoadingScreen.java">
+<persistable path="/SaveFish-Core/src/com/savefish/screens/LoadingScreen.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="SaveFish-Android/AndroidManifest.xml">
 <persistable path="/SaveFish-Android/AndroidManifest.xml"/>
 </file>
@@ -1001,12 +1033,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GreenHexFloat.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/resolve/GreenHexFloat.java">
 <persistable path="/SaveFish-Desktop/src/com/savefish/physics/resolve/GreenHexFloat.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GreenFixture.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/resolve/GreenFixture.java">
-<persistable path="/SaveFish-Desktop/src/com/savefish/physics/resolve/GreenFixture.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GreenEdgeShape.java" tooltip="SaveFish-Desktop/src/com/savefish/physics/resolve/GreenEdgeShape.java">
-<persistable path="/SaveFish-Desktop/src/com/savefish/physics/resolve/GreenEdgeShape.java"/>
 </file>
 </mruList>
 </workbench>
