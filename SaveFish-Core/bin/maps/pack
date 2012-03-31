@@ -1,0 +1,19 @@
+
+input1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+mainmenu
+  rotate: false
+  xy: 2, 2
+  size: 776, 503
+  orig: 776, 503
+  offset: 0, 0
+  index: -1
+gamescene
+  rotate: false
+  xy: 2, 507
+  size: 585, 449
+  orig: 585, 449
+  offset: 0, 0
+  index: -1

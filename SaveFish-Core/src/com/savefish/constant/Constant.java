@@ -1,7 +1,10 @@
 package com.savefish.constant;
 
 /********************************
- * Description: 该类对项目中的常量进行 *************分类管理 Author : 王志伟 Date : 2012/03/08
+ * Description: 该类对项目中的常量进行 
+ * *************分类管理 
+ * Author :     王志伟 
+ * Date :       2012/03/08
  *******************************/
 
 public final class Constant {
@@ -55,6 +58,7 @@ public final class Constant {
 		public static final String MAPS_BASE_PATH = "maps/";
 		public static final String FONTS_BASE_PATH = "fonts/";
 		public static final String PIXMAPS_BASE_PATH = "pixmaps/";
+		public static final String ACTORS_BASE_PATH = "actors/";
 
 		// 背景音乐
 		public static final String MUSIC = "annie.mp3";
@@ -63,19 +67,19 @@ public final class Constant {
 		public static final String SOUND = "glass.wav";
 
 		// 纹理
-		public static final String QUIT = "quit.png";
-		public static final String START = "start.png";
-		public static final String MENU_128_64 = "menu_128_64.png";
-		public static final String NEXT_128_64 = "next_128_64.png";
-		public static final String EXIT = "exit.png";
+		public static final String QUIT = "quit";
+		public static final String START = "start";
+		public static final String MENU = "menu";
+		public static final String NEXT = "next";
+		public static final String EXIT = "exit";
 
 		// 游戏场景的背景图片
-		public static final String BACKGROUND_ONE = "background_one.png";
-		public static final String BACKGROUND_TWO = "background_two.png";
-		public static final String BACKGOUND_THREE = "background_three.png";
-		public static final String BACKGROUND_FOUR = "background_four.png";
-		public static final String BACKGROUND_FIVE = "background_five.png";
-		public static final String BACKGROUND_SIX = "background_six.png";
+		public static final String BACKGROUND_ONE = "gamescene";
+		public static final String BACKGROUND_TWO = "background_two";
+		public static final String BACKGOUND_THREE = "background_three";
+		public static final String BACKGROUND_FOUR = "background_four";
+		public static final String BACKGROUND_FIVE = "background_five";
+		public static final String BACKGROUND_SIX = "background_six";
 
 		// 地图:第一大关
 		public static final String PREVENT_FIRST = "prevent_first.json";
@@ -95,5 +99,8 @@ public final class Constant {
 
 		// 粒子文件
 		public static final String PARTICLE_ONE_TEXT = "128.p";
+
+		//
+		public static final String ACTORS_PACK = "pack";
 	}
 }

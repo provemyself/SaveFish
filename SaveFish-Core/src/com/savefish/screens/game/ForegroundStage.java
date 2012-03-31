@@ -4,7 +4,7 @@ import java.util.logging.Level;
 
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.savefish.constant.Constant;
-import com.savefish.service.Particle;
+import com.savefish.service.ParticleManager;
 import com.savefish.util.logger.GreenLogger;
 
 public class ForegroundStage extends Stage {
@@ -27,11 +27,11 @@ public class ForegroundStage extends Stage {
 	public void render(float delta) {
 		GreenLogger.getInstance().logp(Level.INFO,
 				ForegroundStage.class.getName(), "render", "called!");
-		Particle.getInstance().render(delta);
+		ParticleManager.getInstance().render(delta);
 	}
 
 	public void dispose() {
-		Particle.getInstance().dispose();
+		ParticleManager.getInstance().dispose();
 	}
 
 	@Override
@@ -39,8 +39,8 @@ public class ForegroundStage extends Stage {
 		GreenLogger.getInstance().logp(Level.INFO,
 				ForegroundStage.class.getName(), "touchDown", "called");
 
-		Particle.getInstance().start();
-		Particle.getInstance().setPosition(x, y);
+		ParticleManager.getInstance().start();
+		ParticleManager.getInstance().setPosition(x, y);
 		return super.touchDown(x, y, pointer, button);
 	}
 

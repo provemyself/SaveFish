@@ -13,7 +13,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
 import com.savefish.screens.game.GameScreen;
-import com.savefish.service.InitializedScreen;
+import com.savefish.service.LoadedScreen;
+import com.savefish.service.MusicManager;
+import com.savefish.service.SoundManager;
 import com.savefish.util.logger.GreenLogger;
 
 public class HighScoreScreen implements Screen {
@@ -23,7 +25,7 @@ public class HighScoreScreen implements Screen {
 	public static HighScoreScreen getInstance(Game game) {
 		if (null == highScoreScreen) {
 			highScoreScreen = new HighScoreScreen(game);
-			InitializedScreen.screens.add(highScoreScreen);
+			LoadedScreen.screens.add(highScoreScreen);
 		}
 		return highScoreScreen;
 	}
@@ -40,13 +42,14 @@ public class HighScoreScreen implements Screen {
 	private Image menuImage = null;
 
 	private void initImage() {
-		this.nextImage = new Image(Assets.getInstance().getTexture(
-				Constant.asset.NEXT_128_64));
+		this.nextImage = new Image(Assets.getInstance().getTextureRegion(
+				Constant.asset.NEXT));
 		this.nextImage.x = 300;
 		this.nextImage.y = 10;
+		this.nextImage.setClickListener(new NextImageListener());
 
-		this.menuImage = new Image(Assets.getInstance().getTexture(
-				Constant.asset.MENU_128_64));
+		this.menuImage = new Image(Assets.getInstance().getTextureRegion(
+				Constant.asset.MENU));
 		this.menuImage.x = 50;
 		this.menuImage.y = 10;
 		this.menuImage.setClickListener(new MenuImageListener());
@@ -57,7 +60,8 @@ public class HighScoreScreen implements Screen {
 		@Override
 		public void click(Actor actor, float x, float y) {
 			// TODO Auto-generated method stub
-			game.setScreen(WinScreen.getInstance(game));
+			SoundManager.getInstance().play();
+			MusicManager.getInstance().play();
 		}
 
 	}

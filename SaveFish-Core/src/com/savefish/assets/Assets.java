@@ -4,8 +4,9 @@ import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Pixmap;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.savefish.constant.Constant;
 
 public class Assets {
@@ -15,8 +16,8 @@ public class Assets {
 	private static Assets assets = null;
 
 	private Assets() {
+		this.assetManager.clear();
 		this.load();
-		this.setComplete(false);
 	}
 
 	public static Assets getInstance() {
@@ -26,6 +27,7 @@ public class Assets {
 	}
 
 	private boolean isComplete = false;
+	private TextureAtlas textureAtlas = null;
 
 	private boolean isComplete() {
 		return isComplete;
@@ -33,6 +35,16 @@ public class Assets {
 
 	public void setComplete(boolean isComplete) {
 		this.isComplete = isComplete;
+		this.textureAtlas = this.getTextureAtlas();
+	}
+
+	private TextureAtlas getTextureAtlas() {
+		if (this.isComplete()) {
+			return assetManager.get(Constant.asset.TEXTURES_BASE_PATH
+					+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
+		} else {
+			return null;
+		}
 	}
 
 	public boolean update() {
@@ -47,10 +59,9 @@ public class Assets {
 		return assetManager.getLoadedAssets();
 	}
 
-	public Texture getTexture(String fileName) {
+	public TextureRegion getTextureRegion(String fileName) {
 		if (this.isComplete())
-			return assetManager.get(Constant.asset.TEXTURES_BASE_PATH
-					+ fileName, Texture.class);
+			return this.textureAtlas.findRegion(fileName);
 		else
 			return null;
 	}
@@ -91,35 +102,16 @@ public class Assets {
 		this.assetManager.unload(fileName);
 	}
 
-	public void clear() {
+	public void dispose() {
 		this.assetManager.clear();
 	}
 
-	public void dispose() {
-		this.assetManager.dispose();
-	}
-
 	private void load() {
-		this.loadTexture();
 		this.loadBitmapFont();
 		this.loadMusic();
 		this.loadSound();
 		this.loadPixmap();
-	}
-
-	private void loadTexture() {
-		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
-				+ Constant.asset.QUIT, Texture.class);
-		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
-				+ Constant.asset.START, Texture.class);
-		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
-				+ Constant.asset.MENU_128_64, Texture.class);
-		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
-				+ Constant.asset.NEXT_128_64, Texture.class);
-		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
-				+ Constant.asset.EXIT, Texture.class);
-		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
-				+ Constant.asset.BACKGROUND_ONE, Texture.class);
+		this.loadTextureAtlas();
 	}
 
 	private void loadBitmapFont() {
@@ -138,5 +130,12 @@ public class Assets {
 	private void loadSound() {
 		this.assetManager.load(Constant.asset.SOUNDS_BASE_PATH
 				+ Constant.asset.SOUND, Sound.class);
+	}
+
+	private void loadTextureAtlas() {
+		this.assetManager.load(Constant.asset.ACTORS_BASE_PATH
+				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
+		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
+				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
 	}
 }

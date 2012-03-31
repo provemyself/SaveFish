@@ -5,8 +5,6 @@ import java.util.logging.Level;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.audio.Music;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -14,7 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
-import com.savefish.service.InitializedScreen;
+import com.savefish.service.LoadedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class MainMenuScreen implements Screen {
@@ -24,7 +22,7 @@ public class MainMenuScreen implements Screen {
 	public static MainMenuScreen getInstance(Game game) {
 		if (null == mainMenuScreen) {
 			mainMenuScreen = new MainMenuScreen(game);
-			InitializedScreen.screens.add(mainMenuScreen);
+			LoadedScreen.screens.add(mainMenuScreen);
 		}
 		return mainMenuScreen;
 	}
@@ -34,8 +32,6 @@ public class MainMenuScreen implements Screen {
 	private Stage stage = null;
 	private Image startImage = null;
 	private Image quitImage = null;
-	private Music bgMusic = null;
-	private Sound sound = null;
 
 	private MainMenuScreen(Game game) {
 		this.game = game;
@@ -107,18 +103,16 @@ public class MainMenuScreen implements Screen {
 	private void initialize() {
 		this.initImage();
 		this.initStage();
-		this.initBgMusic();
-		this.initSound();
 	}
 
 	private void initImage() {
-		this.startImage = new Image(Assets.getInstance().getTexture(
+		this.startImage = new Image(Assets.getInstance().getTextureRegion(
 				Constant.asset.START));
 		this.startImage.x = 10;
 		this.startImage.y = 10;
 		this.startImage.setClickListener(new StartImageListener());
 
-		this.quitImage = new Image(Assets.getInstance().getTexture(
+		this.quitImage = new Image(Assets.getInstance().getTextureRegion(
 				Constant.asset.QUIT));
 		this.quitImage.x = 200;
 		this.quitImage.y = 200;
@@ -129,10 +123,6 @@ public class MainMenuScreen implements Screen {
 
 		@Override
 		public void click(Actor actor, float x, float y) {
-			sound.play();
-			bgMusic.play();
-			bgMusic.setVolume(1f);
-			bgMusic.setLooping(true);
 		}
 	}
 
@@ -144,8 +134,6 @@ public class MainMenuScreen implements Screen {
 			GreenLogger.getInstance().logp(Level.INFO,
 					MainMenuScreen.class.getName(), "click", "click");
 
-			sound.play();
-			bgMusic.stop();
 			game.dispose();
 		}
 	}
@@ -155,13 +143,5 @@ public class MainMenuScreen implements Screen {
 				Gdx.graphics.getHeight(), true);
 		this.stage.addActor(quitImage);
 		this.stage.addActor(startImage);
-	}
-
-	private void initBgMusic() {
-		this.bgMusic = Assets.getInstance().getMusic(Constant.asset.MUSIC);
-	}
-
-	private void initSound() {
-		this.sound = Assets.getInstance().getSound(Constant.asset.SOUND);
 	}
 }

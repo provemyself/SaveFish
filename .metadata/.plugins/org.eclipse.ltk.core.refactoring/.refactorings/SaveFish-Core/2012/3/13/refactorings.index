@@ -3,3 +3,17 @@
 1333092754815	Move package
 1333092772791	Copy folder
 1333093071888	Delete element
+1333201175764	Rename field 'MENU_128_64'
+1333201182355	Rename field 'NEXT_128_64'
+1333212866828	Rename method 'getTexture'
+1333213501037	Rename type 'Particle'
+1333213609381	Rename type 'SoundManager'
+1333213866003	Delete element
+1333214740985	Delete element
+1333214744879	Delete element
+1333214748891	Delete element
+1333215754804	Delete element
+1333215781576	Rename compilation unit 'VoiceManager.java'
+1333217257077	Rename type 'InitializedScreen'
+1333217399620	Rename field 'manager'
+1333218586714	Delete element

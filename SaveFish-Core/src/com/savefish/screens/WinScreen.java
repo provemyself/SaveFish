@@ -7,7 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.savefish.service.InitializedScreen;
+import com.savefish.service.LoadedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class WinScreen implements Screen {
@@ -17,7 +17,7 @@ public class WinScreen implements Screen {
 	public static WinScreen getInstance(Game game) {
 		if (null == winScreen) {
 			winScreen = new WinScreen(game);
-			InitializedScreen.screens.add(winScreen);
+			LoadedScreen.screens.add(winScreen);
 		}
 		return winScreen;
 	}

@@ -6,7 +6,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
 import com.savefish.assets.Assets;
 import com.savefish.screens.LoadingScreen;
-import com.savefish.service.InitializedScreen;
+import com.savefish.service.LoadedScreen;
 import com.savefish.util.logger.GreenLogger;
 import com.savefish.util.logger.GreenLoggerManager;
 
@@ -52,7 +52,7 @@ public class ApplicationManager extends Game {
 	}
 
 	private void disposeScreens() {
-		for (Screen screen : InitializedScreen.screens)
+		for (Screen screen : LoadedScreen.screens)
 			screen.dispose();
 	}
 

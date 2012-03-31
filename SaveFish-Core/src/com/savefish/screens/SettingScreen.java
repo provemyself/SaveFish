@@ -4,7 +4,7 @@ import java.util.logging.Level;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
-import com.savefish.service.InitializedScreen;
+import com.savefish.service.LoadedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class SettingScreen implements Screen {
@@ -14,7 +14,7 @@ public class SettingScreen implements Screen {
 	public static SettingScreen getInstance(Game game) {
 		if (null == settingScreen) {
 			settingScreen = new SettingScreen(game);
-			InitializedScreen.screens.add(settingScreen);
+			LoadedScreen.screens.add(settingScreen);
 		}
 		return settingScreen;
 	}

@@ -10,7 +10,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
-import com.savefish.service.InitializedScreen;
+import com.savefish.service.LoadedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class LoadingScreen implements Screen {
@@ -22,7 +22,7 @@ public class LoadingScreen implements Screen {
 
 		if (null == loadingScreen) {
 			loadingScreen = new LoadingScreen(game);
-			InitializedScreen.screens.add(loadingScreen);
+			LoadedScreen.screens.add(loadingScreen);
 		}
 		return loadingScreen;
 	}

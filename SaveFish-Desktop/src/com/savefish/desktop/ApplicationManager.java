@@ -6,7 +6,9 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
 import com.savefish.assets.Assets;
 import com.savefish.screens.LoadingScreen;
-import com.savefish.service.InitializedScreen;
+import com.savefish.service.LoadedManager;
+import com.savefish.service.LoadedScreen;
+import com.savefish.service.Managable;
 import com.savefish.util.logger.GreenLogger;
 import com.savefish.util.logger.GreenLoggerManager;
 
@@ -41,7 +43,8 @@ public class ApplicationManager extends Game {
 		GreenLogger.getInstance().logp(Level.INFO,
 				ApplicationManager.class.getName(), "dispose", "called!");
 
-		disposeScreens();
+		this.disposeScreens();
+		this.disposeManagers();
 		Assets.getInstance().dispose();
 		DesktopLauncher.saveFish.exit();
 
@@ -49,8 +52,15 @@ public class ApplicationManager extends Game {
 	}
 
 	private void disposeScreens() {
-		for (Screen screen : InitializedScreen.screens)
+		for (Screen screen : LoadedScreen.screens)
 			screen.dispose();
+		LoadedScreen.screens = null;
+	}
+
+	private void disposeManagers() {
+		for (Managable manager : LoadedManager.managers)
+			manager.dispose();
+		LoadedManager.managers = null;
 	}
 
 }
