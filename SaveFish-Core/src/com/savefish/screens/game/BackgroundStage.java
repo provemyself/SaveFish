@@ -3,7 +3,6 @@ package com.savefish.screens.game;
 import java.util.logging.Level;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
@@ -12,12 +11,8 @@ import com.savefish.util.logger.GreenLogger;
 
 public class BackgroundStage extends Stage {
 
-	private static BackgroundStage backgroundStage = null;
-
-	public static BackgroundStage getInstance() {
-		if (null == backgroundStage)
-			backgroundStage = new BackgroundStage();
-		return backgroundStage;
+	public static BackgroundStage crateBackgroundStage() {
+		return new BackgroundStage();
 	}
 
 	private BackgroundStage() {
@@ -32,21 +27,15 @@ public class BackgroundStage extends Stage {
 
 	public void dispose() {
 		this.backgroundImage = null;
-		backgroundStage = null;
 	}
 
 	private Image backgroundImage = null;
 
 	public void setBackground(String fileName) {
-		
-		TextureRegion region = Assets.getInstance().getTextureRegion(fileName);
-		if(region == null)
-			GreenLogger.getInstance().warning("region is null!");
-		
+		this.clear();
 		this.backgroundImage = new Image(Assets.getInstance().getTextureRegion(
 				fileName));
 		this.resizeActors(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-		this.clear();
 		this.addActor(backgroundImage);
 
 	}

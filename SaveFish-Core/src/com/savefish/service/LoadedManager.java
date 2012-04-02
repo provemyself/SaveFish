@@ -1,7 +1,8 @@
 package com.savefish.service;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class LoadedManager {
-	public static ArrayList<Managable> managers = new ArrayList<Managable>();
+	public static List<Managable> managers = new LinkedList<Managable>();
 }

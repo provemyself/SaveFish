@@ -54,9 +54,9 @@ public class GameScreen implements Screen {
 		GreenLogger.getInstance().logp(Level.WARNING,
 				GameScreen.class.getName(), "resize", "called!");
 
-		this.backGroundStage.setViewport(width, height, true);
-		this.middleStage.setViewport(width, height, true);
-		this.foreGroundStage.setViewport(width, height, true);
+		 this.backGroundStage.setViewport(width, height, true);
+		 this.middleStage.setViewport(width, height, true);
+		 this.foreGroundStage.setViewport(width, height, true);
 	}
 
 	@Override
@@ -105,8 +105,8 @@ public class GameScreen implements Screen {
 		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
 				"initStages", "called!");
 
-		this.backGroundStage = BackgroundStage.getInstance();
-		this.middleStage = MiddleStage.getInstance();
+		this.backGroundStage = BackgroundStage.crateBackgroundStage();
+		this.middleStage = MiddleStage.createMiddleStage(1);
 		this.foreGroundStage = ForegroundStage.getInstance();
 	}
 

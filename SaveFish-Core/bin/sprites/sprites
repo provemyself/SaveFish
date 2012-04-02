@@ -1,0 +1,206 @@
+
+input1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fisheightR
+  rotate: false
+  xy: 2, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishoneR
+  rotate: false
+  xy: 276, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishsixR
+  rotate: false
+  xy: 550, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishthreeM
+  rotate: false
+  xy: 2, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fisheightL
+  rotate: false
+  xy: 2, 384
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishtwoL
+  rotate: false
+  xy: 2, 575
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishfourL
+  rotate: false
+  xy: 2, 766
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishthreeL
+  rotate: false
+  xy: 276, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishtwoR
+  rotate: false
+  xy: 550, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishfourR
+  rotate: false
+  xy: 276, 384
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishsixL
+  rotate: false
+  xy: 276, 575
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishfiveL
+  rotate: false
+  xy: 276, 766
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+aquaticfive
+  rotate: false
+  xy: 550, 384
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishnineR
+  rotate: false
+  xy: 550, 575
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishfiveR
+  rotate: false
+  xy: 550, 766
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+
+input2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+aquaticone
+  rotate: false
+  xy: 2, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+aquaticfour
+  rotate: false
+  xy: 2, 276
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+pesticidetwo
+  rotate: false
+  xy: 2, 550
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+aquaticthree
+  rotate: false
+  xy: 193, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+pesticideone
+  rotate: false
+  xy: 384, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+aquatictwo
+  rotate: false
+  xy: 575, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+aquaticsix
+  rotate: false
+  xy: 766, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+fishoneL
+  rotate: false
+  xy: 193, 276
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishnineL
+  rotate: false
+  xy: 467, 276
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+stoneone
+  rotate: false
+  xy: 741, 276
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishsevenL
+  rotate: false
+  xy: 193, 467
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishthreeR
+  rotate: false
+  xy: 193, 658
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fishsevenR
+  rotate: false
+  xy: 467, 467
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1

@@ -1,9 +1,10 @@
 package com.savefish.service;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import com.badlogic.gdx.Screen;
 
 public class LoadedScreen {
-	public static ArrayList<Screen> screens = new ArrayList<Screen>();
+	public static List<Screen> screens = new LinkedList<Screen>();
 }

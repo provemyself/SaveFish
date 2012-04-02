@@ -16,6 +16,7 @@ public class ApplicationManager extends Game {
 
 	public ApplicationManager() {
 		GreenLoggerManager.filterLogByLevel(Level.WARNING);
+		
 	}
 
 	@Override

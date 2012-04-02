@@ -3,8 +3,8 @@ package com.savefish.constant;
 /********************************
  * Description: 该类对项目中的常量进行 
  * *************分类管理 
- * Author :     王志伟 
- * Date :       2012/03/08
+ * Author : 王志伟 
+ * Date : 2012/03/08
  *******************************/
 
 public final class Constant {
@@ -29,6 +29,8 @@ public final class Constant {
 
 	public static final class game {
 		public static final String GAME_NAME = "GreenGuards";// 游戏名称
+
+		public static final int GAME_DELAY = 60000;// 60秒
 
 		public static final int PREVENT_FIRST_LEVEL = 1;
 		public static final int PREVENT_SECOND_LEVEL = 2;
@@ -59,6 +61,7 @@ public final class Constant {
 		public static final String FONTS_BASE_PATH = "fonts/";
 		public static final String PIXMAPS_BASE_PATH = "pixmaps/";
 		public static final String ACTORS_BASE_PATH = "actors/";
+		public static final String SPRITES_BASE_PATH = "sprites/";
 
 		// 背景音乐
 		public static final String MUSIC = "annie.mp3";
@@ -66,12 +69,34 @@ public final class Constant {
 		// 音效
 		public static final String SOUND = "glass.wav";
 
-		// 纹理
+		// 纹理文件
+		public static final String LOADING = "loading.png";
+
+		// 纹理文件名
 		public static final String QUIT = "quit";
 		public static final String START = "start";
 		public static final String MENU = "menu";
 		public static final String NEXT = "next";
 		public static final String EXIT = "exit";
+
+		// 精灵名字
+		public static final String FISH_EIGHT_R = "fisheightR";
+		public static final String FISH_EIGHT_M = "fisheightM";
+		public static final String FISH_EIGHT_L = "fisheightL";
+		public static final String FISH_SEVEN_R = "fishsevenR";
+		public static final String FISH_SEVEN_L = "fishsevenR";
+		public static final String FISH_SIX_R = "fishsixR";
+		public static final String FISH_SIX_L = "fisheightL";
+		public static final String FISH_FIVE_R = "fishfiveR";
+		public static final String FISH_FIVE_L = "fishfiveL";
+		public static final String FISH_FOUR_R = "fishfourR";
+		public static final String FISH_FOUR_L = "fishfourL";
+		public static final String FISH_THREE_R = "fishthreeR";
+		public static final String FISH_THREE_L = "fishfishL";
+		public static final String FISH_TWO_R = "fishtwoR";
+		public static final String FISH_TWO_L = "fishtwoL";
+		public static final String FISH_ONE_R = "fishoneR";
+		public static final String FISH_ONE_L = "fishoneL";
 
 		// 游戏场景的背景图片
 		public static final String BACKGROUND_ONE = "gamescene";
@@ -100,7 +125,8 @@ public final class Constant {
 		// 粒子文件
 		public static final String PARTICLE_ONE_TEXT = "128.p";
 
-		//
-		public static final String ACTORS_PACK = "pack";
+		// pack
+		public static final String ACTORS_PACK = "actors";
+		public static final String SPRITES_PACT = "sprites";
 	}
 }

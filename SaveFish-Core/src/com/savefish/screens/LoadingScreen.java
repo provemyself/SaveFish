@@ -31,14 +31,14 @@ public class LoadingScreen implements Screen {
 
 	private LoadingScreen(Game game) {
 		this.game = game;
-		this.loadingTexture = new Texture(
+
+		Texture texture = new Texture(
 				Gdx.files.internal("textures/loading.png"));
-		this.loadingImage = new Image(loadingTexture);
+		this.loadingImage = new Image(texture);
 
 	}
 
 	private Stage stage = null;
-	private Texture loadingTexture = null;
 	private Image loadingImage = null;
 
 	private void initStage() {

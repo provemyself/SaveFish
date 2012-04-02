@@ -1,10 +1,15 @@
 package com.savefish.assets;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.savefish.constant.Constant;
@@ -27,7 +32,18 @@ public class Assets {
 	}
 
 	private boolean isComplete = false;
-	private TextureAtlas textureAtlas = null;
+
+	private TextureAtlas actorAtlas = null;
+
+	public void setActorAtlas() {
+		this.actorAtlas = this.getActorAtlas();
+	}
+
+	private TextureAtlas spriteAtlas = null;
+
+	private void setSpriteAtlas() {
+		this.spriteAtlas = this.getSpriteAtlas();
+	}
 
 	private boolean isComplete() {
 		return isComplete;
@@ -35,16 +51,19 @@ public class Assets {
 
 	public void setComplete(boolean isComplete) {
 		this.isComplete = isComplete;
-		this.textureAtlas = this.getTextureAtlas();
+		this.setActorAtlas();
+		this.setSpriteAtlas();
+		this.initialize();
 	}
 
-	private TextureAtlas getTextureAtlas() {
-		if (this.isComplete()) {
-			return assetManager.get(Constant.asset.TEXTURES_BASE_PATH
-					+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
-		} else {
-			return null;
-		}
+	private TextureAtlas getActorAtlas() {
+		return assetManager.get(Constant.asset.ACTORS_BASE_PATH
+				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
+	}
+
+	private TextureAtlas getSpriteAtlas() {
+		return assetManager.get(Constant.asset.SPRITES_BASE_PATH
+				+ Constant.asset.SPRITES_PACT, TextureAtlas.class);
 	}
 
 	public boolean update() {
@@ -59,9 +78,19 @@ public class Assets {
 		return assetManager.getLoadedAssets();
 	}
 
+	public Sprite getSprite() {
+		Random random = new Random();
+		int size = this.fishes.size();
+		return this.fishes.get(random.nextInt(size));
+	}
+
+	private Sprite getSprite(String fileName) {
+		return this.spriteAtlas.createSprite(fileName);
+	}
+
 	public TextureRegion getTextureRegion(String fileName) {
 		if (this.isComplete())
-			return this.textureAtlas.findRegion(fileName);
+			return this.actorAtlas.findRegion(fileName);
 		else
 			return null;
 	}
@@ -98,10 +127,6 @@ public class Assets {
 			return null;
 	}
 
-	public void unload(String fileName) {
-		this.assetManager.unload(fileName);
-	}
-
 	public void dispose() {
 		this.assetManager.clear();
 	}
@@ -135,7 +160,35 @@ public class Assets {
 	private void loadTextureAtlas() {
 		this.assetManager.load(Constant.asset.ACTORS_BASE_PATH
 				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
-		this.assetManager.load(Constant.asset.TEXTURES_BASE_PATH
+		this.assetManager.load(Constant.asset.ACTORS_BASE_PATH
 				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
+		this.assetManager.load(Constant.asset.SPRITES_BASE_PATH
+				+ Constant.asset.SPRITES_PACT, TextureAtlas.class);
+	}
+
+	private void initialize() {
+		this.initSprites();
+	}
+
+	private List<Sprite> fishes = new ArrayList<Sprite>();
+
+	private void initSprites() {
+		this.fishes.add(this.getSprite(Constant.asset.FISH_ONE_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_ONE_R));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_TWO_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_TWO_R));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_THREE_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_THREE_R));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_FOUR_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_FOUR_R));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_FIVE_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_FIVE_R));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_SIX_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_SIX_R));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_SEVEN_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_SEVEN_R));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_EIGHT_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_EIGHT_R));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_EIGHT_M));
 	}
 }

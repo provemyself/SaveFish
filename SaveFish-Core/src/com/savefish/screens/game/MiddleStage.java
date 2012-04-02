@@ -1,40 +1,39 @@
 package com.savefish.screens.game;
 
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.logging.Level;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
 import com.savefish.physics.resolve.GreenWorldFactory;
 import com.savefish.util.logger.GreenLogger;
 
 public class MiddleStage extends Stage {
 
-	private static MiddleStage middleStage = null;
-
-	public static MiddleStage getInstance() {
-		if (null == middleStage)
-			try {
-				middleStage = new MiddleStage();
-			} catch (Exception e) {
-				GreenLogger.getInstance()
-						.logp(Level.INFO, MiddleStage.class.getName(),
-								"getInstance", "called", e);
-			}
-		return middleStage;
+	public static MiddleStage createMiddleStage(int gate) {
+		return new MiddleStage(gate);
 	}
 
-	private MiddleStage() throws Exception {
+	private MiddleStage(int gate) {
 		super(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
 		this.initCamera();
 		this.initRender();
-		this.initWorld();
+		this.initMaps();
+
+		try {
+			this.initWorld(gate);
+		} catch (Exception e) {
+			GreenLogger.getInstance().severe(e.toString());
+		}
+
+		this.initSprite();
 	}
 
 	private OrthographicCamera camera;
@@ -51,12 +50,16 @@ public class MiddleStage extends Stage {
 
 	private World world;
 
-	private void initWorld() throws Exception {
+	private void initWorld(int gate) throws Exception {
 		GreenLogger.getInstance().logp(Level.INFO, GameScreen.class.getName(),
 				"initWorld", "called!");
 
-		world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
-				+ Constant.asset.PREVENT_FIRST);
+		if (gate <= maps.size())
+			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
+					+ maps.get(gate));
+		else
+			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
+					+ maps.get(1));
 	}
 
 	private Box2DDebugRenderer render;
@@ -68,7 +71,27 @@ public class MiddleStage extends Stage {
 		render = new Box2DDebugRenderer();
 	}
 
+	Sprite sprite = Assets.getInstance().getSprite();
+
+	private void initSprite() {
+		this.sprite.setScale(0.3f);
+	}
+
+	HashMap<Integer, String> maps = new HashMap<Integer, String>();
+
+	private void initMaps() {
+		maps.put(1, Constant.asset.PREVENT_FIRST);
+		maps.put(2, Constant.asset.PREVENT_SECOND);
+		maps.put(3, Constant.asset.PREVENT_THIRD);
+		maps.put(4, Constant.asset.PREVENT_FOURTH);
+		maps.put(5, Constant.asset.PREVETN_FIFTH);
+		maps.put(6, Constant.asset.PREVENT_SIXTH);
+	}
+
 	public void render(float delta, GL10 gl) {
+		this.batch.begin();
+		sprite.draw(batch);
+		this.batch.end();
 		this.world.step(delta, 3, 3);
 		this.camera.update();
 		this.camera.apply(gl);
@@ -86,18 +109,6 @@ public class MiddleStage extends Stage {
 	public boolean touchDown(int x, int y, int pointer, int button) {
 		GreenLogger.getInstance().logp(Level.INFO, MiddleStage.class.getName(),
 				"touchDown", "called");
-
-		String bodyName = "bigcircle";
-		Iterator<Body> iters = this.world.getBodies();
-		while (iters.hasNext()) {
-			Body temp = iters.next();
-			if (bodyName.equals((String) temp.getUserData()))
-
-				temp.setBullet(true);
-				temp.applyForceToCenter(-1000, 100);
-				GreenLogger.getInstance()
-						.warning(temp.getPosition().toString());
-		}
 
 		return super.touchDown(x, y, pointer, button);
 	}
