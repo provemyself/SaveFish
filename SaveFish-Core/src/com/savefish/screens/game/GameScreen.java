@@ -2,14 +2,12 @@ package com.savefish.screens.game;
 
 import java.util.logging.Level;
 
-import org.lwjgl.util.Timer;
-
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
-import com.savefish.screens.HighScoreScreen;
+import com.savefish.logical.TimingManager;
 import com.savefish.util.logger.GreenLogger;
 
 public class GameScreen implements Screen {
@@ -38,8 +36,6 @@ public class GameScreen implements Screen {
 	@Override
 	public void render(float delta) {
 		GreenLogger.getInstance().log(Level.INFO, "render world!");
-		
-		Timer.tick();
 
 		GL10 gl = Gdx.graphics.getGL10();
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
@@ -49,12 +45,8 @@ public class GameScreen implements Screen {
 
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage));
-
-		GreenLogger.getInstance().warning(timer.getTime() + "");
-		if ((int) timer.getTime() % 5 == 0) {
-			timer.pause();
-			game.setScreen(HighScoreScreen.getInstance(game));
-		}
+		
+		TimingManager.getInstance(game).start();
 	}
 
 	@Override
@@ -68,7 +60,6 @@ public class GameScreen implements Screen {
 	public void show() {
 		this.initGame(game);
 		this.initStages();
-		this.initTimer();
 	}
 
 	@Override
@@ -111,11 +102,4 @@ public class GameScreen implements Screen {
 		this.middleStage = MiddleStage.createMiddleStage(1);
 		this.foreGroundStage = ForegroundStage.getInstance();
 	}
-
-	private Timer timer;
-
-	private void initTimer() {
-		this.timer = new Timer();
-	}
-
 }

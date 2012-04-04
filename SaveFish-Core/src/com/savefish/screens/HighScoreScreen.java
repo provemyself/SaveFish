@@ -61,8 +61,7 @@ public class HighScoreScreen implements Screen {
 		public void click(Actor actor, float x, float y) {
 			SoundManager.getInstance().play();
 			MusicManager.getInstance().play();
-			
-			
+
 		}
 
 	}
@@ -84,7 +83,7 @@ public class HighScoreScreen implements Screen {
 		this.stage.addActor(menuImage);
 		this.stage.addActor(nextImage);
 	}
-	
+
 	@Override
 	public void render(float delta) {
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
