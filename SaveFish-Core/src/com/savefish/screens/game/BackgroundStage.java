@@ -11,8 +11,12 @@ import com.savefish.util.logger.GreenLogger;
 
 public class BackgroundStage extends Stage {
 
-	public static BackgroundStage crateBackgroundStage() {
-		return new BackgroundStage();
+	private static BackgroundStage backgroundStage = null;
+
+	public static BackgroundStage getInstance() {
+		if (null == backgroundStage)
+			backgroundStage = new BackgroundStage();
+		return backgroundStage;
 	}
 
 	private BackgroundStage() {

@@ -12,6 +12,10 @@ import com.savefish.util.logger.GreenLogger;
 
 public class WinScreen implements Screen {
 
+	public WinScreen(){
+		
+	}
+	
 	private static WinScreen winScreen = null;
 
 	public static WinScreen getInstance(Game game) {
@@ -25,9 +29,10 @@ public class WinScreen implements Screen {
 	@SuppressWarnings("unused")
 	private Game game;
 
-	private WinScreen(Game game) {
+	public WinScreen(Game game) {
 		super();
 		this.game = game;
+		this.initStage();
 	}
 
 	private Stage stage = null;

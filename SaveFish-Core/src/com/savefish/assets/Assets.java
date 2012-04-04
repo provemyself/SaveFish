@@ -3,6 +3,7 @@ package com.savefish.assets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Level;
 
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
@@ -13,6 +14,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.savefish.constant.Constant;
+import com.savefish.util.logger.GreenLogger;
 
 public class Assets {
 
@@ -31,6 +33,7 @@ public class Assets {
 		return assets;
 	}
 
+	@SuppressWarnings("unused")
 	private boolean isComplete = false;
 
 	private TextureAtlas actorAtlas = null;
@@ -45,10 +48,6 @@ public class Assets {
 		this.spriteAtlas = this.getSpriteAtlas();
 	}
 
-	private boolean isComplete() {
-		return isComplete;
-	}
-
 	public void setComplete(boolean isComplete) {
 		this.isComplete = isComplete;
 		this.setActorAtlas();
@@ -57,13 +56,27 @@ public class Assets {
 	}
 
 	private TextureAtlas getActorAtlas() {
-		return assetManager.get(Constant.asset.ACTORS_BASE_PATH
+		TextureAtlas atlas = assetManager.get(Constant.asset.ACTORS_BASE_PATH
 				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
+		if (null == atlas) {
+			atlas = new TextureAtlas();
+			GreenLogger.getInstance().logp(Level.SEVERE,
+					Assets.class.getName(), "getActorAtlas",
+					"Failed to load ActorAtlas!");
+		}
+		return atlas;
 	}
 
 	private TextureAtlas getSpriteAtlas() {
-		return assetManager.get(Constant.asset.SPRITES_BASE_PATH
+		TextureAtlas atlas = assetManager.get(Constant.asset.SPRITES_BASE_PATH
 				+ Constant.asset.SPRITES_PACT, TextureAtlas.class);
+		if (null == atlas) {
+			atlas = new TextureAtlas();
+			GreenLogger.getInstance().logp(Level.SEVERE,
+					Assets.class.getName(), "getSpriteAtlas",
+					"Failed to load SpriteAtlas!");
+		}
+		return atlas;
 	}
 
 	public boolean update() {
@@ -81,50 +94,50 @@ public class Assets {
 	public Sprite getSprite() {
 		Random random = new Random();
 		int size = this.fishes.size();
-		return this.fishes.get(random.nextInt(size));
+		Sprite sprite = this.fishes.get(random.nextInt(size));
+
+		if (null == sprite) {
+			sprite = new Sprite();
+			GreenLogger.getInstance().logp(Level.SEVERE,
+					Assets.class.getName(), "getSprite",
+					"Failed to load sprite");
+		}
+		return sprite;
 	}
 
 	private Sprite getSprite(String fileName) {
-		return this.spriteAtlas.createSprite(fileName);
+		Sprite sprite = this.spriteAtlas.createSprite(fileName);
+		if (null == sprite) {
+			sprite = new Sprite();
+			GreenLogger.getInstance().logp(Level.SEVERE,
+					Assets.class.getName(), "getSprite",
+					"Failed to create sprite with the " + fileName + " !");
+		}
+		return sprite;
 	}
 
 	public TextureRegion getTextureRegion(String fileName) {
-		if (this.isComplete())
-			return this.actorAtlas.findRegion(fileName);
-		else
-			return null;
+		return this.actorAtlas.findRegion(fileName);
 	}
 
 	public BitmapFont getBitmapFont(String fileName) {
-		if (this.isComplete())
-			return assetManager.get(Constant.asset.FONTS_BASE_PATH + fileName,
-					BitmapFont.class);
-		else
-			return null;
+		return assetManager.get(Constant.asset.FONTS_BASE_PATH + fileName,
+				BitmapFont.class);
 	}
 
 	public Music getMusic(String fileName) {
-		if (this.isComplete())
-			return assetManager.get(Constant.asset.MUSICS_BASE_PATH + fileName,
-					Music.class);
-		else
-			return null;
+		return assetManager.get(Constant.asset.MUSICS_BASE_PATH + fileName,
+				Music.class);
 	}
 
 	public Pixmap getPixmap(String fileName) {
-		if (this.isComplete())
-			return assetManager.get(
-					Constant.asset.PIXMAPS_BASE_PATH + fileName, Pixmap.class);
-		else
-			return null;
+		return assetManager.get(Constant.asset.PIXMAPS_BASE_PATH + fileName,
+				Pixmap.class);
 	}
 
 	public Sound getSound(String fileName) {
-		if (this.isComplete())
-			return assetManager.get(Constant.asset.SOUNDS_BASE_PATH + fileName,
-					Sound.class);
-		else
-			return null;
+		return assetManager.get(Constant.asset.SOUNDS_BASE_PATH + fileName,
+				Sound.class);
 	}
 
 	public void dispose() {
@@ -178,6 +191,7 @@ public class Assets {
 		this.fishes.add(this.getSprite(Constant.asset.FISH_TWO_L));
 		this.fishes.add(this.getSprite(Constant.asset.FISH_TWO_R));
 		this.fishes.add(this.getSprite(Constant.asset.FISH_THREE_L));
+		this.fishes.add(this.getSprite(Constant.asset.FISH_THREE_M));
 		this.fishes.add(this.getSprite(Constant.asset.FISH_THREE_R));
 		this.fishes.add(this.getSprite(Constant.asset.FISH_FOUR_L));
 		this.fishes.add(this.getSprite(Constant.asset.FISH_FOUR_R));
@@ -189,6 +203,5 @@ public class Assets {
 		this.fishes.add(this.getSprite(Constant.asset.FISH_SEVEN_R));
 		this.fishes.add(this.getSprite(Constant.asset.FISH_EIGHT_L));
 		this.fishes.add(this.getSprite(Constant.asset.FISH_EIGHT_R));
-		this.fishes.add(this.getSprite(Constant.asset.FISH_EIGHT_M));
 	}
 }

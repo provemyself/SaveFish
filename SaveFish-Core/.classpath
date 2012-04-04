@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="libs/gdx-natives.jar"/>
 	<classpathentry kind="lib" path="libs/gdx.jar" sourcepath="libs/gdx-sources.jar"/>
 	<classpathentry kind="lib" path="libs/gson-2.1.jar" sourcepath="libs/gson-2.1-sources.jar"/>
+	<classpathentry kind="lib" path="libs/gdx-tools.jar" sourcepath="libs/gdx-tools-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -30,7 +30,7 @@ public final class Constant {
 	public static final class game {
 		public static final String GAME_NAME = "GreenGuards";// 游戏名称
 
-		public static final int GAME_DELAY = 60000;// 60秒
+		public static final int GAME_DELAY = 6;// 60秒
 
 		public static final int PREVENT_FIRST_LEVEL = 1;
 		public static final int PREVENT_SECOND_LEVEL = 2;
@@ -81,7 +81,6 @@ public final class Constant {
 
 		// 精灵名字
 		public static final String FISH_EIGHT_R = "fisheightR";
-		public static final String FISH_EIGHT_M = "fisheightM";
 		public static final String FISH_EIGHT_L = "fisheightL";
 		public static final String FISH_SEVEN_R = "fishsevenR";
 		public static final String FISH_SEVEN_L = "fishsevenR";
@@ -92,7 +91,8 @@ public final class Constant {
 		public static final String FISH_FOUR_R = "fishfourR";
 		public static final String FISH_FOUR_L = "fishfourL";
 		public static final String FISH_THREE_R = "fishthreeR";
-		public static final String FISH_THREE_L = "fishfishL";
+		public static final String FISH_THREE_M = "fishthreeM";
+		public static final String FISH_THREE_L = "fishthreeL";
 		public static final String FISH_TWO_R = "fishtwoR";
 		public static final String FISH_TWO_L = "fishtwoL";
 		public static final String FISH_ONE_R = "fishoneR";

@@ -10,7 +10,6 @@ public class CombineTexture {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Settings settings = new Settings();
         settings.alias = false;
         settings.incremental = true;

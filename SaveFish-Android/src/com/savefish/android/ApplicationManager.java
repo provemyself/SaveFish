@@ -22,7 +22,7 @@ public class ApplicationManager extends Game {
 	@Override
 	public void create() {
 		try {
-			setScreen(LoadingScreen.getInstance(this));
+			setScreen(LoadingScreen.createLoadingScreen(this));
 
 		} catch (Exception e) {
 			GreenLogger.getInstance().logp(Level.INFO,

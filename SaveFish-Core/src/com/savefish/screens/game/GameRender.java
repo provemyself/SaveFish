@@ -10,13 +10,9 @@ public class GameRender {
 	@SuppressWarnings("unused")
 	private Matrix4 combined;
 
-	/**
-	 * @param world
-	 * @param combined
-	 */
 	public GameRender(World world, Matrix4 combined) {
-		super();
 		this.world = world;
 		this.combined = combined;
 	}
+
 }

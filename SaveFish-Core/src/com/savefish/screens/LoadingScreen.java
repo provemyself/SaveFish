@@ -14,16 +14,11 @@ import com.savefish.service.LoadedScreen;
 import com.savefish.util.logger.GreenLogger;
 
 public class LoadingScreen implements Screen {
-	private static LoadingScreen loadingScreen = null;
 
-	public static LoadingScreen getInstance(Game game) {
-		GreenLogger.getInstance().logp(Level.INFO,
-				LoadingScreen.class.getName(), "getInstance", "called!");
-
-		if (null == loadingScreen) {
-			loadingScreen = new LoadingScreen(game);
-			LoadedScreen.screens.add(loadingScreen);
-		}
+	public static LoadingScreen createLoadingScreen(Game game) {
+		LoadingScreen loadingScreen = null;
+		loadingScreen = new LoadingScreen(game);
+		LoadedScreen.screens.add(loadingScreen);
 		return loadingScreen;
 	}
 
@@ -89,7 +84,7 @@ public class LoadingScreen implements Screen {
 
 	@Override
 	public void hide() {
-		GreenLogger.getInstance().logp(Level.INFO,
+		GreenLogger.getInstance().logp(Level.WARNING,
 				LoadingScreen.class.getName(), "hide", "called!");
 	}
 

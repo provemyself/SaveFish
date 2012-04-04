@@ -39,6 +39,7 @@ public class ForegroundStage extends Stage {
 		GreenLogger.getInstance().logp(Level.INFO,
 				ForegroundStage.class.getName(), "touchDown", "called");
 
+		
 		ParticleManager.getInstance().start();
 		ParticleManager.getInstance().setPosition(x, y);
 		return super.touchDown(x, y, pointer, button);

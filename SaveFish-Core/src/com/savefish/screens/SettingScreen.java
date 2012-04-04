@@ -42,6 +42,8 @@ public class SettingScreen implements Screen {
 	@Override
 	public void show() {
 		// TODO Auto-generated method stub
+		
+		GreenLogger.getInstance().warning("SettingScreen is shown!");
 
 	}
 

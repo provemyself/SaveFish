@@ -32,7 +32,7 @@ public class HighScoreScreen implements Screen {
 
 	private Game game;
 
-	private HighScoreScreen(Game game) {
+	public HighScoreScreen(Game game) {
 		super();
 		this.game = game;
 		this.initImage();
@@ -59,9 +59,10 @@ public class HighScoreScreen implements Screen {
 
 		@Override
 		public void click(Actor actor, float x, float y) {
-			// TODO Auto-generated method stub
 			SoundManager.getInstance().play();
 			MusicManager.getInstance().play();
+			
+			
 		}
 
 	}
@@ -70,7 +71,6 @@ public class HighScoreScreen implements Screen {
 
 		@Override
 		public void click(Actor actor, float x, float y) {
-			// TODO Auto-generated method stub
 			game.setScreen(GameScreen.getInstance(game));
 		}
 
@@ -84,10 +84,9 @@ public class HighScoreScreen implements Screen {
 		this.stage.addActor(menuImage);
 		this.stage.addActor(nextImage);
 	}
-
+	
 	@Override
 	public void render(float delta) {
-		// TODO Auto-generated method stub
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		this.stage.act(delta);
 		this.stage.draw();
@@ -96,37 +95,31 @@ public class HighScoreScreen implements Screen {
 
 	@Override
 	public void resize(int width, int height) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
 		this.initStage();
 	}
 
 	@Override
 	public void hide() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void pause() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void resume() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void dispose() {
-		// TODO Auto-generated method stub
 		GreenLogger.getInstance().logp(Level.INFO,
 				HighScoreScreen.class.getName(), "dispose", "called!");
 
@@ -137,7 +130,6 @@ public class HighScoreScreen implements Screen {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return HighScoreScreen.class.getName();
 	}
 
