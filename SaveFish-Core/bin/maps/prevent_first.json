@@ -1270,12 +1270,14 @@
          "awake" : true,
          "linearVelocity" : 0,
          "position" : 0,
+         "name" : "ground",
          "type" : 0 //static
       },
       
       {
          "angle" : 0,
          "angularVelocity" : 0,
+         "name" : "test",
          "fixture" : 
          [
             

@@ -3,6 +3,7 @@ package com.savefish.screens.game;
 import java.util.logging.Level;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
@@ -73,6 +74,13 @@ public class BackgroundStage extends Stage {
 	@Override
 	public boolean touchMoved(int x, int y) {
 		return super.touchMoved(x, y);
+	}
+
+	@Override
+	public Actor hit(float x, float y) {
+		// TODO Auto-generated method stub
+		System.out.println("hit");
+		return super.hit(x, y);
 	}
 
 }

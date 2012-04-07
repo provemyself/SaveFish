@@ -10,6 +10,7 @@ import com.badlogic.gdx.graphics.GL10;
 import com.savefish.logical.TimingManager;
 import com.savefish.util.logger.GreenLogger;
 
+@SuppressWarnings("unused")
 public class GameScreen implements Screen {
 
 	private static GameScreen gameScreen = null;
@@ -46,7 +47,7 @@ public class GameScreen implements Screen {
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage));
 		
-		TimingManager.getInstance(game).start();
+//		TimingManager.getInstance(game).start();
 	}
 
 	@Override

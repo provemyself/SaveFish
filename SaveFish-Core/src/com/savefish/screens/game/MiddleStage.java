@@ -1,22 +1,14 @@
 package com.savefish.screens.game;
 
-import java.util.HashMap;
-import java.util.Iterator;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Sprite;
-import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
-import com.badlogic.gdx.physics.box2d.CircleShape;
-import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
-import com.savefish.physics.resolve.GreenWorldFactory;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.logical.WorldManager;
 
 public class MiddleStage extends Stage {
 
@@ -28,14 +20,8 @@ public class MiddleStage extends Stage {
 		super(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
 		this.initCamera();
 		this.initRender();
-		this.initMaps();
 		this.initSprite();
-		try {
-			this.initWorld(gate);
-		} catch (Exception e) {
-			GreenLogger.getInstance().severe(e.toString());
-		}
-
+		this.initWorldManager();
 	}
 
 	private OrthographicCamera camera;
@@ -45,17 +31,6 @@ public class MiddleStage extends Stage {
 				Constant.physics.CAMERA_VIEW_HEIGHT);
 		camera.position.set(Constant.physics.CAMERA_X,
 				Constant.physics.CAMERA_Y, Constant.physics.CAMERA_Z);
-	}
-
-	private World world;
-
-	private void initWorld(int gate) throws Exception {
-		if (gate <= maps.size())
-			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
-					+ maps.get(gate));
-		else
-			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
-					+ maps.get(1));
 	}
 
 	private Box2DDebugRenderer render;
@@ -71,49 +46,22 @@ public class MiddleStage extends Stage {
 		this.sprite.setScale(0.3f);
 	}
 
-	HashMap<Integer, String> maps = new HashMap<Integer, String>();
+	private WorldManager worldManager = null;
 
-	private void initMaps() {
-		maps.put(1, Constant.asset.PREVENT_FIRST);
-		maps.put(2, Constant.asset.PREVENT_SECOND);
-		maps.put(3, Constant.asset.PREVENT_THIRD);
-		maps.put(4, Constant.asset.PREVENT_FOURTH);
-		maps.put(5, Constant.asset.PREVETN_FIFTH);
-		maps.put(6, Constant.asset.PREVENT_SIXTH);
-	}
-
-	@SuppressWarnings("unused")
-	private void applyToBody() {
-		Iterator<Body> iter = world.getBodies();
-		while (iter.hasNext()) {
-			Body body = iter.next();
-			String bodyName = (String) body.getUserData();
-			if ((bodyName != null) && bodyName.startsWith("Rubbish")) {
-				CircleShape shape = (CircleShape) body.getFixtureList().get(0)
-						.getShape();
-				float radius = shape.getRadius();
-				Vector2 position = body.getPosition();
-//				GreenLogger.getInstance().severe(radius + "");
-//				GreenLogger.getInstance().severe(body.getPosition().toString());
-//				GreenLogger.getInstance().severe(
-//						position.x * 10 + ", " + position.y * 10);
-				body.applyForceToCenter(body.getPosition().x / 10, -10);
-			}
-		}
+	private void initWorldManager() {
+		this.worldManager = new WorldManager(1);
 	}
 
 	public void render(float delta, GL10 gl) {
-		this.world.step(delta, 3, 3);
-		this.applyToBody();
 		this.camera.update();
 		this.camera.apply(gl);
-		this.render.render(world, this.camera.combined);
+		this.worldManager.render(delta);
+		this.render.render(worldManager.getWorld(), this.camera.combined);
 	}
 
 	@Override
 	public void dispose() {
 		this.render.dispose();
-		this.world.dispose();
 		super.dispose();
 	}
 
@@ -136,5 +84,4 @@ public class MiddleStage extends Stage {
 	public boolean touchMoved(int x, int y) {
 		return super.touchMoved(x, y);
 	}
-
 }

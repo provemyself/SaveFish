@@ -1,14 +1,10 @@
 package com.savefish.service;
 
-import java.util.logging.Level;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.savefish.constant.Constant;
-import com.savefish.screens.game.ForegroundStage;
-import com.savefish.util.logger.GreenLogger;
 
 public class ParticleManager implements Managable {
 
@@ -53,11 +49,6 @@ public class ParticleManager implements Managable {
 	private ParticleEffect particleEffect = null;
 
 	private void initParticleEffect() {
-
-		GreenLogger.getInstance().logp(Level.INFO,
-				ForegroundStage.class.getName(), "initParticleEffect",
-				"called!");
-
 		this.particleEffect = new ParticleEffect();
 		this.particleEffect.load(
 				Gdx.files.internal(Constant.asset.PARTICLES_BASE_PATH
@@ -70,9 +61,6 @@ public class ParticleManager implements Managable {
 	private SpriteBatch spriteBatch = null;
 
 	private void initSpriteBatch() {
-		GreenLogger.getInstance().logp(Level.INFO,
-				ParticleManager.class.getName(), "initSpriteBatch", "called!");
-
 		this.spriteBatch = new SpriteBatch();
 	}
 }

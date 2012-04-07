@@ -1,5 +1,0 @@
-package com.savefish.service;
-
-public enum WeiboEnum {
-
-}
