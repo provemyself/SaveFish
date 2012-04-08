@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.savefish.constant.Constant;
 import com.savefish.service.ParticleManager;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class ForegroundStage extends Stage {
 

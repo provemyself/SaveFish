@@ -11,7 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.service.LoadedScreen;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class LoadingScreen implements Screen {
 

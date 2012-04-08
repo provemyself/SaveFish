@@ -14,7 +14,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.savefish.constant.Constant;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class Assets {
 

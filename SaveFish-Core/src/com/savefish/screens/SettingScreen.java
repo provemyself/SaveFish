@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
 import com.savefish.service.LoadedScreen;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class SettingScreen implements Screen {
 

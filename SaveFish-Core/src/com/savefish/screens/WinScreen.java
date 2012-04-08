@@ -8,7 +8,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.savefish.service.LoadedScreen;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class WinScreen implements Screen {
 

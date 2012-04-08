@@ -16,7 +16,7 @@ import com.savefish.screens.game.GameScreen;
 import com.savefish.service.LoadedScreen;
 import com.savefish.service.MusicManager;
 import com.savefish.service.SoundManager;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class HighScoreScreen implements Screen {
 

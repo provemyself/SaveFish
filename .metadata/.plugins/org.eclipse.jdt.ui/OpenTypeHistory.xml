@@ -9,4 +9,8 @@
 <typeInfo handle="=SaveFish-Core/src&lt;com.savefish.logical{TaskContainer.java[TaskContainer" modifiers="513" timestamp="1333711445000"/>
 <typeInfo handle="=SaveFish-Core/libs\/gdx.jar&lt;com.badlogic.gdx.physics.box2d(ContactListener.class[ContactListener" modifiers="1537" timestamp="1333597139000"/>
 <typeInfo handle="=SaveFish-Core/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;com.sun.corba.se.pept.transport(ContactInfoList.class[ContactInfoList" modifiers="1537" timestamp="1329979723000"/>
+<typeInfo handle="=SaveFish-Desktop/\/SaveFish-Core\/libs\/gdx.jar&lt;com.badlogic.gdx(ApplicationListener.class[ApplicationListener" modifiers="1537" timestamp="1333597139000"/>
+<typeInfo handle="=SaveFish-Desktop/\/SaveFish-Core\/libs\/gdx.jar&lt;com.badlogic.gdx(Application.class[Application" modifiers="1537" timestamp="1333597139000"/>
+<typeInfo handle="=SaveFish-Desktop/\/SaveFish-Core\/libs\/gdx.jar&lt;com.badlogic.gdx(InputProcessor.class[InputProcessor" modifiers="1537" timestamp="1333597139000"/>
+<typeInfo handle="=SaveFish-Desktop/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;sun.awt.im(InputMethodWindow.class[InputMethodWindow" modifiers="1537" timestamp="1329979723000"/>
 </typeInfoHistroy>

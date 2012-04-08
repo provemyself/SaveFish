@@ -1,5 +1,12 @@
 package com.savefish.service;
 
+/********************************
+ * Description: 该类是音效管理器，负责
+ *              音效的设置
+ * Author     : 王志伟
+ * Date       : 2012/03/08
+ *******************************/
+
 import com.badlogic.gdx.audio.Sound;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
@@ -21,6 +28,9 @@ public class SoundManager implements Managable {
 		this.sound = Assets.getInstance().getSound(Constant.asset.SOUND);
 	}
 
+	/**
+	 * @description 音量的取值区间<0, 1>
+	 */
 	public void play() {
 		this.sound.play(1);
 	}

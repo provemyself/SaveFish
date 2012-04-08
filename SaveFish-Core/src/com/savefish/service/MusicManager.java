@@ -1,5 +1,12 @@
 package com.savefish.service;
 
+/********************************
+ * Description: 该类是音乐管理器，负责
+ *              背景音乐的加载与播放
+ * Author     : 王志伟
+ * Date       : 2012/03/08
+ *******************************/
+
 import com.badlogic.gdx.audio.Music;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;

@@ -35,7 +35,7 @@ import com.badlogic.gdx.physics.box2d.joints.WeldJointDef;
 import com.badlogic.gdx.physics.box2d.joints.WheelJointDef;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class GreenWorldFactory {
 

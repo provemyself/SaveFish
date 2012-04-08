@@ -11,13 +11,13 @@ public final class Constant {
 
 	public static final class physics {
 		public static final int RATE = 10;// 屏幕与现实世界的比例1：10（1像素等于10米）
-		public static final float TIME_STEP = 2.0f / 60.0f;// 模拟现实世界的频率
+		public static final float TIME_STEP = 1.0f / 60.0f;// 模拟现实世界的频率
 		public static final int ITERATION = 10;// 迭代次数
 		public static final int CAMERA_VIEW_WIDTH = screen.SCREEN_WIDTH / RATE;// 相机视点宽度
 		public static final int CAMERA_VIEW_HEIGHT = screen.SCREEN_HEIGHT
 				/ RATE;// 相机视点高度
 		public static final int CAMERA_X = CAMERA_VIEW_WIDTH / 2;
-		public static final int CAMERA_Y = CAMERA_VIEW_HEIGHT / 2 - 1;
+		public static final int CAMERA_Y = CAMERA_VIEW_HEIGHT / 2;
 		public static final int CAMERA_Z = 10;
 	}
 

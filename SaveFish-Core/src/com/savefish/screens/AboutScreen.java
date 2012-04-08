@@ -8,14 +8,14 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.savefish.service.LoadedScreen;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class AboutScreen implements Screen {
 
 	private static AboutScreen aboutScreen = null;
 
 	public static AboutScreen getInstance(Game game) {
-		if (null == aboutScreen){
+		if (null == aboutScreen) {
 			aboutScreen = new AboutScreen(game);
 			LoadedScreen.screens.add(aboutScreen);
 		}
@@ -39,7 +39,6 @@ public class AboutScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
-		// TODO Auto-generated method stub
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		this.stage.act(delta);
 		this.stage.draw();
@@ -47,37 +46,31 @@ public class AboutScreen implements Screen {
 
 	@Override
 	public void resize(int width, int height) {
-		// TODO Auto-generated method stub
 		stage.setViewport(width, height, true);
 	}
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
 		this.initStage();
 	}
 
 	@Override
 	public void hide() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void pause() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void resume() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void dispose() {
-		// TODO Auto-generated method stub
 		GreenLogger.getInstance().logp(Level.INFO, AboutScreen.class.getName(),
 				"dispose", "called!");
 
@@ -88,7 +81,6 @@ public class AboutScreen implements Screen {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return AboutScreen.class.getName();
 	}
 

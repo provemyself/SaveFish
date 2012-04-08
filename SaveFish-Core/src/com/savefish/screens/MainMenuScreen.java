@@ -13,7 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
 import com.savefish.service.LoadedScreen;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
 
 public class MainMenuScreen implements Screen {
 

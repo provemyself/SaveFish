@@ -7,8 +7,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
-import com.savefish.logical.TimingManager;
-import com.savefish.util.logger.GreenLogger;
+import com.savefish.util.GreenLogger;
+import com.savefish.util.TimingManager;
 
 @SuppressWarnings("unused")
 public class GameScreen implements Screen {

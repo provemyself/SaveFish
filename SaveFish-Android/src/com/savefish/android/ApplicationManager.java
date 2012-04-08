@@ -7,8 +7,8 @@ import com.badlogic.gdx.Screen;
 import com.savefish.assets.Assets;
 import com.savefish.screens.LoadingScreen;
 import com.savefish.service.LoadedScreen;
-import com.savefish.util.logger.GreenLogger;
-import com.savefish.util.logger.GreenLoggerManager;
+import com.savefish.util.GreenLogger;
+import com.savefish.util.GreenLoggerManager;
 
 public class ApplicationManager extends Game {
 

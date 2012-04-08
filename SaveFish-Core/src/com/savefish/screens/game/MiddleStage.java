@@ -49,7 +49,7 @@ public class MiddleStage extends Stage {
 	private WorldManager worldManager = null;
 
 	private void initWorldManager() {
-		this.worldManager = new WorldManager(1);
+		this.worldManager = WorldManager.createWorldManager(1);
 	}
 
 	public void render(float delta, GL10 gl) {
@@ -62,26 +62,29 @@ public class MiddleStage extends Stage {
 	@Override
 	public void dispose() {
 		this.render.dispose();
+		this.camera = null;
+		this.worldManager = null;
+		this.sprite = null;
 		super.dispose();
 	}
 
 	@Override
 	public boolean touchDown(int x, int y, int pointer, int button) {
-		return super.touchDown(x, y, pointer, button);
+		return worldManager.touchDown(x, y, pointer, button);
 	}
 
 	@Override
 	public boolean touchUp(int x, int y, int pointer, int button) {
-		return super.touchUp(x, y, pointer, button);
+		return worldManager.touchUp(x, y, pointer, button);
 	}
 
 	@Override
 	public boolean touchDragged(int x, int y, int pointer) {
-		return super.touchDragged(x, y, pointer);
+		return worldManager.touchDragged(x, y, pointer);
 	}
 
 	@Override
 	public boolean touchMoved(int x, int y) {
-		return super.touchMoved(x, y);
+		return worldManager.touchMoved(x, y);
 	}
 }

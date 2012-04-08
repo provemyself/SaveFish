@@ -1,5 +1,12 @@
 package com.savefish.desktop;
 
+/********************************
+ * Description: 该类是应用程序管理器
+ *              负责游戏日志，循环
+ * Author     : 王志伟
+ * Date       : 2012/03/08
+ *******************************/
+
 import java.util.logging.Level;
 
 import com.badlogic.gdx.Game;
@@ -9,21 +16,19 @@ import com.savefish.screens.LoadingScreen;
 import com.savefish.service.LoadedManager;
 import com.savefish.service.LoadedScreen;
 import com.savefish.service.Managable;
-import com.savefish.util.logger.GreenLogger;
-import com.savefish.util.logger.GreenLoggerManager;
+import com.savefish.util.GreenLogger;
+import com.savefish.util.GreenLoggerManager;
 
 public class ApplicationManager extends Game {
 
 	public ApplicationManager() {
 		GreenLoggerManager.filterLogByLevel(Level.WARNING);
-		
 	}
 
 	@Override
 	public void create() {
 		try {
 			setScreen(LoadingScreen.createLoadingScreen(this));
-
 		} catch (Exception e) {
 			GreenLogger.getInstance().logp(Level.INFO,
 					ApplicationManager.class.getName(), "create", e.toString(),

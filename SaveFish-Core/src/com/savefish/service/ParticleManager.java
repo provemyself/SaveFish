@@ -1,5 +1,12 @@
 package com.savefish.service;
 
+/********************************
+ * Description: 该类是粒子效果管理器
+ *              负责例子效果的设置
+ * Author     : 王志伟
+ * Date       : 2012/03/08
+ *******************************/
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
