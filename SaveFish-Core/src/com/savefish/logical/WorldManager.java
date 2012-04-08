@@ -13,7 +13,7 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.savefish.constant.Constant;
 import com.savefish.physics.resolve.GreenWorldFactory;
-import com.savefish.service.SoundManager;
+import com.savefish.service.SlideSound;
 import com.savefish.task.DestroyBodyTask;
 import com.savefish.task.Task;
 import com.savefish.task.TaskContainer;
@@ -166,7 +166,7 @@ public class WorldManager extends InputAdapter {
 							if (null != bodyB)
 								bodyB.applyLinearImpulse(new Vector2(50, 50),
 										bodyB.getWorldCenter());
-							SoundManager.getInstance().play();
+							SlideSound.getInstance().play();
 							addTask(new DestroyBodyTask(testBody));
 						}
 					}

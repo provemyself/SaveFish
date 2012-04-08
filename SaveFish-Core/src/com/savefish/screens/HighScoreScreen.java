@@ -15,7 +15,7 @@ import com.savefish.constant.Constant;
 import com.savefish.screens.game.GameScreen;
 import com.savefish.service.LoadedScreen;
 import com.savefish.service.MusicManager;
-import com.savefish.service.SoundManager;
+import com.savefish.service.SlideSound;
 import com.savefish.util.GreenLogger;
 
 public class HighScoreScreen implements Screen {
@@ -59,7 +59,7 @@ public class HighScoreScreen implements Screen {
 
 		@Override
 		public void click(Actor actor, float x, float y) {
-			SoundManager.getInstance().play();
+			SlideSound.getInstance().play();
 			MusicManager.getInstance().play();
 
 		}

@@ -167,7 +167,7 @@ public class Assets {
 
 	private void loadSound() {
 		this.assetManager.load(Constant.asset.SOUNDS_BASE_PATH
-				+ Constant.asset.SOUND, Sound.class);
+				+ Constant.asset.SLIDE_SOUND, Sound.class);
 	}
 
 	private void loadTextureAtlas() {

@@ -67,7 +67,13 @@ public final class Constant {
 		public static final String MUSIC = "annie.mp3";
 
 		// 音效
-		public static final String SOUND = "glass.wav";
+		public static final String SLIDE_SOUND = "glass.wav";
+		public static final String EJECT_SOUND = "";
+		public static final String CONTACT_SOUND = "";
+		public static final String DEAD_SOUND = "";
+		public static final String WIN_SOUND = "";
+		public static final String FAIL_FISH_SOUND = "";
+		public static final String FAIL_TIME_SOUND = "";
 
 		// 纹理文件
 		public static final String LOADING = "loading.png";
