@@ -8,7 +8,6 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
 import com.savefish.util.GreenLogger;
-import com.savefish.util.TimingManager;
 
 public class GameScreen implements Screen {
 
@@ -46,14 +45,11 @@ public class GameScreen implements Screen {
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage));
 
-		TimingManager.getInstance(game).start();
+		// TimingManager.getInstance(game).start();
 	}
 
 	@Override
 	public void resize(int width, int height) {
-		GreenLogger.getInstance().logp(Level.WARNING,
-				GameScreen.class.getName(), "resize", "called!");
-
 	}
 
 	@Override
@@ -93,13 +89,17 @@ public class GameScreen implements Screen {
 		this.game = game;
 	}
 
-	private BackgroundStage backGroundStage;
-	private MiddleStage middleStage;
-	private ForegroundStage foreGroundStage;
+	private GameBackgroundStage backGroundStage;
+	private GameMiddleStage middleStage;
+	private GameForegroundStage foreGroundStage;
 
 	private void initStages() {
-		this.backGroundStage = BackgroundStage.getInstance();
-		this.middleStage = MiddleStage.createMiddleStage(1);
-		this.foreGroundStage = ForegroundStage.getInstance();
+		this.backGroundStage = GameBackgroundStage.getInstance();
+		try {
+			this.middleStage = GameMiddleStage.createMiddleStage(2);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		this.foreGroundStage = GameForegroundStage.getInstance();
 	}
 }

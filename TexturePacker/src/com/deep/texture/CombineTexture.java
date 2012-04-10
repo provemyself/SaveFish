@@ -13,7 +13,7 @@ public class CombineTexture {
 		Settings settings = new Settings();
         settings.alias = false;
         settings.incremental = true;
-        TexturePacker.process(settings, "/home/zhujianxin/intput", 
-        		"/home/zhujianxin");
+        TexturePacker.process(settings, "/home/zhujianxin/input", 
+        		"/home/zhujianxin/output");
 	}
 }

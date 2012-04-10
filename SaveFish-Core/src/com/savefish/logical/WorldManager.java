@@ -82,7 +82,7 @@ public class WorldManager extends InputAdapter {
 					+ maps.get(gate));
 		else
 			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
-					+ maps.get(1));
+					+ maps.get(5));
 		world.setContactListener(new CollisionHandler());
 	}
 
@@ -95,7 +95,8 @@ public class WorldManager extends InputAdapter {
 		while (iter.hasNext()) {
 			Body body = iter.next();
 			String bodyName = (String) body.getUserData();
-			if ((bodyName != null) && bodyName.startsWith("Rubbish_")) {
+			if ((bodyName != null) && (bodyName.startsWith("rubbish"))) {
+//				body.setGravityScale(1.0f);
 				body.applyForceToCenter(body.getPosition().x / 10, -10);
 			}
 		}
@@ -121,8 +122,8 @@ public class WorldManager extends InputAdapter {
 			Body body = iter.next();
 			String bodyName = (String) body.getUserData();
 			System.out.println(bodyName);
-			if ((null != bodyName) && (bodyName.startsWith("t"))) {
-				// body.applyLinearImpulse(tmp, body.getWorldCenter());
+			if ((null != bodyName) && (bodyName.startsWith("art"))) {
+				 body.applyLinearImpulse(tmp, body.getWorldCenter());
 				body.setLinearVelocity(tmp);
 				body.setAngularDamping(500);
 			}
@@ -161,7 +162,7 @@ public class WorldManager extends InputAdapter {
 					Body testBody = null;
 					if (bodyBName != null) {
 						if ((null != bodyAName)
-								&& (bodyAName.startsWith("test"))) {
+								&& (bodyAName.startsWith("arti"))) {
 							testBody = bodyB;
 							if (null != bodyB)
 								bodyB.applyLinearImpulse(new Vector2(50, 50),

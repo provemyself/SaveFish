@@ -1,47 +1,76 @@
 
-intput1.png
+input1.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-quit
+selectlevel2
   rotate: false
   xy: 2, 2
-  size: 128, 128
-  orig: 128, 128
+  size: 960, 640
+  orig: 960, 640
   offset: 0, 0
   index: -1
-menu
+previous
   rotate: false
-  xy: 2, 132
-  size: 128, 128
-  orig: 128, 128
+  xy: 2, 644
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
-start
+stop
   rotate: false
-  xy: 2, 262
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-exit
-  rotate: false
-  xy: 2, 392
-  size: 128, 128
-  orig: 128, 128
-  offset: 0, 0
-  index: -1
-loading
-  rotate: false
-  xy: 2, 522
-  size: 128, 128
-  orig: 128, 128
+  xy: 260, 644
+  size: 256, 256
+  orig: 256, 256
   offset: 0, 0
   index: -1
 next
   rotate: false
-  xy: 2, 652
-  size: 128, 64
-  orig: 128, 64
+  xy: 518, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+input2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+mainmenu
+  rotate: false
+  xy: 2, 2
+  size: 960, 640
+  orig: 960, 640
+  offset: 0, 0
+  index: -1
+pause
+  rotate: false
+  xy: 2, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+input3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+highscore
+  rotate: false
+  xy: 2, 2
+  size: 960, 640
+  orig: 960, 640
+  offset: 0, 0
+  index: -1
+
+input4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+selectlevel1
+  rotate: false
+  xy: 2, 2
+  size: 940, 640
+  orig: 940, 640
   offset: 0, 0
   index: -1

@@ -2,13 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
 		<item value="true" key="ShowStatusLine"/>
-		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=SaveFish-Desktop/src&amp;lt;com.savefish.desktop{GreenGuardsDesktop.java[GreenGuardsDesktop&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=TexturePacker/src&amp;lt;com.deep.texture{CombineTexture.java[CombineTexture&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=SaveFish-Core/src&amp;lt;com.savefish.desktop{DesktopLauncher.java[DesktopLauncher&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=gdx-tools/src&amp;lt;com.badlogic.gdx.tools.hiero{Hiero.java[Hiero&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=gdx-tools/src&amp;lt;com.badlogic.gdx.tools.imagepacker{ImagePacker.java[ImagePacker&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=SaveFish-Desktop/src&amp;lt;com.savefish.desktop{DesktopLauncher.java[DesktopLauncher&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=SaveFish-Desktop/src&amp;lt;com.savefish.desktop{GreenGuardsDesktop.java[GreenGuardsDesktop&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=SaveFish-Core/src&amp;lt;com.savefish.desktop{DesktopLauncher.java[DesktopLauncher&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=gdx-tools/src&amp;lt;com.badlogic.gdx.tools.hiero{Hiero.java[Hiero&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=gdx-tools/src&amp;lt;com.badlogic.gdx.tools.imagepacker{ImagePacker.java[ImagePacker&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=SaveFish-Core/libs\/gdx-backend-lwjgl.jar&amp;lt;org.lwjgl.util.mapped(CacheLineSize.class[CacheLineSize&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=TexturePacker/src&amp;lt;com.deep.texture{CombineTexture.java[CombineTexture&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=SaveFish-Desktop/src&amp;lt;com.savefish.desktop{DesktopLauncher.java[DesktopLauncher&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
 		<section name="DialogBoundsSettings">
-			<item value="468" key="DIALOG_WIDTH"/>
-			<item value="54" key="DIALOG_Y_ORIGIN"/>
-			<item value="577" key="DIALOG_HEIGHT"/>
-			<item value="384" key="DIALOG_X_ORIGIN"/>
-			<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+			<item value="540" key="DIALOG_WIDTH"/>
+			<item value="29" key="DIALOG_Y_ORIGIN"/>
+			<item value="575" key="DIALOG_HEIGHT"/>
+			<item value="414" key="DIALOG_X_ORIGIN"/>
+			<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		</section>
 	</section>
 </section>

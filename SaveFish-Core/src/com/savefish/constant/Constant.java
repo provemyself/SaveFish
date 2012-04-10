@@ -78,12 +78,13 @@ public final class Constant {
 		// 纹理文件
 		public static final String LOADING = "loading.png";
 
-		// 纹理文件名
-		public static final String QUIT = "quit";
-		public static final String START = "start";
-		public static final String MENU = "menu";
+		// 游戏菜单的背景图片
+		public static final String GAME_SCRENE = "gamescene";
+		public static final String MAIN_MENU = "mainmenu";
+		public static final String PREVIOUS = "previous";
+		public static final String STOP = "stop";
+		public static final String PAUSE = "pause";
 		public static final String NEXT = "next";
-		public static final String EXIT = "exit";
 
 		// 精灵名字
 		public static final String FISH_EIGHT_R = "fisheightR";
@@ -105,7 +106,7 @@ public final class Constant {
 		public static final String FISH_ONE_L = "fishoneL";
 
 		// 游戏场景的背景图片
-		public static final String BACKGROUND_ONE = "gamescene";
+		public static final String BACKGROUND_ONE = "mainmenu";
 		public static final String BACKGROUND_TWO = "background_two";
 		public static final String BACKGOUND_THREE = "background_three";
 		public static final String BACKGROUND_FOUR = "background_four";
@@ -129,7 +130,7 @@ public final class Constant {
 		public static final String CLEAR_SIXTH = "clear_sixth.json";
 
 		// 粒子文件
-		public static final String PARTICLE_ONE_TEXT = "128.p";
+		public static final String PARTICLE_ONE_TEXT = "particle.p";
 
 		// pack
 		public static final String ACTORS_PACK = "actors";

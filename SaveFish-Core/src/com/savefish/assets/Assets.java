@@ -91,7 +91,7 @@ public class Assets {
 		return assetManager.getLoadedAssets();
 	}
 
-	public Sprite getSprite() {
+	public Sprite getNatureFishSprite() {
 		Random random = new Random();
 		int size = this.fishes.size();
 		Sprite sprite = this.fishes.get(random.nextInt(size));
@@ -105,7 +105,11 @@ public class Assets {
 		return sprite;
 	}
 
-	private Sprite getSprite(String fileName) {
+	public Sprite getArtificialFish(String fileName) {
+		return getSprite(fileName);
+	}
+
+	public Sprite getSprite(String fileName) {
 		Sprite sprite = this.spriteAtlas.createSprite(fileName);
 		if (null == sprite) {
 			sprite = new Sprite();
@@ -171,8 +175,6 @@ public class Assets {
 	}
 
 	private void loadTextureAtlas() {
-		this.assetManager.load(Constant.asset.ACTORS_BASE_PATH
-				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
 		this.assetManager.load(Constant.asset.ACTORS_BASE_PATH
 				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
 		this.assetManager.load(Constant.asset.SPRITES_BASE_PATH

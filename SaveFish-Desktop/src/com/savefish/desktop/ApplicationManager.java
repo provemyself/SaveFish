@@ -22,7 +22,7 @@ import com.savefish.util.GreenLoggerManager;
 public class ApplicationManager extends Game {
 
 	public ApplicationManager() {
-		GreenLoggerManager.filterLogByLevel(Level.WARNING);
+		GreenLoggerManager.filterLogByLevel(Level.INFO);
 	}
 
 	@Override
@@ -51,22 +51,35 @@ public class ApplicationManager extends Game {
 
 		this.disposeScreens();
 		this.disposeManagers();
-		Assets.getInstance().dispose();
+		this.disposeAssets();
 		DesktopLauncher.saveFish.exit();
 
 		GreenLogger.getInstance().log(Level.INFO, "Game exited sucessfully!");
 	}
 
 	private void disposeScreens() {
-		for (Screen screen : LoadedScreen.screens)
-			screen.dispose();
+		if ((null != LoadedScreen.screens) && (LoadedScreen.screens.size() > 0)) {
+			for (Screen screen : LoadedScreen.screens) {
+				if (null != screen)
+					screen.dispose();
+			}
+		}
 		LoadedScreen.screens = null;
 	}
 
 	private void disposeManagers() {
-		for (Managable manager : LoadedManager.managers)
-			manager.dispose();
+		if ((null != LoadedManager.managers)
+				&& (LoadedManager.managers.size() > 0)) {
+			for (Managable manager : LoadedManager.managers) {
+				if (null != manager)
+					manager.dispose();
+			}
+		}
 		LoadedManager.managers = null;
+	}
+
+	private void disposeAssets() {
+		Assets.getInstance().dispose();
 	}
 
 }

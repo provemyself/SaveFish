@@ -58,7 +58,7 @@ public class LoadingScreen implements Screen {
 					"Loading complete!");
 
 			Assets.getInstance().setComplete(true);
-			this.game.setScreen(HighScoreScreen.getInstance(game));
+			this.game.setScreen(MainMenuScreen.getInstance(game));
 		} else {
 			GreenLogger.getInstance().logp(Level.INFO,
 					LoadingScreen.class.getName(), "render",

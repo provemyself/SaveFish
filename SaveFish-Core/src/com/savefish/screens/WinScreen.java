@@ -12,10 +12,10 @@ import com.savefish.util.GreenLogger;
 
 public class WinScreen implements Screen {
 
-	public WinScreen(){
-		
+	public WinScreen() {
+
 	}
-	
+
 	private static WinScreen winScreen = null;
 
 	public static WinScreen getInstance(Game game) {

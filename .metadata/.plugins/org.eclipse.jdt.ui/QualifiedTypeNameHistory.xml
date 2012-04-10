@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.savefish.screens.SettingScreen"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Screen"/>
 <fullyQualifiedTypeName name="com.savefish.service.InitializedScreen"/>
 <fullyQualifiedTypeName name="com.savefish.desktop.GreenGuardsDesktop"/>
 <fullyQualifiedTypeName name="java.awt.Toolkit"/>
-<fullyQualifiedTypeName name="com.savefish.screens.game.GameScreen"/>
 <fullyQualifiedTypeName name="com.savefish.screens.LoadingScreen"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.InputMultiplexer"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Gdx"/>
@@ -19,20 +17,15 @@
 <fullyQualifiedTypeName name="com.badlogic.gdx.backends.android.AndroidApplication"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.Stage"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Image"/>
-<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.TextureAtlas"/>
-<fullyQualifiedTypeName name="com.badlogic.gdx.audio.Sound"/>
 <fullyQualifiedTypeName name="com.savefish.service.SoundManager.SoundType"/>
 <fullyQualifiedTypeName name="com.savefish.service.MusicManager"/>
 <fullyQualifiedTypeName name="com.savefish.service.LoadedManager"/>
 <fullyQualifiedTypeName name="com.savefish.service.Managable"/>
-<fullyQualifiedTypeName name="com.badlogic.gdx.Game"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
 <fullyQualifiedTypeName name="com.savefish.constant.Constant.game"/>
 <fullyQualifiedTypeName name="com.savefish.screens.MainMenuScreen"/>
 <fullyQualifiedTypeName name="com.savefish.screens.WinScreen"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.InputAdapter"/>
 <fullyQualifiedTypeName name="com.savefish.util.WorldRenderHelper"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
 <fullyQualifiedTypeName name="com.savefish.assets.Assets"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Audio"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.TextField"/>
@@ -60,4 +53,11 @@
 <fullyQualifiedTypeName name="com.badlogic.gdx.physics.box2d.Shape"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.physics.box2d.Shape.Type"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.math.Vector2"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.audio.Sound"/>
+<fullyQualifiedTypeName name="com.savefish.service.SlideSound"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.TextureAtlas"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.Game"/>
+<fullyQualifiedTypeName name="com.savefish.screens.game.GameScreen"/>
 </qualifiedTypeNameHistroy>

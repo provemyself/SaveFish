@@ -12,6 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
+import com.savefish.screens.game.GameScreen;
 import com.savefish.service.LoadedScreen;
 import com.savefish.util.GreenLogger;
 
@@ -107,15 +108,15 @@ public class MainMenuScreen implements Screen {
 
 	private void initImage() {
 		this.startImage = new Image(Assets.getInstance().getTextureRegion(
-				Constant.asset.START));
+				Constant.asset.PREVIOUS));
 		this.startImage.x = 10;
 		this.startImage.y = 10;
 		this.startImage.setClickListener(new StartImageListener());
 
 		this.quitImage = new Image(Assets.getInstance().getTextureRegion(
-				Constant.asset.QUIT));
-		this.quitImage.x = 200;
-		this.quitImage.y = 200;
+				Constant.asset.STOP));
+		this.quitImage.x = 10;
+		this.quitImage.y = 400;
 		this.quitImage.setClickListener(new QuitImageListener());
 	}
 
@@ -123,6 +124,7 @@ public class MainMenuScreen implements Screen {
 
 		@Override
 		public void click(Actor actor, float x, float y) {
+			game.setScreen(GameScreen.getInstance(game));
 		}
 	}
 
