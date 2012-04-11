@@ -10,6 +10,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.savefish.constant.Constant;
 import com.savefish.physics.resolve.GreenWorldFactory;
+import com.savefish.service.SlideSound;
 import com.savefish.task.Task;
 import com.savefish.task.TaskContainer;
 import com.savefish.task.TaskQueueContainer;
@@ -98,10 +99,12 @@ public class WorldManager extends InputAdapter {
 
 	@Override
 	public boolean touchUp(int x, int y, int pointer, int button) {
+		SlideSound.getInstance().play();
+
 		endPosition = new Vector2(x, y);
 		Vector2 tmp = endPosition.sub(startPosition);
-		tmp.x *= 50;
-		tmp.y *= 50;
+		tmp.x *= 10;
+		tmp.y *= 10;
 		Iterator<Body> iter = world.getBodies();
 		while (iter.hasNext()) {
 			Body body = iter.next();
@@ -109,7 +112,6 @@ public class WorldManager extends InputAdapter {
 			if ((null != bodyName) && (bodyName.startsWith("art"))) {
 				body.applyLinearImpulse(tmp, body.getWorldCenter());
 				body.setLinearVelocity(tmp);
-				body.setAngularDamping(500);
 			}
 		}
 		return super.touchUp(x, y, pointer, button);
