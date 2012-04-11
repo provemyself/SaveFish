@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Image"/>
-<fullyQualifiedTypeName name="com.savefish.service.SoundManager.SoundType"/>
-<fullyQualifiedTypeName name="com.savefish.service.MusicManager"/>
-<fullyQualifiedTypeName name="com.savefish.service.Managable"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant.game"/>
-<fullyQualifiedTypeName name="com.savefish.screens.MainMenuScreen"/>
-<fullyQualifiedTypeName name="com.savefish.screens.WinScreen"/>
-<fullyQualifiedTypeName name="com.badlogic.gdx.InputAdapter"/>
 <fullyQualifiedTypeName name="com.savefish.util.WorldRenderHelper"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Audio"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.TextField"/>
@@ -32,7 +24,6 @@
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.physics.box2d.Shape.Type"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.audio.Sound"/>
-<fullyQualifiedTypeName name="com.savefish.service.SlideSound"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.TextureAtlas"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.Game"/>
 <fullyQualifiedTypeName name="com.savefish.screens.game.GameScreen"/>
@@ -49,15 +40,24 @@
 <fullyQualifiedTypeName name="com.savefish.render.NatureFishActor"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.SpriteBatch"/>
 <fullyQualifiedTypeName name="com.savefish.render.FishActor"/>
-<fullyQualifiedTypeName name="com.savefish.assets.Assets"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
 <fullyQualifiedTypeName name="com.savefish.render.ArtificialFishActor"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="com.savefish.render.GameActorFactory"/>
 <fullyQualifiedTypeName name="com.savefish.util.ShapeHelper"/>
-<fullyQualifiedTypeName name="com.savefish.util.GreenLogger"/>
-<fullyQualifiedTypeName name="java.util.logging.Level"/>
 <fullyQualifiedTypeName name="com.savefish.screens.game.GameMiddleStage"/>
+<fullyQualifiedTypeName name="com.savefish.assets.Assets"/>
+<fullyQualifiedTypeName name="com.savefish.service.MusicManager"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.savefish.logical.CollisionHandler"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
+<fullyQualifiedTypeName name="com.savefish.logical.ForceController"/>
+<fullyQualifiedTypeName name="com.savefish.task.DestroyBodyTask"/>
+<fullyQualifiedTypeName name="com.savefish.service.SlideSound"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
+<fullyQualifiedTypeName name="com.savefish.service.EatSound"/>
+<fullyQualifiedTypeName name="com.savefish.util.GreenLogger"/>
+<fullyQualifiedTypeName name="com.savefish.logical.Checkable"/>
+<fullyQualifiedTypeName name="com.savefish.logical.BoundaryChecker"/>
+<fullyQualifiedTypeName name="com.savefish.logical.FishChecker"/>
 </qualifiedTypeNameHistroy>

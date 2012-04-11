@@ -12,4 +12,8 @@
 <typeInfo handle="=SaveFish-Core/src&lt;com.savefish.service{AbstractSound.java[AbstractSound" modifiers="1025" timestamp="1333909445000"/>
 <typeInfo handle="=SaveFish-Core/libs\/gdx.jar&lt;com.badlogic.gdx.scenes.scene2d(Actor.class[Actor" modifiers="1057" timestamp="1333597139000"/>
 <typeInfo handle="=SaveFish-Core/src&lt;com.savefish.render{GameActor.java[GameActor" modifiers="1025" timestamp="1334047888000"/>
+<typeInfo handle="=SaveFish-Core/src&lt;com.savefish.task{Task.java[Task" modifiers="513" timestamp="1333851020000"/>
+<typeInfo handle="=SaveFish-Core/src&lt;com.savefish.task{TaskContainer.java[TaskContainer" modifiers="513" timestamp="1333850603000"/>
+<typeInfo handle="=SaveFish-Core/src&lt;com.savefish.logical{CollisionAdapter.java[CollisionAdapter" modifiers="1025" timestamp="1333850880000"/>
+<typeInfo handle="=SaveFish-Core/src&lt;com.savefish.logical{Checkable.java[Checkable" modifiers="513" timestamp="1334148766000"/>
 </typeInfoHistroy>
