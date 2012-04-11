@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
+import com.savefish.service.MusicManager;
 import com.savefish.util.GreenLogger;
 
 public class GameScreen implements Screen {
@@ -14,6 +15,7 @@ public class GameScreen implements Screen {
 	private static GameScreen gameScreen = null;
 
 	public static GameScreen getInstance(Game game) {
+		MusicManager.getInstance().play();
 		if (null == gameScreen) {
 			try {
 				gameScreen = new GameScreen(game);
@@ -41,6 +43,8 @@ public class GameScreen implements Screen {
 		this.backGroundStage.render(delta);
 		this.middleStage.render(delta, gl);
 		this.foreGroundStage.render(delta);
+		this.middleStage.act(delta);
+		this.middleStage.draw();
 
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage));

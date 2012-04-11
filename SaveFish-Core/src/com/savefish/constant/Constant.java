@@ -87,9 +87,11 @@ public final class Constant {
 		public static final String NEXT = "next";
 
 		// 精灵名字
+		public static final String FISH_NINE_L = "fishnineR";
+		public static final String FISH_NINE_R = "fishnineL";
 		public static final String FISH_EIGHT_R = "fisheightR";
 		public static final String FISH_EIGHT_L = "fisheightL";
-		public static final String FISH_SEVEN_R = "fishsevenR";
+		public static final String FISH_SEVEN_R = "fishsevenL";
 		public static final String FISH_SEVEN_L = "fishsevenR";
 		public static final String FISH_SIX_R = "fishsixR";
 		public static final String FISH_SIX_L = "fisheightL";

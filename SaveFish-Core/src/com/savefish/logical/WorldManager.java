@@ -1,7 +1,9 @@
 package com.savefish.logical;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 import java.util.logging.Level;
 
 import com.badlogic.gdx.InputAdapter;
@@ -22,15 +24,15 @@ import com.savefish.util.GreenLogger;
 
 public class WorldManager extends InputAdapter {
 
-	public static WorldManager createWorldManager(int gate) {
-		return new WorldManager(gate);
+	public static WorldManager createWorldManager(int level) {
+		return new WorldManager(level);
 	}
 
-	private WorldManager(int gate) {
+	private WorldManager(int level) {
 		this.initTasks();
 		this.initMaps();
 		try {
-			this.initWorld(gate);
+			this.initWorld(level);
 		} catch (Exception e) {
 			GreenLogger.getInstance().logp(Level.WARNING,
 					WorldManager.class.getName(), "WorldManager", e.toString(),
@@ -45,7 +47,7 @@ public class WorldManager extends InputAdapter {
 	public void render(float delta) {
 		if (null != world) {
 			this.applyToBody();
-			world.step(delta, 10, 10);
+			world.step(delta, 3, 3);
 			world.clearForces();
 			while (!tasks.isEmpty()) {
 				Task<Body, World> task = tasks.pop();
@@ -76,10 +78,10 @@ public class WorldManager extends InputAdapter {
 
 	private World world = null;
 
-	private void initWorld(int gate) throws Exception {
-		if (gate <= maps.size())
+	private void initWorld(int level) throws Exception {
+		if (level <= maps.size())
 			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
-					+ maps.get(gate));
+					+ maps.get(level));
 		else
 			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
 					+ maps.get(5));
@@ -96,8 +98,9 @@ public class WorldManager extends InputAdapter {
 			Body body = iter.next();
 			String bodyName = (String) body.getUserData();
 			if ((bodyName != null) && (bodyName.startsWith("rubbish"))) {
-//				body.setGravityScale(1.0f);
+				body.getFixtureList().get(0).setRestitution(0.0f);
 				body.applyForceToCenter(body.getPosition().x / 10, -10);
+
 			}
 		}
 	}
@@ -121,9 +124,8 @@ public class WorldManager extends InputAdapter {
 		while (iter.hasNext()) {
 			Body body = iter.next();
 			String bodyName = (String) body.getUserData();
-			System.out.println(bodyName);
 			if ((null != bodyName) && (bodyName.startsWith("art"))) {
-				 body.applyLinearImpulse(tmp, body.getWorldCenter());
+				body.applyLinearImpulse(tmp, body.getWorldCenter());
 				body.setLinearVelocity(tmp);
 				body.setAngularDamping(500);
 			}
@@ -150,7 +152,10 @@ public class WorldManager extends InputAdapter {
 			this.doPostSolve(contact, impulse);
 		}
 
+		private Set<Body> addedBodies = new HashSet<Body>();
+
 		private void doPostSolve(Contact contact, ContactImpulse impulse) {
+
 			Fixture fixtureA = contact.getFixtureA();
 			Fixture fixtureB = contact.getFixtureB();
 			if ((null != fixtureA) && (null != fixtureB)) {
@@ -159,16 +164,16 @@ public class WorldManager extends InputAdapter {
 				if ((null != bodyA) && (null != bodyB)) {
 					String bodyAName = (String) bodyA.getUserData();// 被撞的body
 					String bodyBName = (String) bodyB.getUserData();// 主动撞的body
-					Body testBody = null;
 					if (bodyBName != null) {
 						if ((null != bodyAName)
-								&& (bodyAName.startsWith("arti"))) {
-							testBody = bodyB;
-							if (null != bodyB)
-								bodyB.applyLinearImpulse(new Vector2(50, 50),
-										bodyB.getWorldCenter());
-							SlideSound.getInstance().play();
-							addTask(new DestroyBodyTask(testBody));
+								&& (bodyAName.startsWith("artificial"))) {
+							if (!bodyBName.startsWith("bottom")) {
+								SlideSound.getInstance().play();
+								if (!this.addedBodies.contains(bodyB)) {
+									addTask(new DestroyBodyTask(bodyB));
+									this.addedBodies.add(bodyB);
+								}
+							}
 						}
 					}
 				}
