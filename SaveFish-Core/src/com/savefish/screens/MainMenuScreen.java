@@ -29,7 +29,6 @@ public class MainMenuScreen implements Screen {
 	}
 
 	private Game game = null;
-
 	private Stage stage = null;
 	private Image startImage = null;
 	private Image quitImage = null;

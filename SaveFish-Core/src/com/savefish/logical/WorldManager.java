@@ -1,22 +1,15 @@
 package com.savefish.logical;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
 import java.util.logging.Level;
 
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.Contact;
-import com.badlogic.gdx.physics.box2d.ContactImpulse;
-import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.World;
 import com.savefish.constant.Constant;
 import com.savefish.physics.resolve.GreenWorldFactory;
-import com.savefish.service.SlideSound;
-import com.savefish.task.DestroyBodyTask;
 import com.savefish.task.Task;
 import com.savefish.task.TaskContainer;
 import com.savefish.task.TaskQueueContainer;
@@ -46,7 +39,8 @@ public class WorldManager extends InputAdapter {
 
 	public void render(float delta) {
 		if (null != world) {
-			this.applyToBody();
+			ForceController.applyToRubbish(world);
+			ForceController.applyWholeNatureLeft(world);
 			world.step(delta, 3, 3);
 			world.clearForces();
 			while (!tasks.isEmpty()) {
@@ -85,24 +79,12 @@ public class WorldManager extends InputAdapter {
 		else
 			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
 					+ maps.get(5));
-		world.setContactListener(new CollisionHandler());
+		world.setContactListener(CollisionHandler.createCollisionHandler(tasks,
+				world));
 	}
 
 	public World getWorld() {
 		return this.world;
-	}
-
-	private void applyToBody() {
-		Iterator<Body> iter = world.getBodies();
-		while (iter.hasNext()) {
-			Body body = iter.next();
-			String bodyName = (String) body.getUserData();
-			if ((bodyName != null) && (bodyName.startsWith("rubbish"))) {
-				body.getFixtureList().get(0).setRestitution(0.0f);
-				body.applyForceToCenter(body.getPosition().x / 10, -10);
-
-			}
-		}
 	}
 
 	private Vector2 startPosition = null;
@@ -144,40 +126,5 @@ public class WorldManager extends InputAdapter {
 		this.tasks = null;
 		this.maps = null;
 		this.world.dispose();
-	}
-
-	private class CollisionHandler extends CollisionAdapter {
-		@Override
-		public void postSolve(Contact contact, ContactImpulse impulse) {
-			this.doPostSolve(contact, impulse);
-		}
-
-		private Set<Body> addedBodies = new HashSet<Body>();
-
-		private void doPostSolve(Contact contact, ContactImpulse impulse) {
-
-			Fixture fixtureA = contact.getFixtureA();
-			Fixture fixtureB = contact.getFixtureB();
-			if ((null != fixtureA) && (null != fixtureB)) {
-				Body bodyA = fixtureA.getBody();
-				Body bodyB = fixtureB.getBody();
-				if ((null != bodyA) && (null != bodyB)) {
-					String bodyAName = (String) bodyA.getUserData();// 被撞的body
-					String bodyBName = (String) bodyB.getUserData();// 主动撞的body
-					if (bodyBName != null) {
-						if ((null != bodyAName)
-								&& (bodyAName.startsWith("artificial"))) {
-							if (!bodyBName.startsWith("bottom")) {
-								SlideSound.getInstance().play();
-								if (!this.addedBodies.contains(bodyB)) {
-									addTask(new DestroyBodyTask(bodyB));
-									this.addedBodies.add(bodyB);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 }
