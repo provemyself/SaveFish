@@ -17,7 +17,6 @@ import com.savefish.task.BodyKilledLisetener;
 import com.savefish.task.DestroyBodyTask;
 import com.savefish.task.TaskContainer;
 import com.savefish.task.TaskQueueContainer;
-import com.savefish.util.AngleHelper;
 import com.savefish.util.GreenLogger;
 
 public class WorldManager extends InputAdapter {
@@ -117,11 +116,6 @@ public class WorldManager extends InputAdapter {
 		Vector3 tmp = new Vector3(x, y, 0);
 		this.gameMiddleStage.getCamera().unproject(tmp);
 		endPosition = new Vector2(tmp.x, tmp.y);
-
-		System.out.println(AngleHelper
-				.computeRadian(startPosition, endPosition));
-		System.out.println(AngleHelper
-				.computeDegree(startPosition, endPosition));
 
 		Vector2 result = endPosition.sub(startPosition);
 		Iterator<Body> iter = world.getBodies();
