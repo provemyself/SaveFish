@@ -9,6 +9,10 @@ import com.savefish.util.GreenLogger;
 public class DestroyBodyTask implements Task<Body, World> {
 
 	private Body body = null;
+	
+	public Body getBody(){
+		return this.body;
+	}
 
 	public DestroyBodyTask(Body body) {
 		this.body = body;

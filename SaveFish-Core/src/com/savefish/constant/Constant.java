@@ -1,10 +1,7 @@
 package com.savefish.constant;
 
 /********************************
- * Description: 该类对项目中的常量进行 
- * *************分类管理 
- * Author : 王志伟 
- * Date : 2012/03/08
+ * Description: 该类对项目中的常量进行 *************分类管理 Author : 王志伟 Date : 2012/03/08
  *******************************/
 
 public final class Constant {
@@ -106,6 +103,9 @@ public final class Constant {
 		public static final String FISH_TWO_L = "fishtwoL";
 		public static final String FISH_ONE_R = "fishoneR";
 		public static final String FISH_ONE_L = "fishoneL";
+
+		public static final String PESTICIDE_TWO = "pesticidetwo";
+		public static final String PESTICIDE_ONE = "pesticideone";
 
 		// 游戏场景的背景图片
 		public static final String BACKGROUND_ONE = "mainmenu";

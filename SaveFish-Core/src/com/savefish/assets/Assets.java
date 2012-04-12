@@ -1,5 +1,12 @@
 package com.savefish.assets;
 
+/********************************
+ * Description: 该类为资产管理类，负责
+ *              资产加载读入内存
+ * Author     : 王志伟
+ * Date       : 2012/03/08
+ *******************************/
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -27,6 +34,10 @@ public class Assets {
 		this.load();
 	}
 
+	/**
+	 * @description 这是一个单例模式
+	 * @return
+	 */
 	public static Assets getInstance() {
 		if (null == assets)
 			assets = new Assets();
@@ -91,6 +102,10 @@ public class Assets {
 		return assetManager.getLoadedAssets();
 	}
 
+	/**
+	 * @description 随机获取天然鱼精灵
+	 * @return
+	 */
 	public Sprite getNatureFishSprite() {
 		Random random = new Random();
 		int size = this.fishes.size();
@@ -105,10 +120,21 @@ public class Assets {
 		return sprite;
 	}
 
+	/**
+	 * @description 根据名字获取人工鱼精灵
+	 * @param fileName
+	 *            人工鱼的名字
+	 * @return
+	 */
 	public Sprite getArtificialFish(String fileName) {
 		return getSprite(fileName);
 	}
 
+	/**
+	 * @description 根据名字获取精灵
+	 * @param fileName
+	 * @return
+	 */
 	public Sprite getSprite(String fileName) {
 		Sprite sprite = this.spriteAtlas.createSprite(fileName);
 		if (null == sprite) {
@@ -120,34 +146,65 @@ public class Assets {
 		return sprite;
 	}
 
+	/**
+	 * @description 根据名字获取纹理区域
+	 * @param fileName
+	 * @return
+	 */
 	public TextureRegion getTextureRegion(String fileName) {
 		return this.actorAtlas.findRegion(fileName);
 	}
 
+	/**
+	 * @description 根据名字获取位图字体
+	 * @param fileName
+	 * @return
+	 */
 	public BitmapFont getBitmapFont(String fileName) {
 		return assetManager.get(Constant.asset.FONTS_BASE_PATH + fileName,
 				BitmapFont.class);
 	}
 
+	/**
+	 * @description 根据名字获取背景音乐对象
+	 * @param fileName
+	 * @return
+	 */
 	public Music getMusic(String fileName) {
 		return assetManager.get(Constant.asset.MUSICS_BASE_PATH + fileName,
 				Music.class);
 	}
 
+	/**
+	 * @description 根据名字获取Pixmap
+	 * @param fileName
+	 * @return
+	 */
 	public Pixmap getPixmap(String fileName) {
 		return assetManager.get(Constant.asset.PIXMAPS_BASE_PATH + fileName,
 				Pixmap.class);
 	}
 
+	/**
+	 * @description 根据名字获取音效对象
+	 * @param fileName
+	 * @return
+	 */
 	public Sound getSound(String fileName) {
 		return assetManager.get(Constant.asset.SOUNDS_BASE_PATH + fileName,
 				Sound.class);
 	}
 
+	/**
+	 * @description 释放资源
+	 */
 	public void dispose() {
 		this.assetManager.clear();
 	}
 
+	/**
+	 * @description 加载资源
+	 */
 	private void load() {
 		this.loadBitmapFont();
 		this.loadMusic();
@@ -156,19 +213,31 @@ public class Assets {
 		this.loadTextureAtlas();
 	}
 
+	/**
+	 * @description 加载位图字体资源
+	 */
 	private void loadBitmapFont() {
 
 	}
 
+	/**
+	 * @description 加载背景音乐资源
+	 */
 	private void loadMusic() {
 		this.assetManager.load(Constant.asset.MUSICS_BASE_PATH
 				+ Constant.asset.MUSIC, Music.class);
 	}
 
+	/**
+	 * @description 加载Pixmap资源
+	 */
 	private void loadPixmap() {
 
 	}
 
+	/**
+	 * @description 加载音效资源
+	 */
 	private void loadSound() {
 		this.assetManager.load(Constant.asset.SOUNDS_BASE_PATH
 				+ Constant.asset.SLIDE_SOUND, Sound.class);
@@ -176,6 +245,9 @@ public class Assets {
 				+ Constant.asset.EAT_SOUND, Sound.class);
 	}
 
+	/**
+	 * @description 加载TextureAtlas资源
+	 */
 	private void loadTextureAtlas() {
 		this.assetManager.load(Constant.asset.ACTORS_BASE_PATH
 				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
@@ -183,6 +255,9 @@ public class Assets {
 				+ Constant.asset.SPRITES_PACT, TextureAtlas.class);
 	}
 
+	/**
+	 * @description 初始化鱼精灵列表
+	 */
 	private void initialize() {
 		this.initSprites();
 	}

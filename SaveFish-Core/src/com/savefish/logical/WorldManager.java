@@ -6,25 +6,34 @@ import java.util.logging.Level;
 
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.savefish.constant.Constant;
 import com.savefish.physics.resolve.GreenWorldFactory;
+import com.savefish.screens.game.GameMiddleStage;
 import com.savefish.service.SlideSound;
-import com.savefish.task.Task;
+import com.savefish.task.BodyKilledLisetener;
+import com.savefish.task.DestroyBodyTask;
 import com.savefish.task.TaskContainer;
 import com.savefish.task.TaskQueueContainer;
+import com.savefish.util.AngleHelper;
 import com.savefish.util.GreenLogger;
 
 public class WorldManager extends InputAdapter {
 
-	public static WorldManager createWorldManager(int level) {
-		return new WorldManager(level);
+	public static WorldManager createWorldManager(int level,
+			GameMiddleStage gameMiddleStage) {
+		return new WorldManager(level, gameMiddleStage);
 	}
 
-	private WorldManager(int level) {
+	private GameMiddleStage gameMiddleStage = null;
+
+	private WorldManager(int level, GameMiddleStage gameMiddleStage) {
 		this.initTasks();
 		this.initMaps();
+		this.gameMiddleStage = gameMiddleStage;
+		this.listener = this.gameMiddleStage;
 		try {
 			this.initWorld(level);
 		} catch (Exception e) {
@@ -34,7 +43,9 @@ public class WorldManager extends InputAdapter {
 		}
 	}
 
-	public void addTask(Task<Body, World> task) {
+	private BodyKilledLisetener<Body> listener = null;
+
+	public void addTask(DestroyBodyTask task) {
 		this.tasks.push(task);
 	}
 
@@ -45,17 +56,18 @@ public class WorldManager extends InputAdapter {
 			world.step(delta, 3, 3);
 			world.clearForces();
 			while (!tasks.isEmpty()) {
-				Task<Body, World> task = tasks.pop();
+				DestroyBodyTask task = tasks.pop();
+				this.listener.onKillActor(task.getBody());
 				task.onDestroyTask(world);
 			}
 		}
 	}
 
-	private TaskContainer<Task<Body, World>> tasks = null;
+	private TaskContainer<DestroyBodyTask> tasks = null;
 
 	private void initTasks() {
 		if (null == tasks)
-			this.tasks = new TaskQueueContainer<Task<Body, World>>();
+			this.tasks = new TaskQueueContainer<DestroyBodyTask>();
 		else
 			this.tasks.clear();
 	}
@@ -93,27 +105,35 @@ public class WorldManager extends InputAdapter {
 
 	@Override
 	public boolean touchDown(int x, int y, int pointer, int button) {
-		startPosition = new Vector2(x, y);
+		Vector3 tmp = new Vector3(x, y, 0);
+		this.gameMiddleStage.getCamera().unproject(tmp);
+		startPosition = new Vector2(tmp.x, tmp.y);
+
 		return super.touchDown(x, y, pointer, button);
 	}
 
 	@Override
 	public boolean touchUp(int x, int y, int pointer, int button) {
-		SlideSound.getInstance().play();
+		Vector3 tmp = new Vector3(x, y, 0);
+		this.gameMiddleStage.getCamera().unproject(tmp);
+		endPosition = new Vector2(tmp.x, tmp.y);
 
-		endPosition = new Vector2(x, y);
-		Vector2 tmp = endPosition.sub(startPosition);
-		tmp.x *= 10;
-		tmp.y *= 10;
+		System.out.println(AngleHelper
+				.computeRadian(startPosition, endPosition));
+		System.out.println(AngleHelper
+				.computeDegree(startPosition, endPosition));
+
+		Vector2 result = endPosition.sub(startPosition);
 		Iterator<Body> iter = world.getBodies();
 		while (iter.hasNext()) {
 			Body body = iter.next();
 			String bodyName = (String) body.getUserData();
 			if ((null != bodyName) && (bodyName.startsWith("art"))) {
-				body.applyLinearImpulse(tmp, body.getWorldCenter());
-				body.setLinearVelocity(tmp);
+				result.mul(body.getMass());
+				body.applyLinearImpulse(result, body.getWorldCenter());
 			}
 		}
+		SlideSound.getInstance().play();
 		return super.touchUp(x, y, pointer, button);
 	}
 
@@ -127,6 +147,7 @@ public class WorldManager extends InputAdapter {
 		this.startPosition = null;
 		this.tasks = null;
 		this.maps = null;
+		this.gameMiddleStage = null;
 		this.world.dispose();
 	}
 }

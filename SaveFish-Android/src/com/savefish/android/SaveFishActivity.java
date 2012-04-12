@@ -10,7 +10,6 @@ public class SaveFishActivity extends AndroidApplication {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		initialize(new TestApplication(), false);
+		initialize(new ApplicationManager(null), false);
 	}
-
 }
