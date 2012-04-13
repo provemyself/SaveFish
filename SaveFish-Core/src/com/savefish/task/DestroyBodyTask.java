@@ -6,11 +6,11 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.savefish.util.GreenLogger;
 
-public class DestroyBodyTask implements Task<Body, World> {
+public class DestroyBodyTask extends DestroyBodyAdapter {
 
 	private Body body = null;
-	
-	public Body getBody(){
+
+	public Body getBody() {
 		return this.body;
 	}
 
@@ -19,7 +19,7 @@ public class DestroyBodyTask implements Task<Body, World> {
 	}
 
 	@Override
-	public Body onDestroyTask(World world) {
+	public Body onDestroy(World world) {
 		if ((null != world) && (body != null))
 			try {
 				world.destroyBody(body);

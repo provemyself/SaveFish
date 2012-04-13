@@ -16,8 +16,9 @@ import com.savefish.physics.resolve.GreenWorldFactory;
 import com.savefish.screens.game.GameMiddleStage;
 import com.savefish.service.SlideSound;
 import com.savefish.task.DestroyBodyTask;
+import com.savefish.task.MoveBodyTask;
 import com.savefish.task.TaskContainer;
-import com.savefish.task.TaskQueueContainer;
+import com.savefish.task.TaskQueue;
 import com.savefish.util.GreenLogger;
 
 public class WorldManager extends InputAdapter {
@@ -30,7 +31,8 @@ public class WorldManager extends InputAdapter {
 	private GameMiddleStage gameMiddleStage = null;
 
 	private WorldManager(int level, GameMiddleStage gameMiddleStage) {
-		this.initTasks();
+		this.initMoveTasks();
+		this.initDestroyTasks();
 		this.initMaps();
 		this.gameMiddleStage = gameMiddleStage;
 		this.listener = this.gameMiddleStage;
@@ -45,31 +47,48 @@ public class WorldManager extends InputAdapter {
 
 	private BodyKilledListener<Body> listener = null;
 
-	public void addTask(DestroyBodyTask task) {
-		this.tasks.push(task);
-	}
-
 	public void render(float delta) {
 		if (null != world) {
 			ForceController.applyToRubbish(world);
 			ForceController.applyWholeNature(world);
 			world.step(delta, 10, 10);
 			world.clearForces();
-			while (!tasks.isEmpty()) {
-				DestroyBodyTask task = tasks.pop();
-				listener.onKillActor(new GreenEvent<Body>(task.getBody()));
-				task.onDestroyTask(world);
-			}
+			this.doDestroyBody();
+			this.doMoveBody();
 		}
 	}
 
-	private TaskContainer<DestroyBodyTask> tasks = null;
+	private void doDestroyBody() {
+		while (!destroyTasks.isEmpty()) {
+			DestroyBodyTask destroyTask = destroyTasks.pop();
+			listener.onKillActor(new GreenEvent<Body>(destroyTask.getBody()));
+			destroyTask.onDestroy(world);
+		}
+	}
 
-	private void initTasks() {
-		if (null == tasks)
-			this.tasks = new TaskQueueContainer<DestroyBodyTask>();
+	private void doMoveBody() {
+		while (!moveTasks.isEmpty()) {
+			MoveBodyTask moveTask = moveTasks.pop();
+			moveTask.onMoveBody();
+		}
+	}
+
+	private TaskContainer<DestroyBodyTask> destroyTasks = null;
+
+	private void initDestroyTasks() {
+		if (null == destroyTasks)
+			this.destroyTasks = new TaskQueue<DestroyBodyTask>();
 		else
-			this.tasks.clear();
+			this.destroyTasks.clear();
+	}
+
+	private TaskContainer<MoveBodyTask> moveTasks = null;
+
+	private void initMoveTasks() {
+		if (null == moveTasks)
+			this.moveTasks = new TaskQueue<MoveBodyTask>();
+		else
+			this.moveTasks.clear();
 	}
 
 	HashMap<Integer, String> maps = new HashMap<Integer, String>();
@@ -92,8 +111,8 @@ public class WorldManager extends InputAdapter {
 		else
 			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
 					+ maps.get(5));
-		world.setContactListener(CollisionHandler.createCollisionHandler(tasks,
-				world));
+		world.setContactListener(CollisionHandler.createCollisionHandler(
+				destroyTasks, moveTasks));
 	}
 
 	public World getWorld() {
@@ -142,7 +161,7 @@ public class WorldManager extends InputAdapter {
 	public void dispose() {
 		this.endPosition = null;
 		this.startPosition = null;
-		this.tasks = null;
+		this.destroyTasks = null;
 		this.maps = null;
 		this.gameMiddleStage = null;
 		this.world.dispose();
