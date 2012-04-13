@@ -11,5 +11,4 @@ public class DesktopLauncher {
 		saveFish = new LwjglApplication(new ApplicationManager(),
 				Constant.game.GAME_NAME, 480, 320, false);
 	}
-
 }

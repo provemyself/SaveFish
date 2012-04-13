@@ -10,10 +10,11 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.savefish.constant.Constant;
+import com.savefish.event.BodyKilledListener;
+import com.savefish.event.GreenEvent;
 import com.savefish.physics.resolve.GreenWorldFactory;
 import com.savefish.screens.game.GameMiddleStage;
 import com.savefish.service.SlideSound;
-import com.savefish.task.BodyKilledLisetener;
 import com.savefish.task.DestroyBodyTask;
 import com.savefish.task.TaskContainer;
 import com.savefish.task.TaskQueueContainer;
@@ -42,7 +43,7 @@ public class WorldManager extends InputAdapter {
 		}
 	}
 
-	private BodyKilledLisetener<Body> listener = null;
+	private BodyKilledListener<Body> listener = null;
 
 	public void addTask(DestroyBodyTask task) {
 		this.tasks.push(task);
@@ -51,12 +52,12 @@ public class WorldManager extends InputAdapter {
 	public void render(float delta) {
 		if (null != world) {
 			ForceController.applyToRubbish(world);
-			ForceController.applyWholeNatureLeft(world);
+			ForceController.applyWholeNature(world);
 			world.step(delta, 10, 10);
 			world.clearForces();
 			while (!tasks.isEmpty()) {
 				DestroyBodyTask task = tasks.pop();
-				listener.onKillActor(task.getBody());
+				listener.onKillActor(new GreenEvent<Body>(task.getBody()));
 				task.onDestroyTask(world);
 			}
 		}
@@ -124,6 +125,7 @@ public class WorldManager extends InputAdapter {
 			Body body = iter.next();
 			String bodyName = (String) body.getUserData();
 			if ((null != bodyName) && (bodyName.startsWith("art"))) {
+
 				result.mul(body.getMass());
 				body.applyLinearImpulse(result, body.getWorldCenter());
 			}
