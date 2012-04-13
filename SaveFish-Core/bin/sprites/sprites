@@ -3,105 +3,105 @@ input1.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-fisheightR
+Lfishfiveone
   rotate: false
   xy: 2, 2
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishoneR
+Rfishthreetwo
   rotate: false
   xy: 276, 2
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishsixR
+Rfishoneone
   rotate: false
   xy: 550, 2
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishthreeM
+Rfishonetwo
   rotate: false
   xy: 2, 193
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fisheightL
+Lfishseventwo
   rotate: false
   xy: 2, 384
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishtwoL
+Lfisheightone
   rotate: false
   xy: 2, 575
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishfourL
+Lfishninetwo
   rotate: false
   xy: 2, 766
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishthreeL
+Lfishsixtwo
   rotate: false
   xy: 276, 193
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishtwoR
+Lfishfivetwo
   rotate: false
   xy: 550, 193
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishfourR
+Rfishtentwo
   rotate: false
   xy: 276, 384
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishsixL
+Rfishthreesthree
   rotate: false
   xy: 276, 575
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishfiveL
+Lfishnineone
   rotate: false
   xy: 276, 766
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-aquaticfive
+Lfishsixone
   rotate: false
   xy: 550, 384
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishnineR
+Rfishthreeone
   rotate: false
   xy: 550, 575
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishfiveR
+Lfishfourtwo
   rotate: false
   xy: 550, 766
   size: 272, 189
@@ -113,93 +113,58 @@ input2.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-aquaticone
+pesticideone
   rotate: false
   xy: 2, 2
   size: 189, 272
   orig: 189, 272
   offset: 0, 0
   index: -1
-aquaticfour
+pesticidetwo
   rotate: false
   xy: 2, 276
   size: 189, 272
   orig: 189, 272
   offset: 0, 0
   index: -1
-pesticidetwo
-  rotate: false
-  xy: 2, 550
-  size: 189, 272
-  orig: 189, 272
-  offset: 0, 0
-  index: -1
-aquaticthree
+Lfishsevenone
   rotate: false
   xy: 193, 2
-  size: 189, 272
-  orig: 189, 272
-  offset: 0, 0
-  index: -1
-pesticideone
-  rotate: false
-  xy: 384, 2
-  size: 189, 272
-  orig: 189, 272
-  offset: 0, 0
-  index: -1
-aquatictwo
-  rotate: false
-  xy: 575, 2
-  size: 189, 272
-  orig: 189, 272
-  offset: 0, 0
-  index: -1
-aquaticsix
-  rotate: false
-  xy: 766, 2
-  size: 189, 272
-  orig: 189, 272
-  offset: 0, 0
-  index: -1
-fishoneL
-  rotate: false
-  xy: 193, 276
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishnineL
+Lfisheighttwo
   rotate: false
-  xy: 467, 276
+  xy: 467, 2
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-stoneone
+Lfishtwotwo
   rotate: false
-  xy: 741, 276
+  xy: 741, 2
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishsevenL
+Lfishfourone
   rotate: false
-  xy: 193, 467
+  xy: 193, 193
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishthreeR
+Lfishtwoone
   rotate: false
-  xy: 193, 658
+  xy: 467, 193
   size: 272, 189
   orig: 272, 189
   offset: 0, 0
   index: -1
-fishsevenR
+Rfishtenone
   rotate: false
-  xy: 467, 467
+  xy: 741, 193
   size: 272, 189
   orig: 272, 189
   offset: 0, 0

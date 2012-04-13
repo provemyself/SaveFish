@@ -1,87 +1,72 @@
 package com.savefish.screens;
 
-import java.util.logging.Level;
-
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.savefish.service.LoadedScreen;
-import com.savefish.util.GreenLogger;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.savefish.constant.Constant;
+import com.savefish.screens.button.MenuActor;
 
 public class AboutScreen implements Screen {
+	private Stage stage;
+	private MenuActor menuActor;
+	private Image bgImage;
 
-	private static AboutScreen aboutScreen = null;
-
-	public static AboutScreen getInstance(Game game) {
-		if (null == aboutScreen) {
-			aboutScreen = new AboutScreen(game);
-			LoadedScreen.screens.add(aboutScreen);
-		}
-		return aboutScreen;
-	}
-
-	@SuppressWarnings("unused")
-	private Game game;
-
-	private AboutScreen(Game game) {
-		super();
-		this.game = game;
-	}
-
-	private Stage stage = null;
-
-	private void initStage() {
+	
+	public AboutScreen(Game game) {
+		
+		bgImage = new Image(Constant.asset.bghelpTexture);
 		stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),
 				true);
+		menuActor = new MenuActor(game, Constant.asset.fish2Texture);
+		stage.addActor(bgImage);
+		stage.addActor(menuActor);
 	}
 
 	@Override
 	public void render(float delta) {
-		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
-		this.stage.act(delta);
-		this.stage.draw();
+		Gdx.input.setInputProcessor(stage);
+		stage.act(delta);
+		stage.draw();
 	}
 
 	@Override
 	public void resize(int width, int height) {
-		stage.setViewport(width, height, true);
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void show() {
-		this.initStage();
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void hide() {
-
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void pause() {
-
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void resume() {
-
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void dispose() {
-		GreenLogger.getInstance().logp(Level.INFO, AboutScreen.class.getName(),
-				"dispose", "called!");
-
-		if (this.stage != null)
-			this.stage.dispose();
-		game = null;
+		// TODO Auto-generated method stub
+		
 	}
 
-	@Override
-	public String toString() {
-		return AboutScreen.class.getName();
-	}
+
 
 }

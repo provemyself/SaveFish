@@ -6,45 +6,31 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
-import com.savefish.service.LoadedScreen;
+import com.savefish.constant.Constant;
 import com.savefish.util.GreenLogger;
 
 public class LoadingScreen implements Screen {
 
-	public static LoadingScreen createLoadingScreen(Game game) {
-		LoadingScreen loadingScreen = null;
-		loadingScreen = new LoadingScreen(game);
-		LoadedScreen.screens.add(loadingScreen);
-		return loadingScreen;
-	}
+	private Stage stage;
+	private Image bgLoadImage;
+	private Game game;
 
-	private Game game = null;
+	public LoadingScreen(Game game) {
 
-	private LoadingScreen(Game game) {
+		bgLoadImage = new Image(Constant.asset.bghelpTexture);// 换成加载背景
+		stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),
+				true);
+		stage.addActor(bgLoadImage);
 		this.game = game;
-
-		Texture texture = new Texture(
-				Gdx.files.internal("textures/loading.png"));
-		this.loadingImage = new Image(texture);
-
-	}
-
-	private Stage stage = null;
-	private Image loadingImage = null;
-
-	private void initStage() {
-		this.stage = new Stage(Gdx.graphics.getWidth(),
-				Gdx.graphics.getHeight(), true);
-		this.stage.addActor(loadingImage);
 	}
 
 	@Override
 	public void render(float delta) {
 		Gdx.gl10.glClear(GL10.GL_COLOR_BUFFER_BIT);
+
 		stage.act(delta);
 		stage.draw();
 
@@ -53,14 +39,16 @@ public class LoadingScreen implements Screen {
 				delta);
 
 		if (Assets.getInstance().update()) {
-			GreenLogger.getInstance().logp(Level.INFO,
+			GreenLogger.getInstance().logp(Level.SEVERE,
 					LoadingScreen.class.getName(), "render",
-					"Loading complete!");
+					Assets.getInstance().getProgress() + "Loading complete!");
 
 			Assets.getInstance().setComplete(true);
-			this.game.setScreen(MainMenuScreen.getInstance(game));
+
+			// 加载完成跳转到主界面
+			game.setScreen(new MenuScreen(game));
 		} else {
-			GreenLogger.getInstance().logp(Level.INFO,
+			GreenLogger.getInstance().logp(Level.SEVERE,
 					LoadingScreen.class.getName(), "render",
 					Assets.getInstance().getProgress() + " loaded!");
 		}
@@ -79,7 +67,6 @@ public class LoadingScreen implements Screen {
 		GreenLogger.getInstance().logp(Level.INFO,
 				LoadingScreen.class.getName(), "show", "called!");
 
-		this.initStage();
 	}
 
 	@Override
@@ -106,7 +93,6 @@ public class LoadingScreen implements Screen {
 				LoadingScreen.class.getName(), "dispose", "called!");
 		if (this.stage != null)
 			this.stage.dispose();
-		game = null;
 	}
 
 	@Override

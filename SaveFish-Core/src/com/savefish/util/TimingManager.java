@@ -9,7 +9,7 @@ package com.savefish.util;
 import org.lwjgl.util.Timer;
 
 import com.badlogic.gdx.Game;
-import com.savefish.screens.HighScoreScreen;
+import com.savefish.screens.OptionScreen;
 
 public class TimingManager {
 	private static TimingManager manager = null;
@@ -40,7 +40,7 @@ public class TimingManager {
 	private void doTask() {
 		if ((int) (timer.getTime() + 1) % 10 == 0) {
 			timer.reset();
-			game.setScreen(HighScoreScreen.getInstance(game));
+			game.setScreen(new OptionScreen(game));
 		}
 	}
 

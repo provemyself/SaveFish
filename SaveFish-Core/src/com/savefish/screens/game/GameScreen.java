@@ -100,7 +100,7 @@ public class GameScreen implements Screen {
 	private void initStages() {
 		this.backGroundStage = GameBackgroundStage.getInstance();
 		try {
-			this.middleStage = GameMiddleStage.createMiddleStage(2);
+			this.middleStage = GameMiddleStage.createMiddleStage(1);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

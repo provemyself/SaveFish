@@ -52,11 +52,11 @@ public class WorldManager extends InputAdapter {
 		if (null != world) {
 			ForceController.applyToRubbish(world);
 			ForceController.applyWholeNatureLeft(world);
-			world.step(delta, 3, 3);
+			world.step(delta, 10, 10);
 			world.clearForces();
 			while (!tasks.isEmpty()) {
 				DestroyBodyTask task = tasks.pop();
-				this.listener.onKillActor(task.getBody());
+				listener.onKillActor(task.getBody());
 				task.onDestroyTask(world);
 			}
 		}
@@ -99,8 +99,8 @@ public class WorldManager extends InputAdapter {
 		return this.world;
 	}
 
-	private Vector2 startPosition = null;
-	private Vector2 endPosition = null;
+	private Vector2 startPosition = new Vector2();
+	private Vector2 endPosition = new Vector2();
 
 	@Override
 	public boolean touchDown(int x, int y, int pointer, int button) {
@@ -117,7 +117,8 @@ public class WorldManager extends InputAdapter {
 		this.gameMiddleStage.getCamera().unproject(tmp);
 		endPosition = new Vector2(tmp.x, tmp.y);
 
-		Vector2 result = endPosition.sub(startPosition);
+		Vector2 result = new Vector2(endPosition.x - startPosition.x,
+				endPosition.y - startPosition.y);
 		Iterator<Body> iter = world.getBodies();
 		while (iter.hasNext()) {
 			Body body = iter.next();
