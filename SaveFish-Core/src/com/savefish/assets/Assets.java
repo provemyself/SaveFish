@@ -7,6 +7,10 @@ package com.savefish.assets;
  * Date       : 2012/03/08
  *******************************/
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.audio.Sound;
@@ -57,6 +61,8 @@ public class Assets {
 		this.isComplete = isComplete;
 		this.setActorAtlas();
 		this.setSpriteAtlas();
+		this.initNatureLeftList();
+		this.initNatureRightList();
 	}
 
 	private TextureAtlas getActorAtlas() {
@@ -203,6 +209,67 @@ public class Assets {
 				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
 		this.assetManager.load(Constant.asset.SPRITES_BASE_PATH
 				+ Constant.asset.SPRITES_PACT, TextureAtlas.class);
+	}
+
+	public ArrayList<TextureRegion> getNatureLeft() {
+		Random random = new Random();
+		int size = this.natureLeftList.size();
+		if ((null != this.natureLeftList) && (size > 0))
+			return this.natureLeftList.get(random.nextInt(size));
+		else
+			return null;
+	}
+
+	public ArrayList<TextureRegion> getNatureRight() {
+		Random random = new Random();
+		int size = this.natureRightList.size();
+		if ((null != this.natureRightList) && (size > 0))
+			return this.natureRightList.get(random.nextInt(size));
+		else
+			return null;
+	}
+
+	private List<ArrayList<TextureRegion>> natureLeftList = null;
+
+	private void initNatureLeftList() {
+		natureLeftList = new ArrayList<ArrayList<TextureRegion>>();
+		natureLeftList.add(constructFishList(Constant.asset.LFISH_EIGHT_ONE,
+				Constant.asset.LFISH_EIGHT_TWO));
+		natureLeftList.add(constructFishList(Constant.asset.LFISH_EIGHT_ONE,
+				Constant.asset.LFISH_EIGHT_TWO));
+		natureLeftList.add(constructFishList(Constant.asset.LFISH_SEVEN_ONE,
+				Constant.asset.LFISH_SEVEN_TWO));
+		natureLeftList.add(constructFishList(Constant.asset.LFISH_SIX_ONE,
+				Constant.asset.LFISH_SIX_TWO));
+		natureLeftList.add(constructFishList(Constant.asset.LFISH_FIVE_ONE,
+				Constant.asset.LFISH_FIVE_TWO));
+		natureLeftList.add(constructFishList(Constant.asset.LFISH_FOUR_ONE,
+				Constant.asset.LFISH_FOUR_TWO));
+		natureLeftList.add(constructFishList(Constant.asset.LFISH_TWO_ONE,
+				Constant.asset.LFISH_TWO_TWO));
+		natureLeftList.add(constructFishList(Constant.asset.LFISH_NINE_ONE,
+				Constant.asset.LFISH_NINE_TWO));
+	}
+
+	private List<ArrayList<TextureRegion>> natureRightList = null;
+
+	private void initNatureRightList() {
+		natureRightList = new ArrayList<ArrayList<TextureRegion>>();
+
+		natureRightList.add(constructFishList(Constant.asset.RFISH_ONE_ONE,
+				Constant.asset.RFISH_ONE_TWO));
+		natureRightList.add(constructFishList(Constant.asset.RFISH_THREE_ONE,
+				Constant.asset.RFISH_THREE_TWO));
+	}
+
+	private ArrayList<TextureRegion> constructFishList(String frameOne,
+			String frameTwo) {
+		ArrayList<TextureRegion> list = new ArrayList<TextureRegion>();
+		list.add(this.getSpriteRigion(frameOne));
+		list.add(this.getSpriteRigion(frameTwo));
+		list.add(this.getSpriteRigion(frameOne));
+		list.add(this.getSpriteRigion(frameTwo));
+		return list;
 	}
 
 }

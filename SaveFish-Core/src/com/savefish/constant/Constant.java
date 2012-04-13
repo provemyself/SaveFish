@@ -91,6 +91,7 @@ public final class Constant {
 
 		// 精灵名字 以“L”表示向左游动，以“R”开头表示向右游动
 		public static final String LFISH_NINE_ONE = "Lfishnineone";
+		public static final String LFISH_NINE_TWO = "Lfishninetwo";
 		public static final String LFISH_EIGHT_TWO = "Lfisheighttwo";
 		public static final String LFISH_EIGHT_ONE = "Lfisheightone";
 		public static final String LFISH_SEVEN_ONE = "Lfishsevenone";
@@ -101,7 +102,6 @@ public final class Constant {
 		public static final String LFISH_FIVE_ONE = "Lfishfiveone";
 		public static final String LFISH_FOUR_TWO = "Lfishfourtwo";
 		public static final String LFISH_FOUR_ONE = "Lfishfourone";
-		public static final String RFISH_THREE_THREE = "Rfishthreesthree";
 		public static final String RFISH_THREE_TWO = "Rfishthreetwo";
 		public static final String RFISH_THREE_ONE = "Rfishthreeone";
 		public static final String LFISH_TWO_TWO = "Lfishtwotwo";
