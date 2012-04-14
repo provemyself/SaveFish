@@ -28,23 +28,27 @@ public class GameScreen implements Screen {
 		return gameScreen;
 	}
 
-	private int defaultLevel = 1;
+	public static GameScreen getInstance() {
+		if (null != gameScreen)
+			return gameScreen;
+		else
+			return null;
+	}
 
 	private GameScreen(Game game, int defaultLevel) throws Exception {
 		GreenLogger.getInstance().logp(Level.WARNING,
 				GameScreen.class.getName(), "GameScreen", "called!");
 		this.game = game;
-		this.defaultLevel = defaultLevel;
+		this.switchToGameLevel(defaultLevel);
 	}
 
 	@Override
 	public void render(float delta) {
 		GreenLogger.getInstance().log(Level.INFO, "render world!");
 
-		GL10 gl = Gdx.graphics.getGL10();
-		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
+		Gdx.graphics.getGL10().glClear(GL10.GL_COLOR_BUFFER_BIT);
 		this.backGroundStage.render(delta);
-		this.middleStage.render(delta, gl);
+		this.middleStage.render(delta);
 		this.gameControlStage.render(delta);
 		this.foreGroundStage.render(delta);
 
@@ -103,12 +107,14 @@ public class GameScreen implements Screen {
 
 	private void initStages() {
 		this.backGroundStage = GameBackgroundStage.getInstance();
-		try {
-			this.middleStage = GameMiddleStage.createInstance(defaultLevel);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 		this.gameControlStage = GameControlStage.getInstance(game);
 		this.foreGroundStage = GameForegroundStage.getInstance();
+	}
+
+	public GameScreen switchToGameLevel(int level) {
+		if (null != middleStage)
+			middleStage.dispose();
+		middleStage = GameMiddleStage.createInstance(level);
+		return gameScreen;
 	}
 }

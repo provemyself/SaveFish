@@ -1,0 +1,206 @@
+
+input1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bgMChoice
+  rotate: false
+  xy: 2, 2
+  size: 480, 326
+  orig: 480, 326
+  offset: 0, 0
+  index: -1
+bgOption
+  rotate: false
+  xy: 484, 2
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+bgMenu
+  rotate: false
+  xy: 2, 330
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+bgHighscore
+  rotate: false
+  xy: 2, 652
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+bgHelp
+  rotate: false
+  xy: 484, 330
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+bgChoice
+  rotate: false
+  xy: 484, 652
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+
+input2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fish6
+  rotate: false
+  xy: 2, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fish5
+  rotate: false
+  xy: 276, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fish4
+  rotate: false
+  xy: 550, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fish3
+  rotate: false
+  xy: 2, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fish2
+  rotate: false
+  xy: 2, 384
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+fish1
+  rotate: false
+  xy: 2, 575
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+start
+  rotate: false
+  xy: 824, 2
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+share
+  rotate: false
+  xy: 2, 766
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+option
+  rotate: false
+  xy: 132, 766
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+num6
+  rotate: false
+  xy: 276, 193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+num5
+  rotate: false
+  xy: 406, 193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+num4
+  rotate: false
+  xy: 536, 193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+num3
+  rotate: false
+  xy: 666, 193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+num2
+  rotate: false
+  xy: 796, 193
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+num1
+  rotate: false
+  xy: 276, 323
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+music
+  rotate: false
+  xy: 276, 453
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+menu
+  rotate: false
+  xy: 276, 583
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+highscore
+  rotate: false
+  xy: 276, 713
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+exit
+  rotate: false
+  xy: 276, 843
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+choice2
+  rotate: false
+  xy: 406, 323
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+choice1
+  rotate: false
+  xy: 536, 323
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+about
+  rotate: false
+  xy: 666, 323
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1

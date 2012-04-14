@@ -3,74 +3,45 @@ input1.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-selectlevel2
+gamescene
   rotate: false
   xy: 2, 2
-  size: 960, 640
-  orig: 960, 640
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+mainmenu
+  rotate: false
+  xy: 484, 2
+  size: 480, 320
+  orig: 480, 320
   offset: 0, 0
   index: -1
 previous
   rotate: false
-  xy: 2, 644
+  xy: 2, 324
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 stop
   rotate: false
-  xy: 260, 644
+  xy: 2, 582
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
 next
   rotate: false
-  xy: 518, 644
+  xy: 260, 324
   size: 256, 256
   orig: 256, 256
-  offset: 0, 0
-  index: -1
-
-input2.png
-format: RGBA8888
-filter: Nearest,Nearest
-repeat: none
-mainmenu
-  rotate: false
-  xy: 2, 2
-  size: 960, 640
-  orig: 960, 640
   offset: 0, 0
   index: -1
 pause
   rotate: false
-  xy: 2, 644
+  xy: 260, 582
   size: 256, 256
   orig: 256, 256
-  offset: 0, 0
-  index: -1
-
-input3.png
-format: RGBA8888
-filter: Nearest,Nearest
-repeat: none
-highscore
-  rotate: false
-  xy: 2, 2
-  size: 960, 640
-  orig: 960, 640
-  offset: 0, 0
-  index: -1
-
-input4.png
-format: RGBA8888
-filter: Nearest,Nearest
-repeat: none
-selectlevel1
-  rotate: false
-  xy: 2, 2
-  size: 940, 640
-  orig: 940, 640
   offset: 0, 0
   index: -1

@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.savefish.render.NatureFishActor"/>
-<fullyQualifiedTypeName name="com.savefish.render.FishActor"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="com.savefish.render.GameActorFactory"/>
-<fullyQualifiedTypeName name="com.savefish.service.MusicManager"/>
-<fullyQualifiedTypeName name="com.savefish.logical.CollisionHandler"/>
-<fullyQualifiedTypeName name="com.savefish.service.SlideSound"/>
-<fullyQualifiedTypeName name="com.savefish.service.EatSound"/>
-<fullyQualifiedTypeName name="com.savefish.logical.Checkable"/>
-<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.Sprite"/>
-<fullyQualifiedTypeName name="com.savefish.assets.Assets"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant.physics"/>
-<fullyQualifiedTypeName name="com.savefish.render.CircleRubbishActor"/>
-<fullyQualifiedTypeName name="com.savefish.task.DestroyBodyTask"/>
-<fullyQualifiedTypeName name="com.savefish.screens.game.GameMiddleStage"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.math.Vector3"/>
 <fullyQualifiedTypeName name="com.savefish.logical.BodyKilledLisetener"/>
 <fullyQualifiedTypeName name="com.savefish.android.ApplicationManager"/>
@@ -27,15 +12,10 @@
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.Animation"/>
 <fullyQualifiedTypeName name="com.savefish.screens.LoadingScreen"/>
 <fullyQualifiedTypeName name="com.savefish.screens.OptionScreen"/>
-<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.TextureRegion"/>
-<fullyQualifiedTypeName name="com.badlogic.gdx.Gdx"/>
 <fullyQualifiedTypeName name="java.lang.IllegalAccessError"/>
 <fullyQualifiedTypeName name="com.savefish.util.ShapeHelper"/>
 <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.SpriteBatch"/>
-<fullyQualifiedTypeName name="com.savefish.render.NatureLeftFishActor"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
-<fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.savefish.event.TaskListener"/>
 <fullyQualifiedTypeName name="com.savefish.event.GreenEvevtListener"/>
@@ -60,4 +40,24 @@
 <fullyQualifiedTypeName name="com.savefish.logical.BoundaryChecker"/>
 <fullyQualifiedTypeName name="com.savefish.logical.FishChecker"/>
 <fullyQualifiedTypeName name="com.savefish.task.MoveBodyTask"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.Gdx"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant.screen"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Image"/>
+<fullyQualifiedTypeName name="com.savefish.assets.Assets"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant"/>
+<fullyQualifiedTypeName name="com.savefish.constant.Constant.asset"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.ClickListener"/>
+<fullyQualifiedTypeName name="com.savefish.screens.game.GameControlStage.PauseListener"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.Game"/>
+<fullyQualifiedTypeName name="com.savefish.screens.game.GameControlStage"/>
+<fullyQualifiedTypeName name="com.savefish.screens.game.GameControlStage.PauseImage"/>
+<fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.TextureRegion"/>
+<fullyQualifiedTypeName name="com.savefish.screens.MenuScreen"/>
+<fullyQualifiedTypeName name="com.savefish.render.CircleRubbishActor"/>
+<fullyQualifiedTypeName name="com.savefish.render.NatureLeftFishActor"/>
+<fullyQualifiedTypeName name="com.savefish.render.NatureRightFishActor"/>
+<fullyQualifiedTypeName name="com.savefish.screens.MainMenuScreen"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="com.savefish.screens.game.GameMiddleStage"/>
+<fullyQualifiedTypeName name="android.R"/>
 </qualifiedTypeNameHistroy>

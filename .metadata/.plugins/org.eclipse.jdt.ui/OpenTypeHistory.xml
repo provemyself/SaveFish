@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=SaveFish-Android/libs\/gdx.jar&lt;com.badlogic.gdx(Game.class[Game" modifiers="1057" timestamp="1330607870000"/>
-<typeInfo handle="=SaveFish-Android/libs\/gdx.jar&lt;com.badlogic.gdx(ApplicationListener.class[ApplicationListener" modifiers="1537" timestamp="1330607870000"/>
 <typeInfo handle="=SaveFish-Core/libs\/gdx.jar&lt;com.badlogic.gdx.physics.box2d(ContactListener.class[ContactListener" modifiers="1537" timestamp="1333597139000"/>
 <typeInfo handle="=SaveFish-Desktop/\/SaveFish-Core\/libs\/gdx.jar&lt;com.badlogic.gdx(ApplicationListener.class[ApplicationListener" modifiers="1537" timestamp="1333597139000"/>
 <typeInfo handle="=SaveFish-Desktop/\/SaveFish-Core\/libs\/gdx.jar&lt;com.badlogic.gdx(Application.class[Application" modifiers="1537" timestamp="1333597139000"/>
@@ -18,4 +16,5 @@
 <typeInfo handle="=SaveFish-Core/src&lt;com.savefish.event{GreenEvevtListener.java[GreenEvevtListener" modifiers="513" timestamp="1334338461000"/>
 <typeInfo handle="=SaveFish-Core/src&lt;com.savefish.event{GreenEvent.java[GreenEvent" modifiers="1" timestamp="1334307144000"/>
 <typeInfo handle="=SaveFish-Core/src&lt;com.savefish.task{Task.java[Task" modifiers="513" timestamp="1334340478000"/>
+<typeInfo handle="=SaveFish-Core/libs\/gdx.jar&lt;com.badlogic.gdx.scenes.scene2d(Stage.class[Stage" modifiers="33" timestamp="1333597139000"/>
 </typeInfoHistroy>

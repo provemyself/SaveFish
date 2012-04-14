@@ -123,7 +123,7 @@ public class MainMenuScreen implements Screen {
 
 		@Override
 		public void click(Actor actor, float x, float y) {
-			game.setScreen(GameScreen.getInstance(game, 1));
+			game.setScreen(GameScreen.getInstance().switchToGameLevel(2));
 		}
 	}
 

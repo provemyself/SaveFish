@@ -99,5 +99,4 @@ public class LoadingScreen implements Screen {
 	public String toString() {
 		return LoadingScreen.class.getName();
 	}
-
 }
