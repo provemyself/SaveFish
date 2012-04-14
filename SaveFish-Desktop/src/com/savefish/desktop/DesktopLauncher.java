@@ -9,6 +9,7 @@ public class DesktopLauncher {
 
 	public static void main(String[] argv) {
 		saveFish = new LwjglApplication(new ApplicationManager(),
-				Constant.game.GAME_NAME, 480, 320, false);
+				Constant.game.GAME_NAME, 960,
+				640, false);
 	}
 }

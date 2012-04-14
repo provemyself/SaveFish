@@ -39,7 +39,7 @@ public class LoadingScreen implements Screen {
 				delta);
 
 		if (Assets.getInstance().update()) {
-			GreenLogger.getInstance().logp(Level.SEVERE,
+			GreenLogger.getInstance().logp(Level.INFO,
 					LoadingScreen.class.getName(), "render",
 					Assets.getInstance().getProgress() + "Loading complete!");
 
@@ -48,7 +48,7 @@ public class LoadingScreen implements Screen {
 			// 加载完成跳转到主界面
 			game.setScreen(new MenuScreen(game));
 		} else {
-			GreenLogger.getInstance().logp(Level.SEVERE,
+			GreenLogger.getInstance().logp(Level.INFO,
 					LoadingScreen.class.getName(), "render",
 					Assets.getInstance().getProgress() + " loaded!");
 		}
@@ -71,7 +71,7 @@ public class LoadingScreen implements Screen {
 
 	@Override
 	public void hide() {
-		GreenLogger.getInstance().logp(Level.WARNING,
+		GreenLogger.getInstance().logp(Level.INFO,
 				LoadingScreen.class.getName(), "hide", "called!");
 	}
 

@@ -42,12 +42,14 @@ public class GameScreen implements Screen {
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		this.backGroundStage.render(delta);
 		this.middleStage.render(delta, gl);
+
 		this.foreGroundStage.render(delta);
 		this.middleStage.act(delta);
 		this.middleStage.draw();
+		this.gameControlStage.render(delta);
 
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
-				middleStage, foreGroundStage));
+				middleStage, foreGroundStage, gameControlStage));
 
 		// TimingManager.getInstance(game).start();
 	}
@@ -79,6 +81,7 @@ public class GameScreen implements Screen {
 	public void dispose() {
 		backGroundStage.dispose();
 		this.middleStage.dispose();
+		this.gameControlStage.dispose();
 		this.foreGroundStage.dispose();
 	}
 
@@ -95,6 +98,7 @@ public class GameScreen implements Screen {
 
 	private GameBackgroundStage backGroundStage;
 	private GameMiddleStage middleStage;
+	private GameControlStage gameControlStage;
 	private GameForegroundStage foreGroundStage;
 
 	private void initStages() {
@@ -104,6 +108,7 @@ public class GameScreen implements Screen {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		this.gameControlStage = GameControlStage.getInstance(game);
 		this.foreGroundStage = GameForegroundStage.getInstance();
 	}
 }

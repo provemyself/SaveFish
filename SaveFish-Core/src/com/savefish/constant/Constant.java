@@ -27,7 +27,6 @@ public final class Constant {
 	public static final class screen {
 		public static final int SCREEN_WIDTH = 480;// 屏幕宽度
 		public static final int SCREEN_HEIGHT = 320;// 屏幕高度
-		public static final int SCREEN_HALF_WIDTH = 240;// 半屏幕宽
 	}
 
 	public static final class game {
