@@ -14,11 +14,11 @@ public class GameScreen implements Screen {
 
 	private static GameScreen gameScreen = null;
 
-	public static GameScreen getInstance(Game game) {
+	public static GameScreen getInstance(Game game, int defaultLevel) {
 		MusicManager.getInstance().play();
 		if (null == gameScreen) {
 			try {
-				gameScreen = new GameScreen(game);
+				gameScreen = new GameScreen(game, defaultLevel);
 			} catch (Exception e) {
 				GreenLogger.getInstance().logp(Level.WARNING,
 						GameScreen.class.getName(), "getInstance",
@@ -28,10 +28,13 @@ public class GameScreen implements Screen {
 		return gameScreen;
 	}
 
-	private GameScreen(Game game) throws Exception {
+	private int defaultLevel = 1;
+
+	private GameScreen(Game game, int defaultLevel) throws Exception {
 		GreenLogger.getInstance().logp(Level.WARNING,
 				GameScreen.class.getName(), "GameScreen", "called!");
 		this.game = game;
+		this.defaultLevel = defaultLevel;
 	}
 
 	@Override
@@ -42,11 +45,8 @@ public class GameScreen implements Screen {
 		gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		this.backGroundStage.render(delta);
 		this.middleStage.render(delta, gl);
-
-		this.foreGroundStage.render(delta);
-		this.middleStage.act(delta);
-		this.middleStage.draw();
 		this.gameControlStage.render(delta);
+		this.foreGroundStage.render(delta);
 
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage, gameControlStage));
@@ -104,7 +104,7 @@ public class GameScreen implements Screen {
 	private void initStages() {
 		this.backGroundStage = GameBackgroundStage.getInstance();
 		try {
-			this.middleStage = GameMiddleStage.createMiddleStage(1);
+			this.middleStage = GameMiddleStage.createInstance(defaultLevel);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
