@@ -4,10 +4,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 /********************************
- * Description: 该类对项目中的常量进行 
- * *************分类管理 
- * Author : 王志伟 
- * Date : 2012/03/08
+ * Description: 该类对项目中的常量进行 *************分类管理 Author : 王志伟 Date : 2012/03/08
  *******************************/
 
 public final class Constant {
@@ -108,14 +105,14 @@ public final class Constant {
 		public static final String RFISH_ONE_TWO = "Rfishonetwo";
 		public static final String RFISH_ONE_ONE = "Rfishoneone";
 
-		//人工鱼
+		// 人工鱼
 		public static final String ARTIFICIAL_ONE = "artificialone";
 		public static final String ARTIFICIAL_TWO = "artificialtwo";
 		public static final String ARTIFICIAL_THREE = "artificialthree";
 		public static final String ARTIFICIAL_FOUR = "artificialfour";
 		public static final String ARTIFICIAL_FIVE = "artificialfive";
 		public static final String ARTIFICIAL_SIX = "artificialsix";
-		
+
 		public static final String PESTICIDE_TWO = "pesticidetwo";
 		public static final String PESTICIDE_ONE = "pesticideone";
 
@@ -150,55 +147,55 @@ public final class Constant {
 		public static final String ACTORS_PACK = "actors";
 		public static final String SPRITES_PACT = "sprites";
 
+		// 背景音效开关
+		public static boolean isBgMusicOn = true;
+		public static final boolean isSoundOn = true;
+
 		// button actor
 		public static final TextureAtlas atlas = new TextureAtlas(
 				"textures/pack");
-		public static final TextureRegion bgMChoiceTexture = atlas
-				.findRegion("bgMChoice");
 		public static final TextureRegion bgChoiceTexture = atlas
 				.findRegion("bgChoice");
-		public static final TextureRegion bgMenuTexture = atlas
-				.findRegion("bgMenu");
-		public static final TextureRegion bghelpTexture = atlas
-				.findRegion("bgHelp");
-		public static final TextureRegion bgOptionTexture = atlas
-				.findRegion("bgOption");
-		public static final TextureRegion bgHighscoreTexture = atlas
-				.findRegion("bgHighscore");
+		public static final TextureRegion bgMainTexture = atlas
+				.findRegion("bgMain");
 
-		public static final TextureRegion aboutActorTexture = atlas
-				.findRegion("about");
-		public static final TextureRegion menuActorTexture = atlas
-				.findRegion("menu");
-		public static final TextureRegion startActorTexture = atlas
-				.findRegion("start");
-		public static final TextureRegion optionActorTexture = atlas
-				.findRegion("option");
-		public static final TextureRegion exitActorTexture = atlas
-				.findRegion("exit");
-		public static final TextureRegion choice1ActorTexture = atlas
-				.findRegion("choice1");
-		public static final TextureRegion choice2ActorTexture = atlas
-				.findRegion("choice2");
-		public static final TextureRegion highscoreActorTexture = atlas
-				.findRegion("highscore");
-		public static final TextureRegion musicActorTexture = atlas
-				.findRegion("music");
-		public static final TextureRegion shareActorTexture = atlas
-				.findRegion("share");
+		public static final TextureRegion[] aboutActorTexture = {
+				atlas.findRegion("about"), atlas.findRegion("about") };
+		public static final TextureRegion[] helpActorTexture = {
+				atlas.findRegion("help"), atlas.findRegion("help") };
+		public static final TextureRegion[] quitActorTexture = {
+				atlas.findRegion("quit"), atlas.findRegion("quit") };
+		public static final TextureRegion[] startActorTexture = {
+				atlas.findRegion("play"), atlas.findRegion("play2") };
+		public static final TextureRegion[] optionActorTexture = {
+				atlas.findRegion("option"), atlas.findRegion("option") };
+		public static final TextureRegion[] exitActorTexture = {
+				atlas.findRegion("exit"), atlas.findRegion("exit") };
+		public static final TextureRegion[] choice1ActorTexture = {
+				atlas.findRegion("choice1"), atlas.findRegion("choice2"),
+				atlas.findRegion("choice3"), atlas.findRegion("choice4") };
+		public static final TextureRegion[] choice2ActorTexture = {
+				atlas.findRegion("choice5"), atlas.findRegion("choice6"),
+				atlas.findRegion("choice7"), atlas.findRegion("choice8") };
+		public static final TextureRegion[] highscoreActorTexture = {
+				atlas.findRegion("highscore"), atlas.findRegion("highscore") };
+		public static final TextureRegion[] bgMusicActorTexture = {
+				atlas.findRegion("bgMusicOn"), atlas.findRegion("bgMusicOff") };
+		public static final TextureRegion[] soundActorTexture = {
+				atlas.findRegion("soundOff"), atlas.findRegion("soundOn") };
 
-		public static final TextureRegion num1ActorTexture = atlas
-				.findRegion("num1");
-		public static final TextureRegion num2ActorTexture = atlas
-				.findRegion("num2");
-		public static final TextureRegion num3ActorTexture = atlas
-				.findRegion("num3");
-		public static final TextureRegion num4ActorTexture = atlas
-				.findRegion("num4");
-		public static final TextureRegion num5ActorTexture = atlas
-				.findRegion("num5");
-		public static final TextureRegion num6ActorTexture = atlas
-				.findRegion("num6");
+		public static final TextureRegion[] num1ActorTexture = {
+				atlas.findRegion("1"), atlas.findRegion("11") };
+		public static final TextureRegion[] num2ActorTexture = {
+				atlas.findRegion("2"), atlas.findRegion("22") };
+		public static final TextureRegion[] num3ActorTexture = {
+				atlas.findRegion("3"), atlas.findRegion("33") };
+		public static final TextureRegion[] num4ActorTexture = {
+				atlas.findRegion("4"), atlas.findRegion("44") };
+		public static final TextureRegion[] num5ActorTexture = {
+				atlas.findRegion("5"), atlas.findRegion("55") };
+		public static final TextureRegion[] num6ActorTexture = {
+				atlas.findRegion("6"), atlas.findRegion("66") };
 
 		public static final TextureRegion fish1Texture[] = {
 				atlas.findRegion("fish1"), atlas.findRegion("fish2") };

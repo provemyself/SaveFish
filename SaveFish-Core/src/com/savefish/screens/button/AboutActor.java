@@ -5,19 +5,19 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.savefish.screens.OptionScreen;
+import com.savefish.screens.AboutScreen;
 
-public class OptionActor extends Image {
+public class AboutActor extends Image {
 
 	private TextureRegion[] region;
 	private Game game;
 
-	public OptionActor(Game game, TextureRegion[] region) {
+	public AboutActor(Game game, TextureRegion[] region) {
 
 		super(region[0]);
-		this.x = (float) (5 * Gdx.graphics.getWidth() / 6);
-		this.y = (float) (Gdx.graphics.getHeight() / 2);
-		this.scaleX = (float) (Gdx.graphics.getWidth() / (6 * region[0]
+		this.x = (float) (Gdx.graphics.getWidth()/2);
+		this.y = (float) (Gdx.graphics.getHeight() / 8);
+		this.scaleX = (float) ( Gdx.graphics.getWidth() / (7 * region[0]
 				.getRegionWidth()));
 		this.scaleY = this.scaleX;
 		this.region = region;
@@ -26,13 +26,13 @@ public class OptionActor extends Image {
 
 	@Override
 	public void draw(SpriteBatch batch, float parentAlpha) {
+
 		fishMoving();
 		super.draw(batch, parentAlpha);
 
 	}
 
-	static final int frame = 24;// 让option按钮图片每隔12帧改变一下
-								// 24帧一个循环
+	static final int frame = 24;
 	int fishMove = 0;
 
 	private void fishMoving() {
@@ -50,13 +50,9 @@ public class OptionActor extends Image {
 
 	@Override
 	public boolean touchDown(float x, float y, int point) {
-
-		game.setScreen(new OptionScreen(game));
+		game.setScreen(new AboutScreen(game));
 		return false;
-	}
-
-	@Override
-	public void touchUp(float x, float y, int point) {
 
 	}
+
 }

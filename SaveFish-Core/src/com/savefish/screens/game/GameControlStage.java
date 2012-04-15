@@ -7,7 +7,6 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
-import com.savefish.screens.MainMenuScreen;
 
 public class GameControlStage extends Stage {
 
@@ -19,6 +18,7 @@ public class GameControlStage extends Stage {
 		return gameControlStage;
 	}
 
+	@SuppressWarnings("unused")
 	private Game game = null;
 
 	private GameControlStage(Game game) {
@@ -48,7 +48,6 @@ public class GameControlStage extends Stage {
 
 		@Override
 		public boolean touchDown(float x, float y, int pointer) {
-			game.setScreen(MainMenuScreen.getInstance(game));
 			return super.touchDown(x, y, pointer);
 		}
 

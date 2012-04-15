@@ -1,10 +1,11 @@
 package com.savefish.screens;
-
 /********************************
- * Description: 该类为关于界面，介绍游戏的内容
+ * Description: 该类为帮助界面，需要修改
+ *              介绍游戏的操作
  * Author     : 杨勇
  * Date       : 2012/03/08
  *******************************/
+
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -13,13 +14,12 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.constant.Constant;
 import com.savefish.screens.button.MenuActor;
 
-public class AboutScreen implements Screen {
-	
+public class HelpScreen implements Screen{
 	private Stage     stage = null;
 	private MenuActor menuActor = null;
 	private Image     bgImage = null;
 
-	public AboutScreen(Game game) {
+	public HelpScreen(Game game) {
 		
 		bgImage        = new Image(Constant.asset.bgMainTexture);
 		bgImage.height = Gdx.graphics.getHeight();

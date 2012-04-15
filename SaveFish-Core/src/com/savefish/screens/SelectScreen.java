@@ -17,11 +17,11 @@ import com.savefish.screens.button.MenuActor;
 
 public class SelectScreen implements Screen {
 	
-	private Stage stage;
-	private MenuActor menuActor;
-	private Image bgImage;
+	private Stage         stage;
+	private MenuActor     menuActor;
+	private Image         bgImage;
 	
-	private ChoiceButton choiceButton;
+	private ChoiceButton  choiceButton;
 	private Choice_1Actor choice_1Actor;
 	private Choice_2Actor choice_2Actor;
 	private Choice_3Actor choice_3Actor;
@@ -30,18 +30,8 @@ public class SelectScreen implements Screen {
 	private Choice_6Actor choice_6Actor;
 	
 	public  SelectScreen(Game game) {
-		bgImage = new Image(Constant.asset.bgChoiceTexture);
-		stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),
-				true);
-		menuActor = new MenuActor(game,Constant.asset.fish2Texture);
-		choiceButton = new ChoiceButton(game);
-		choice_1Actor = choiceButton.getChoice_1Actor(Constant.asset.num1ActorTexture);
-		choice_2Actor = choiceButton.getChoice_2Actor(Constant.asset.num2ActorTexture);
-		choice_3Actor = choiceButton.getChoice_3Actor(Constant.asset.num3ActorTexture);
-		choice_4Actor = choiceButton.getChoice_4Actor(Constant.asset.num4ActorTexture);
-		choice_5Actor = choiceButton.getChoice_5Actor(Constant.asset.num5ActorTexture);
-		choice_6Actor = choiceButton.getChoice_6Actor(Constant.asset.num6ActorTexture);
 		
+		init(game);
 		stage.addActor(bgImage);
 		stage.addActor(menuActor);
 		stage.addActor(choice_1Actor);
@@ -51,6 +41,23 @@ public class SelectScreen implements Screen {
 		stage.addActor(choice_5Actor);
 		stage.addActor(choice_6Actor);
 	}
+	
+	private void init(Game game){
+		bgImage        = new Image(Constant.asset.bgChoiceTexture);
+		stage          = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),true);
+		menuActor      = new MenuActor(game,Constant.asset.quitActorTexture);
+		choiceButton   = new ChoiceButton(game);
+		bgImage.height = Gdx.graphics.getHeight();
+		bgImage.width  = Gdx.graphics.getWidth();
+		choice_1Actor = choiceButton.getChoice_1Actor(Constant.asset.num1ActorTexture);
+		choice_2Actor = choiceButton.getChoice_2Actor(Constant.asset.num2ActorTexture);
+		choice_3Actor = choiceButton.getChoice_3Actor(Constant.asset.num3ActorTexture);
+		choice_4Actor = choiceButton.getChoice_4Actor(Constant.asset.num4ActorTexture);
+		choice_5Actor = choiceButton.getChoice_5Actor(Constant.asset.num5ActorTexture);
+		choice_6Actor = choiceButton.getChoice_6Actor(Constant.asset.num6ActorTexture);
+		
+	}
+	
 	@Override
 	public void render(float delta) {
 		// TODO Auto-generated method stub
@@ -61,37 +68,31 @@ public class SelectScreen implements Screen {
 
 	@Override
 	public void resize(int width, int height) {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void hide() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void pause() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void resume() {
-		// TODO Auto-generated method stub
 
 	}
 
 	@Override
 	public void dispose() {
-		// TODO Auto-generated method stub
 
 	}
 
