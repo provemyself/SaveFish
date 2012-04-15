@@ -1,7 +1,6 @@
 package com.savefish.render;
 
 import java.util.List;
-import java.util.logging.Level;
 
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -12,7 +11,6 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
 import com.savefish.screens.game.GameMiddleStage;
-import com.savefish.util.GreenLogger;
 
 public class CircleRubbishActor extends GameActor {
 
@@ -61,27 +59,16 @@ public class CircleRubbishActor extends GameActor {
 
 	@Override
 	public void draw(SpriteBatch batch, float parentAlpha) {
-		if (null == this.shape) {
-			GreenLogger.getInstance().logp(Level.INFO,
-					CircleRubbishActor.class.getName(), "draw",
-					"the shape is null");
-			return;
-		}
 		float radius = this.shape.getRadius();
 		this.spriteBatch
 				.setProjectionMatrix(gameMiddleStage.getCamera().combined);
 		Vector3 position = new Vector3(body.getPosition().x - radius,
 				body.getPosition().y - radius, 0);
-
 		this.spriteBatch.begin();
-
 		this.sprite.rotate(body.getAngle());
-
 		this.sprite.setPosition(position.x * Constant.physics.RATE - 84,
 				position.y * Constant.physics.RATE - 100);
-
 		this.sprite.draw(spriteBatch);
-
 		this.spriteBatch.end();
 	}
 }

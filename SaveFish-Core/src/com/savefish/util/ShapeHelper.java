@@ -10,6 +10,9 @@ public class ShapeHelper {
 	 * @return 返回宽和高的二维向量
 	 */
 	public static Vector2 getRectangleData(PolygonShape shape) {
+		if (null == shape)
+			return new Vector2();
+
 		Vector2 vertex0 = new Vector2();
 		Vector2 vertex2 = new Vector2();
 

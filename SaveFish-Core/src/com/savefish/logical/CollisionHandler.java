@@ -72,13 +72,19 @@ public class CollisionHandler extends CollisionAdapter {
 			if ((null != bodyA) && (null != bodyB)) {
 				String bodyAName = (String) bodyA.getUserData();
 				String bodyBName = (String) bodyB.getUserData();
-				if (bodyBName != null) {
+				if ((null != bodyAName) && (null != bodyBName)) {
 					if (FishChecker.isArtificial(bodyAName)
 							&& !BoundaryChecker.isScreenBoundary(bodyBName)
 							&& !this.killedRubbishes.contains(bodyB)) {
 						EatSound.getInstance().play();
 						addDestroyTask(new DestroyBodyTask(bodyB));
 						this.killedRubbishes.add(bodyB);
+					} else if (FishChecker.isArtificial(bodyBName)
+							&& !BoundaryChecker.isScreenBoundary(bodyAName)
+							&& !this.killedRubbishes.contains(bodyA)) {
+						EatSound.getInstance().play();
+						addDestroyTask(new DestroyBodyTask(bodyA));
+						this.killedRubbishes.add(bodyA);
 					}
 				}
 			}

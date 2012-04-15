@@ -15,6 +15,8 @@ public class GameActorFactory {
 			actor = ArtificialFishActor.createInstance(stage, body);
 		if (CircleRubbishActor.isCircleRubbishActor(body))
 			actor = CircleRubbishActor.createInstance(stage, body);
+		if (PolygonRubbishActor.isPolygonRubbishActor(body))
+			actor = PolygonRubbishActor.createInstance(stage, body);
 
 		return actor;
 	}
