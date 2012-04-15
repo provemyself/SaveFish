@@ -38,13 +38,8 @@ public class NatureRightFishActor extends GameActor {
 	}
 
 	public static boolean isNatureFishActor(Body body) {
-		boolean result = false;
 		String bodyName = (String) body.getUserData();
-		if ((null != bodyName) && (bodyName.startsWith("r_nature")))
-			result = true;
-		else
-			result = false;
-		return result;
+		return FishChecker.isNatureRight(bodyName);
 	}
 
 	@Override
@@ -54,8 +49,8 @@ public class NatureRightFishActor extends GameActor {
 		Vector3 position = new Vector3(body.getPosition().x
 				- ShapeHelper.getRectangleData(leftFishShape).x / 2.0f,
 				body.getPosition().y
-						- ShapeHelper.getRectangleData(leftFishShape).y
-						/ 2.0f, 0);
+						- ShapeHelper.getRectangleData(leftFishShape).y / 2.0f,
+				0);
 
 		this.stateTime += Gdx.graphics.getDeltaTime();
 		this.currentSprite = new Sprite(this.fishAnimation.getKeyFrame(

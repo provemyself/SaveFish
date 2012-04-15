@@ -14,6 +14,7 @@ import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.savefish.render.Direction;
+import com.savefish.render.FishChecker;
 import com.savefish.service.EatSound;
 import com.savefish.task.DestroyBodyTask;
 import com.savefish.task.MoveBodyTask;

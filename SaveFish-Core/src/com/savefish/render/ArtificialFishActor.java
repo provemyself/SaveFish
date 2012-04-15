@@ -39,14 +39,8 @@ public class ArtificialFishActor extends GameActor {
 	}
 
 	public static boolean isArtificialFishActor(Body body) {
-		boolean result = false;
 		String bodyName = (String) body.getUserData();
-		if ((null != bodyName) && (bodyName.startsWith("artificial"))) {
-			result = true;
-		} else {
-			result = false;
-		}
-		return result;
+		return FishChecker.isArtificial(bodyName);
 	}
 
 	private CircleShape fishShape = null;
@@ -76,9 +70,8 @@ public class ArtificialFishActor extends GameActor {
 				.setProjectionMatrix(this.gameMiddleStage.getCamera().combined);
 		Vector3 position = new Vector3(body.getPosition().x
 				- ShapeHelper.getCircleData(fishShape) / 2.0f,
-				body.getPosition().y
-						- ShapeHelper.getCircleData(fishShape) / 2.0f,
-				0);
+				body.getPosition().y - ShapeHelper.getCircleData(fishShape)
+						/ 2.0f, 0);
 
 		this.stateTime += Gdx.graphics.getDeltaTime();
 		this.currentSprite = new Sprite(fishAnimation.getKeyFrame(stateTime,

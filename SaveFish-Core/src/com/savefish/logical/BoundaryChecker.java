@@ -1,5 +1,7 @@
 package com.savefish.logical;
 
+import com.savefish.render.Checkable;
+
 /********************************
  * Description: 该类负责检查参数body 是否是边界 Author : 王志伟 Date : 2012/04/10
  *******************************/

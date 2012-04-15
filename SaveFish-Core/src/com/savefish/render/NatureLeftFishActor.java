@@ -41,13 +41,8 @@ public class NatureLeftFishActor extends GameActor {
 	}
 
 	public static boolean isNatureLeftFishActor(Body body) {
-		boolean result = false;
 		String bodyName = (String) body.getUserData();
-		if ((null != bodyName) && (bodyName.startsWith("l_nature")))
-			result = true;
-		else
-			result = false;
-		return result;
+		return FishChecker.isNatureLeft(bodyName);
 	}
 
 	private PolygonShape leftFishShape = null;
@@ -92,8 +87,8 @@ public class NatureLeftFishActor extends GameActor {
 		Vector3 position = new Vector3(body.getPosition().x
 				- ShapeHelper.getRectangleData(leftFishShape).x / 2.0f,
 				body.getPosition().y
-						- ShapeHelper.getRectangleData(leftFishShape).y
-						/ 2.0f, 0);
+						- ShapeHelper.getRectangleData(leftFishShape).y / 2.0f,
+				0);
 
 		this.stateTime += Gdx.graphics.getDeltaTime();
 		this.currentSprite = new Sprite(this.fishAnimation.getKeyFrame(

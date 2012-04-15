@@ -33,14 +33,8 @@ public class CircleRubbishActor extends GameActor {
 	}
 
 	public static boolean isCircleRubbishActor(Body body) {
-		boolean result = false;
 		String bodyName = (String) body.getUserData();
-		if ((null != bodyName) && (bodyName.startsWith("rubbish"))) {
-			result = true;
-		} else {
-			result = false;
-		}
-		return result;
+		return RubbishChecker.isCircleRubbish(bodyName);
 	}
 
 	private CircleShape shape = null;
