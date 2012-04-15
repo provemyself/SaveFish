@@ -108,11 +108,19 @@ public final class Constant {
 		public static final String RFISH_ONE_TWO = "Rfishonetwo";
 		public static final String RFISH_ONE_ONE = "Rfishoneone";
 
+		//人工鱼
+		public static final String ARTIFICIAL_ONE = "artificialone";
+		public static final String ARTIFICIAL_TWO = "artificialtwo";
+		public static final String ARTIFICIAL_THREE = "artificialthree";
+		public static final String ARTIFICIAL_FOUR = "artificialfour";
+		public static final String ARTIFICIAL_FIVE = "artificialfive";
+		public static final String ARTIFICIAL_SIX = "artificialsix";
+		
 		public static final String PESTICIDE_TWO = "pesticidetwo";
 		public static final String PESTICIDE_ONE = "pesticideone";
 
 		// 游戏场景的背景图片
-		public static final String BACKGROUND_ONE = "mainmenu";
+		public static final String BACKGROUND_ONE = "gamescene";
 		public static final String BACKGROUND_TWO = "background_two";
 		public static final String BACKGOUND_THREE = "background_three";
 		public static final String BACKGROUND_FOUR = "background_four";

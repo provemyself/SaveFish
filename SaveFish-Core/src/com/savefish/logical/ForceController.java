@@ -44,9 +44,9 @@ public class ForceController {
 			String bodyName = (String) body.getUserData();
 			Vector2 vec = body.getLinearVelocity();
 			if ((null != bodyName)) {
-				if (bodyName.startsWith("lnature"))
+				if (bodyName.startsWith("l_nature"))
 					vec.x = -2;
-				else if (bodyName.startsWith("rnature"))
+				else if (bodyName.startsWith("r_nature"))
 					vec.x = 2;
 				body.setLinearVelocity(vec);
 			}

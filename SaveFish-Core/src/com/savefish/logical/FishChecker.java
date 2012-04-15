@@ -27,14 +27,14 @@ public class FishChecker implements Checkable {
 	 * @return
 	 */
 	public static boolean isNatureRight(String userData) {
-		if ((null != userData) && userData.startsWith("rnature"))
+		if ((null != userData) && userData.startsWith("r_nature"))
 			return true;
 		else
 			return false;
 	}
 	
 	public static boolean isNatureLeft(String userData) {
-		if ((null != userData) && userData.startsWith("lnature"))
+		if ((null != userData) && userData.startsWith("l_nature"))
 			return true;
 		else
 			return false;

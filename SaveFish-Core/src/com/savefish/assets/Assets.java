@@ -63,6 +63,7 @@ public class Assets {
 		this.setSpriteAtlas();
 		this.initNatureLeftList();
 		this.initNatureRightList();
+		this.initAritificialList();
 	}
 
 	private TextureAtlas getActorAtlas() {
@@ -227,6 +228,28 @@ public class Assets {
 			return this.natureRightList.get(random.nextInt(size));
 		else
 			return null;
+	}
+
+	public ArrayList<TextureRegion> getArtificial() {
+		return this.artificialList;
+	}
+
+	private ArrayList<TextureRegion> artificialList = null;
+
+	private void initAritificialList() {
+		this.artificialList = new ArrayList<TextureRegion>();
+
+		artificialList.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_ONE));
+		artificialList.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_TWO));
+		artificialList
+				.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_FOUR));
+		artificialList.add(this
+				.getSpriteRigion(Constant.asset.ARTIFICIAL_THREE));
+
+		artificialList
+				.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_FIVE));
+		artificialList.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_SIX));
+
 	}
 
 	private List<ArrayList<TextureRegion>> natureLeftList = null;

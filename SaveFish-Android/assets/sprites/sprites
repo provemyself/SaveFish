@@ -3,6 +3,53 @@ input1.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
+artificialthree
+  rotate: false
+  xy: 2, 2
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialtwo
+  rotate: false
+  xy: 484, 2
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialfour
+  rotate: false
+  xy: 2, 324
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialsix
+  rotate: false
+  xy: 2, 646
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialone
+  rotate: false
+  xy: 484, 324
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialfive
+  rotate: false
+  xy: 484, 646
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+
+input2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
 Lfishfiveone
   rotate: false
   xy: 2, 2
@@ -109,7 +156,7 @@ Lfishfourtwo
   offset: 0, 0
   index: -1
 
-input2.png
+input3.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none

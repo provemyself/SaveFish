@@ -144,32 +144,8 @@
          "angle" : 0,
          "angularVelocity" : 0,
          "awake" : true,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "41200000",
-               "filter-categoryBits" : 2,
-               "filter-maskBits" : 2,
-               "friction" : "3E99999A",
-               "polygon" : 
-               {
-                  "vertices" : 
-                  {
-                     "x" : [ "3FE340CF", "3FE340C9", "BFD4BD9C", "BFD4BD9A" ],
-                     "y" : [ "C02AE894", "402A5CFD", "402A5CFD", "C02AE896" ]
-                  }
-               },
-               "restitution" : "3DCCCCCD"
-            }
-         ],
          "linearVelocity" : 0,
-         "name" : "grass_3.png",
-         "position" : 
-         {
-            "x" : "42323D9C",
-            "y" : "406167A4"
-         },
+         "position" : 0,
          "type" : 0 //static
       },
       
@@ -177,32 +153,8 @@
          "angle" : 0,
          "angularVelocity" : 0,
          "awake" : true,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "41200000",
-               "filter-categoryBits" : 2,
-               "filter-maskBits" : 2,
-               "friction" : "3E99999A",
-               "polygon" : 
-               {
-                  "vertices" : 
-                  {
-                     "x" : [ "3FE340CF", "3FE340C9", "BFD4BD9C", "BFD4BD9A" ],
-                     "y" : [ "C02AE894", "402A5CFD", "402A5CFD", "C02AE896" ]
-                  }
-               },
-               "restitution" : "3DCCCCCD"
-            }
-         ],
          "linearVelocity" : 0,
-         "name" : "grass_2.png",
-         "position" : 
-         {
-            "x" : "414FF9E6",
-            "y" : "406167A4"
-         },
+         "position" : 0,
          "type" : 0 //static
       },
       
@@ -261,7 +213,7 @@
             }
          ],
          "linearVelocity" : 0,
-         "name" : "world_left.png",
+         "name" : "world_left",
          "position" : 
          {
             "x" : "C120D00E",
@@ -298,7 +250,7 @@
             }
          ],
          "linearVelocity" : 0,
-         "name" : "world_right.png",
+         "name" : "world_right",
          "position" : 
          {
             "x" : "4266600D",
@@ -335,7 +287,7 @@
             }
          ],
          "linearVelocity" : 0,
-         "name" : "bottom.png",
+         "name" : "bottom",
          "position" : 
          {
             "x" : "41C13994",
@@ -372,7 +324,7 @@
             }
          ],
          "linearVelocity" : 0,
-         "name" : "top.png",
+         "name" : "top",
          "position" : 
          {
             "x" : "41BF9406",
@@ -473,10 +425,10 @@
                {
                   "center" : 
                   {
-                     "x" : "BBBEB400",
-                     "y" : "BD088A44"
+                     "x" : "3D337740",
+                     "y" : "BDE76D80"
                   },
-                  "radius" : "3FAF8C7A"
+                  "radius" : "3F882D59"
                },
                "density" : "40D89CF0",
                "filter-categoryBits" : 2,
@@ -487,18 +439,18 @@
          ],
          "gravityScale" : 0,
          "linearVelocity" : 0,
-         "massData-I" : "4216A89A",
+         "massData-I" : "415F9AB5",
          "massData-center" : 
          {
-            "x" : "BBBEB400",
-            "y" : "BD088A44"
+            "x" : "3D337740",
+            "y" : "BDE76D80"
          },
-         "massData-mass" : "42200000",
-         "name" : "rubbish_2.png",
+         "massData-mass" : "41C08F02",
+         "name" : "rubbish_circle_2",
          "position" : 
          {
-            "x" : "41687D95",
-            "y" : "42183F95"
+            "x" : "412360C1",
+            "y" : "4219F57C"
          },
          "type" : 2 //dynamic
       },
@@ -523,10 +475,10 @@
                {
                   "center" : 
                   {
-                     "x" : "3D9CCF80",
-                     "y" : "3D18F000"
+                     "x" : "3C800040",
+                     "y" : "BDD4F600"
                   },
-                  "radius" : "3FA5FB21"
+                  "radius" : "3F7F38EA"
                },
                "density" : "40724E3A",
                "filter-categoryBits" : 2,
@@ -537,18 +489,18 @@
          ],
          "gravityScale" : 0,
          "linearVelocity" : 0,
-         "massData-I" : "4187AE57",
+         "massData-I" : "40C02FF4",
          "massData-center" : 
          {
-            "x" : "3D9CCF80",
-            "y" : "3D18F000"
+            "x" : "3C800040",
+            "y" : "BDD4F600"
          },
-         "massData-mass" : "41A00000",
-         "name" : "rubbish_1.png",
+         "massData-mass" : "413D26E2",
+         "name" : "rubbish_circle_1",
          "position" : 
          {
-            "x" : "4104F080",
-            "y" : "4214C226"
+            "x" : "41215553",
+            "y" : "42237A6B"
          },
          "type" : 2 //dynamic
       },
@@ -602,7 +554,7 @@
             "y" : "BC6F804F"
          },
          "massData-mass" : "42480000",
-         "name" : "lnature_8.png",
+         "name" : "l_nature_2",
          "position" : 
          {
             "x" : "41E3CB45",
@@ -642,7 +594,7 @@
             "y" : "3D1A823F"
          },
          "massData-mass" : "42480000",
-         "name" : "lnature_3.png",
+         "name" : "r_nature_3",
          "position" : 
          {
             "x" : "412CFE81",
@@ -682,7 +634,7 @@
             "y" : "BCFCA6D0"
          },
          "massData-mass" : "4247FFFF",
-         "name" : "lnature_2.png",
+         "name" : "r_nature_1",
          "position" : 
          {
             "x" : "40474210",
@@ -722,11 +674,11 @@
             "y" : "3C7D875C"
          },
          "massData-mass" : "42480000",
-         "name" : "rnature_10.png",
+         "name" : "l_nature_4",
          "position" : 
          {
-            "x" : "422937F6",
-            "y" : "41041F06"
+            "x" : "42323C79",
+            "y" : "4041C038"
          },
          "type" : 2 //dynamic
       },
@@ -762,7 +714,7 @@
             "y" : "BD8127BF"
          },
          "massData-mass" : "42480001",
-         "name" : "lnature_9.png",
+         "name" : "l_nature_3",
          "position" : 
          {
             "x" : "4225BAF0",
@@ -802,7 +754,7 @@
             "y" : "BD8127BF"
          },
          "massData-mass" : "42480001",
-         "name" : "rnature_6.png",
+         "name" : "r_nature_6",
          "position" : 
          {
             "x" : "4196C7B5",
@@ -842,11 +794,11 @@
             "y" : "3CA967FC"
          },
          "massData-mass" : "42480000",
-         "name" : "lnature_5.png",
+         "name" : "r_nature_4",
          "position" : 
          {
-            "x" : "419E3463",
-            "y" : "41190D29"
+            "x" : "412C209E",
+            "y" : "41008604"
          },
          "type" : 2 //dynamic
       },
@@ -882,11 +834,11 @@
             "y" : "3C5C93BF"
          },
          "massData-mass" : "4247FFFF",
-         "name" : "lnature_7.png",
+         "name" : "l_nature_1",
          "position" : 
          {
-            "x" : "41FF4C34",
-            "y" : "41624EA6"
+            "x" : "41FD2229",
+            "y" : "414E1B96"
          },
          "type" : 2 //dynamic
       },
@@ -922,7 +874,7 @@
             "y" : "BD6CE971"
          },
          "massData-mass" : "42480000",
-         "name" : "lnature_4.png",
+         "name" : "r_nature_5",
          "position" : 
          {
             "x" : "41A36FEC",
@@ -989,7 +941,7 @@
             "y" : "3C6C58C4"
          },
          "massData-mass" : "42480000",
-         "name" : "lnature_1.png",
+         "name" : "r_nature_2",
          "position" : 
          {
             "x" : "4065B2A2",
@@ -1187,30 +1139,31 @@
          [
             
             {
-               "density" : "41200000",
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "BCD36400",
+                     "y" : "BD8EA040"
+                  },
+                  "radius" : "4033D08E"
+               },
+               "density" : "41010922",
                "filter-categoryBits" : 2,
                "filter-maskBits" : 2,
-               "friction" : "3DCCCCCD",
-               "polygon" : 
-               {
-                  "vertices" : 
-                  {
-                     "x" : [ "402093F7", "402093F7", "C02C4471", "C02C4471" ],
-                     "y" : [ "BFCF73A3", "3FC26087", "3FC26087", "BFCF73A3" ]
-                  }
-               },
+               "friction" : "3ECCCCCD",
                "restitution" : "3DCCCCCD"
             }
          ],
          "linearVelocity" : 0,
-         "massData-I" : "3FE4CC4C",
+         "massData-I" : "3F8D3481",
          "massData-center" : 
          {
-            "x" : "BDBB07A2",
-            "y" : "BD5131C0"
+            "x" : "BCD36400",
+            "y" : "BD8EA040"
          },
-         "massData-mass" : "432343E2",
-         "name" : "artificial.png",
+         "massData-mass" : "4347FFFF",
+         "name" : "artificial",
          "position" : 
          {
             "x" : "420FFEF5",
@@ -1354,7 +1307,7 @@
          ],
          "gravityScale" : 0,
          "linearVelocity" : 0,
-         "name" : "middle.png",
+         "name" : "middle",
          "position" : 
          {
             "x" : "41BF5FF8",
@@ -1736,39 +1689,6 @@
          "angle" : 0,
          "angularVelocity" : 0,
          "awake" : true,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "41200000",
-               "filter-categoryBits" : 2,
-               "filter-maskBits" : 2,
-               "friction" : "3E99999A",
-               "polygon" : 
-               {
-                  "vertices" : 
-                  {
-                     "x" : [ "3FE340CF", "3FE340C9", "BFD4BD9C", "BFD4BD9A" ],
-                     "y" : [ "C02AE894", "402A5CFD", "402A5CFD", "C02AE896" ]
-                  }
-               },
-               "restitution" : "3DCCCCCD"
-            }
-         ],
-         "linearVelocity" : 0,
-         "name" : "grass_1.png",
-         "position" : 
-         {
-            "x" : "40DBBA9F",
-            "y" : "40D895D9"
-         },
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
          "linearVelocity" : 0,
          "position" : 0,
          "type" : 0 //static
@@ -1853,26 +1773,26 @@
                {
                   "vertices" : 
                   {
-                     "x" : [ "3F933D67", "3F933D63", "BF86AF93", "BF86AF92" ],
-                     "y" : [ "C002789D", "40247C83", "40247C83", "C002789F" ]
+                     "x" : [ "3F528CB8", "3F528CB8", "BF0B7100", "BF0B7100" ],
+                     "y" : [ "BFA852B0", "3FC5D8A8", "3FC5D8A8", "BFA852B0" ]
                   }
                }
             }
          ],
          "gravityScale" : 0,
          "linearVelocity" : 0,
-         "massData-I" : "42E0BB21",
+         "massData-I" : "418620DA",
          "massData-center" : 
          {
-            "x" : "3D48DD24",
-            "y" : "3E880F92"
+            "x" : "3E0E3770",
+            "y" : "3DEC2FC1"
          },
-         "massData-mass" : "42480000",
-         "name" : "rubbish_3.png",
+         "massData-mass" : "419A1D6F",
+         "name" : "rubbish_polygon_1",
          "position" : 
          {
-            "x" : "41AE8981",
-            "y" : "42173227"
+            "x" : "41A05804",
+            "y" : "421CAEDD"
          },
          "type" : 2 //dynamic
       },
@@ -1893,26 +1813,26 @@
                {
                   "vertices" : 
                   {
-                     "x" : [ "3F933D67", "3F933D63", "BF86AF93", "BF86AF92" ],
-                     "y" : [ "C002789D", "40247C83", "40247C83", "C002789F" ]
+                     "x" : [ "3F2897F0", "3F2897F0", "BF164490", "BF164490" ],
+                     "y" : [ "BFA188F0", "3FAC10C0", "3FAC10C0", "BFA188F0" ]
                   }
                }
             }
          ],
          "gravityScale" : 0,
          "linearVelocity" : 0,
-         "massData-I" : "4306D6AD",
+         "massData-I" : "415661E6",
          "massData-center" : 
          {
-            "x" : "3D48DD24",
-            "y" : "3E880F92"
+            "x" : "3D129B00",
+            "y" : "3D287CFE"
          },
-         "massData-mass" : "42700000",
-         "name" : "rubbish_4.png",
+         "massData-mass" : "419980A5",
+         "name" : "rubbish_polygon_2",
          "position" : 
          {
-            "x" : "41E2AE56",
-            "y" : "4219AAC9"
+            "x" : "41EF2C2A",
+            "y" : "421DC920"
          },
          "type" : 2 //dynamic
       },
@@ -1928,10 +1848,10 @@
                {
                   "center" : 
                   {
-                     "x" : "BBBEB400",
-                     "y" : "BD088A44"
+                     "x" : "3D3B9B00",
+                     "y" : "3D907080"
                   },
-                  "radius" : "3FAF8C7A"
+                  "radius" : "3F74B085"
                },
                "density" : "413D8952",
                "filter-categoryBits" : 2,
@@ -1942,18 +1862,18 @@
          ],
          "gravityScale" : 0,
          "linearVelocity" : 0,
-         "massData-I" : "4283D386",
+         "massData-I" : "417C5711",
          "massData-center" : 
          {
-            "x" : "BBBEB400",
-            "y" : "BD088A44"
+            "x" : "3D3B9B00",
+            "y" : "3D907080"
          },
-         "massData-mass" : "428C0000",
-         "name" : "rubbish_5.png",
+         "massData-mass" : "4207FF8F",
+         "name" : "rubbish_circle_4",
          "position" : 
          {
-            "x" : "42081198",
-            "y" : "421C1319"
+            "x" : "4216DF40",
+            "y" : "4218EAD2"
          },
          "type" : 2 //dynamic
       },
@@ -1969,10 +1889,10 @@
                {
                   "center" : 
                   {
-                     "x" : "BBBEB400",
-                     "y" : "BD088A44"
+                     "x" : "3DF6CC80",
+                     "y" : "BDCC5B00"
                   },
-                  "radius" : "3FAF8C7A"
+                  "radius" : "3F7A30F2"
                },
                "density" : "41589CF0",
                "filter-categoryBits" : 2,
@@ -1983,18 +1903,18 @@
          ],
          "gravityScale" : 0,
          "linearVelocity" : 0,
-         "massData-I" : "4296A89A",
+         "massData-I" : "41A328C2",
          "massData-center" : 
          {
-            "x" : "BBBEB400",
-            "y" : "BD088A44"
+            "x" : "3DF6CC80",
+            "y" : "BDCC5B00"
          },
-         "massData-mass" : "42A00000",
-         "name" : "rubbish_6.png",
+         "massData-mass" : "42227E96",
+         "name" : "rubbish_circle_3",
          "position" : 
          {
-            "x" : "422145A1",
-            "y" : "421C37D9"
+            "x" : "42163D57",
+            "y" : "4222A42B"
          },
          "type" : 2 //dynamic
       },
@@ -2155,7 +2075,7 @@
             }
          ],
          "linearVelocity" : 0,
-         "name" : "screen_right.png",
+         "name" : "screen_right",
          "position" : 
          {
             "x" : "42415AFA",
@@ -2193,7 +2113,7 @@
             }
          ],
          "linearVelocity" : 0,
-         "name" : "screen_left.png",
+         "name" : "screen_left",
          "position" : 
          {
             "x" : "BEBC1760",
@@ -2282,6 +2202,24 @@
             "x" : "BF35CBDF",
             "y" : "41B1C324"
          },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
          "type" : 0 //static
       }
    ],

@@ -84,9 +84,9 @@ public class GameScreen implements Screen {
 	@Override
 	public void dispose() {
 		backGroundStage.dispose();
-		this.middleStage.dispose();
-		this.gameControlStage.dispose();
-		this.foreGroundStage.dispose();
+		middleStage.dispose();
+		gameControlStage.dispose();
+		foreGroundStage.dispose();
 	}
 
 	@Override

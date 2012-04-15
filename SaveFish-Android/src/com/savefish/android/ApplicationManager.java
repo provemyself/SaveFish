@@ -12,6 +12,7 @@ import com.savefish.util.GreenLoggerManager;
 
 public class ApplicationManager extends Game {
 
+	@SuppressWarnings("unused")
 	private SaveFishActivity application = null;
 
 	public ApplicationManager(SaveFishActivity application) {
@@ -46,7 +47,7 @@ public class ApplicationManager extends Game {
 
 		disposeScreens();
 		Assets.getInstance().dispose();
-		this.application.exit();
+		// this.application.exit();
 
 		GreenLogger.getInstance().log(Level.INFO, "Game exited sucessfully!");
 	}

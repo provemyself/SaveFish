@@ -1,13 +1,11 @@
 package com.savefish.render;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Fixture;
@@ -15,7 +13,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
 import com.savefish.screens.game.GameMiddleStage;
-import com.savefish.util.RectangleHelper;
+import com.savefish.util.ShapeHelper;
 
 public class NatureRightFishActor extends GameActor {
 
@@ -35,7 +33,6 @@ public class NatureRightFishActor extends GameActor {
 		this.spriteBatch = new SpriteBatch();
 		this.body = body;
 		this.initLeftFishShape();
-		this.initSpriteFrameList();
 		this.initMoveAnimation();
 		this.stateTime = 0f;
 	}
@@ -43,7 +40,7 @@ public class NatureRightFishActor extends GameActor {
 	public static boolean isNatureFishActor(Body body) {
 		boolean result = false;
 		String bodyName = (String) body.getUserData();
-		if ((null != bodyName) && (bodyName.startsWith("rnature")))
+		if ((null != bodyName) && (bodyName.startsWith("r_nature")))
 			result = true;
 		else
 			result = false;
@@ -55,9 +52,9 @@ public class NatureRightFishActor extends GameActor {
 		this.spriteBatch
 				.setProjectionMatrix(this.gameMiddleStage.getCamera().combined);
 		Vector3 position = new Vector3(body.getPosition().x
-				- RectangleHelper.getRectangleData(leftFishShape).x / 2.0f,
+				- ShapeHelper.getRectangleData(leftFishShape).x / 2.0f,
 				body.getPosition().y
-						- RectangleHelper.getRectangleData(leftFishShape).y
+						- ShapeHelper.getRectangleData(leftFishShape).y
 						/ 2.0f, 0);
 
 		this.stateTime += Gdx.graphics.getDeltaTime();
@@ -85,20 +82,6 @@ public class NatureRightFishActor extends GameActor {
 					&& (fixture.getShape() instanceof PolygonShape))
 				this.leftFishShape = (PolygonShape) fixture.getShape();
 		}
-	}
-
-	private List<TextureRegion> spriteFrameList = null;
-
-	private void initSpriteFrameList() {
-		this.spriteFrameList = new ArrayList<TextureRegion>();
-		this.spriteFrameList.add(Assets.getInstance().getSpriteRigion(
-				Constant.asset.RFISH_ONE_ONE));
-		this.spriteFrameList.add(Assets.getInstance().getSpriteRigion(
-				Constant.asset.RFISH_ONE_TWO));
-		this.spriteFrameList.add(Assets.getInstance().getSpriteRigion(
-				Constant.asset.RFISH_ONE_ONE));
-		this.spriteFrameList.add(Assets.getInstance().getSpriteRigion(
-				Constant.asset.RFISH_ONE_TWO));
 	}
 
 	private Animation fishAnimation = null;

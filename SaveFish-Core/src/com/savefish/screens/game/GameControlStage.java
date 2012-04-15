@@ -34,8 +34,10 @@ public class GameControlStage extends Stage {
 				Constant.asset.PAUSE));
 		this.pauseImage.scaleX = 0.3f;
 		this.pauseImage.scaleY = 0.3f;
-		this.pauseImage.x = 850;
-		this.pauseImage.y = 550;
+		this.pauseImage.x = Gdx.graphics.getWidth() - this.pauseImage.width
+				/ 2.0f;
+		this.pauseImage.y = Gdx.graphics.getHeight() - this.pauseImage.height
+				/ 2.0f;
 	}
 
 	class PauseImage extends Image {
