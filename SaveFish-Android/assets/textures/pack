@@ -260,37 +260,65 @@ fish1
   orig: 90, 92
   offset: 0, 0
   index: -1
-22
+share
   rotate: false
   xy: 396, 295
+  size: 90, 91
+  orig: 90, 91
+  offset: 0, 0
+  index: -1
+replay
+  rotate: false
+  xy: 276, 400
+  size: 90, 91
+  orig: 90, 91
+  offset: 0, 0
+  index: -1
+next
+  rotate: false
+  xy: 276, 493
+  size: 90, 91
+  orig: 90, 91
+  offset: 0, 0
+  index: -1
+menu
+  rotate: false
+  xy: 368, 400
+  size: 90, 91
+  orig: 90, 91
+  offset: 0, 0
+  index: -1
+22
+  rotate: false
+  xy: 368, 493
   size: 90, 89
   orig: 90, 89
   offset: 0, 0
   index: -1
 66
   rotate: false
-  xy: 276, 400
+  xy: 276, 591
   size: 90, 83
   orig: 90, 83
   offset: 0, 0
   index: -1
 55
   rotate: false
-  xy: 276, 485
+  xy: 276, 676
   size: 90, 83
   orig: 90, 83
   offset: 0, 0
   index: -1
 choice1
   rotate: false
-  xy: 368, 400
+  xy: 368, 591
   size: 120, 78
   orig: 120, 78
   offset: 0, 0
   index: -1
 choice4
   rotate: false
-  xy: 368, 480
+  xy: 368, 671
   size: 120, 74
   orig: 120, 74
   offset: 0, 0

@@ -22,7 +22,7 @@ import com.savefish.util.GreenLoggerManager;
 public class ApplicationManager extends Game {
 
 	public ApplicationManager() {
-		GreenLoggerManager.filterLogByLevel(Level.SEVERE);
+		GreenLoggerManager.filterLogByLevel(Level.OFF);
 		
 	}
 

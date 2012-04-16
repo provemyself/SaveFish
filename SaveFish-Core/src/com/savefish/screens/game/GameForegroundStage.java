@@ -1,9 +1,13 @@
 package com.savefish.screens.game;
 
+import java.util.Date;
 import java.util.logging.Level;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.utils.Json;
+import com.savefish.score.ClearScoreRecord;
+import com.savefish.score.ScoreRecord;
 import com.savefish.service.ParticleManager;
 import com.savefish.util.GreenLogger;
 
@@ -21,7 +25,8 @@ public class GameForegroundStage extends Stage {
 		super(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
 
 		GreenLogger.getInstance().logp(Level.INFO,
-				GameForegroundStage.class.getName(), "ForegroundStage", "called!");
+				GameForegroundStage.class.getName(), "ForegroundStage",
+				"called!");
 	}
 
 	public void render(float delta) {
@@ -40,9 +45,8 @@ public class GameForegroundStage extends Stage {
 		GreenLogger.getInstance().logp(Level.INFO,
 				GameForegroundStage.class.getName(), "touchDown", "called");
 
-		
-		ParticleManager.getInstance().start();
-		ParticleManager.getInstance().setPosition(x, y);
+		// ParticleManager.getInstance().start();
+		// ParticleManager.getInstance().setPosition(x, y);
 		return super.touchDown(x, y, pointer, button);
 	}
 

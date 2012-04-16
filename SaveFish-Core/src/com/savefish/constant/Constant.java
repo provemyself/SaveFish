@@ -141,7 +141,13 @@ public final class Constant {
 		public static final String CLEAR_SIXTH = "clear_sixth.json";
 
 		// 粒子文件
-		public static final String PARTICLE_ONE_TEXT = "particle.p";
+		public static final String PARTICLE_TEXT = "particle.p";
+		public static final String PARTICLE_ONE = "one.p";
+		public static final String PARTICLE_TWO = "two.p";
+		public static final String PARTICLE_THREE = "three.p";
+		public static final String PARTICLE_FOUR = "four.p";
+		public static final String PARTICLE_SIX = "six.p";
+		public static final String PARTICLE_NINE = "nine.p";
 
 		// pack
 		public static final String ACTORS_PACK = "actors";
@@ -161,10 +167,16 @@ public final class Constant {
 
 		public static final TextureRegion[] aboutActorTexture = {
 				atlas.findRegion("about"), atlas.findRegion("about") };
+		public static final TextureRegion[] replayActorTexture = {
+				atlas.findRegion("replay"), atlas.findRegion("replay") };
+		public static final TextureRegion[] shareActorTexture = {
+				atlas.findRegion("share"), atlas.findRegion("share") };
+		public static final TextureRegion[] nextActorTexture = {
+				atlas.findRegion("next"), atlas.findRegion("next") };
 		public static final TextureRegion[] helpActorTexture = {
 				atlas.findRegion("help"), atlas.findRegion("help") };
 		public static final TextureRegion[] quitActorTexture = {
-				atlas.findRegion("quit"), atlas.findRegion("quit") };
+				atlas.findRegion("menu"), atlas.findRegion("menu") };
 		public static final TextureRegion[] startActorTexture = {
 				atlas.findRegion("play"), atlas.findRegion("play2") };
 		public static final TextureRegion[] optionActorTexture = {
@@ -178,7 +190,7 @@ public final class Constant {
 				atlas.findRegion("choice5"), atlas.findRegion("choice6"),
 				atlas.findRegion("choice7"), atlas.findRegion("choice8") };
 		public static final TextureRegion[] highscoreActorTexture = {
-				atlas.findRegion("highscore"), atlas.findRegion("highscore") };
+				atlas.findRegion("highScore"), atlas.findRegion("highScore") };
 		public static final TextureRegion[] bgMusicActorTexture = {
 				atlas.findRegion("bgMusicOn"), atlas.findRegion("bgMusicOff") };
 		public static final TextureRegion[] soundActorTexture = {

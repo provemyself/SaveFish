@@ -12,7 +12,7 @@ import com.savefish.screens.button.HelpActor;
 import com.savefish.screens.button.OptionActor;
 import com.savefish.screens.button.StartActor;
 import com.savefish.screens.button.AboutActor;
-import com.savefish.service.MusicManager;
+import com.savefish.service.BackgroundMusic;
 
 public class MenuScreen implements Screen {
 
@@ -57,7 +57,7 @@ public class MenuScreen implements Screen {
 		bgImage.height = Gdx.graphics.getHeight();
 		bgImage.width = Gdx.graphics.getWidth();
 		if (Constant.asset.isBgMusicOn)
-			MusicManager.getInstance().play();// 加载背景音乐
+			BackgroundMusic.getInstance().play();// 加载背景音乐
 		//加载音效
 	}
 

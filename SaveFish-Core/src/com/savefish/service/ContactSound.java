@@ -1,10 +1,12 @@
 package com.savefish.service;
 
+import com.badlogic.gdx.audio.Sound;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
 
-public class ContactSound extends AbstractSound {
+public class ContactSound {
 
+	public static boolean isEnable = true;
 	private static ContactSound contactSound = null;
 
 	public static ContactSound getInstance() {
@@ -13,13 +15,18 @@ public class ContactSound extends AbstractSound {
 		return contactSound;
 	}
 
+	private Sound sound = null;
+
 	private ContactSound() {
 		sound = Assets.getInstance().getSound(Constant.asset.CONTACT_SOUND);
 	}
 
-	@Override
+	public void play() {
+		if (isEnable)
+			this.sound.play();
+	}
+
 	public void dispose() {
-		super.dispose();
 		contactSound = null;
 	}
 

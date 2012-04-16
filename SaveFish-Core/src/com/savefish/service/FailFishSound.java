@@ -1,9 +1,11 @@
 package com.savefish.service;
 
+import com.badlogic.gdx.audio.Sound;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
 
-public class FailFishSound extends AbstractSound {
+public class FailFishSound {
+	public static boolean isEnable = true;
 	private static FailFishSound failFishSound = null;
 
 	public static FailFishSound getInstance() {
@@ -12,13 +14,18 @@ public class FailFishSound extends AbstractSound {
 		return failFishSound;
 	}
 
+	private Sound sound = null;
+
 	private FailFishSound() {
 		sound = Assets.getInstance().getSound(Constant.asset.FAIL_FISH_SOUND);
 	}
 
-	@Override
+	public void play() {
+		if (isEnable)
+			this.sound.play();
+	}
+
 	public void dispose() {
-		super.dispose();
 		failFishSound = null;
 	}
 }

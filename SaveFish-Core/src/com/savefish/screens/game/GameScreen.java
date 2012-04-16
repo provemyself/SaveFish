@@ -7,15 +7,18 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
+import com.savefish.service.BackgroundMusic;
 import com.savefish.service.MusicManager;
 import com.savefish.util.GreenLogger;
+import com.savefish.util.TimingManager;
 
 public class GameScreen implements Screen {
 
 	private static GameScreen gameScreen = null;
 
 	public static GameScreen getInstance(Game game, int defaultLevel) {
-		MusicManager.getInstance().play();
+		MusicManager.disableMusic();
+		BackgroundMusic.getInstance().play();
 		if (null == gameScreen) {
 			try {
 				gameScreen = new GameScreen(game, defaultLevel);
@@ -55,7 +58,7 @@ public class GameScreen implements Screen {
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage, gameControlStage));
 
-		// TimingManager.getInstance(game).start();
+		 TimingManager.getInstance(game).start();
 	}
 
 	@Override

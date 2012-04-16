@@ -16,6 +16,7 @@ import com.badlogic.gdx.physics.box2d.Fixture;
 import com.savefish.render.Direction;
 import com.savefish.render.FishChecker;
 import com.savefish.service.EatSound;
+import com.savefish.service.ParticleManager;
 import com.savefish.task.DestroyBodyTask;
 import com.savefish.task.MoveBodyTask;
 import com.savefish.task.TaskContainer;
@@ -53,8 +54,7 @@ public class CollisionHandler extends CollisionAdapter {
 
 	@Override
 	public void postSolve(Contact contact, ContactImpulse impulse) {
-		this.doPostSolveArtificial(contact, impulse);
-		this.doPostSolveNature(contact, impulse);
+		this.doPostSolve(contact, impulse);
 		super.postSolve(contact, impulse);
 	}
 
@@ -63,7 +63,7 @@ public class CollisionHandler extends CollisionAdapter {
 	 * @param contact
 	 * @param impulse
 	 */
-	private void doPostSolveArtificial(Contact contact, ContactImpulse impulse) {
+	private void doPostSolve(Contact contact, ContactImpulse impulse) {
 		Fixture fixtureA = contact.getFixtureA();
 		Fixture fixtureB = contact.getFixtureB();
 		if ((null != fixtureA) && (null != fixtureB)) {
@@ -73,48 +73,46 @@ public class CollisionHandler extends CollisionAdapter {
 				String bodyAName = (String) bodyA.getUserData();
 				String bodyBName = (String) bodyB.getUserData();
 				if ((null != bodyAName) && (null != bodyBName)) {
-					if (FishChecker.isArtificial(bodyAName)
-							&& !BoundaryChecker.isScreenBoundary(bodyBName)
-							&& !this.killedRubbishes.contains(bodyB)) {
-						EatSound.getInstance().play();
-						addDestroyTask(new DestroyBodyTask(bodyB));
-						this.killedRubbishes.add(bodyB);
-					} else if (FishChecker.isArtificial(bodyBName)
-							&& !BoundaryChecker.isScreenBoundary(bodyAName)
-							&& !this.killedRubbishes.contains(bodyA)) {
-						EatSound.getInstance().play();
-						addDestroyTask(new DestroyBodyTask(bodyA));
-						this.killedRubbishes.add(bodyA);
-					}
+					this.destroyRubbish(bodyA, bodyAName, bodyB, bodyBName);
+					this.moveNatureFish(bodyA, bodyAName, bodyB, bodyBName);
 				}
 			}
 		}
 	}
 
-	/**
-	 * @description 检测天然鱼与边界的碰撞
-	 * @param contact
-	 * @param impulse
-	 */
-	private void doPostSolveNature(Contact contact, ContactImpulse impulse) {
-		Fixture fixtureA = contact.getFixtureA();
-		Fixture fixtureB = contact.getFixtureB();
-		if ((null != fixtureA) && (null != fixtureB)) {
-			Body bodyA = fixtureA.getBody();
-			Body bodyB = fixtureB.getBody();
-			if ((null != bodyA) && (null != bodyB)) {
-				String bodyAName = (String) bodyA.getUserData();
-				String bodyBName = (String) bodyB.getUserData();
-				if (BoundaryChecker.isWorldRight(bodyAName)
-						&& FishChecker.isNatureRight(bodyBName)
-						&& !movedNatureFish.contains(bodyB)) {
-					addMoveTask(new MoveBodyTask(bodyB, Direction.MOVE_LEFT));
-				} else if (BoundaryChecker.isWorldLeft(bodyAName)
-						&& FishChecker.isNatureLeft(bodyBName)
-						&& !movedNatureFish.contains(bodyB)) {
-					addMoveTask(new MoveBodyTask(bodyB, Direction.MOVE_RIGHT));
-				}
-			}
+	// 人工鱼吃掉垃圾
+	private void destroyRubbish(Body bodyA, String bodyAName, Body bodyB,
+			String bodyBName) {
+		if (FishChecker.isArtificial(bodyAName)
+				&& !BoundaryChecker.isScreenBoundary(bodyBName)
+				&& !this.killedRubbishes.contains(bodyB)) {
+			EatSound.getInstance().play();
+			ParticleManager.getInstance().start();
+			ParticleManager.getInstance().setPosition(bodyB);
+			addDestroyTask(new DestroyBodyTask(bodyB));
+			this.killedRubbishes.add(bodyB);
+		} else if (FishChecker.isArtificial(bodyBName)
+				&& !BoundaryChecker.isScreenBoundary(bodyAName)
+				&& !this.killedRubbishes.contains(bodyA)) {
+			EatSound.getInstance().play();
+			ParticleManager.getInstance().start();
+			ParticleManager.getInstance().setPosition(bodyA);
+			addDestroyTask(new DestroyBodyTask(bodyA));
+			this.killedRubbishes.add(bodyA);
+		}
+	}
+
+	// 循环随机对天然鱼施加力
+	private void moveNatureFish(Body bodyA, String bodyAName, Body bodyB,
+			String bodyBName) {
+		if (BoundaryChecker.isWorldRight(bodyAName)
+				&& FishChecker.isNatureRight(bodyBName)
+				&& !movedNatureFish.contains(bodyB)) {
+			addMoveTask(new MoveBodyTask(bodyB, Direction.MOVE_LEFT));
+		} else if (BoundaryChecker.isWorldLeft(bodyAName)
+				&& FishChecker.isNatureLeft(bodyBName)
+				&& !movedNatureFish.contains(bodyB)) {
+			addMoveTask(new MoveBodyTask(bodyB, Direction.MOVE_RIGHT));
 		}
 	}
 

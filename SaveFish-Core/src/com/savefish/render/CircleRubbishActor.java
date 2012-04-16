@@ -59,6 +59,8 @@ public class CircleRubbishActor extends GameActor {
 
 	@Override
 	public void draw(SpriteBatch batch, float parentAlpha) {
+		if (null == shape)
+			return;
 		float radius = this.shape.getRadius();
 		this.spriteBatch
 				.setProjectionMatrix(gameMiddleStage.getCamera().combined);

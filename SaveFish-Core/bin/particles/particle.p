@@ -132,4 +132,4 @@ aligned: false
 additive: true
 behind: false
 - Image Path -
-/home/zhujianxin/particle.png
+/particle.png

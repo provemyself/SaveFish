@@ -11,6 +11,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
 import com.savefish.constant.Constant;
 
 public class ParticleManager implements Managable {
@@ -43,6 +45,13 @@ public class ParticleManager implements Managable {
 		this.particleEffect.setPosition(x, y);
 	}
 
+	public void setPosition(Body body) {
+		Vector2 tmp = body.getPosition();
+		tmp.x *= (2f * 10);
+		tmp.y *= (2f * 10);
+		this.setPosition(tmp.x, tmp.y);
+	}
+
 	public void setDuration(int duration) {
 		this.particleEffect.setDuration(duration);
 	}
@@ -59,7 +68,7 @@ public class ParticleManager implements Managable {
 		this.particleEffect = new ParticleEffect();
 		this.particleEffect.load(
 				Gdx.files.internal(Constant.asset.PARTICLES_BASE_PATH
-						+ Constant.asset.PARTICLE_ONE_TEXT),
+						+ Constant.asset.PARTICLE_SIX),
 				Gdx.files.internal(Constant.asset.PARTICLES_BASE_PATH));
 		particleEffect.setPosition(100f, 100f);
 		particleEffect.setDuration(1);

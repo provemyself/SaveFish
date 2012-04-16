@@ -9,7 +9,7 @@ package com.savefish.util;
 import org.lwjgl.util.Timer;
 
 import com.badlogic.gdx.Game;
-import com.savefish.screens.OptionScreen;
+import com.savefish.service.ParticleManager;
 
 public class TimingManager {
 	private static TimingManager manager = null;
@@ -30,6 +30,7 @@ public class TimingManager {
 	}
 
 	private Timer timer;
+	@SuppressWarnings("unused")
 	private Game game;
 
 	private TimingManager(Game game) {
@@ -38,9 +39,10 @@ public class TimingManager {
 	}
 
 	private void doTask() {
-		if ((int) (timer.getTime() + 1) % 10 == 0) {
+		if ((int) (timer.getTime() + 1) % 2 == 0) {
 			timer.reset();
-			game.setScreen(new OptionScreen(game));
+//			game.setScreen(new OptionScreen(game));
+			ParticleManager.getInstance().dispose();
 		}
 	}
 

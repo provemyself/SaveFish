@@ -65,7 +65,7 @@ public class ChoiceButton {
 			super(region[0]);
 			this.x = (float) (Gdx.graphics.getWidth() / 4 - region[0]
 					.getRegionWidth() / 2);
-			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
+			this.y = (float) (2*Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
 			this.rotation = 45;
 			this.region = region;
@@ -107,7 +107,7 @@ public class ChoiceButton {
 			super(region[0]);
 			this.x = (float) (Gdx.graphics.getWidth() / 2 - region[0]
 					.getRegionWidth() / 2);
-			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
+			this.y = (float) (2*Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
 			this.rotation = 45;
 			this.region = region;
@@ -147,9 +147,9 @@ public class ChoiceButton {
 		private Choice_3Actor(TextureRegion[] region) {
 
 			super(region[0]);
-			this.x = (float) (3 * Gdx.graphics.getWidth() / 4 - region[0]
+			this.x = (float) (3*Gdx.graphics.getWidth() / 4 - region[0]
 					.getRegionWidth() / 2);
-			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
+			this.y = (float) (2*Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
 			this.rotation = 45;
 			this.region = region;
@@ -272,7 +272,7 @@ public class ChoiceButton {
 		private Choice_6Actor(TextureRegion[] region) {
 
 			super(region[0]);
-			this.x = (float) (3 * Gdx.graphics.getWidth() / 4 - region[0]
+			this.x = (float) (3*Gdx.graphics.getWidth() / 4 - region[0]
 					.getRegionWidth() / 2);
 			this.y = (float) (Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
