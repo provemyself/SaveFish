@@ -1,13 +1,9 @@
 package com.savefish.screens.game;
 
-import java.util.Date;
 import java.util.logging.Level;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.utils.Json;
-import com.savefish.score.ClearScoreRecord;
-import com.savefish.score.ScoreRecord;
 import com.savefish.service.ParticleManager;
 import com.savefish.util.GreenLogger;
 

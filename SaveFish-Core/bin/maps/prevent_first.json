@@ -446,7 +446,7 @@
             "y" : "BDE76D80"
          },
          "massData-mass" : "41C08F02",
-         "name" : "rubbish_circle_2",
+         "name" : "rubbish_circle__sulfurdioxide_2",
          "position" : 
          {
             "x" : "412360C1",
@@ -496,7 +496,7 @@
             "y" : "BDD4F600"
          },
          "massData-mass" : "413D26E2",
-         "name" : "rubbish_circle_1",
+         "name" : "rubbish_circle_rubbishbag_1",
          "position" : 
          {
             "x" : "41215553",
@@ -1788,7 +1788,7 @@
             "y" : "3DEC2FC1"
          },
          "massData-mass" : "419A1D6F",
-         "name" : "rubbish_polygon_1",
+         "name" : "rubbish_polygon_ddvp_1",
          "position" : 
          {
             "x" : "41A05804",
@@ -1828,7 +1828,7 @@
             "y" : "3D287CFE"
          },
          "massData-mass" : "419980A5",
-         "name" : "rubbish_polygon_2",
+         "name" : "rubbish_polygon_snackbox_2",
          "position" : 
          {
             "x" : "41EF2C2A",
@@ -1869,7 +1869,7 @@
             "y" : "3D907080"
          },
          "massData-mass" : "4207FF8F",
-         "name" : "rubbish_circle_4",
+         "name" : "rubbish_circle_rubbishbag_4",
          "position" : 
          {
             "x" : "4216DF40",
@@ -1910,7 +1910,7 @@
             "y" : "BDCC5B00"
          },
          "massData-mass" : "42227E96",
-         "name" : "rubbish_circle_3",
+         "name" : "rubbish_circle__hydrothion_3",
          "position" : 
          {
             "x" : "42163D57",
