@@ -117,10 +117,12 @@ public class GameScreen implements Screen {
 	}
 
 	public GameScreen switchToGameLevel(GameLevel level) {
+		System.out.println("当前关卡： " + "(" + level.getBig() + ", "
+				+ level.getSmall() + ")");
 		if (null != middleStage)
 			middleStage.dispose();
+		middleStage = GameMiddleStage.createInstance(level, game);
 		CurrentLevel.level = level;
-		middleStage = GameMiddleStage.createInstance(level);
 		return gameScreen;
 	}
 }

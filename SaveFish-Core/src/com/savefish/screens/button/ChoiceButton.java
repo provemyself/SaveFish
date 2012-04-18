@@ -91,7 +91,7 @@ public class ChoiceButton {
 		public boolean touchDown(float x, float y, int point) {
 			if (!lock) {
 				// 进入游戏第一关
-				game.setScreen(GameScreen.getInstance(game, GameLevel.createInstance(1, 1)));
+				game.setScreen(GameScreen.getInstance(game, GameLevel.createInstance(2, 2)));
 			}
 			return false;
 

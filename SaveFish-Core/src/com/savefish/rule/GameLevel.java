@@ -48,13 +48,15 @@ public class GameLevel {
 	}
 
 	private void setSmall(int small) {
-		if ((1 <= big) && (big <= 6)) {
-			this.small = small;
-		} else {
-			GreenLogger.getInstance().logp(Level.WARNING,
-					GameLevel.class.getName(), "setSmall", "参数错误， 将小关卡设为1");
-			this.small = 1;
-		}
+		if (((small - 1) / 6) % 2 == 0)
+			this.big = 1;
+		else
+			this.big = 2;
+
+		if (small % 6 == 0)
+			this.small = 6;
+		else
+			this.small = small % 6;
 	}
 
 	public int getCount() {

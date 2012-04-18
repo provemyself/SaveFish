@@ -41,6 +41,7 @@ public class CollisionHandler extends CollisionAdapter {
 	private TaskContainer<MoveBodyTask> moveTasks = null;
 
 	private Set<Body> killedRubbishes = null;
+	@SuppressWarnings("unused")
 	private Set<Body> movedNatureFish = null;
 
 	private CollisionHandler(TaskContainer<DestroyBodyTask> destroyTasks,
@@ -106,12 +107,10 @@ public class CollisionHandler extends CollisionAdapter {
 	private void moveNatureFish(Body bodyA, String bodyAName, Body bodyB,
 			String bodyBName) {
 		if (BoundaryChecker.isWorldRight(bodyAName)
-				&& FishChecker.isNatureRight(bodyBName)
-				&& !movedNatureFish.contains(bodyB)) {
+				&& FishChecker.isNatureRight(bodyBName)) {
 			addMoveTask(new MoveBodyTask(bodyB, Direction.MOVE_LEFT));
 		} else if (BoundaryChecker.isWorldLeft(bodyAName)
-				&& FishChecker.isNatureLeft(bodyBName)
-				&& !movedNatureFish.contains(bodyB)) {
+				&& FishChecker.isNatureLeft(bodyBName)) {
 			addMoveTask(new MoveBodyTask(bodyB, Direction.MOVE_RIGHT));
 		}
 	}

@@ -3,6 +3,7 @@ package com.savefish.screens.game;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -19,16 +20,27 @@ import com.savefish.rule.GameLevel;
 
 public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 
-	public static GameMiddleStage createInstance(GameLevel level) {
-		return new GameMiddleStage(level);
+	public static GameMiddleStage createInstance(GameLevel level, Game game) {
+		return new GameMiddleStage(level, game);
 	}
 
-	private GameMiddleStage(GameLevel level) {
+	private GameMiddleStage(GameLevel level, Game game) {
 		super(Constant.screen.SCREEN_WIDTH, Constant.screen.SCREEN_HEIGHT, true);
+		this.initGame(game);
 		this.initCamera();
 		this.initRender();
 		this.initWorldManager(level);
 		this.initHashMap();
+	}
+
+	private Game game;
+
+	private void initGame(Game game) {
+		this.game = game;
+	}
+
+	public Game getGame() {
+		return this.game;
 	}
 
 	// 正交相机
@@ -63,6 +75,8 @@ public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 
 		Iterator<Body> iter = this.worldManager.getWorld().getBodies();
 		while (iter.hasNext()) {
+			if(null == iter)
+				return;
 			Body body = iter.next();
 			Actor actor = GameActorFactory.createGameActor(this, body);
 			if (null != actor) {
@@ -88,6 +102,7 @@ public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 
 	@Override
 	public void dispose() {
+		bodyActorMap = null;
 		this.render.dispose();
 		this.camera = null;
 		this.worldManager.dispose();

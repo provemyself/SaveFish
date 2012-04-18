@@ -3,6 +3,7 @@ package com.savefish.logical;
 import java.util.Iterator;
 import java.util.logging.Level;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
@@ -13,6 +14,7 @@ import com.savefish.event.BodyKilledListener;
 import com.savefish.event.GreenEvent;
 import com.savefish.physics.resolve.GreenWorldFactory;
 import com.savefish.render.FishChecker;
+import com.savefish.render.RubbishChecker;
 import com.savefish.rule.GameLevel;
 import com.savefish.rule.MapDictionary;
 import com.savefish.screens.game.GameMiddleStage;
@@ -71,7 +73,12 @@ public class WorldManager extends InputAdapter {
 	private void doDestroyBody() {
 		while (!destroyTasks.isEmpty()) {
 			DestroyBodyTask destroyTask = destroyTasks.pop();
-			listener.onKillActor(new GreenEvent<Body>(destroyTask.getBody()));
+			Body body = destroyTask.getBody();
+			listener.onKillActor(new GreenEvent<Body>(body));
+			if (RubbishChecker.isPolygonRubbish((String) body.getUserData())) {
+				Game game = this.gameMiddleStage.getGame();
+				game.setScreen(TestScreen.getInstance(game));
+			}
 			destroyTask.onDestroy(world);
 		}
 	}
@@ -137,7 +144,7 @@ public class WorldManager extends InputAdapter {
 
 		Vector2 result = new Vector2(endPosition.x - startPosition.x,
 				endPosition.y - startPosition.y);
-		
+
 		Iterator<Body> iter = world.getBodies();
 		while (iter.hasNext()) {
 			Body body = iter.next();
