@@ -22,6 +22,11 @@ public class MapDictionary {
 		dict.put(GameLevel.createInstance(2, 6), Constant.map.CLEAR_SIXTH);
 	}
 
+	/**
+	 * @description 根据关卡获取地图
+	 * @param level
+	 * @return
+	 */
 	public static String getMap(GameLevel level) {
 		return dict.get(level);
 	}

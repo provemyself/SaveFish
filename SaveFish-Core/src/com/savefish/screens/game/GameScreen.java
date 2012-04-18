@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
+import com.savefish.rule.CurrentLevel;
 import com.savefish.rule.GameLevel;
 import com.savefish.service.BackgroundMusic;
 import com.savefish.service.MusicManager;
@@ -59,7 +60,7 @@ public class GameScreen implements Screen {
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage, gameControlStage));
 
-		 TimingManager.getInstance(game).start();
+		TimingManager.getInstance(game).start();
 	}
 
 	@Override
@@ -118,6 +119,7 @@ public class GameScreen implements Screen {
 	public GameScreen switchToGameLevel(GameLevel level) {
 		if (null != middleStage)
 			middleStage.dispose();
+		CurrentLevel.level = level;
 		middleStage = GameMiddleStage.createInstance(level);
 		return gameScreen;
 	}

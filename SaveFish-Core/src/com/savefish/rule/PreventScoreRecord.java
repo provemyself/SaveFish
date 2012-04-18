@@ -7,6 +7,12 @@ package com.savefish.rule;
 
 public class PreventScoreRecord extends ScoreRecord {
 
+	/**
+	 * 
+	 * @param dateTime 游戏日期
+	 * @param crossScore 过关得分
+	 * @param crossWaterIndex 过关时清澈指数
+	 */
 	public PreventScoreRecord(String dateTime, int crossScore, int crossWaterIndex) {
 		super(dateTime, crossScore, crossWaterIndex);
 	}

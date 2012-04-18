@@ -25,6 +25,12 @@ import com.savefish.util.GreenLogger;
 
 public class WorldManager extends InputAdapter {
 
+	/**
+	 * @description 简单工厂方法，创建实例
+	 * @param level
+	 * @param gameMiddleStage
+	 * @return
+	 */
 	public static WorldManager createWorldManager(GameLevel level,
 			GameMiddleStage gameMiddleStage) {
 		return new WorldManager(level, gameMiddleStage);
@@ -59,6 +65,9 @@ public class WorldManager extends InputAdapter {
 		}
 	}
 
+	/**
+	 * @description 执行摧毁物理世界中指定body
+	 */
 	private void doDestroyBody() {
 		while (!destroyTasks.isEmpty()) {
 			DestroyBodyTask destroyTask = destroyTasks.pop();
@@ -67,6 +76,9 @@ public class WorldManager extends InputAdapter {
 		}
 	}
 
+	/**
+	 * @description 执行加力使物理世界中的body运动
+	 */
 	private void doMoveBody() {
 		while (!moveTasks.isEmpty()) {
 			MoveBodyTask moveTask = moveTasks.pop();
@@ -125,6 +137,7 @@ public class WorldManager extends InputAdapter {
 
 		Vector2 result = new Vector2(endPosition.x - startPosition.x,
 				endPosition.y - startPosition.y);
+		
 		Iterator<Body> iter = world.getBodies();
 		while (iter.hasNext()) {
 			Body body = iter.next();

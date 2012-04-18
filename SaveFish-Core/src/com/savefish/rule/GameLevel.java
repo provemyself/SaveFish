@@ -7,6 +7,7 @@ import com.savefish.util.GreenLogger;
 public class GameLevel {
 	private int big;
 	private int small;
+	private int count;// 每一关卡垃圾的数量
 
 	public static GameLevel createInstance() {
 		return new GameLevel();
@@ -15,6 +16,7 @@ public class GameLevel {
 	private GameLevel() {
 		this.setBig(1);
 		this.setSmall(1);
+		this.setCount();
 	}
 
 	public static GameLevel createInstance(int big, int small) {
@@ -24,13 +26,14 @@ public class GameLevel {
 	private GameLevel(int big, int small) {
 		this.setBig(big);
 		this.setSmall(small);
+		this.setCount();
 	}
 
 	public int getBig() {
 		return big;
 	}
 
-	public void setBig(int big) {
+	private void setBig(int big) {
 		if ((1 <= big) && (big <= 2)) {
 			this.big = big;
 		} else {
@@ -44,7 +47,7 @@ public class GameLevel {
 		return small;
 	}
 
-	public void setSmall(int small) {
+	private void setSmall(int small) {
 		if ((1 <= big) && (big <= 6)) {
 			this.small = small;
 		} else {
@@ -52,6 +55,14 @@ public class GameLevel {
 					GameLevel.class.getName(), "setSmall", "参数错误， 将小关卡设为1");
 			this.small = 1;
 		}
+	}
+
+	public int getCount() {
+		return this.count;
+	}
+
+	private void setCount() {
+		this.count = 600 + (small - 1) * 200;
 	}
 
 	@Override
@@ -75,6 +86,7 @@ public class GameLevel {
 		int result = 17;
 		result = 37 * result + big;
 		result = 37 * result + small;
+		result = 37 * result + count;
 		return result;
 	}
 

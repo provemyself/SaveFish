@@ -5,10 +5,16 @@ package com.savefish.rule;
  *******************************/
 
 public abstract class ScoreRecord {
-	private String dateTime = null;// 过关的时间
+	private String dateTime = null;// 过关日期
 	private int crossScore;// 过关分数
 	private int crossCleanIndex;// 过关时河水清澈指数
 
+	/**
+	 * 
+	 * @param dateTime
+	 * @param crossScore
+	 * @param crossWaterIndex
+	 */
 	public ScoreRecord(String dateTime, int crossScore, int crossWaterIndex) {
 		this.dateTime = dateTime;
 		this.crossScore = crossScore;

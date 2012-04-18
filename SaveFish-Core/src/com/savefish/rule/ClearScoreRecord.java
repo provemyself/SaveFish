@@ -16,6 +16,10 @@ public class ClearScoreRecord extends ScoreRecord {
 		this.duration = duration;
 	}
 
+	/**
+	 * @description 获取过关时间
+	 * @return
+	 */
 	public int getDuration() {
 		return this.duration;
 	}
