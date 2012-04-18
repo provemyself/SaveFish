@@ -64,13 +64,13 @@ public class NatureLeftFishActor extends GameActor {
 	private void initSpriteFrameList() {
 		this.spriteFrameList = new ArrayList<TextureRegion>();
 		this.spriteFrameList.add(Assets.getInstance().getSpriteRigion(
-				Constant.asset.LFISH_EIGHT_ONE));
+				Constant.fish.LFISH_EIGHT_ONE));
 		this.spriteFrameList.add(Assets.getInstance().getSpriteRigion(
-				Constant.asset.LFISH_EIGHT_TWO));
+				Constant.fish.LFISH_EIGHT_TWO));
 		this.spriteFrameList.add(Assets.getInstance().getSpriteRigion(
-				Constant.asset.LFISH_EIGHT_ONE));
+				Constant.fish.LFISH_EIGHT_ONE));
 		this.spriteFrameList.add(Assets.getInstance().getSpriteRigion(
-				Constant.asset.LFISH_EIGHT_TWO));
+				Constant.fish.LFISH_EIGHT_TWO));
 	}
 
 	private Animation fishAnimation = null;

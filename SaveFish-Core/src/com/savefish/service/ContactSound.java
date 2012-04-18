@@ -18,7 +18,7 @@ public class ContactSound {
 	private Sound sound = null;
 
 	private ContactSound() {
-		sound = Assets.getInstance().getSound(Constant.asset.CONTACT_SOUND);
+		sound = Assets.getInstance().getSound(Constant.sound.CONTACT_SOUND);
 	}
 
 	public void play() {

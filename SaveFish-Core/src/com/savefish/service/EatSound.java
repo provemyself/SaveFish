@@ -17,7 +17,7 @@ public class EatSound {
 	private Sound sound = null;
 
 	private EatSound() {
-		sound = Assets.getInstance().getSound(Constant.asset.EAT_SOUND);
+		sound = Assets.getInstance().getSound(Constant.sound.EAT_SOUND);
 	}
 
 	public void play() {

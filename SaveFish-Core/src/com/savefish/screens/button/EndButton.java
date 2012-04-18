@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.savefish.rule.GameLevel;
 import com.savefish.screens.game.GameScreen;
 
 public class EndButton {
@@ -57,13 +58,15 @@ public class EndButton {
 		@Override
 		public void draw(SpriteBatch batch, float parentAlpha) {
 
-			//增加变量来使游戏显示胜利与否
+			// 增加变量来使游戏显示胜利与否
 			if (isFailed) {
-				bitmapFont.draw(batch, "You Failed!",Gdx.graphics.getWidth()/2 ,
-						Gdx.graphics.getHeight() - bitmapFont.getScaleY());
+				bitmapFont.draw(batch, "You Failed!",
+						Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight()
+								- bitmapFont.getScaleY());
 			} else {
-				bitmapFont.draw(batch, "You Succeed!",Gdx.graphics.getWidth()/2,
-						Gdx.graphics.getHeight()/2);
+				bitmapFont.draw(batch, "You Succeed!",
+						Gdx.graphics.getWidth() / 2,
+						Gdx.graphics.getHeight() / 2);
 
 			}
 
@@ -74,8 +77,8 @@ public class EndButton {
 		@Override
 		public boolean touchDown(float x, float y, int point) {
 
-//			isFailed = true;
-			
+			// isFailed = true;
+
 			return false;
 
 		}
@@ -137,7 +140,8 @@ public class EndButton {
 
 		@Override
 		public boolean touchDown(float x, float y, int point) {
-			game.setScreen(GameScreen.getInstance().switchToGameLevel(6));
+			game.setScreen(GameScreen.getInstance().switchToGameLevel(
+					GameLevel.createInstance(1, 6)));
 			return false;
 
 		}

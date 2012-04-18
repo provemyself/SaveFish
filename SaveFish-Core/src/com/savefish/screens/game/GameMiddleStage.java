@@ -15,14 +15,15 @@ import com.savefish.event.BodyKilledListener;
 import com.savefish.event.GreenEvent;
 import com.savefish.logical.WorldManager;
 import com.savefish.render.GameActorFactory;
+import com.savefish.rule.GameLevel;
 
 public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 
-	public static GameMiddleStage createInstance(int level) {
+	public static GameMiddleStage createInstance(GameLevel level) {
 		return new GameMiddleStage(level);
 	}
 
-	private GameMiddleStage(int level) {
+	private GameMiddleStage(GameLevel level) {
 		super(Constant.screen.SCREEN_WIDTH, Constant.screen.SCREEN_HEIGHT, true);
 		this.initCamera();
 		this.initRender();
@@ -50,7 +51,7 @@ public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 	// 物理世界管理器
 	private WorldManager worldManager = null;
 
-	private void initWorldManager(int level) {
+	private void initWorldManager(GameLevel level) {
 		this.worldManager = WorldManager.createWorldManager(level, this);
 	}
 

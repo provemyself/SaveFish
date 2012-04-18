@@ -67,14 +67,16 @@ public class Assets {
 	}
 
 	private TextureAtlas getActorAtlas() {
-		TextureAtlas atlas = assetManager.get(Constant.asset.ACTORS_BASE_PATH
-				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
+		TextureAtlas atlas = assetManager.get(
+				Constant.basepath.ACTORS_BASE_PATH + Constant.pack.ACTORS_PACK,
+				TextureAtlas.class);
 		return atlas;
 	}
 
 	private TextureAtlas getSpriteAtlas() {
-		TextureAtlas atlas = assetManager.get(Constant.asset.SPRITES_BASE_PATH
-				+ Constant.asset.SPRITES_PACT, TextureAtlas.class);
+		TextureAtlas atlas = assetManager.get(
+				Constant.basepath.SPRITES_BASE_PATH
+						+ Constant.pack.SPRITES_PACT, TextureAtlas.class);
 		return atlas;
 	}
 
@@ -118,7 +120,7 @@ public class Assets {
 	 * @return
 	 */
 	public BitmapFont getBitmapFont(String fileName) {
-		return assetManager.get(Constant.asset.FONTS_BASE_PATH + fileName,
+		return assetManager.get(Constant.basepath.FONTS_BASE_PATH + fileName,
 				BitmapFont.class);
 	}
 
@@ -128,7 +130,7 @@ public class Assets {
 	 * @return
 	 */
 	public Music getMusic(String fileName) {
-		return assetManager.get(Constant.asset.MUSICS_BASE_PATH + fileName,
+		return assetManager.get(Constant.basepath.MUSICS_BASE_PATH + fileName,
 				Music.class);
 	}
 
@@ -138,7 +140,7 @@ public class Assets {
 	 * @return
 	 */
 	public Pixmap getPixmap(String fileName) {
-		return assetManager.get(Constant.asset.PIXMAPS_BASE_PATH + fileName,
+		return assetManager.get(Constant.basepath.PIXMAPS_BASE_PATH + fileName,
 				Pixmap.class);
 	}
 
@@ -148,7 +150,7 @@ public class Assets {
 	 * @return
 	 */
 	public Sound getSound(String fileName) {
-		return assetManager.get(Constant.asset.SOUNDS_BASE_PATH + fileName,
+		return assetManager.get(Constant.basepath.SOUNDS_BASE_PATH + fileName,
 				Sound.class);
 	}
 
@@ -181,8 +183,8 @@ public class Assets {
 	 * @description 加载背景音乐资源
 	 */
 	private void loadMusic() {
-		this.assetManager.load(Constant.asset.MUSICS_BASE_PATH
-				+ Constant.asset.MUSIC, Music.class);
+		this.assetManager.load(Constant.basepath.MUSICS_BASE_PATH
+				+ Constant.music.MUSIC, Music.class);
 	}
 
 	/**
@@ -196,20 +198,20 @@ public class Assets {
 	 * @description 加载音效资源
 	 */
 	private void loadSound() {
-		this.assetManager.load(Constant.asset.SOUNDS_BASE_PATH
-				+ Constant.asset.SLIDE_SOUND, Sound.class);
-		this.assetManager.load(Constant.asset.SOUNDS_BASE_PATH
-				+ Constant.asset.EAT_SOUND, Sound.class);
+		this.assetManager.load(Constant.basepath.SOUNDS_BASE_PATH
+				+ Constant.sound.SLIDE_SOUND, Sound.class);
+		this.assetManager.load(Constant.basepath.SOUNDS_BASE_PATH
+				+ Constant.sound.EAT_SOUND, Sound.class);
 	}
 
 	/**
 	 * @description 加载TextureAtlas资源
 	 */
 	private void loadTextureAtlas() {
-		this.assetManager.load(Constant.asset.ACTORS_BASE_PATH
-				+ Constant.asset.ACTORS_PACK, TextureAtlas.class);
-		this.assetManager.load(Constant.asset.SPRITES_BASE_PATH
-				+ Constant.asset.SPRITES_PACT, TextureAtlas.class);
+		this.assetManager.load(Constant.basepath.ACTORS_BASE_PATH
+				+ Constant.pack.ACTORS_PACK, TextureAtlas.class);
+		this.assetManager.load(Constant.basepath.SPRITES_BASE_PATH
+				+ Constant.pack.SPRITES_PACT, TextureAtlas.class);
 	}
 
 	public ArrayList<TextureRegion> getNatureLeft() {
@@ -239,16 +241,14 @@ public class Assets {
 	private void initAritificialList() {
 		this.artificialList = new ArrayList<TextureRegion>();
 
-		artificialList.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_ONE));
-		artificialList.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_TWO));
+		artificialList.add(this.getSpriteRigion(Constant.fish.ARTIFICIAL_ONE));
+		artificialList.add(this.getSpriteRigion(Constant.fish.ARTIFICIAL_TWO));
+		artificialList.add(this.getSpriteRigion(Constant.fish.ARTIFICIAL_FOUR));
 		artificialList
-				.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_FOUR));
-		artificialList.add(this
-				.getSpriteRigion(Constant.asset.ARTIFICIAL_THREE));
+				.add(this.getSpriteRigion(Constant.fish.ARTIFICIAL_THREE));
 
-		artificialList
-				.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_FIVE));
-		artificialList.add(this.getSpriteRigion(Constant.asset.ARTIFICIAL_SIX));
+		artificialList.add(this.getSpriteRigion(Constant.fish.ARTIFICIAL_FIVE));
+		artificialList.add(this.getSpriteRigion(Constant.fish.ARTIFICIAL_SIX));
 
 	}
 
@@ -256,22 +256,22 @@ public class Assets {
 
 	private void initNatureLeftList() {
 		natureLeftList = new ArrayList<ArrayList<TextureRegion>>();
-		natureLeftList.add(constructFishList(Constant.asset.LFISH_EIGHT_ONE,
-				Constant.asset.LFISH_EIGHT_TWO));
-		natureLeftList.add(constructFishList(Constant.asset.LFISH_EIGHT_ONE,
-				Constant.asset.LFISH_EIGHT_TWO));
-		natureLeftList.add(constructFishList(Constant.asset.LFISH_SEVEN_ONE,
-				Constant.asset.LFISH_SEVEN_TWO));
-		natureLeftList.add(constructFishList(Constant.asset.LFISH_SIX_ONE,
-				Constant.asset.LFISH_SIX_TWO));
-		natureLeftList.add(constructFishList(Constant.asset.LFISH_FIVE_ONE,
-				Constant.asset.LFISH_FIVE_TWO));
-		natureLeftList.add(constructFishList(Constant.asset.LFISH_FOUR_ONE,
-				Constant.asset.LFISH_FOUR_TWO));
-		natureLeftList.add(constructFishList(Constant.asset.LFISH_TWO_ONE,
-				Constant.asset.LFISH_TWO_TWO));
-		natureLeftList.add(constructFishList(Constant.asset.LFISH_NINE_ONE,
-				Constant.asset.LFISH_NINE_TWO));
+		natureLeftList.add(constructFishList(Constant.fish.LFISH_EIGHT_ONE,
+				Constant.fish.LFISH_EIGHT_TWO));
+		natureLeftList.add(constructFishList(Constant.fish.LFISH_EIGHT_ONE,
+				Constant.fish.LFISH_EIGHT_TWO));
+		natureLeftList.add(constructFishList(Constant.fish.LFISH_SEVEN_ONE,
+				Constant.fish.LFISH_SEVEN_TWO));
+		natureLeftList.add(constructFishList(Constant.fish.LFISH_SIX_ONE,
+				Constant.fish.LFISH_SIX_TWO));
+		natureLeftList.add(constructFishList(Constant.fish.LFISH_FIVE_ONE,
+				Constant.fish.LFISH_FIVE_TWO));
+		natureLeftList.add(constructFishList(Constant.fish.LFISH_FOUR_ONE,
+				Constant.fish.LFISH_FOUR_TWO));
+		natureLeftList.add(constructFishList(Constant.fish.LFISH_TWO_ONE,
+				Constant.fish.LFISH_TWO_TWO));
+		natureLeftList.add(constructFishList(Constant.fish.LFISH_NINE_ONE,
+				Constant.fish.LFISH_NINE_TWO));
 	}
 
 	private List<ArrayList<TextureRegion>> natureRightList = null;
@@ -279,10 +279,10 @@ public class Assets {
 	private void initNatureRightList() {
 		natureRightList = new ArrayList<ArrayList<TextureRegion>>();
 
-		natureRightList.add(constructFishList(Constant.asset.RFISH_ONE_ONE,
-				Constant.asset.RFISH_ONE_TWO));
-		natureRightList.add(constructFishList(Constant.asset.RFISH_THREE_ONE,
-				Constant.asset.RFISH_THREE_TWO));
+		natureRightList.add(constructFishList(Constant.fish.RFISH_ONE_ONE,
+				Constant.fish.RFISH_ONE_TWO));
+		natureRightList.add(constructFishList(Constant.fish.RFISH_THREE_ONE,
+				Constant.fish.RFISH_THREE_TWO));
 	}
 
 	private ArrayList<TextureRegion> constructFishList(String frameOne,

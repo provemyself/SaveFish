@@ -1,6 +1,5 @@
 package com.savefish.logical;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.logging.Level;
 
@@ -13,6 +12,9 @@ import com.savefish.constant.Constant;
 import com.savefish.event.BodyKilledListener;
 import com.savefish.event.GreenEvent;
 import com.savefish.physics.resolve.GreenWorldFactory;
+import com.savefish.render.FishChecker;
+import com.savefish.rule.GameLevel;
+import com.savefish.rule.MapDictionary;
 import com.savefish.screens.game.GameMiddleStage;
 import com.savefish.service.SlideSound;
 import com.savefish.task.DestroyBodyTask;
@@ -23,17 +25,16 @@ import com.savefish.util.GreenLogger;
 
 public class WorldManager extends InputAdapter {
 
-	public static WorldManager createWorldManager(int level,
+	public static WorldManager createWorldManager(GameLevel level,
 			GameMiddleStage gameMiddleStage) {
 		return new WorldManager(level, gameMiddleStage);
 	}
 
 	private GameMiddleStage gameMiddleStage = null;
 
-	private WorldManager(int level, GameMiddleStage gameMiddleStage) {
+	private WorldManager(GameLevel level, GameMiddleStage gameMiddleStage) {
 		this.initMoveTasks();
 		this.initDestroyTasks();
-		this.initMaps();
 		this.gameMiddleStage = gameMiddleStage;
 		this.listener = this.gameMiddleStage;
 		try {
@@ -91,26 +92,11 @@ public class WorldManager extends InputAdapter {
 			this.moveTasks.clear();
 	}
 
-	HashMap<Integer, String> maps = new HashMap<Integer, String>();
-
-	private void initMaps() {
-		maps.put(1, Constant.asset.PREVENT_FIRST);
-		maps.put(2, Constant.asset.PREVENT_SECOND);
-		maps.put(3, Constant.asset.PREVENT_THIRD);
-		maps.put(4, Constant.asset.PREVENT_FOURTH);
-		maps.put(5, Constant.asset.PREVETN_FIFTH);
-		maps.put(6, Constant.asset.PREVENT_SIXTH);
-	}
-
 	private World world = null;
 
-	private void initWorld(int level) throws Exception {
-		if (level <= maps.size())
-			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
-					+ maps.get(level));
-		else
-			world = GreenWorldFactory.creatWorld(Constant.asset.MAPS_BASE_PATH
-					+ maps.get(5));
+	private void initWorld(GameLevel level) throws Exception {
+		world = GreenWorldFactory.creatWorld(Constant.basepath.MAPS_BASE_PATH
+				+ MapDictionary.getMap(level));
 		world.setContactListener(CollisionHandler.createCollisionHandler(
 				destroyTasks, moveTasks));
 	}
@@ -143,8 +129,7 @@ public class WorldManager extends InputAdapter {
 		while (iter.hasNext()) {
 			Body body = iter.next();
 			String bodyName = (String) body.getUserData();
-			if ((null != bodyName) && (bodyName.startsWith("art"))) {
-
+			if (FishChecker.isArtificial(bodyName)) {
 				result.mul(body.getMass());
 				body.applyLinearImpulse(result, body.getWorldCenter());
 			}
@@ -162,7 +147,6 @@ public class WorldManager extends InputAdapter {
 		this.endPosition = null;
 		this.startPosition = null;
 		this.destroyTasks = null;
-		this.maps = null;
 		this.gameMiddleStage = null;
 		this.world.dispose();
 	}

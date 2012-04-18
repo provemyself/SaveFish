@@ -54,7 +54,7 @@ public class PolygonRubbishActor extends GameActor {
 
 	private void initSprite() {
 		this.sprite = Assets.getInstance().getSprite(
-				Constant.asset.PESTICIDE_TWO);
+				Constant.rubbish.PESTICIDE_TWO);
 		this.sprite.setScale(0.4f);
 	}
 

@@ -67,9 +67,9 @@ public class ParticleManager implements Managable {
 	private void initParticleEffect() {
 		this.particleEffect = new ParticleEffect();
 		this.particleEffect.load(
-				Gdx.files.internal(Constant.asset.PARTICLES_BASE_PATH
-						+ Constant.asset.PARTICLE_SIX),
-				Gdx.files.internal(Constant.asset.PARTICLES_BASE_PATH));
+				Gdx.files.internal(Constant.basepath.PARTICLES_BASE_PATH
+						+ Constant.particle.PARTICLE_SIX),
+				Gdx.files.internal(Constant.basepath.PARTICLES_BASE_PATH));
 		particleEffect.setPosition(100f, 100f);
 		particleEffect.setDuration(1);
 	}

@@ -53,7 +53,7 @@ public class CircleRubbishActor extends GameActor {
 
 	private void initSprite() {
 		this.sprite = Assets.getInstance().getSprite(
-				Constant.asset.PESTICIDE_ONE);
+				Constant.rubbish.PESTICIDE_ONE);
 		this.sprite.setScale(0.4f);
 	}
 

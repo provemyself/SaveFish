@@ -17,7 +17,7 @@ public class SlideSound {
 	private Sound sound = null;
 
 	private SlideSound() {
-		sound = Assets.getInstance().getSound(Constant.asset.SLIDE_SOUND);
+		sound = Assets.getInstance().getSound(Constant.sound.SLIDE_SOUND);
 	}
 
 	public void play() {

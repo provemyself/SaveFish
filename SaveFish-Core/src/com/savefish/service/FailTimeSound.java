@@ -17,7 +17,7 @@ public class FailTimeSound {
 	private Sound sound = null;
 
 	private FailTimeSound() {
-		sound = Assets.getInstance().getSound(Constant.asset.FAIL_TIME_SOUND);
+		sound = Assets.getInstance().getSound(Constant.sound.FAIL_TIME_SOUND);
 	}
 
 	public void play() {

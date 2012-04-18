@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.savefish.rule.GameLevel;
 import com.savefish.screens.AboutScreen;
 import com.savefish.screens.game.GameScreen;
 
@@ -90,7 +91,7 @@ public class ChoiceButton {
 		public boolean touchDown(float x, float y, int point) {
 			if (!lock) {
 				// 进入游戏第一关
-				game.setScreen(GameScreen.getInstance(game, 1));
+				game.setScreen(GameScreen.getInstance(game, GameLevel.createInstance(1, 1)));
 			}
 			return false;
 

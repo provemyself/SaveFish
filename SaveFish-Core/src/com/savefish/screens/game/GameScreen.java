@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
+import com.savefish.rule.GameLevel;
 import com.savefish.service.BackgroundMusic;
 import com.savefish.service.MusicManager;
 import com.savefish.util.GreenLogger;
@@ -16,7 +17,7 @@ public class GameScreen implements Screen {
 
 	private static GameScreen gameScreen = null;
 
-	public static GameScreen getInstance(Game game, int defaultLevel) {
+	public static GameScreen getInstance(Game game, GameLevel defaultLevel) {
 		MusicManager.disableMusic();
 		BackgroundMusic.getInstance().play();
 		if (null == gameScreen) {
@@ -38,7 +39,7 @@ public class GameScreen implements Screen {
 			return null;
 	}
 
-	private GameScreen(Game game, int defaultLevel) throws Exception {
+	private GameScreen(Game game, GameLevel defaultLevel) throws Exception {
 		GreenLogger.getInstance().logp(Level.WARNING,
 				GameScreen.class.getName(), "GameScreen", "called!");
 		this.game = game;
@@ -114,7 +115,7 @@ public class GameScreen implements Screen {
 		this.foreGroundStage = GameForegroundStage.getInstance();
 	}
 
-	public GameScreen switchToGameLevel(int level) {
+	public GameScreen switchToGameLevel(GameLevel level) {
 		if (null != middleStage)
 			middleStage.dispose();
 		middleStage = GameMiddleStage.createInstance(level);

@@ -17,7 +17,7 @@ public class WinSound {
 	private Sound sound = null;
 
 	private WinSound() {
-		sound = Assets.getInstance().getSound(Constant.asset.WIN_SOUND);
+		sound = Assets.getInstance().getSound(Constant.sound.WIN_SOUND);
 	}
 
 	public void play() {

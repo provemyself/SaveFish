@@ -50,7 +50,7 @@ public final class Constant {
 		public static final String LOGGER_NAME = "com.savefish";
 	}
 
-	public static final class asset {
+	public static final class basepath {
 		// 文件基路径
 		public static final String TEXTURES_BASE_PATH = "textures/";
 		public static final String SOUNDS_BASE_PATH = "sounds/";
@@ -61,30 +61,9 @@ public final class Constant {
 		public static final String PIXMAPS_BASE_PATH = "pixmaps/";
 		public static final String ACTORS_BASE_PATH = "actors/";
 		public static final String SPRITES_BASE_PATH = "sprites/";
+	}
 
-		// 背景音乐
-		public static final String MUSIC = "annie.mp3";
-
-		// 音效
-		public static final String SLIDE_SOUND = "glass.mp3";
-		public static final String EJECT_SOUND = "";
-		public static final String CONTACT_SOUND = "";
-		public static final String EAT_SOUND = "eat.wav";
-		public static final String WIN_SOUND = "";
-		public static final String FAIL_FISH_SOUND = "";
-		public static final String FAIL_TIME_SOUND = "";
-
-		// 纹理文件
-		public static final String LOADING = "loading.png";
-
-		// 游戏菜单的背景图片
-		public static final String GAME_SCRENE = "gamescene";
-		public static final String MAIN_MENU = "mainmenu";
-		public static final String PREVIOUS = "previous";
-		public static final String STOP = "stop";
-		public static final String PAUSE = "pause";
-		public static final String NEXT = "next";
-
+	public static final class fish {
 		// 精灵名字 以“L”表示向左游动，以“R”开头表示向右游动
 		public static final String LFISH_NINE_ONE = "Lfishnineone";
 		public static final String LFISH_NINE_TWO = "Lfishninetwo";
@@ -113,33 +92,39 @@ public final class Constant {
 		public static final String ARTIFICIAL_FIVE = "artificialfive";
 		public static final String ARTIFICIAL_SIX = "artificialsix";
 
+	}
+
+	public static final class rubbish {
 		public static final String PESTICIDE_TWO = "pesticidetwo";
 		public static final String PESTICIDE_ONE = "pesticideone";
 
-		// 游戏场景的背景图片
-		public static final String BACKGROUND_ONE = "gamescene";
-		public static final String BACKGROUND_TWO = "background_two";
-		public static final String BACKGOUND_THREE = "background_three";
-		public static final String BACKGROUND_FOUR = "background_four";
-		public static final String BACKGROUND_FIVE = "background_five";
-		public static final String BACKGROUND_SIX = "background_six";
+		// 垃圾种类
+		public static final String RUBBISH_BAG = "bag";// 垃圾袋
+		public static final String THERMOGRAPH = "thermograph";// 温度计
+		public static final String RADIOACTIVE_MATERIAL = "rm";// 放射性物质
+		public static final String PESTICIDE = "pesticide";// 敌敌畏
+		public static final String ELECTRIC_BATTERY = "eb";// 电池
+	}
 
+	public static final class map {
 		// 地图:第一大关
-		public static final String PREVENT_FIRST = "prevent_first.json";
-		public static final String PREVENT_SECOND = "prevent_second.json";
-		public static final String PREVENT_THIRD = "prevent_third.json";
-		public static final String PREVENT_FOURTH = "prevent_fourth.json";
-		public static final String PREVETN_FIFTH = "prevent_fifth.json";
-		public static final String PREVENT_SIXTH = "prevent_sixth.json";
+		public static final String PREVENT_FIRST = "map_prevent_first.json";
+		public static final String PREVENT_SECOND = "map_prevent_second.json";
+		public static final String PREVENT_THIRD = "map_prevent_third.json";
+		public static final String PREVENT_FOURTH = "map_prevent_fourth.json";
+		public static final String PREVETN_FIFTH = "map_prevent_fifth.json";
+		public static final String PREVENT_SIXTH = "map_prevent_sixth.json";
 
 		// 地图:第二关
-		public static final String CLEAR_FIRST = "clear_first.json";
-		public static final String CLEAR_SECOND = "clear_second.json";
-		public static final String CLEAR_THIRD = "clear_third.json";
-		public static final String CLEAR_FOURTH = "clear_fourth.json";
-		public static final String CLEAR_FIFTH = "clear_fifth.json";
-		public static final String CLEAR_SIXTH = "clear_sixth.json";
+		public static final String CLEAR_FIRST = "map_clear_first.json";
+		public static final String CLEAR_SECOND = "map_clear_second.json";
+		public static final String CLEAR_THIRD = "map_clear_third.json";
+		public static final String CLEAR_FOURTH = "map_clear_fourth.json";
+		public static final String CLEAR_FIFTH = "map_clear_fifth.json";
+		public static final String CLEAR_SIXTH = "map_clear_sixth.json";
+	}
 
+	public static final class particle {
 		// 粒子文件
 		public static final String PARTICLE_TEXT = "particle.p";
 		public static final String PARTICLE_ONE = "one.p";
@@ -148,10 +133,46 @@ public final class Constant {
 		public static final String PARTICLE_FOUR = "four.p";
 		public static final String PARTICLE_SIX = "six.p";
 		public static final String PARTICLE_NINE = "nine.p";
+	}
 
+	public static final class sound {
+		// 音效
+		public static final String SLIDE_SOUND = "glass.mp3";
+		public static final String EJECT_SOUND = "";
+		public static final String CONTACT_SOUND = "";
+		public static final String EAT_SOUND = "eat.wav";
+		public static final String WIN_SOUND = "";
+		public static final String FAIL_FISH_SOUND = "";
+		public static final String FAIL_TIME_SOUND = "";
+	}
+
+	public static final class music {
+		// 背景音乐
+		public static final String MUSIC = "annie.mp3";
+	}
+
+	public static final class pack {
 		// pack
 		public static final String ACTORS_PACK = "actors";
 		public static final String SPRITES_PACT = "sprites";
+	}
+
+	public static final class asset {
+		// 游戏菜单的背景图片
+		public static final String GAME_SCRENE = "gamescene";
+		public static final String MAIN_MENU = "mainmenu";
+		public static final String PREVIOUS = "previous";
+		public static final String STOP = "stop";
+		public static final String PAUSE = "pause";
+		public static final String NEXT = "next";
+
+		// 游戏场景的背景图片
+		public static final String BACKGROUND_ONE = "gamescene";
+		public static final String BACKGROUND_TWO = "background_two";
+		public static final String BACKGOUND_THREE = "background_three";
+		public static final String BACKGROUND_FOUR = "background_four";
+		public static final String BACKGROUND_FIVE = "background_five";
+		public static final String BACKGROUND_SIX = "background_six";
 
 		// 背景音效开关
 		public static boolean isBgMusicOn = true;

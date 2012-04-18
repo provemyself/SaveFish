@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
+import com.savefish.render.RubbishChecker;
 import com.savefish.util.GreenLogger;
 
 public class ForceController {
@@ -26,7 +27,7 @@ public class ForceController {
 		while (iter.hasNext()) {
 			Body body = iter.next();
 			String bodyName = (String) body.getUserData();
-			if ((null != bodyName) && (bodyName.startsWith("rubbish"))) {
+			if (RubbishChecker.isRubbish(bodyName)) {
 				Vector2 force = world.getGravity();
 				body.applyForceToCenter(force.mul(body.getMass() / 9.0f));
 			}

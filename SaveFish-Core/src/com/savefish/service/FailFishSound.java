@@ -17,7 +17,7 @@ public class FailFishSound {
 	private Sound sound = null;
 
 	private FailFishSound() {
-		sound = Assets.getInstance().getSound(Constant.asset.FAIL_FISH_SOUND);
+		sound = Assets.getInstance().getSound(Constant.sound.FAIL_FISH_SOUND);
 	}
 
 	public void play() {

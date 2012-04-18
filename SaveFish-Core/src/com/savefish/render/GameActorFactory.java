@@ -9,12 +9,16 @@ public class GameActorFactory {
 
 		if (NatureRightFishActor.isNatureFishActor(body))
 			actor = NatureRightFishActor.createInstance(stage, body);
+		
 		if (NatureLeftFishActor.isNatureLeftFishActor(body))
 			actor = NatureLeftFishActor.createInstance(stage, body);
+		
 		if (ArtificialFishActor.isArtificialFishActor(body))
 			actor = ArtificialFishActor.createInstance(stage, body);
+		
 		if (CircleRubbishActor.isCircleRubbishActor(body))
 			actor = CircleRubbishActor.createInstance(stage, body);
+		
 		if (PolygonRubbishActor.isPolygonRubbishActor(body))
 			actor = PolygonRubbishActor.createInstance(stage, body);
 

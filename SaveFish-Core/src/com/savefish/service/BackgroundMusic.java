@@ -30,7 +30,7 @@ public class BackgroundMusic implements Managable {
 	private Music music = null;
 
 	private void initMusic() {
-		this.music = Assets.getInstance().getMusic(Constant.asset.MUSIC);
+		this.music = Assets.getInstance().getMusic(Constant.music.MUSIC);
 	}
 
 	public void play() {
