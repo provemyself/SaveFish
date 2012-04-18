@@ -1,0 +1,40 @@
+
+actors_input1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+gamescene
+  rotate: false
+  xy: 2, 2
+  size: 960, 640
+  orig: 960, 640
+  offset: 0, 0
+  index: -1
+previous
+  rotate: false
+  xy: 2, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+stop
+  rotate: false
+  xy: 260, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+next
+  rotate: false
+  xy: 518, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+pause
+  rotate: false
+  xy: 2, 902
+  size: 120, 111
+  orig: 120, 111
+  offset: 0, 0
+  index: -1
