@@ -10,13 +10,19 @@ public class ScoreRecord {
 	private String dateTime = null;// 过关日期
 	private int crossScore;// 过关分数
 	private int crossCleanIndex;// 过关时河水清澈指数
+	private int killedRubbish;
 	private GameLevel gameLevel;// 所属关卡
 
 	public ScoreRecord() {
 		this.gameLevel = GameLevel.createInstance(1, 1);
 		this.dateTime = DateTimeHelper.getDate();
 		this.crossScore = 0;
-		this.crossCleanIndex = WaterDictionary.getInitialWaterIndex(gameLevel);
+		this.killedRubbish = 0;
+		if (1 == CurrentLevel.level.getBig())
+			this.crossCleanIndex = WaterDictionary
+					.getInitialWaterIndex(gameLevel);
+		else
+			this.crossCleanIndex = 0;
 	}
 
 	/**
@@ -29,7 +35,12 @@ public class ScoreRecord {
 		this.gameLevel = gameLevel;
 		this.dateTime = DateTimeHelper.getDate();
 		this.crossScore = 0;
-		this.crossCleanIndex = WaterDictionary.getInitialWaterIndex(gameLevel);
+		this.killedRubbish = 0;
+		if (1 == CurrentLevel.level.getBig())
+			this.crossCleanIndex = WaterDictionary
+					.getInitialWaterIndex(gameLevel);
+		else
+			this.crossCleanIndex = 0;
 	}
 
 	/**
@@ -45,10 +56,11 @@ public class ScoreRecord {
 	 * @param score
 	 */
 	public void setCrossScore(int score) {
-		System.out.println("加分： " + score);
-		this.gameLevel.decreaseCount();
-		System.out.println("当前剩下垃圾个数： " + this.gameLevel.getCount());
+		this.killedRubbish += 1;
+		System.out.println("已经吞噬垃圾个数： " + this.killedRubbish);
 		this.crossScore += score;
+		System.out.println("加分： " + score + ", 当前得分： " + this.crossScore);
+
 	}
 
 	/**
@@ -61,6 +73,8 @@ public class ScoreRecord {
 
 	public void setCrossCleanIndex(int index) {
 		this.crossCleanIndex += index;
+		System.out.println("河水清澈指数减少： " + index + "河水清澈指数变为： "
+				+ this.crossCleanIndex);
 	}
 
 	/**
@@ -69,6 +83,10 @@ public class ScoreRecord {
 	 */
 	public int getCrossCleanIndex() {
 		return this.crossCleanIndex;
+	}
+
+	public int getKilledRubbish() {
+		return this.killedRubbish;
 	}
 
 	/**

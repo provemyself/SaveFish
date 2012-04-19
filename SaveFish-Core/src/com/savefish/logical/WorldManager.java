@@ -12,6 +12,7 @@ import com.savefish.constant.Constant;
 import com.savefish.event.BodyKilledListener;
 import com.savefish.event.GreenEvent;
 import com.savefish.physics.resolve.GreenWorldFactory;
+import com.savefish.pointsystem.CurrentLevel;
 import com.savefish.pointsystem.GameLevel;
 import com.savefish.pointsystem.MapDictionary;
 import com.savefish.pointsystem.ScoreAnalysis;
@@ -19,6 +20,7 @@ import com.savefish.render.FishChecker;
 import com.savefish.screens.game.GameMiddleStage;
 import com.savefish.service.SlideSound;
 import com.savefish.task.DestroyBodyTask;
+import com.savefish.task.FilterBodyTask;
 import com.savefish.task.MoveBodyTask;
 import com.savefish.task.TaskContainer;
 import com.savefish.task.TaskQueue;
@@ -42,6 +44,7 @@ public class WorldManager extends InputAdapter {
 	private WorldManager(GameLevel level, GameMiddleStage gameMiddleStage) {
 		this.initMoveTasks();
 		this.initDestroyTasks();
+		this.initFilterTasks();
 		this.gameMiddleStage = gameMiddleStage;
 		this.listener = this.gameMiddleStage;
 		try {
@@ -57,12 +60,14 @@ public class WorldManager extends InputAdapter {
 
 	public void render(float delta) {
 		if (null != world) {
-			ForceController.applyToRubbish(world);
+			if (CurrentLevel.level.getBig() == 1)
+				ForceController.applyToRubbish(world);
 			ForceController.applyWholeNature(world);
 			world.step(delta, 10, 10);
 			world.clearForces();
 			this.doDestroyBody();
 			this.doMoveBody();
+			this.doFilterBody();
 		}
 	}
 
@@ -74,7 +79,7 @@ public class WorldManager extends InputAdapter {
 			DestroyBodyTask destroyTask = destroyTasks.pop();
 			Body body = destroyTask.getBody();
 			listener.onKillActor(new GreenEvent<Body>(body));
-			ScoreAnalysis.destroyCount(gameMiddleStage.getGame(), body);
+			ScoreAnalysis.increaseScore(gameMiddleStage.getGame(), body);
 			destroyTask.onDestroy(world);
 		}
 	}
@@ -86,6 +91,18 @@ public class WorldManager extends InputAdapter {
 		while (!moveTasks.isEmpty()) {
 			MoveBodyTask moveTask = moveTasks.pop();
 			moveTask.onMoveBody();
+		}
+	}
+
+	/**
+	 * @description 执行过滤碰到水底的垃圾
+	 */
+	private void doFilterBody() {
+		while (!filterTasks.isEmpty()) {
+			FilterBodyTask filterTask = filterTasks.pop();
+			Body body = filterTask.getBody();
+			ScoreAnalysis.decreaseIndex(this.gameMiddleStage.getGame(), body);
+			filterTask.onFilterBody();
 		}
 	}
 
@@ -107,13 +124,22 @@ public class WorldManager extends InputAdapter {
 			this.moveTasks.clear();
 	}
 
+	private TaskContainer<FilterBodyTask> filterTasks = null;
+
+	private void initFilterTasks() {
+		if (null == filterTasks)
+			this.filterTasks = new TaskQueue<FilterBodyTask>();
+		else
+			this.filterTasks.clear();
+	}
+
 	private World world = null;
 
 	private void initWorld(GameLevel level) throws Exception {
 		world = GreenWorldFactory.creatWorld(Constant.basepath.MAPS_BASE_PATH
 				+ MapDictionary.getMap(level));
 		world.setContactListener(CollisionHandler.createCollisionHandler(
-				destroyTasks, moveTasks));
+				destroyTasks, moveTasks, filterTasks));
 	}
 
 	public World getWorld() {

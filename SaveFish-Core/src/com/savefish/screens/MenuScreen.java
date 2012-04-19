@@ -1,5 +1,12 @@
 package com.savefish.screens;
 
+/********************************
+ * Description: menu screen.
+ * the game menu screen
+ * including kinds of options
+ * Author     : Yang Yong
+ * Date       : 2012/03/08
+ *******************************/
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -58,7 +65,7 @@ public class MenuScreen implements Screen {
 		bgImage.width = Gdx.graphics.getWidth();
 		if (Constant.asset.isBgMusicOn)
 			BackgroundMusic.getInstance().play();// 加载背景音乐
-		//加载音效
+		// 加载音效
 	}
 
 	@Override

@@ -1,5 +1,12 @@
 package com.savefish.screens;
 
+/********************************
+ * Description: option screen.
+ * we decide whether to open 
+ * the background music or not
+ * Author     : Yang Yong
+ * Date       : 2012/03/08
+ *******************************/
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -13,18 +20,18 @@ import com.savefish.screens.button.OptionButton.MusicActor;
 import com.savefish.screens.button.OptionButton.SoundActor;
 
 public class OptionScreen implements Screen {
-	
-	private Stage           stage;
-	private MenuActor       menuActor;
-	private HighscoreActor  highscoreActor;
-	private MusicActor      musicActor;
-	private SoundActor      soundActor;
-	public  OptionButton    optionButton;
-	private Image           bgImage;
-	
+
+	private Stage stage;
+	private MenuActor menuActor;
+	private HighscoreActor highscoreActor;
+	private MusicActor musicActor;
+	private SoundActor soundActor;
+	public OptionButton optionButton;
+	private Image bgImage;
+
 	public OptionScreen(Game game) {
-		
-	    init(game);
+
+		init(game);
 		stage.addActor(bgImage);
 		stage.addActor(menuActor);
 		stage.addActor(highscoreActor);
@@ -32,25 +39,29 @@ public class OptionScreen implements Screen {
 		stage.addActor(soundActor);
 	}
 
-	private void init(Game game){
-		bgImage        = new Image(Constant.asset.bgMainTexture);
+	private void init(Game game) {
+		bgImage = new Image(Constant.asset.bgMainTexture);
 		bgImage.height = Gdx.graphics.getHeight();
-		bgImage.width  = Gdx.graphics.getWidth();
-		
-		stage        = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(), true);
-		menuActor    = new MenuActor(game,Constant.asset.quitActorTexture);
+		bgImage.width = Gdx.graphics.getWidth();
+
+		stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),
+				true);
+		menuActor = new MenuActor(game, Constant.asset.quitActorTexture);
 		optionButton = new OptionButton(game);
-		highscoreActor = optionButton.getHighscoreActor(Constant.asset.highscoreActorTexture);
-		soundActor     = optionButton.getSoundActor(Constant.asset.soundActorTexture);
-		musicActor     = optionButton.getMusicActor(Constant.asset.bgMusicActorTexture);
-	
+		highscoreActor = optionButton
+				.getHighscoreActor(Constant.asset.highscoreActorTexture);
+		soundActor = optionButton
+				.getSoundActor(Constant.asset.soundActorTexture);
+		musicActor = optionButton
+				.getMusicActor(Constant.asset.bgMusicActorTexture);
+
 	}
-	
+
 	@Override
 	public void render(float delta) {
-		Gdx.input.setInputProcessor(stage);       
-        stage.act(delta);
-        stage.draw();
+		Gdx.input.setInputProcessor(stage);
+		stage.act(delta);
+		stage.draw();
 	}
 
 	@Override

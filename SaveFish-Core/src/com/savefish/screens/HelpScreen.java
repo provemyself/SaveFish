@@ -1,11 +1,12 @@
 package com.savefish.screens;
+
 /********************************
- * Description: 该类为帮助界面，需要修改
- *              介绍游戏的操作
- * Author     : 杨勇
+ * Description: help screen.
+ * the class tell us how play
+ * the game
+ * Author     : Yang Yong
  * Date       : 2012/03/08
  *******************************/
-
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;

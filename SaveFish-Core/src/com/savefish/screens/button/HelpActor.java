@@ -1,11 +1,19 @@
 package com.savefish.screens.button;
 
+/********************************
+ * Description: help button.
+ * when we click it and the 
+ * screen will change to the
+ * help screen
+ * Author     : Yang Yong
+ * Date       : 2012/03/08
+ *******************************/
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.savefish.screens.AboutScreen;
+import com.savefish.screens.HelpScreen;
 
 public class HelpActor extends Image {
 
@@ -50,7 +58,7 @@ public class HelpActor extends Image {
 
 	@Override
 	public boolean touchDown(float x, float y, int point) {
-		game.setScreen(new AboutScreen(game));////转到help界面
+		game.setScreen(new HelpScreen(game));//change to help screen
 		return false;
 
 	}

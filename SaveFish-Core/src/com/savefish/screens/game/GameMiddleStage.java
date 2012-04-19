@@ -17,10 +17,12 @@ import com.savefish.event.GreenEvent;
 import com.savefish.logical.WorldManager;
 import com.savefish.pointsystem.GameLevel;
 import com.savefish.render.GameActorFactory;
+import com.savefish.service.BackgroundMusic;
 
 public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 
 	public static GameMiddleStage createInstance(GameLevel level, Game game) {
+		BackgroundMusic.getInstance().play();
 		return new GameMiddleStage(level, game);
 	}
 
@@ -104,6 +106,7 @@ public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 		this.render.dispose();
 		this.camera = null;
 		this.worldManager.dispose();
+		BackgroundMusic.getInstance().stop();
 		super.dispose();
 	}
 

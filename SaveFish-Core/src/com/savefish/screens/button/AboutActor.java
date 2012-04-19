@@ -1,5 +1,12 @@
 package com.savefish.screens.button;
 
+/********************************
+ * Description: this class is about button,
+ * the game will turn to about screen when 
+ * we click it!
+ * Author: Yang Yong 
+ * Date : 2012/03/08
+ *******************************/
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -15,9 +22,9 @@ public class AboutActor extends Image {
 	public AboutActor(Game game, TextureRegion[] region) {
 
 		super(region[0]);
-		this.x = (float) (Gdx.graphics.getWidth()/2);
+		this.x = (float) (Gdx.graphics.getWidth() / 2);
 		this.y = (float) (Gdx.graphics.getHeight() / 8);
-		this.scaleX = (float) ( Gdx.graphics.getWidth() / (7 * region[0]
+		this.scaleX = (float) (Gdx.graphics.getWidth() / (7 * region[0]
 				.getRegionWidth()));
 		this.scaleY = this.scaleX;
 		this.region = region;
@@ -26,10 +33,8 @@ public class AboutActor extends Image {
 
 	@Override
 	public void draw(SpriteBatch batch, float parentAlpha) {
-
 		fishMoving();
 		super.draw(batch, parentAlpha);
-
 	}
 
 	static final int frame = 24;

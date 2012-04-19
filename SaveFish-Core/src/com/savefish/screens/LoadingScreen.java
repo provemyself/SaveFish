@@ -14,7 +14,12 @@ import com.savefish.screens.button.Fish;
 import com.savefish.util.GreenLogger;
 
 /********************************
- * Description: 该类为加载界面， 游戏开始时加载资源的等待界面 Author : 杨勇 Date : 2012/03/08
+ * Description: load screen. 
+ * we use the class to load 
+ * resourses whenwe start the
+ * game 
+ * Author : Yang Yong 
+ * Date : 2012/03/08
  *******************************/
 public class LoadingScreen implements Screen {
 

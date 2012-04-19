@@ -1,0 +1,47 @@
+
+grass.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+grassone
+  rotate: false
+  xy: 2, 2
+  size: 600, 600
+  orig: 600, 600
+  offset: 0, 0
+  index: -1
+grassd
+  rotate: false
+  xy: 604, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+grassc
+  rotate: false
+  xy: 795, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+grassb
+  rotate: false
+  xy: 604, 276
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+grassa
+  rotate: false
+  xy: 795, 276
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+grasstwo
+  rotate: false
+  xy: 2, 604
+  size: 244, 206
+  orig: 244, 206
+  offset: 0, 0
+  index: -1

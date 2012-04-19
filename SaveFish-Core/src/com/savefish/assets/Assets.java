@@ -294,5 +294,4 @@ public class Assets {
 		list.add(this.getSpriteRigion(frameTwo));
 		return list;
 	}
-
 }

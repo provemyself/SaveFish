@@ -1,5 +1,11 @@
 package com.savefish.screens.button;
-
+/********************************
+ * Description: the game will turn
+ * to the option screen when we click
+ * the option button
+ * Author     : Yang Yong
+ * Date       : 2012/03/08
+ *******************************/
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

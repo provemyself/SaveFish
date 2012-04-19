@@ -18,464 +18,124 @@
          "angle" : 0,
          "angularVelocity" : 0,
          "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : "BFC8605B",
-         "angularVelocity" : 0,
-         "awake" : true,
          "fixture" : 
          [
             
             {
                "density" : "41200000",
-               "edge" : 
-               {
-                  "vertex1" : 
-                  {
-                     "x" : "C1B38FE8",
-                     "y" : "3D0C74DA"
-                  },
-                  "vertex2" : 
-                  {
-                     "x" : "41B35FA9",
-                     "y" : "3D0C74DA"
-                  }
-               },
                "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
-               "friction" : "3E99999A",
-               "restitution" : "3E4CCCCD"
-            }
-         ],
-         "linearVelocity" : 0,
-         "position" : 
-         {
-            "x" : "BF35CBDF",
-            "y" : "41B1C324"
-         },
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : "BFC8605B",
-         "angularVelocity" : 0,
-         "awake" : true,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "41200000",
-               "edge" : 
-               {
-                  "vertex1" : 
-                  {
-                     "x" : "C1B2FD06",
-                     "y" : "3D5766C3"
-                  },
-                  "vertex2" : 
-                  {
-                     "x" : "41B4E9D7",
-                     "y" : "3D5766C3"
-                  }
-               },
-               "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
-               "friction" : "3E99999A",
-               "restitution" : "3E4CCCCD"
-            }
-         ],
-         "linearVelocity" : 0,
-         "position" : 
-         {
-            "x" : "4242B9FB",
-            "y" : "41B1760E"
-         },
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : "BFC8605B",
-         "angularVelocity" : 0,
-         "awake" : true,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "41200000",
-               "edge" : 
-               {
-                  "vertex1" : 
-                  {
-                     "x" : "C1B38FE8",
-                     "y" : "3D0C74DA"
-                  },
-                  "vertex2" : 
-                  {
-                     "x" : "41B35FA9",
-                     "y" : "3D0C74DA"
-                  }
-               },
-               "filter-categoryBits" : 2,
-               "friction" : "3E99999A",
-               "restitution" : "3E4CCCCD",
-               "sensor" : true
-            }
-         ],
-         "linearVelocity" : 0,
-         "name" : "screen_left",
-         "position" : 
-         {
-            "x" : "BEBC1760",
-            "y" : "41B1C324"
-         },
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : "BFC8605B",
-         "angularVelocity" : 0,
-         "awake" : true,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "41200000",
-               "edge" : 
-               {
-                  "vertex1" : 
-                  {
-                     "x" : "C1B2FD06",
-                     "y" : "3D5766C3"
-                  },
-                  "vertex2" : 
-                  {
-                     "x" : "41B4E9D7",
-                     "y" : "3D5766C3"
-                  }
-               },
-               "filter-categoryBits" : 2,
-               "friction" : "3E99999A",
-               "restitution" : "3E4CCCCD",
-               "sensor" : true
-            }
-         ],
-         "linearVelocity" : 0,
-         "name" : "screen_right",
-         "position" : 
-         {
-            "x" : "42415AFA",
-            "y" : "41B1760E"
-         },
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "fixedRotation" : true,
-         "fixture" : 
-         [
-            
-            {
-               "edge" : 
-               {
-                  "vertex1" : 
-                  {
-                     "x" : "C207A414",
-                     "y" : "3A0FC000"
-                  },
-                  "vertex2" : 
-                  {
-                     "x" : "4207A28B",
-                     "y" : "3A0FC000"
-                  }
-               },
-               "friction" : "3E99999A",
-               "restitution" : "3F19999A",
-               "sensor" : true
-            }
-         ],
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "position" : 
-         {
-            "x" : "41BF5FF8",
-            "y" : "41A1B904"
-         },
-         "type" : 1 //kinematic
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "fixture" : 
-         [
-            
-            {
-               "circle" : 
-               {
-                  "center" : 
-                  {
-                     "x" : "3DF6CC80",
-                     "y" : "BDCC5B00"
-                  },
-                  "radius" : "3F7A30F2"
-               },
-               "density" : "41589CF0",
-               "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
                "filter-maskBits" : 2,
-               "friction" : "3E4CCCCD"
-            }
-         ],
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "massData-I" : "41A328C2",
-         "massData-center" : 
-         {
-            "x" : "3DF6CC80",
-            "y" : "BDCC5B00"
-         },
-         "massData-mass" : "42227E96",
-         "name" : "c_bag_3",
-         "position" : 
-         {
-            "x" : "42163D57",
-            "y" : "4222A42B"
-         },
-         "type" : 2 //dynamic
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "fixture" : 
-         [
-            
-            {
-               "circle" : 
-               {
-                  "center" : 
-                  {
-                     "x" : "3D3B9B00",
-                     "y" : "3D907080"
-                  },
-                  "radius" : "3F74B085"
-               },
-               "density" : "413D8952",
-               "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
-               "filter-maskBits" : 2,
-               "friction" : "3E4CCCCD"
-            }
-         ],
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "massData-I" : "417C5711",
-         "massData-center" : 
-         {
-            "x" : "3D3B9B00",
-            "y" : "3D907080"
-         },
-         "massData-mass" : "4207FF8F",
-         "name" : "c_thermograph_1",
-         "position" : 
-         {
-            "x" : "4216DF40",
-            "y" : "4218EAD2"
-         },
-         "type" : 2 //dynamic
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "40BD255E",
-               "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
-               "filter-maskBits" : 2,
-               "friction" : "3DCCCCCD",
+               "friction" : "3ECCCCCD",
                "polygon" : 
                {
                   "vertices" : 
                   {
-                     "x" : [ "3F2897F0", "3F2897F0", "BF164490", "BF164490" ],
-                     "y" : [ "BFA188F0", "3FAC10C0", "3FAC10C0", "BFA188F0" ]
+                     "x" : [ "3FCCBCF4", "3FCCBCEC", "BFD84F80", "BFD84F80" ],
+                     "y" : [ "C011F3E5", "400AB565", "40105621", "C011F3E7" ]
                   }
-               }
+               },
+               "restitution" : "3E4CCCCD"
             }
          ],
-         "gravityScale" : 0,
          "linearVelocity" : 0,
-         "massData-I" : "415661E6",
-         "massData-center" : 
-         {
-            "x" : "3D129B00",
-            "y" : "3D287CFE"
-         },
-         "massData-mass" : "419980A5",
-         "name" : "c_eb_1",
+         "name" : "s_stone_3",
          "position" : 
          {
-            "x" : "41EF2C2A",
-            "y" : "421DC920"
+            "x" : "4223AF3C",
+            "y" : "40F199F3"
          },
-         "type" : 2 //dynamic
+         "type" : 0 //static
       },
       
       {
          "angle" : 0,
          "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
          "fixture" : 
          [
             
             {
-               "density" : "409D9F24",
+               "density" : "41200000",
                "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
                "filter-maskBits" : 2,
-               "friction" : "3DCCCCCD",
+               "friction" : "3ECCCCCD",
                "polygon" : 
                {
                   "vertices" : 
                   {
-                     "x" : [ "3F528CB8", "3F528CB8", "BF0B7100", "BF0B7100" ],
-                     "y" : [ "BFA852B0", "3FC5D8A8", "3FC5D8A8", "BFA852B0" ]
+                     "x" : [ "40AA6865", "40AA6863", "C0A34418", "C0A34418" ],
+                     "y" : [ "BFABA056", "3F9AB68A", "3FA5F802", "BFABA05B" ]
                   }
-               }
+               },
+               "restitution" : "3E4CCCCD"
             }
          ],
-         "gravityScale" : 0,
          "linearVelocity" : 0,
-         "massData-I" : "418620DA",
-         "massData-center" : 
-         {
-            "x" : "3E0E3770",
-            "y" : "3DEC2FC1"
-         },
-         "massData-mass" : "419A1D6F",
-         "name" : "p_pesticide_1",
+         "name" : "s_stone_1",
          "position" : 
          {
-            "x" : "41A05804",
-            "y" : "421CAEDD"
+            "x" : "41276E68",
+            "y" : "414BD181"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3CF9B800",
+                     "y" : "BD555400"
+                  },
+                  "radius" : "3FDD8FF4"
+               },
+               "density" : "40A9FAEC",
+               "filter-categoryBits" : 2,
+               "filter-groupIndex" : 1,
+               "filter-maskBits" : 2,
+               "friction" : "3ECCCCCD",
+               "restitution" : "3E4CCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "massData-I" : "42962CAF",
+         "massData-center" : 
+         {
+            "x" : "3CF9B800",
+            "y" : "BD555400"
+         },
+         "massData-mass" : "42480000",
+         "name" : "c_thermograph",
+         "position" : 
+         {
+            "x" : "42387573",
+            "y" : "3FFFD52C"
          },
          "type" : 2 //dynamic
       },
@@ -501,459 +161,630 @@
       {
          "angle" : 0,
          "angularVelocity" : 0,
-         "fixedRotation" : true,
-         "fixture" : 
-         [
-            
-            {
-               "edge" : 
-               {
-                  "vertex1" : 
-                  {
-                     "x" : "C207C7E6",
-                     "y" : "3D13A000"
-                  },
-                  "vertex2" : 
-                  {
-                     "x" : "42072FB5",
-                     "y" : "3D13A000"
-                  }
-               },
-               "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
-               "friction" : "3E99999A"
-            }
-         ],
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
          "gravityScale" : 0,
          "linearVelocity" : 0,
-         "position" : 
-         {
-            "x" : "41BF5FF8",
-            "y" : "42075538"
-         },
-         "type" : 1 //kinematic
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
          "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 1 //kinematic
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "fixedRotation" : true,
-         "fixture" : 
-         [
-            
-            {
-               "edge" : 
-               {
-                  "vertex1" : 
-                  {
-                     "x" : "C2077022",
-                     "y" : "BE07FF80"
-                  },
-                  "vertex2" : 
-                  {
-                     "x" : "42078164",
-                     "y" : "BE07FF80"
-                  }
-               },
-               "friction" : "3E99999A",
-               "restitution" : "3F19999A"
-            }
-         ],
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "name" : "middle",
-         "position" : 
-         {
-            "x" : "41BF5FF8",
-            "y" : "41A018C2"
-         },
          "type" : 1 //kinematic
       },
       
@@ -1078,31 +909,32 @@
                {
                   "center" : 
                   {
-                     "x" : "BCD36400",
-                     "y" : "BD8EA040"
+                     "x" : "BC049800",
+                     "y" : "3D169210"
                   },
-                  "radius" : "4033D08E"
+                  "radius" : "401E3616"
                },
-               "density" : "41010922",
+               "density" : "40A6AE3F",
                "filter-categoryBits" : 2,
+               "filter-groupIndex" : 1,
                "filter-maskBits" : 2,
                "friction" : "3ECCCCCD",
                "restitution" : "3DCCCCCD"
             }
          ],
          "linearVelocity" : 0,
-         "massData-I" : "3F8D3481",
+         "massData-I" : "3E11151D",
          "massData-center" : 
          {
-            "x" : "BCD36400",
-            "y" : "BD8EA040"
+            "x" : "BC049800",
+            "y" : "3D169210"
          },
-         "massData-mass" : "4347FFFF",
+         "massData-mass" : "42C80000",
          "name" : "artificial",
          "position" : 
          {
-            "x" : "420FFEF5",
-            "y" : "408EF769"
+            "x" : "41C14C29",
+            "y" : "41E30C53"
          },
          "type" : 2 //dynamic
       },
@@ -1321,8 +1153,8 @@
          "name" : "r_nature_1",
          "position" : 
          {
-            "x" : "4065B2A2",
-            "y" : "414629B3"
+            "x" : "410235F6",
+            "y" : "41DAB3D7"
          },
          "type" : 2 //dynamic
       },
@@ -1388,8 +1220,8 @@
          "name" : "r_nature_4",
          "position" : 
          {
-            "x" : "41A36FEC",
-            "y" : "416F1912"
+            "x" : "414CF5E9",
+            "y" : "41A6DF20"
          },
          "type" : 2 //dynamic
       },
@@ -1428,8 +1260,8 @@
          "name" : "r_nature_6",
          "position" : 
          {
-            "x" : "41FD2229",
-            "y" : "414E1B96"
+            "x" : "42300702",
+            "y" : "41D25B69"
          },
          "type" : 2 //dynamic
       },
@@ -1465,91 +1297,91 @@
             "y" : "3CA967FC"
          },
          "massData-mass" : "42480000",
-         "name" : "r_nature_2",
-         "position" : 
-         {
-            "x" : "412C209E",
-            "y" : "41008604"
-         },
-         "type" : 2 //dynamic
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "fixedRotation" : true,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "408CB7CF",
-               "filter-groupIndex" : -1,
-               "friction" : "3F4CCCCD",
-               "polygon" : 
-               {
-                  "vertices" : 
-                  {
-                     "x" : [ "40244996", "40244994", "C0181051", "C0181050" ],
-                     "y" : [ "BF9B4A48", "3F8B2552", "3F8B2552", "BF9B4A4B" ]
-                  }
-               },
-               "restitution" : "3ECCCCCD"
-            }
-         ],
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "massData-I" : "3F27A3D7",
-         "massData-center" : 
-         {
-            "x" : "3DC39441",
-            "y" : "BD8127BF"
-         },
-         "massData-mass" : "42480001",
-         "name" : "r_nature_3",
-         "position" : 
-         {
-            "x" : "4196C7B5",
-            "y" : "408AFCC7"
-         },
-         "type" : 2 //dynamic
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "fixedRotation" : true,
-         "fixture" : 
-         [
-            
-            {
-               "density" : "408CB7CF",
-               "filter-groupIndex" : -1,
-               "friction" : "3F4CCCCD",
-               "polygon" : 
-               {
-                  "vertices" : 
-                  {
-                     "x" : [ "40244996", "40244994", "C0181051", "C0181050" ],
-                     "y" : [ "BF9B4A48", "3F8B2552", "3F8B2552", "BF9B4A4B" ]
-                  }
-               },
-               "restitution" : "3ECCCCCD"
-            }
-         ],
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "massData-I" : "3F27A3D7",
-         "massData-center" : 
-         {
-            "x" : "3DC39441",
-            "y" : "BD8127BF"
-         },
-         "massData-mass" : "42480001",
          "name" : "l_nature_1",
          "position" : 
          {
-            "x" : "4225BAF0",
-            "y" : "4182039A"
+            "x" : "4206AD6E",
+            "y" : "40604D70"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixedRotation" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "408CB7CF",
+               "filter-groupIndex" : -1,
+               "friction" : "3F4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "40244996", "40244994", "C0181051", "C0181050" ],
+                     "y" : [ "BF9B4A48", "3F8B2552", "3F8B2552", "BF9B4A4B" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "gravityScale" : 0,
+         "linearVelocity" : 0,
+         "massData-I" : "3F27A3D7",
+         "massData-center" : 
+         {
+            "x" : "3DC39441",
+            "y" : "BD8127BF"
+         },
+         "massData-mass" : "42480001",
+         "name" : "l_nature_3",
+         "position" : 
+         {
+            "x" : "41F110C8",
+            "y" : "41B7C68F"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "fixedRotation" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "408CB7CF",
+               "filter-groupIndex" : -1,
+               "friction" : "3F4CCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "40244996", "40244994", "C0181051", "C0181050" ],
+                     "y" : [ "BF9B4A48", "3F8B2552", "3F8B2552", "BF9B4A4B" ]
+                  }
+               },
+               "restitution" : "3ECCCCCD"
+            }
+         ],
+         "gravityScale" : 0,
+         "linearVelocity" : 0,
+         "massData-I" : "3F27A3D7",
+         "massData-center" : 
+         {
+            "x" : "3DC39441",
+            "y" : "BD8127BF"
+         },
+         "massData-mass" : "42480001",
+         "name" : "r_nature_5",
+         "position" : 
+         {
+            "x" : "4201BE5A",
+            "y" : "4160CCBE"
          },
          "type" : 2 //dynamic
       },
@@ -1585,11 +1417,11 @@
             "y" : "3C7D875C"
          },
          "massData-mass" : "42480000",
-         "name" : "r_nature_5",
+         "name" : "l_nature_2",
          "position" : 
          {
-            "x" : "42323C79",
-            "y" : "4041C038"
+            "x" : "423001E0",
+            "y" : "417E9A0F"
          },
          "type" : 2 //dynamic
       },
@@ -1625,11 +1457,11 @@
             "y" : "BCFCA6D0"
          },
          "massData-mass" : "4247FFFF",
-         "name" : "l_nature_4",
+         "name" : "r_nature_3",
          "position" : 
          {
-            "x" : "40474210",
-            "y" : "4000F6D1"
+            "x" : "41ADB1EA",
+            "y" : "4158B2EA"
          },
          "type" : 2 //dynamic
       },
@@ -1665,11 +1497,11 @@
             "y" : "3D1A823F"
          },
          "massData-mass" : "42480000",
-         "name" : "l_nature_3",
+         "name" : "r_nature_2",
          "position" : 
          {
-            "x" : "412CFE81",
-            "y" : "418942E6"
+            "x" : "408B637D",
+            "y" : "40BB7E30"
          },
          "type" : 2 //dynamic
       },
@@ -1705,11 +1537,11 @@
             "y" : "BC6F804F"
          },
          "massData-mass" : "42480000",
-         "name" : "l_nature_2",
+         "name" : "l_nature_4",
          "position" : 
          {
-            "x" : "41E3CB45",
-            "y" : "41033780"
+            "x" : "4202478B",
+            "y" : "41EE64D0"
          },
          "type" : 2 //dynamic
       },
@@ -1735,92 +1567,10 @@
       {
          "angle" : 0,
          "angularVelocity" : 0,
-         "fixture" : 
-         [
-            
-            {
-               "circle" : 
-               {
-                  "center" : 
-                  {
-                     "x" : "3C800040",
-                     "y" : "BDD4F600"
-                  },
-                  "radius" : "3F7F38EA"
-               },
-               "density" : "40724E3A",
-               "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
-               "filter-maskBits" : 2,
-               "friction" : "3E4CCCCD"
-            }
-         ],
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "massData-I" : "40C02FF4",
-         "massData-center" : 
-         {
-            "x" : "3C800040",
-            "y" : "BDD4F600"
-         },
-         "massData-mass" : "413D26E2",
-         "name" : "c_bag_1",
-         "position" : 
-         {
-            "x" : "41215553",
-            "y" : "42237A6B"
-         },
-         "type" : 2 //dynamic
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
          "awake" : true,
          "linearVelocity" : 0,
          "position" : 0,
          "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "fixture" : 
-         [
-            
-            {
-               "circle" : 
-               {
-                  "center" : 
-                  {
-                     "x" : "3D337740",
-                     "y" : "BDE76D80"
-                  },
-                  "radius" : "3F882D59"
-               },
-               "density" : "40D89CF0",
-               "filter-categoryBits" : 2,
-               "filter-groupIndex" : -1,
-               "filter-maskBits" : 2,
-               "friction" : "3E4CCCCD"
-            }
-         ],
-         "gravityScale" : 0,
-         "linearVelocity" : 0,
-         "massData-I" : "415F9AB5",
-         "massData-center" : 
-         {
-            "x" : "3D337740",
-            "y" : "BDE76D80"
-         },
-         "massData-mass" : "41C08F02",
-         "name" : "c_bag_2",
-         "position" : 
-         {
-            "x" : "412360C1",
-            "y" : "4219F57C"
-         },
-         "type" : 2 //dynamic
       },
       
       {
@@ -1917,13 +1667,13 @@
                {
                   "vertex1" : 
                   {
-                     "x" : "C207D2EB",
-                     "y" : "3D09A6C0"
+                     "x" : "C2071FA7",
+                     "y" : "3C7FEF00"
                   },
                   "vertex2" : 
                   {
-                     "x" : "4207E1A2",
-                     "y" : "3D09A6C0"
+                     "x" : "4207936E",
+                     "y" : "3C7FEF00"
                   }
                },
                "filter-categoryBits" : 2,
@@ -1936,7 +1686,7 @@
          "position" : 
          {
             "x" : "41BF9406",
-            "y" : "42323C41"
+            "y" : "4200A8A2"
          },
          "type" : 0 //static
       },
@@ -1954,13 +1704,13 @@
                {
                   "vertex1" : 
                   {
-                     "x" : "C20903D1",
-                     "y" : "3BBA9BC8"
+                     "x" : "C206EDAC",
+                     "y" : "BDCC4DFB"
                   },
                   "vertex2" : 
                   {
-                     "x" : "42082787",
-                     "y" : "3BBA9BC8"
+                     "x" : "42071597",
+                     "y" : "BDCC4DFB"
                   }
                },
                "filter-categoryBits" : 2,
@@ -1973,7 +1723,7 @@
          "position" : 
          {
             "x" : "41C13994",
-            "y" : "BD93C05C"
+            "y" : "3C5E0000"
          },
          "type" : 0 //static
       },
@@ -1991,13 +1741,420 @@
                {
                   "vertex1" : 
                   {
-                     "x" : "C1B2FD06",
-                     "y" : "3D5766C3"
+                     "x" : "C180C1FF",
+                     "y" : "3BE80800"
                   },
                   "vertex2" : 
                   {
-                     "x" : "41B4E9D7",
-                     "y" : "3D5766C3"
+                     "x" : "4181ACA1",
+                     "y" : "3BE80800"
+                  }
+               },
+               "filter-categoryBits" : 2,
+               "friction" : "3E99999A",
+               "restitution" : "3E4CCCCD",
+               "sensor" : true
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "screen_right",
+         "position" : 
+         {
+            "x" : "424021AF",
+            "y" : "41828932"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "BFC8605B",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "41200000",
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C17EF451",
+                     "y" : "3D50E6EC"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "4182029B",
+                     "y" : "3D50E6EC"
+                  }
+               },
+               "filter-categoryBits" : 2,
+               "friction" : "3E99999A",
+               "restitution" : "3E4CCCCD",
+               "sensor" : true
+            }
+         ],
+         "linearVelocity" : 0,
+         "name" : "screen_left",
+         "position" : 
+         {
+            "x" : "BDC5C800",
+            "y" : "41820B0F"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "circle" : 
+               {
+                  "center" : 
+                  {
+                     "x" : "3CF9B800",
+                     "y" : "BD555400"
+                  },
+                  "radius" : "3FDD8FF4"
+               },
+               "density" : "40A9FAEC",
+               "filter-categoryBits" : 2,
+               "filter-groupIndex" : 1,
+               "filter-maskBits" : 2,
+               "friction" : "3ECCCCCD",
+               "restitution" : "3E4CCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "massData-I" : "42962CAF",
+         "massData-center" : 
+         {
+            "x" : "3CF9B800",
+            "y" : "BD555400"
+         },
+         "massData-mass" : "42480000",
+         "name" : "c_bag",
+         "position" : 
+         {
+            "x" : "41282929",
+            "y" : "3FF1CE4E"
+         },
+         "type" : 2 //dynamic
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : 0,
+         "angularVelocity" : 0,
+         "awake" : true,
+         "linearVelocity" : 0,
+         "position" : 0,
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "BFC8605B",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "41200000",
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C180C1FF",
+                     "y" : "3BE80800"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "4181ACA1",
+                     "y" : "3BE80800"
+                  }
+               },
+               "filter-categoryBits" : 2,
+               "filter-groupIndex" : -1,
+               "friction" : "3E99999A",
+               "restitution" : "3E4CCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "424136B5",
+            "y" : "41828932"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "BFC8605B",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "41200000",
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C180C1FF",
+                     "y" : "3BE80800"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "4181ACA1",
+                     "y" : "3BE80800"
                   }
                },
                "filter-categoryBits" : 2,
@@ -2009,8 +2166,8 @@
          "name" : "world_right",
          "position" : 
          {
-            "x" : "4266600D",
-            "y" : "41B1760E"
+            "x" : "42682B78",
+            "y" : "41828932"
          },
          "type" : 0 //static
       },
@@ -2028,13 +2185,50 @@
                {
                   "vertex1" : 
                   {
-                     "x" : "C1B38FE8",
-                     "y" : "3D0C74DA"
+                     "x" : "C17EF451",
+                     "y" : "3D50E6EC"
                   },
                   "vertex2" : 
                   {
-                     "x" : "41B35FA9",
-                     "y" : "3D0C74DA"
+                     "x" : "4182029B",
+                     "y" : "3D50E6EC"
+                  }
+               },
+               "filter-categoryBits" : 2,
+               "filter-groupIndex" : -1,
+               "friction" : "3E99999A",
+               "restitution" : "3E4CCCCD"
+            }
+         ],
+         "linearVelocity" : 0,
+         "position" : 
+         {
+            "x" : "BEBBF4B4",
+            "y" : "41820B0F"
+         },
+         "type" : 0 //static
+      },
+      
+      {
+         "angle" : "BFC8605B",
+         "angularVelocity" : 0,
+         "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "41200000",
+               "edge" : 
+               {
+                  "vertex1" : 
+                  {
+                     "x" : "C17EF451",
+                     "y" : "3D50E6EC"
+                  },
+                  "vertex2" : 
+                  {
+                     "x" : "4182029B",
+                     "y" : "3D50E6EC"
                   }
                },
                "filter-categoryBits" : 2,
@@ -2046,8 +2240,8 @@
          "name" : "world_left",
          "position" : 
          {
-            "x" : "C120D00E",
-            "y" : "41B1C324"
+            "x" : "C11ECFF9",
+            "y" : "41820B0F"
          },
          "type" : 0 //static
       },
@@ -2119,107 +2313,32 @@
          "angle" : 0,
          "angularVelocity" : 0,
          "awake" : true,
+         "fixture" : 
+         [
+            
+            {
+               "density" : "41200000",
+               "filter-categoryBits" : 2,
+               "filter-maskBits" : 2,
+               "friction" : "3ECCCCCD",
+               "polygon" : 
+               {
+                  "vertices" : 
+                  {
+                     "x" : [ "40480B1A", "40480B16", "C0448700", "C0448700" ],
+                     "y" : [ "C087C45E", "4088CBD0", "408B9C2E", "C087C45F" ]
+                  }
+               },
+               "restitution" : "3E4CCCCD"
+            }
+         ],
          "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
-         "type" : 0 //static
-      },
-      
-      {
-         "angle" : 0,
-         "angularVelocity" : 0,
-         "awake" : true,
-         "linearVelocity" : 0,
-         "position" : 0,
+         "name" : "s_stone_2",
+         "position" : 
+         {
+            "x" : "41BA1709",
+            "y" : "408B4699"
+         },
          "type" : 0 //static
       },
       

@@ -1,5 +1,13 @@
 package com.savefish.screens;
 
+/********************************
+ * Description: start screen.
+ * the screen includes two buttons.
+ * we will change to select screen
+ * when we click the button.
+ * Author     : Yang Yong
+ * Date       : 2012/03/08
+ *******************************/
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -13,16 +21,15 @@ import com.savefish.screens.button.StartButton.ChoicetwoActor;
 
 public class StartScreen implements Screen {
 
-
-	private Stage          stage;
-	private MenuActor      menuActor;
-	private Image          bgImage;
-	private StartButton    startButton;
+	private Stage stage;
+	private MenuActor menuActor;
+	private Image bgImage;
+	private StartButton startButton;
 	private ChoiceoneActor choiceoneActor;
 	private ChoicetwoActor choicetwoActor;
 
 	public StartScreen(Game game) {
-		
+
 		init(game);
 		stage.addActor(bgImage);
 		stage.addActor(menuActor);
@@ -30,18 +37,22 @@ public class StartScreen implements Screen {
 		stage.addActor(choicetwoActor);
 	}
 
-	private void init(Game game){
-		
-		bgImage        = new Image(Constant.asset.bgChoiceTexture);
-		stage          = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),true);
-		menuActor      = new MenuActor(game,Constant.asset.quitActorTexture);
-		startButton    = new StartButton(game);
+	private void init(Game game) {
+
+		bgImage = new Image(Constant.asset.bgChoiceTexture);
+		stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),
+				true);
+		menuActor = new MenuActor(game, Constant.asset.quitActorTexture);
+		startButton = new StartButton(game);
 		bgImage.height = Gdx.graphics.getHeight();
-		bgImage.width  = Gdx.graphics.getWidth();
-		choiceoneActor = startButton.getChoiceoneActor(Constant.asset.choice1ActorTexture);
-		choicetwoActor = startButton.getChoicetwoActor(Constant.asset.choice2ActorTexture);
-		
+		bgImage.width = Gdx.graphics.getWidth();
+		choiceoneActor = startButton
+				.getChoiceoneActor(Constant.asset.choice1ActorTexture);
+		choicetwoActor = startButton
+				.getChoicetwoActor(Constant.asset.choice2ActorTexture);
+
 	}
+
 	@Override
 	public void render(float delta) {
 		Gdx.input.setInputProcessor(stage);

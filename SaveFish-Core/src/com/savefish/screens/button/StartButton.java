@@ -1,10 +1,11 @@
 package com.savefish.screens.button;
 
 /********************************
- * Description: 该类为开始界面的两个，需要修改
- *              按钮类，点击后进入细
- *              分的关卡选择
- * Author     : 杨勇
+ * Description: the class has two
+ * button:choice1 and choice2.
+ * the screen will change to other
+ * screen
+ * Author     : Yang Yong
  * Date       : 2012/03/08
  *******************************/
 import com.badlogic.gdx.Game;

@@ -13,7 +13,7 @@ public class CombineTexture {
 		Settings settings = new Settings();
         settings.alias = false;
         settings.incremental = true;
-        TexturePacker.process(settings, "actors_input", 
-        		"actors_output");
+        TexturePacker.process(settings, "input", 
+        		"sprite_output");
 	}
 }

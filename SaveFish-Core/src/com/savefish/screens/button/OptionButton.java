@@ -1,12 +1,13 @@
 package com.savefish.screens.button;
 
 /********************************
- * Description: 该类为option界面里的按钮，需要修改
- *              放在一个类里便于统一管理
- *              共包含三个主要按钮：
- *              背景音乐、音效、高分榜按
- *              钮
- * Author     : 杨勇
+ * Description: the class includes
+ * three button.these buttons will
+ * be shown in the option button.
+ * the game will have different 
+ * behavier when we click the 
+ * different button
+ * Author     : Yang Yong
  * Date       : 2012/03/08
  *******************************/
 import com.badlogic.gdx.Game;

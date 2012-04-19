@@ -1,10 +1,10 @@
 package com.savefish.screens.button;
 
 /********************************
- * Description: 该类为游动的鱼背景，
- *              让鱼在屏幕中游动作为背景
- *              需要修改
- * Author     : 杨勇
+ * Description: the class is shown
+ * when we use it.and the fish will
+ * move in the screen
+ * Author     : Yang Yong
  * Date       : 2012/03/08
  *******************************/
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -33,10 +33,8 @@ public class Fish extends Image {
 
 	}
 
-	/*
-	 * @Introduce 该函数用来设置鱼的起始游动位置是从左还是从右
-	 */
-	boolean directionLeft = true; // 标志位，判断鱼的游动方向是屏幕左还是右
+	boolean directionLeft = true; // flag bit.we need it to judge the fish is
+									// moving left or right
 	static final int frame = 24;
 	int fishMove = 0;
 
@@ -47,7 +45,7 @@ public class Fish extends Image {
 	}
 
 	/*
-	 * @Description 下面这个函数是用来使界面背景中的鱼来回游动显示
+	 * @Description the fuction will make the fish move in the screen.
 	 */
 
 	private void fishMoving() {

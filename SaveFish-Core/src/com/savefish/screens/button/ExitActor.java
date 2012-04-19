@@ -5,8 +5,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 /********************************
- * Description: 该类为退出按钮，需要修改监听事件
- * Author     : 杨勇
+ * Description: we use it when we ///need change
+ * click the exit button  
+ * Author     : Yang Yong
  * Date       : 2012/03/08
  *******************************/
 public class ExitActor extends Image {
@@ -16,7 +17,6 @@ public class ExitActor extends Image {
 	public ExitActor(TextureRegion[] region) {
 
 		super(region[0]);
-		// 设置退出按钮的相对位置为右下角
 		this.x = (float) (Gdx.graphics.getWidth() - region[0].getRegionWidth());
 		this.y = (float) (Gdx.graphics.getHeight() - Gdx.graphics.getHeight());
 		this.region = region;
@@ -46,7 +46,7 @@ public class ExitActor extends Image {
 
 	@Override
 	public boolean touchDown(float x, float y, int point) {
-		System.exit(0);// 直接退出游戏,需要修改
+		System.exit(0);
 		return false;
 	}
 }

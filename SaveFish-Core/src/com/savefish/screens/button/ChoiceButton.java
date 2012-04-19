@@ -6,12 +6,11 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.pointsystem.GameLevel;
-import com.savefish.screens.AboutScreen;
 import com.savefish.screens.game.GameScreen;
 
 /********************************
- * Description: 该类为游戏关卡选择界面的六个关卡按钮 其中每个按钮的内容除了按键监听不同外 事件都相同 还有待完善，应跳转到第一关 Author
- * : 杨勇 Date : 2012/03/08
+ * Description: the class has six button in the select screen. every button will
+ * turn to the right levels. Author: Yang Yong Date : 2012/03/08
  *******************************/
 public class ChoiceButton {
 
@@ -66,7 +65,7 @@ public class ChoiceButton {
 			super(region[0]);
 			this.x = (float) (Gdx.graphics.getWidth() / 4 - region[0]
 					.getRegionWidth() / 2);
-			this.y = (float) (2*Gdx.graphics.getHeight() / 3 - region[0]
+			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
 			this.rotation = 45;
 			this.region = region;
@@ -90,8 +89,9 @@ public class ChoiceButton {
 		@Override
 		public boolean touchDown(float x, float y, int point) {
 			if (!lock) {
-				// 进入游戏第一关
-				game.setScreen(GameScreen.getInstance(game, GameLevel.createInstance(1, 2)));
+				// turn to level one!
+				game.setScreen(GameScreen.getInstance(game,
+						GameLevel.createInstance(2, 4)));
 			}
 			return false;
 
@@ -108,7 +108,7 @@ public class ChoiceButton {
 			super(region[0]);
 			this.x = (float) (Gdx.graphics.getWidth() / 2 - region[0]
 					.getRegionWidth() / 2);
-			this.y = (float) (2*Gdx.graphics.getHeight() / 3 - region[0]
+			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
 			this.rotation = 45;
 			this.region = region;
@@ -132,7 +132,8 @@ public class ChoiceButton {
 		@Override
 		public boolean touchDown(float x, float y, int point) {
 			if (!lock) {
-				game.setScreen(new AboutScreen(game));// ////////////
+				game.setScreen(GameScreen.getInstance(game,
+						GameLevel.createInstance(1, 2)));
 			}
 
 			return false;
@@ -148,9 +149,9 @@ public class ChoiceButton {
 		private Choice_3Actor(TextureRegion[] region) {
 
 			super(region[0]);
-			this.x = (float) (3*Gdx.graphics.getWidth() / 4 - region[0]
+			this.x = (float) (3 * Gdx.graphics.getWidth() / 4 - region[0]
 					.getRegionWidth() / 2);
-			this.y = (float) (2*Gdx.graphics.getHeight() / 3 - region[0]
+			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
 			this.rotation = 45;
 			this.region = region;
@@ -174,7 +175,8 @@ public class ChoiceButton {
 		@Override
 		public boolean touchDown(float x, float y, int point) {
 			if (!lock) {
-				game.setScreen(new AboutScreen(game));// ////////////
+				game.setScreen(GameScreen.getInstance(game,
+						GameLevel.createInstance(1, 3)));
 			}
 
 			return false;
@@ -216,7 +218,8 @@ public class ChoiceButton {
 		@Override
 		public boolean touchDown(float x, float y, int point) {
 			if (!lock) {
-				game.setScreen(new AboutScreen(game));// ////////////
+				game.setScreen(GameScreen.getInstance(game,
+						GameLevel.createInstance(1, 4)));
 			}
 
 			return false;
@@ -258,7 +261,8 @@ public class ChoiceButton {
 		@Override
 		public boolean touchDown(float x, float y, int point) {
 			if (!lock) {
-				game.setScreen(new AboutScreen(game));// ////////////
+				game.setScreen(GameScreen.getInstance(game,
+						GameLevel.createInstance(1, 5)));
 			}
 			return false;
 
@@ -273,7 +277,7 @@ public class ChoiceButton {
 		private Choice_6Actor(TextureRegion[] region) {
 
 			super(region[0]);
-			this.x = (float) (3*Gdx.graphics.getWidth() / 4 - region[0]
+			this.x = (float) (3 * Gdx.graphics.getWidth() / 4 - region[0]
 					.getRegionWidth() / 2);
 			this.y = (float) (Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
@@ -299,7 +303,8 @@ public class ChoiceButton {
 		@Override
 		public boolean touchDown(float x, float y, int point) {
 			if (!lock) {
-				game.setScreen(new AboutScreen(game));// ////////////
+				game.setScreen(GameScreen.getInstance(game,
+						GameLevel.createInstance(1, 6)));
 			}
 
 			return false;

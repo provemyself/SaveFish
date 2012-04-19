@@ -4,10 +4,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 /********************************
- * Description: 该类对项目中的常量进行 
- * *************分类管理
- *  Author : 王志伟 
- *  Date : 2012/03/08
+ * Description: 该类对项目中的常量进行 *************分类管理 Author : 王志伟 Date : 2012/03/08
  *******************************/
 
 public final class Constant {
@@ -158,6 +155,7 @@ public final class Constant {
 		// pack
 		public static final String ACTORS_PACK = "actors";
 		public static final String SPRITES_PACT = "sprites";
+		public static final String GRASSES_PACK = "grasses";
 	}
 
 	public static final class asset {

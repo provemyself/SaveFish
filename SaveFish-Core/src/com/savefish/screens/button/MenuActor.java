@@ -1,9 +1,10 @@
 package com.savefish.screens.button;
 
 /********************************
- * Description: 该类为返回按钮，
- *              点击后返回到主界面
- * Author     : 杨勇
+ * Description: the game will turn
+ * to the menu screen when we click
+ * the menu button
+ * Author     : Yang Yong
  * Date       : 2012/03/08
  *******************************/
 import com.badlogic.gdx.Game;

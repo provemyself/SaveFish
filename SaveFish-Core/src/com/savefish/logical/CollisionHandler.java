@@ -15,9 +15,12 @@ import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.savefish.render.Direction;
 import com.savefish.render.FishChecker;
+import com.savefish.render.RubbishChecker;
+import com.savefish.render.StoneChecker;
 import com.savefish.service.EatSound;
 import com.savefish.service.ParticleManager;
 import com.savefish.task.DestroyBodyTask;
+import com.savefish.task.FilterBodyTask;
 import com.savefish.task.MoveBodyTask;
 import com.savefish.task.TaskContainer;
 
@@ -33,24 +36,31 @@ public class CollisionHandler extends CollisionAdapter {
 	 */
 	public static CollisionHandler createCollisionHandler(
 			TaskContainer<DestroyBodyTask> destroyTasks,
-			TaskContainer<MoveBodyTask> moveTasks) {
-		return new CollisionHandler(destroyTasks, moveTasks);
+			TaskContainer<MoveBodyTask> moveTasks,
+			TaskContainer<FilterBodyTask> filterTasks) {
+		return new CollisionHandler(destroyTasks, moveTasks, filterTasks);
 	}
 
 	private TaskContainer<DestroyBodyTask> destroyTasks = null;
 	private TaskContainer<MoveBodyTask> moveTasks = null;
+	private TaskContainer<FilterBodyTask> filterTasks = null;
 
 	private Set<Body> killedRubbishes = null;
 	@SuppressWarnings("unused")
 	private Set<Body> movedNatureFish = null;
 
+	private Set<Body> filteredRubbish = null;
+
 	private CollisionHandler(TaskContainer<DestroyBodyTask> destroyTasks,
-			TaskContainer<MoveBodyTask> moveTasks) {
+			TaskContainer<MoveBodyTask> moveTasks,
+			TaskContainer<FilterBodyTask> filterTasks) {
 		super();
 		this.destroyTasks = destroyTasks;
 		this.moveTasks = moveTasks;
+		this.filterTasks = filterTasks;
 		this.killedRubbishes = new HashSet<Body>();
 		this.movedNatureFish = new HashSet<Body>();
+		this.filteredRubbish = new HashSet<Body>();
 	}
 
 	@Override
@@ -76,34 +86,51 @@ public class CollisionHandler extends CollisionAdapter {
 				if ((null != bodyAName) && (null != bodyBName)) {
 					this.destroyRubbish(bodyA, bodyAName, bodyB, bodyBName);
 					this.moveNatureFish(bodyA, bodyAName, bodyB, bodyBName);
+					this.filterRubbish(bodyA, bodyAName, bodyB, bodyBName);
 				}
 			}
 		}
 	}
 
-	// 人工鱼吃掉垃圾
+	/**
+	 * @description 人工鱼吃掉垃圾
+	 * @param bodyA
+	 * @param bodyAName
+	 * @param bodyB
+	 * @param bodyBName
+	 */
 	private void destroyRubbish(Body bodyA, String bodyAName, Body bodyB,
 			String bodyBName) {
 		if (FishChecker.isArtificial(bodyAName)
 				&& !BoundaryChecker.isScreenBoundary(bodyBName)
+				&& !StoneChecker.isStone(bodyBName)
 				&& !killedRubbishes.contains(bodyB)) {
 			EatSound.getInstance().play();
 			ParticleManager.getInstance().start();
 			ParticleManager.getInstance().setPosition(bodyB);
 			addDestroyTask(new DestroyBodyTask(bodyB));
+			System.out.println(bodyBName);
 			killedRubbishes.add(bodyB);
 		} else if (FishChecker.isArtificial(bodyBName)
 				&& !BoundaryChecker.isScreenBoundary(bodyAName)
+				&& !StoneChecker.isStone(bodyAName)
 				&& !killedRubbishes.contains(bodyA)) {
 			EatSound.getInstance().play();
 			ParticleManager.getInstance().start();
 			ParticleManager.getInstance().setPosition(bodyA);
 			addDestroyTask(new DestroyBodyTask(bodyA));
+			System.out.println(bodyAName);
 			killedRubbishes.add(bodyA);
 		}
 	}
 
-	// 循环随机对天然鱼施加力
+	/**
+	 * @description 循环随机对天然鱼施加力
+	 * @param bodyA
+	 * @param bodyAName
+	 * @param bodyB
+	 * @param bodyBName
+	 */
 	private void moveNatureFish(Body bodyA, String bodyAName, Body bodyB,
 			String bodyBName) {
 		if (BoundaryChecker.isWorldRight(bodyAName)
@@ -112,6 +139,28 @@ public class CollisionHandler extends CollisionAdapter {
 		} else if (BoundaryChecker.isWorldLeft(bodyAName)
 				&& FishChecker.isNatureLeft(bodyBName)) {
 			addMoveTask(new MoveBodyTask(bodyB, Direction.MOVE_RIGHT));
+		}
+	}
+
+	/**
+	 * @description 过滤掉碰到地面的垃圾
+	 * @param bodyA
+	 * @param bodyAName
+	 * @param bodyB
+	 * @param bodyBName
+	 */
+	private void filterRubbish(Body bodyA, String bodyAName, Body bodyB,
+			String bodyBName) {
+		if (BoundaryChecker.isBottom(bodyAName)
+				&& RubbishChecker.isRubbish(bodyBName)
+				&& !filteredRubbish.contains(bodyB)) {
+			this.addFilterTask(new FilterBodyTask(bodyB));
+			filteredRubbish.add(bodyB);
+		} else if (BoundaryChecker.isBottom(bodyBName)
+				&& RubbishChecker.isRubbish(bodyAName)
+				&& !filteredRubbish.contains(bodyA)) {
+			this.addFilterTask(new FilterBodyTask(bodyA));
+			filteredRubbish.add(bodyA);
 		}
 	}
 
@@ -129,5 +178,14 @@ public class CollisionHandler extends CollisionAdapter {
 	 */
 	private void addMoveTask(MoveBodyTask task) {
 		this.moveTasks.push(task);
+	}
+
+	/**
+	 * @description 添加过滤Body的任务
+	 * 
+	 * @param task
+	 */
+	private void addFilterTask(FilterBodyTask task) {
+		this.filterTasks.push(task);
 	}
 }

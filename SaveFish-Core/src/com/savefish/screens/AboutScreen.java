@@ -1,8 +1,9 @@
 package com.savefish.screens;
 
 /********************************
- * Description: 该类为关于界面，介绍游戏的内容
- * Author     : 杨勇
+ * Description: this class is about 
+ * screen which introduce the game
+ * Author     : Yang Yong
  * Date       : 2012/03/08
  *******************************/
 import com.badlogic.gdx.Game;
@@ -14,19 +15,20 @@ import com.savefish.constant.Constant;
 import com.savefish.screens.button.MenuActor;
 
 public class AboutScreen implements Screen {
-	
-	private Stage     stage = null;
+
+	private Stage stage = null;
 	private MenuActor menuActor = null;
-	private Image     bgImage = null;
+	private Image bgImage = null;
 
 	public AboutScreen(Game game) {
-		
-		bgImage        = new Image(Constant.asset.bgMainTexture);
+
+		bgImage = new Image(Constant.asset.bgMainTexture);
 		bgImage.height = Gdx.graphics.getHeight();
-		bgImage.width  = Gdx.graphics.getWidth();
-		stage          = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),true);
-		menuActor      = new MenuActor(game, Constant.asset.quitActorTexture);
-		
+		bgImage.width = Gdx.graphics.getWidth();
+		stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),
+				true);
+		menuActor = new MenuActor(game, Constant.asset.quitActorTexture);
+
 		stage.addActor(bgImage);
 		stage.addActor(menuActor);
 	}
@@ -40,33 +42,32 @@ public class AboutScreen implements Screen {
 
 	@Override
 	public void resize(int width, int height) {
-		
+
 	}
 
 	@Override
 	public void show() {
-		
+
 	}
 
 	@Override
 	public void hide() {
-		
+
 	}
 
 	@Override
 	public void pause() {
-		
+
 	}
 
 	@Override
 	public void resume() {
-		
+
 	}
 
 	@Override
 	public void dispose() {
-		
-	}
 
+	}
 
 }

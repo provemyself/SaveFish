@@ -1,5 +1,12 @@
 package com.savefish.screens.button;
-
+/********************************
+ * Description: Start button.
+ * when we click it and the 
+ * screen will change to the
+ * start screen
+ * Author     : Yang Yong
+ * Date       : 2012/03/08
+ *******************************/
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

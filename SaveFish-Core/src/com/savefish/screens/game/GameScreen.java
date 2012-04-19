@@ -9,20 +9,16 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
 import com.savefish.pointsystem.CurrentLevel;
 import com.savefish.pointsystem.GameLevel;
-import com.savefish.pointsystem.GameScore;
+import com.savefish.pointsystem.GameScoreRecord;
 import com.savefish.pointsystem.ScoreRecord;
-import com.savefish.service.BackgroundMusic;
 import com.savefish.service.MusicManager;
 import com.savefish.util.GreenLogger;
-import com.savefish.util.TimingManager;
 
 public class GameScreen implements Screen {
 
 	private static GameScreen gameScreen = null;
 
 	public static GameScreen getInstance(Game game, GameLevel defaultLevel) {
-		MusicManager.disableMusic();
-		BackgroundMusic.getInstance().play();
 		if (null == gameScreen) {
 			try {
 				gameScreen = new GameScreen(game, defaultLevel);
@@ -42,11 +38,13 @@ public class GameScreen implements Screen {
 			return null;
 	}
 
+	private GameLevel defaultLevel = null;
+
 	private GameScreen(Game game, GameLevel defaultLevel) throws Exception {
 		GreenLogger.getInstance().logp(Level.WARNING,
 				GameScreen.class.getName(), "GameScreen", "called!");
 		this.game = game;
-		this.switchToGameLevel(defaultLevel);
+		this.defaultLevel = defaultLevel.clone();
 	}
 
 	@Override
@@ -61,8 +59,6 @@ public class GameScreen implements Screen {
 
 		Gdx.input.setInputProcessor(new InputMultiplexer(backGroundStage,
 				middleStage, foreGroundStage, gameControlStage));
-
-		TimingManager.getInstance(game).start();
 	}
 
 	@Override
@@ -71,13 +67,14 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void show() {
-		this.initGame(game);
+		MusicManager.enableMusic();
 		this.initStages();
+		this.switchToGameLevel(defaultLevel);
 	}
 
 	@Override
 	public void hide() {
-
+		MusicManager.disableMusic();
 	}
 
 	@Override
@@ -94,6 +91,17 @@ public class GameScreen implements Screen {
 		middleStage.dispose();
 		gameControlStage.dispose();
 		foreGroundStage.dispose();
+		gameScreen = null;
+		game = null;
+	}
+
+	/**
+	 * @description This is a special dispose, as it is just designed for
+	 *              MiddleStage
+	 */
+	public void disposeMiddleStage() {
+		if (null != middleStage)
+			middleStage.dispose();
 	}
 
 	@Override
@@ -102,10 +110,6 @@ public class GameScreen implements Screen {
 	}
 
 	private Game game;
-
-	private void initGame(Game game) {
-		this.game = game;
-	}
 
 	private GameBackgroundStage backGroundStage;
 	private GameMiddleStage middleStage;
@@ -123,9 +127,14 @@ public class GameScreen implements Screen {
 				+ level.getSmall() + ")");
 		if (null != middleStage)
 			middleStage.dispose();
-		middleStage = GameMiddleStage.createInstance(level, game);
-		CurrentLevel.level = level;
-		GameScore.currentLevelScore = new ScoreRecord(level);
+		try {
+			middleStage = GameMiddleStage.createInstance(level.clone(), game);
+			CurrentLevel.level = level.clone();
+			this.defaultLevel = level.clone();
+			GameScoreRecord.currentLevelScore = new ScoreRecord(level.clone());
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
 		return gameScreen;
 	}
 }

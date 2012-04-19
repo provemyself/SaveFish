@@ -27,11 +27,4 @@ public class ScoreDictionary {
 			return null;
 	}
 
-	/**
-	 * @description 获取当垃圾落到水底需要扣除的分数
-	 * @return
-	 */
-	public static Integer getDecreaseScore() {
-		return -100;
-	}
 }

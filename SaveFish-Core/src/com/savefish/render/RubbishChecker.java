@@ -41,7 +41,7 @@ public class RubbishChecker {
 	 * @return
 	 */
 	public static boolean isRubbishBag(String userData) {
-		if ((null != userData) && (userData.contains("bag")))
+		if ((null != userData) && (userData.contains("c_bag")))
 			return true;
 		else
 			return false;
@@ -53,7 +53,7 @@ public class RubbishChecker {
 	 * @return
 	 */
 	public static boolean isThermograph(String userData) {
-		if ((null != userData) && (userData.contains("thermograph")))
+		if ((null != userData) && (userData.contains("c_thermograph")))
 			return true;
 		else
 			return false;
@@ -65,7 +65,7 @@ public class RubbishChecker {
 	 * @return
 	 */
 	public static boolean isRadioactive(String userData){
-		if ((null != userData) && (userData.contains("rm")))
+		if ((null != userData) && (userData.contains("c_rm")))
 			return true;
 		else
 			return false;
@@ -77,7 +77,7 @@ public class RubbishChecker {
 	 * @return
 	 */
 	public static boolean isElectricBattery(String userData){
-		if ((null != userData) && (userData.contains("eb")))
+		if ((null != userData) && (userData.contains("c_eb")))
 			return true;
 		else
 			return false;
@@ -89,7 +89,7 @@ public class RubbishChecker {
 	 * @return
 	 */
 	public static boolean isPesticide(String userData){
-		if ((null != userData) && (userData.contains("pesticide")))
+		if ((null != userData) && (userData.contains("p_pesticide")))
 			return true;
 		else
 			return false;

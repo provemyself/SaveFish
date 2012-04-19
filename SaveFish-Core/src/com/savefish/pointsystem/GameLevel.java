@@ -54,16 +54,17 @@ public class GameLevel {
 			this.small = small % 6;
 	}
 
-	public void decreaseCount() {
-		--this.count;
-	}
-
 	public int getCount() {
 		return this.count;
 	}
 
 	private void setCount() {
-		this.count = 6 + (small - 1) * 2;
+		this.count = 6 + (small - 1) * 3;
+	}
+
+	@Override
+	public GameLevel clone() throws CloneNotSupportedException {
+		return GameLevel.createInstance(big, small);
 	}
 
 	@Override
