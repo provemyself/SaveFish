@@ -91,7 +91,7 @@ public class ChoiceButton {
 			if (!lock) {
 				// turn to level one!
 				game.setScreen(GameScreen.getInstance(game,
-						GameLevel.createInstance(2, 4)));
+						GameLevel.createInstance(1, 1)));
 			}
 			return false;
 

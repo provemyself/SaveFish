@@ -53,9 +53,10 @@ public class PolygonRubbishActor extends GameActor {
 	private Sprite sprite = null;
 
 	private void initSprite() {
+		
 		this.sprite = Assets.getInstance().getSprite(
-				Constant.rubbish.PESTICIDE_TWO);
-		this.sprite.setScale(0.4f);
+				Constant.rubbish.PESTICIDE);
+		this.sprite.setScale(0.2f);
 	}
 
 	@Override
@@ -64,12 +65,13 @@ public class PolygonRubbishActor extends GameActor {
 				.setProjectionMatrix(gameMiddleStage.getCamera().combined);
 
 		Vector3 position = new Vector3(body.getPosition().x
-				- ShapeHelper.getRectangleData(shape).x, body.getPosition().y
-				- ShapeHelper.getRectangleData(shape).y, 0);
+				- ShapeHelper.getRectangleData(shape).x / 2.0f, body.getPosition().y
+				- ShapeHelper.getRectangleData(shape).y / 2.0f, 0);
+		
 		this.spriteBatch.begin();
 		this.sprite.rotate(body.getAngle());
-		this.sprite.setPosition(position.x * Constant.physics.RATE - 84,
-				position.y * Constant.physics.RATE - 100);
+		this.sprite.setPosition(position.x * Constant.physics.RATE,
+				position.y * Constant.physics.RATE - 200);
 		this.sprite.draw(spriteBatch);
 		this.spriteBatch.end();
 	}

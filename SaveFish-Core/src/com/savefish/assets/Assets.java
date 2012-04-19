@@ -64,6 +64,7 @@ public class Assets {
 		this.initNatureLeftList();
 		this.initNatureRightList();
 		this.initAritificialList();
+		this.initGrassList();
 	}
 
 	private TextureAtlas getActorAtlas() {
@@ -236,6 +237,10 @@ public class Assets {
 		return this.artificialList;
 	}
 
+	public ArrayList<TextureRegion> getGrass() {
+		return this.grassList;
+	}
+
 	private ArrayList<TextureRegion> artificialList = null;
 
 	private void initAritificialList() {
@@ -293,5 +298,15 @@ public class Assets {
 		list.add(this.getSpriteRigion(frameOne));
 		list.add(this.getSpriteRigion(frameTwo));
 		return list;
+	}
+
+	private ArrayList<TextureRegion> grassList = null;
+
+	private void initGrassList() {
+		this.grassList = new ArrayList<TextureRegion>();
+		this.grassList.add(this.getSpriteRigion(Constant.grass.GRASS_A));
+		this.grassList.add(this.getSpriteRigion(Constant.grass.GRASS_B));
+		this.grassList.add(this.getSpriteRigion(Constant.grass.GRASS_A));
+		this.grassList.add(this.getSpriteRigion(Constant.grass.GRASS_B));
 	}
 }

@@ -77,8 +77,8 @@ public class ScoreAnalysis {
 					.setCrossCleanIndex(-ScoreDictionary
 							.getIncreaseScore(Constant.rubbish.THERMOGRAPH));
 		}
-		if (1 == CurrentLevel.level.getBig())
-			checkPassFromIndex(game, body);
+//		if (1 == CurrentLevel.level.getBig())
+//			checkPassFromIndex(game, body);
 	}
 
 	private static void checkPassFromIndex(Game game, Body body) {

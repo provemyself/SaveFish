@@ -52,9 +52,20 @@ public class CircleRubbishActor extends GameActor {
 	private Sprite sprite = null;
 
 	private void initSprite() {
-		this.sprite = Assets.getInstance().getSprite(
-				Constant.rubbish.PESTICIDE_ONE);
-		this.sprite.setScale(0.4f);
+		String bodyName = (String) body.getUserData();
+		if (RubbishChecker.isRubbishBag(bodyName))
+			this.sprite = Assets.getInstance().getSprite(
+					Constant.rubbish.ELECTRIC_BATTERY);
+		else if (RubbishChecker.isThermograph(bodyName))
+			this.sprite = Assets.getInstance().getSprite(
+					Constant.rubbish.THERMOGRAPH);
+		else if (RubbishChecker.isElectricBattery(bodyName))
+			this.sprite = Assets.getInstance().getSprite(
+					Constant.rubbish.ELECTRIC_BATTERY);
+		else
+			this.sprite = Assets.getInstance().getSprite(
+					Constant.rubbish.RADIOACTIVE_MATERIAL);
+		this.sprite.setScale(0.2f);
 	}
 
 	@Override
@@ -66,10 +77,11 @@ public class CircleRubbishActor extends GameActor {
 				.setProjectionMatrix(gameMiddleStage.getCamera().combined);
 		Vector3 position = new Vector3(body.getPosition().x - radius,
 				body.getPosition().y - radius, 0);
+		
 		this.spriteBatch.begin();
 		this.sprite.rotate(body.getAngle());
-		this.sprite.setPosition(position.x * Constant.physics.RATE - 84,
-				position.y * Constant.physics.RATE - 100);
+		this.sprite.setPosition(position.x * Constant.physics.RATE - 105,
+				position.y * Constant.physics.RATE - 120);
 		this.sprite.draw(spriteBatch);
 		this.spriteBatch.end();
 	}

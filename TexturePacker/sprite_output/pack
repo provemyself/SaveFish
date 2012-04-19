@@ -1,0 +1,89 @@
+
+input5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pesticide
+  rotate: false
+  xy: 2, 2
+  size: 360, 470
+  orig: 360, 470
+  offset: 0, 0
+  index: -1
+eb
+  rotate: false
+  xy: 2, 474
+  size: 228, 300
+  orig: 228, 300
+  offset: 0, 0
+  index: -1
+rm
+  rotate: false
+  xy: 364, 2
+  size: 254, 259
+  orig: 254, 259
+  offset: 0, 0
+  index: -1
+stoneeleven
+  rotate: false
+  xy: 2, 776
+  size: 254, 199
+  orig: 254, 199
+  offset: 0, 0
+  index: -1
+stoneseven
+  rotate: false
+  xy: 620, 2
+  size: 255, 198
+  orig: 255, 198
+  offset: 0, 0
+  index: -1
+stoneeight
+  rotate: false
+  xy: 364, 263
+  size: 267, 189
+  orig: 267, 189
+  offset: 0, 0
+  index: -1
+stonefour
+  rotate: false
+  xy: 364, 454
+  size: 226, 223
+  orig: 226, 223
+  offset: 0, 0
+  index: -1
+stonesix
+  rotate: false
+  xy: 592, 454
+  size: 241, 209
+  orig: 241, 209
+  offset: 0, 0
+  index: -1
+stonetwo
+  rotate: false
+  xy: 592, 665
+  size: 259, 194
+  orig: 259, 194
+  offset: 0, 0
+  index: -1
+stonenine
+  rotate: false
+  xy: 633, 263
+  size: 197, 132
+  orig: 197, 132
+  offset: 0, 0
+  index: -1
+stonefive
+  rotate: false
+  xy: 877, 2
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+thermograph
+  rotate: false
+  xy: 232, 474
+  size: 42, 197
+  orig: 42, 197
+  offset: 0, 0
+  index: -1

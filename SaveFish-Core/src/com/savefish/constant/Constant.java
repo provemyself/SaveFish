@@ -106,6 +106,16 @@ public final class Constant {
 		public static final String ELECTRIC_BATTERY = "eb";// 电池
 	}
 
+	public static final class stone {
+		public static final String STONE_EIGHT = "stoneeight";
+		public static final String STONE_SEVEN = "stoneseven";
+		public static final String STONE_SIX = "stonesix";
+		public static final String STONE_FIVE = "stonefive";
+		public static final String STONE_FOUR = "stonefour";
+		public static final String STONE_ELEVEN = "stoneeleven";
+		public static final String STONE_NINE = "stonenine";
+	}
+
 	public static final class map {
 		// 地图:第一大关
 		public static final String PREVENT_FIRST = "map_prevent_first.json";
@@ -155,7 +165,17 @@ public final class Constant {
 		// pack
 		public static final String ACTORS_PACK = "actors";
 		public static final String SPRITES_PACT = "sprites";
-		public static final String GRASSES_PACK = "grasses";
+		public static final String STONES_PACK = "stones";
+	}
+
+	public static final class grass {
+		public static final String GRASS_A = "grassa";
+		public static final String GRASS_B = "grassb";
+		public static final String GRASS_C = "grassc";
+		public static final String GRASS_D = "grassd";
+
+		public static final String GRASS_ONE = "grassone";
+		public static final String GRASS_TWO = "grasstwo";
 	}
 
 	public static final class asset {

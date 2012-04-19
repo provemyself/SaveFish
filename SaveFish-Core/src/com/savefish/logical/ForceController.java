@@ -29,7 +29,7 @@ public class ForceController {
 			String bodyName = (String) body.getUserData();
 			if (RubbishChecker.isRubbish(bodyName)) {
 				Vector2 force = world.getGravity();
-				body.applyForceToCenter(force.mul(body.getMass()));
+				body.applyForceToCenter(force.mul(body.getMass() / 9.0f));
 			}
 		}
 	}
