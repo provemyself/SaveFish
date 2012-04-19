@@ -1,13 +1,16 @@
-package com.savefish.rule;
+package com.savefish.pointsystem;
 
 /********************************
- * Description: 该类用于保存过关分数 Author : 王志伟 Date : 2012/04/01
+ * Description: 该类用于保存过关分数
+ * Author : 王志伟
+ * Date : 2012/04/01
  *******************************/
 
 public abstract class ScoreRecord {
 	private String dateTime = null;// 过关日期
 	private int crossScore;// 过关分数
 	private int crossCleanIndex;// 过关时河水清澈指数
+	private GameLevel gameLevel;// 所属关卡
 
 	/**
 	 * 
@@ -15,10 +18,12 @@ public abstract class ScoreRecord {
 	 * @param crossScore
 	 * @param crossWaterIndex
 	 */
-	public ScoreRecord(String dateTime, int crossScore, int crossWaterIndex) {
+	public ScoreRecord(String dateTime, int crossScore, int crossWaterIndex,
+			GameLevel gameLevel) {
 		this.dateTime = dateTime;
 		this.crossScore = crossScore;
 		this.crossCleanIndex = crossWaterIndex;
+		this.gameLevel = gameLevel;
 	}
 
 	/**
@@ -43,5 +48,13 @@ public abstract class ScoreRecord {
 	 */
 	public int getCrossCleanIndex() {
 		return this.crossCleanIndex;
+	}
+
+	/**
+	 * @description 返回当前游戏所属关卡
+	 * @return
+	 */
+	public GameLevel getGameLevel() {
+		return this.gameLevel;
 	}
 }

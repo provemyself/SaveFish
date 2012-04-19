@@ -1,4 +1,4 @@
-package com.savefish.rule;
+package com.savefish.pointsystem;
 
 /********************************
  * Description: 该类是治理关卡分数记录 
@@ -11,8 +11,8 @@ public class ClearScoreRecord extends ScoreRecord {
 	private int duration;
 
 	public ClearScoreRecord(String dateTime, int crossScore,
-			int crossWaterIndex, int duration) {
-		super(dateTime, crossScore, crossWaterIndex);
+			int crossWaterIndex, int duration, GameLevel gameLevel) {
+		super(dateTime, crossScore, crossWaterIndex, gameLevel);
 		this.duration = duration;
 	}
 

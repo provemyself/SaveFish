@@ -1,4 +1,4 @@
-package com.savefish.rule;
+package com.savefish.pointsystem;
 
 public class CurrentLevel {
 	public static GameLevel level = GameLevel.createInstance();

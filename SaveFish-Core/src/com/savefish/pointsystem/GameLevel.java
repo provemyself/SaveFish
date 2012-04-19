@@ -1,4 +1,4 @@
-package com.savefish.rule;
+package com.savefish.pointsystem;
 
 import java.util.logging.Level;
 
@@ -48,11 +48,6 @@ public class GameLevel {
 	}
 
 	private void setSmall(int small) {
-		if (((small - 1) / 6) % 2 == 0)
-			this.big = 1;
-		else
-			this.big = 2;
-
 		if (small % 6 == 0)
 			this.small = 6;
 		else

@@ -15,8 +15,8 @@ import com.savefish.constant.Constant;
 import com.savefish.event.BodyKilledListener;
 import com.savefish.event.GreenEvent;
 import com.savefish.logical.WorldManager;
+import com.savefish.pointsystem.GameLevel;
 import com.savefish.render.GameActorFactory;
-import com.savefish.rule.GameLevel;
 
 public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 
@@ -75,8 +75,6 @@ public class GameMiddleStage extends Stage implements BodyKilledListener<Body> {
 
 		Iterator<Body> iter = this.worldManager.getWorld().getBodies();
 		while (iter.hasNext()) {
-			if(null == iter)
-				return;
 			Body body = iter.next();
 			Actor actor = GameActorFactory.createGameActor(this, body);
 			if (null != actor) {

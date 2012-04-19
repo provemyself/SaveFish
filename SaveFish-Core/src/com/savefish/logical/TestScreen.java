@@ -9,8 +9,8 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.assets.Assets;
 import com.savefish.constant.Constant;
-import com.savefish.rule.CurrentLevel;
-import com.savefish.rule.GameLevel;
+import com.savefish.pointsystem.CurrentLevel;
+import com.savefish.pointsystem.GameLevel;
 import com.savefish.screens.game.GameScreen;
 import com.savefish.service.LoadedScreen;
 
@@ -112,9 +112,10 @@ public class TestScreen implements Screen {
 
 		@Override
 		public boolean touchDown(float x, float y, int pointer) {
+			int big = CurrentLevel.level.getBig();
 			int small = CurrentLevel.level.getSmall();
 			game.setScreen(GameScreen.getInstance().switchToGameLevel(
-					GameLevel.createInstance(1, small + 1)));
+					GameLevel.createInstance(big, ++small)));
 			return super.touchDown(x, y, pointer);
 		}
 	}

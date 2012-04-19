@@ -1,4 +1,4 @@
-package com.savefish.rule;
+package com.savefish.pointsystem;
 
 import java.util.HashMap;
 

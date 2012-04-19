@@ -1,4 +1,4 @@
-package com.savefish.rule;
+package com.savefish.pointsystem;
 
 /********************************
  * Description: 该类是河水清澈指数字典 

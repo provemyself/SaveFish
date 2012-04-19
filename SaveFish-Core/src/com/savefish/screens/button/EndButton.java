@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.savefish.rule.GameLevel;
+import com.savefish.pointsystem.GameLevel;
 import com.savefish.screens.game.GameScreen;
 
 public class EndButton {
