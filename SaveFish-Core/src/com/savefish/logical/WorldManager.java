@@ -3,7 +3,6 @@ package com.savefish.logical;
 import java.util.Iterator;
 import java.util.logging.Level;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
@@ -15,8 +14,8 @@ import com.savefish.event.GreenEvent;
 import com.savefish.physics.resolve.GreenWorldFactory;
 import com.savefish.pointsystem.GameLevel;
 import com.savefish.pointsystem.MapDictionary;
+import com.savefish.pointsystem.ScoreAnalysis;
 import com.savefish.render.FishChecker;
-import com.savefish.render.RubbishChecker;
 import com.savefish.screens.game.GameMiddleStage;
 import com.savefish.service.SlideSound;
 import com.savefish.task.DestroyBodyTask;
@@ -75,10 +74,7 @@ public class WorldManager extends InputAdapter {
 			DestroyBodyTask destroyTask = destroyTasks.pop();
 			Body body = destroyTask.getBody();
 			listener.onKillActor(new GreenEvent<Body>(body));
-			if (RubbishChecker.isPolygonRubbish((String) body.getUserData())) {
-				Game game = this.gameMiddleStage.getGame();
-				game.setScreen(TestScreen.getInstance(game));
-			}
+			ScoreAnalysis.destroyCount(gameMiddleStage.getGame(), body);
 			destroyTask.onDestroy(world);
 		}
 	}

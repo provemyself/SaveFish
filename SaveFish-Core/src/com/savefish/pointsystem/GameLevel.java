@@ -54,12 +54,16 @@ public class GameLevel {
 			this.small = small % 6;
 	}
 
+	public void decreaseCount() {
+		--this.count;
+	}
+
 	public int getCount() {
 		return this.count;
 	}
 
 	private void setCount() {
-		this.count = 600 + (small - 1) * 200;
+		this.count = 6 + (small - 1) * 2;
 	}
 
 	@Override

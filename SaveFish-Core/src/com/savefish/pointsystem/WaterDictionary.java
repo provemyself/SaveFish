@@ -9,39 +9,49 @@ package com.savefish.pointsystem;
 import java.util.HashMap;
 
 public class WaterDictionary {
-	private static HashMap<Integer, WaterCleanIndex> PreventWater = new HashMap<Integer, WaterCleanIndex>();
+	private static HashMap<GameLevel, WaterCleanIndex> waterMap = new HashMap<GameLevel, WaterCleanIndex>();
 
 	static {
-		PreventWater.put(1, new WaterCleanIndex(1));
-		PreventWater.put(2, new WaterCleanIndex(2));
-		PreventWater.put(3, new WaterCleanIndex(3));
-		PreventWater.put(4, new WaterCleanIndex(4));
-		PreventWater.put(5, new WaterCleanIndex(5));
-		PreventWater.put(6, new WaterCleanIndex(6));
+		waterMap.put(GameLevel.createInstance(1, 1),
+				WaterCleanIndex.createInstance(1200, 800));
+		waterMap.put(GameLevel.createInstance(1, 2),
+				WaterCleanIndex.createInstance(2100, 1500));
+		waterMap.put(GameLevel.createInstance(1, 3),
+				WaterCleanIndex.createInstance(3300, 2200));
+		waterMap.put(GameLevel.createInstance(1, 4),
+				WaterCleanIndex.createInstance(4500, 3000));
+		waterMap.put(GameLevel.createInstance(1, 5),
+				WaterCleanIndex.createInstance(5700, 3800));
+		waterMap.put(GameLevel.createInstance(1, 6),
+				WaterCleanIndex.createInstance(6000, 4000));
 	}
 
-	public static WaterCleanIndex getWaterIndex(Integer level) {
-		return PreventWater.get(level);
+	public static int getInitialWaterIndex(GameLevel level) {
+		return waterMap.get(level).getInitialIndex();
+	}
+
+	public static int getBoundaryIndex(GameLevel level) {
+		return waterMap.get(level).getBoundaryIndex();
 	}
 
 	private static class WaterCleanIndex {
 		private int initialIndex;
 		private int boundaryIndex;
 
-		/**
-		 * @description 根据关卡确定河水的初始清澈指数
-		 * @param level
-		 */
-		public WaterCleanIndex(int level) {
-			this.initialIndex = 600 + (level - 1) * 300;
-			this.boundaryIndex = 400 + (level - 1) * 200;
+		public static WaterCleanIndex createInstance(int initialIndex,
+				int boundaryIndex) {
+			return new WaterCleanIndex(initialIndex, boundaryIndex);
+		}
+
+		private WaterCleanIndex(int initialIndex, int boundaryIndex) {
+			this.initialIndex = initialIndex;
+			this.boundaryIndex = boundaryIndex;
 		}
 
 		/**
 		 * @description 获取初始清澈指数
 		 * @return
 		 */
-		@SuppressWarnings("unused")
 		public int getInitialIndex() {
 			return this.initialIndex;
 		}
@@ -50,7 +60,6 @@ public class WaterDictionary {
 		 * @description 获取边界清澈指数
 		 * @return
 		 */
-		@SuppressWarnings("unused")
 		public int getBoundaryIndex() {
 			return this.boundaryIndex;
 		}

@@ -15,6 +15,7 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.World;
 import com.savefish.render.RubbishChecker;
 import com.savefish.util.GreenLogger;
+import com.savefish.util.RandomHelper;
 
 public class ForceController {
 
@@ -29,7 +30,11 @@ public class ForceController {
 			String bodyName = (String) body.getUserData();
 			if (RubbishChecker.isRubbish(bodyName)) {
 				Vector2 force = world.getGravity();
-				body.applyForceToCenter(force.mul(body.getMass() / 9.0f));
+				force.x *= -RandomHelper.getInstance().nextInt(
+						(int) (body.getMass() / 9.0f));
+				force.y *= RandomHelper.getInstance().nextInt(
+						(int) (body.getMass() / 9.0f));
+				body.applyForceToCenter(force);
 			}
 		}
 	}

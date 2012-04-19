@@ -9,6 +9,8 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL10;
 import com.savefish.pointsystem.CurrentLevel;
 import com.savefish.pointsystem.GameLevel;
+import com.savefish.pointsystem.GameScore;
+import com.savefish.pointsystem.ScoreRecord;
 import com.savefish.service.BackgroundMusic;
 import com.savefish.service.MusicManager;
 import com.savefish.util.GreenLogger;
@@ -123,6 +125,7 @@ public class GameScreen implements Screen {
 			middleStage.dispose();
 		middleStage = GameMiddleStage.createInstance(level, game);
 		CurrentLevel.level = level;
+		GameScore.currentLevelScore = new ScoreRecord(level);
 		return gameScreen;
 	}
 }
