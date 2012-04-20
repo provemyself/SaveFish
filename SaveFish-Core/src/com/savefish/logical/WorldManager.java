@@ -137,7 +137,7 @@ public class WorldManager extends InputAdapter {
 
 	private void initWorld(GameLevel level) throws Exception {
 		world = GreenWorldFactory.creatWorld(Constant.basepath.MAPS_BASE_PATH
-				+ MapDictionary.getMap(level));
+				+ MapDictionary.createInstance().getMap(level));
 		world.setContactListener(CollisionHandler.createCollisionHandler(
 				destroyTasks, moveTasks, filterTasks));
 	}
@@ -176,7 +176,7 @@ public class WorldManager extends InputAdapter {
 				body.applyLinearImpulse(result, body.getWorldCenter());
 			}
 		}
-		SlideSound.getInstance().play();
+		SlideSound.createInstance().play();
 		return super.touchUp(x, y, pointer, button);
 	}
 

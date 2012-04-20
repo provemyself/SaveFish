@@ -85,4 +85,22 @@ public class ArtificialFishActor extends GameActor {
 		this.currentSprite.draw(spriteBatch);
 		this.spriteBatch.end();
 	}
+
+	@Override
+	public boolean touchDown(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void touchUp(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void touchDragged(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		
+	}
 }

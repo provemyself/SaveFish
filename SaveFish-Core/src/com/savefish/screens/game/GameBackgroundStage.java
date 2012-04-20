@@ -10,13 +10,8 @@ import com.savefish.constant.Constant;
 import com.savefish.util.GreenLogger;
 
 public class GameBackgroundStage extends Stage {
-
-	private static GameBackgroundStage backgroundStage = null;
-
 	public static GameBackgroundStage getInstance() {
-		if (null == backgroundStage)
-			backgroundStage = new GameBackgroundStage();
-		return backgroundStage;
+		return new GameBackgroundStage();
 	}
 
 	private GameBackgroundStage() {

@@ -3,14 +3,11 @@ package com.savefish.util;
 import java.util.Random;
 
 public class RandomHelper {
-	private static RandomHelper randomHelper = null;
 
 	private Random random = null;
 
-	public static RandomHelper getInstance() {
-		if (null == randomHelper)
-			randomHelper = new RandomHelper();
-		return randomHelper;
+	public static RandomHelper createInstance() {
+		return new RandomHelper();
 	}
 
 	private RandomHelper() {

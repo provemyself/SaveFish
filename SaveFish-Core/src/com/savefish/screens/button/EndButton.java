@@ -18,6 +18,7 @@ import com.savefish.pointsystem.GameLevel;
 import com.savefish.pointsystem.GameResult;
 import com.savefish.pointsystem.GameScoreRecord;
 import com.savefish.screens.game.GameScreen;
+import com.savefish.storage.HistoryScoreData;
 
 public class EndButton {
 
@@ -74,25 +75,75 @@ public class EndButton {
 		private void fontShow(SpriteBatch batch) {
 			if (!GameResult.isPassed) {
 				bitmapFont.draw(batch, "You Failed!",
-						Gdx.graphics.getWidth() / 2,
-						Gdx.graphics.getHeight() / 2);
+						0,
+						(float)(Gdx.graphics.getHeight()- bitmapFont.getScaleY()));
 			} else {
 				bitmapFont.draw(batch, "You Succeed!",
-						Gdx.graphics.getWidth() / 2,
-						Gdx.graphics.getHeight() / 2);
+						0,
+						(float)(Gdx.graphics.getHeight()- bitmapFont.getScaleY()));
 			}
+			
+			bitmapFont.draw(batch, "Date",
+					(float) (4*Gdx.graphics.getWidth() / 12),
+					(float) (6 * Gdx.graphics.getHeight() / 8));
+			bitmapFont.draw(batch, "Cross Score",
+					(float) (7 * Gdx.graphics.getWidth() / 12),
+					(float) (6 * Gdx.graphics.getHeight() / 8));
+			bitmapFont.draw(batch, "Index",
+					(float) (10 * Gdx.graphics.getWidth() / 12),
+					(float) (6 * Gdx.graphics.getHeight() / 8));
+			
+			//current information
 			String crossScore = String
 					.valueOf(GameScoreRecord.currentLevelScore.getCrossScore());
 			String cleanIndex = String
 					.valueOf(GameScoreRecord.currentLevelScore
 							.getCrossCleanIndex());
-			bitmapFont.draw(batch, "Date:  "
-					+ GameScoreRecord.currentLevelScore.getDateTime(),
-					Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() / 3);
-			bitmapFont.draw(batch, "cross score:  " + crossScore,
-					Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() / 4);
-			bitmapFont.draw(batch, "clean index:  " + cleanIndex,
-					Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() / 5);
+			bitmapFont.draw(batch, GameScoreRecord.currentLevelScore.getDateTime(),
+					(float) (4*Gdx.graphics.getWidth() / 12),
+					(float) (5 * Gdx.graphics.getHeight() / 8));
+			bitmapFont.draw(batch, crossScore,
+					(float) (7 * Gdx.graphics.getWidth() / 12),
+					(float) (5 * Gdx.graphics.getHeight() / 8));
+			bitmapFont.draw(batch, cleanIndex,
+					(float) (10 * Gdx.graphics.getWidth() / 12),
+					(float) (5 * Gdx.graphics.getHeight() / 8));
+			
+			//history information
+			String historyCrossScore;
+			String historyCleanIndex;
+			String datatime;
+			if(HistoryScoreData.getHistoryData() == null){
+				historyCrossScore = "0";
+				historyCleanIndex = "0";
+				datatime = "0";
+			}
+			else{
+				 historyCrossScore = String
+						.valueOf(HistoryScoreData.getHistoryData().getCrossScore());
+				 historyCleanIndex = String
+						.valueOf(HistoryScoreData.getHistoryData().getCleanIndex());
+				 datatime = HistoryScoreData.getHistoryData().getDateTime();
+			}
+			
+			bitmapFont.draw(batch, datatime,
+					(float) (4*Gdx.graphics.getWidth() / 12),
+					(float) (4 * Gdx.graphics.getHeight() / 8));
+			bitmapFont.draw(batch, historyCrossScore,
+					(float) (7 * Gdx.graphics.getWidth() / 12),
+					(float) (4 * Gdx.graphics.getHeight() / 8));
+			bitmapFont.draw(batch, historyCleanIndex,
+					(float) (10 * Gdx.graphics.getWidth() / 12),
+					(float) (4 * Gdx.graphics.getHeight() / 8));
+			
+			bitmapFont.draw(batch, "Current",
+					(float) (Gdx.graphics.getWidth() / 6),
+					(float) (5 * Gdx.graphics.getHeight() / 8));
+			bitmapFont.draw(batch, "History",
+					(float) (Gdx.graphics.getWidth() / 6),
+					(float) (4 * Gdx.graphics.getHeight() / 8));
+			
+			
 		}
 
 		@Override

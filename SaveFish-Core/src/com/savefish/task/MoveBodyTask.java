@@ -24,20 +24,20 @@ public class MoveBodyTask extends MoveBodyAdapter {
 
 			if (direction == Direction.MOVE_LEFT) {
 				if (1 == CurrentLevel.level.getBig()) {
-					body.setTransform(new Vector2(0, RandomHelper.getInstance()
+					body.setTransform(new Vector2(0, RandomHelper.createInstance()
 							.nextInt(16)), body.getAngle());
 				} else {
-					body.setTransform(new Vector2(0, RandomHelper.getInstance()
+					body.setTransform(new Vector2(0, RandomHelper.createInstance()
 							.nextInt(32)), body.getAngle());
 				}
 				ForceController.applySomeNatureLeft(body);
 			} else if (direction == Direction.MOVE_RIGHT) {
 				if (1 == CurrentLevel.level.getBig()) {
 					body.setTransform(new Vector2(52, RandomHelper
-							.getInstance().nextInt(16)), body.getAngle());
+							.createInstance().nextInt(16)), body.getAngle());
 				} else {
 					body.setTransform(new Vector2(52, RandomHelper
-							.getInstance().nextInt(32)), body.getAngle());
+							.createInstance().nextInt(32)), body.getAngle());
 				}
 				ForceController.applySomeNatureRight(body);
 			}

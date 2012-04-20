@@ -19,7 +19,7 @@ public class ScoreRecord {
 		this.crossScore = 0;
 		this.killedRubbish = 0;
 		if (1 == CurrentLevel.level.getBig())
-			this.crossCleanIndex = WaterDictionary
+			this.crossCleanIndex = WaterDictionary.createInstance()
 					.getInitialWaterIndex(gameLevel);
 		else
 			this.crossCleanIndex = 0;
@@ -37,7 +37,7 @@ public class ScoreRecord {
 		this.crossScore = 0;
 		this.killedRubbish = 0;
 		if (1 == CurrentLevel.level.getBig())
-			this.crossCleanIndex = WaterDictionary
+			this.crossCleanIndex = WaterDictionary.createInstance()
 					.getInitialWaterIndex(gameLevel);
 		else
 			this.crossCleanIndex = 0;

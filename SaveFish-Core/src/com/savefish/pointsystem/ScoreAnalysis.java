@@ -5,6 +5,9 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.savefish.constant.Constant;
 import com.savefish.render.RubbishChecker;
 import com.savefish.screens.EndScreen;
+import com.savefish.storage.CrossData;
+import com.savefish.storage.HistoryScoreData;
+import com.savefish.storage.StoreCrossRecord;
 
 public class ScoreAnalysis {
 	/**
@@ -16,23 +19,23 @@ public class ScoreAnalysis {
 		String bodyName = (String) body.getUserData();
 		if (RubbishChecker.isRubbishBag(bodyName)) {
 			GameScoreRecord.currentLevelScore.setCrossScore(ScoreDictionary
-					.getIncreaseScore(Constant.rubbish.RUBBISH_BAG));
+					.createInstance().getIncreaseScore(Constant.rubbish.RUBBISH_BAG));
 		}
 		if (RubbishChecker.isElectricBattery(bodyName)) {
 			GameScoreRecord.currentLevelScore.setCrossScore(ScoreDictionary
-					.getIncreaseScore(Constant.rubbish.ELECTRIC_BATTERY));
+					.createInstance().getIncreaseScore(Constant.rubbish.ELECTRIC_BATTERY));
 		}
 		if (RubbishChecker.isPesticide(bodyName)) {
 			GameScoreRecord.currentLevelScore.setCrossScore(ScoreDictionary
-					.getIncreaseScore(Constant.rubbish.PESTICIDE));
+					.createInstance().getIncreaseScore(Constant.rubbish.PESTICIDE));
 		}
 		if (RubbishChecker.isRadioactive(bodyName)) {
 			GameScoreRecord.currentLevelScore.setCrossScore(ScoreDictionary
-					.getIncreaseScore(Constant.rubbish.RADIOACTIVE_MATERIAL));
+					.createInstance().getIncreaseScore(Constant.rubbish.RADIOACTIVE_MATERIAL));
 		}
 		if (RubbishChecker.isThermograph(bodyName)) {
 			GameScoreRecord.currentLevelScore.setCrossScore(ScoreDictionary
-					.getIncreaseScore(Constant.rubbish.THERMOGRAPH));
+					.createInstance().getIncreaseScore(Constant.rubbish.THERMOGRAPH));
 		}
 		checkPassFromScore(game, body);
 	}
@@ -41,6 +44,10 @@ public class ScoreAnalysis {
 		if (GameScoreRecord.currentLevelScore.getGameLevel().getCount() == GameScoreRecord.currentLevelScore
 				.getKilledRubbish()) {
 			GameResult.isPassed = true;
+			StoreCrossRecord.store();
+			CrossData cd = HistoryScoreData.getHistoryData();
+			if (null != cd)
+				System.out.println("历史河水清澈指数： " + cd.getCleanIndex());
 			game.setScreen(new EndScreen(game));
 		}
 	}
@@ -55,36 +62,37 @@ public class ScoreAnalysis {
 		if (RubbishChecker.isRubbishBag(bodyName)) {
 			GameScoreRecord.currentLevelScore
 					.setCrossCleanIndex(-ScoreDictionary
-							.getIncreaseScore(Constant.rubbish.RUBBISH_BAG));
+							.createInstance().getIncreaseScore(Constant.rubbish.RUBBISH_BAG));
 		}
 		if (RubbishChecker.isElectricBattery(bodyName)) {
 			GameScoreRecord.currentLevelScore
 					.setCrossCleanIndex(-ScoreDictionary
-							.getIncreaseScore(Constant.rubbish.ELECTRIC_BATTERY));
+							.createInstance().getIncreaseScore(Constant.rubbish.ELECTRIC_BATTERY));
 		}
 		if (RubbishChecker.isPesticide(bodyName)) {
 			GameScoreRecord.currentLevelScore
 					.setCrossCleanIndex(-ScoreDictionary
-							.getIncreaseScore(Constant.rubbish.PESTICIDE));
+							.createInstance().getIncreaseScore(Constant.rubbish.PESTICIDE));
 		}
 		if (RubbishChecker.isRadioactive(bodyName)) {
 			GameScoreRecord.currentLevelScore
 					.setCrossCleanIndex(-ScoreDictionary
-							.getIncreaseScore(Constant.rubbish.RADIOACTIVE_MATERIAL));
+							.createInstance().getIncreaseScore(Constant.rubbish.RADIOACTIVE_MATERIAL));
 		}
 		if (RubbishChecker.isThermograph(bodyName)) {
 			GameScoreRecord.currentLevelScore
 					.setCrossCleanIndex(-ScoreDictionary
-							.getIncreaseScore(Constant.rubbish.THERMOGRAPH));
+							.createInstance().getIncreaseScore(Constant.rubbish.THERMOGRAPH));
 		}
-//		if (1 == CurrentLevel.level.getBig())
-//			checkPassFromIndex(game, body);
+		if (1 == CurrentLevel.level.getBig())
+			checkPassFromIndex(game, body);
 	}
 
 	private static void checkPassFromIndex(Game game, Body body) {
-		if (GameScoreRecord.currentLevelScore.getCrossCleanIndex() < WaterDictionary
-				.getBoundaryIndex(GameScoreRecord.currentLevelScore
-						.getGameLevel())) {
+		int cleanIndex = GameScoreRecord.currentLevelScore.getCrossCleanIndex();
+		int boundaryIndex = WaterDictionary.createInstance().getBoundaryIndex(
+				CurrentLevel.level);
+		if (cleanIndex < boundaryIndex) {
 			GameResult.isPassed = false;
 			game.setScreen(new EndScreen(game));
 		}

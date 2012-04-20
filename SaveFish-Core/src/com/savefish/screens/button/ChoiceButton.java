@@ -67,7 +67,6 @@ public class ChoiceButton {
 					.getRegionWidth() / 2);
 			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
-			this.rotation = 45;
 			this.region = region;
 
 		}
@@ -110,7 +109,6 @@ public class ChoiceButton {
 					.getRegionWidth() / 2);
 			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
-			this.rotation = 45;
 			this.region = region;
 
 		}
@@ -120,7 +118,7 @@ public class ChoiceButton {
 		@Override
 		public void draw(SpriteBatch batch, float parentAlpha) {
 
-			if (lock) {
+			if (!lock) {
 				this.setRegion(region[1]);
 			} else {
 				this.setRegion(region[0]);
@@ -131,7 +129,7 @@ public class ChoiceButton {
 
 		@Override
 		public boolean touchDown(float x, float y, int point) {
-			if (!lock) {
+			if (lock) {
 				game.setScreen(GameScreen.getInstance(game,
 						GameLevel.createInstance(1, 2)));
 			}
@@ -153,7 +151,6 @@ public class ChoiceButton {
 					.getRegionWidth() / 2);
 			this.y = (float) (2 * Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
-			this.rotation = 45;
 			this.region = region;
 
 		}
@@ -163,7 +160,7 @@ public class ChoiceButton {
 		@Override
 		public void draw(SpriteBatch batch, float parentAlpha) {
 
-			if (lock) {
+			if (!lock) {
 				this.setRegion(region[1]);
 			} else {
 				this.setRegion(region[0]);
@@ -174,7 +171,7 @@ public class ChoiceButton {
 
 		@Override
 		public boolean touchDown(float x, float y, int point) {
-			if (!lock) {
+			if (lock) {
 				game.setScreen(GameScreen.getInstance(game,
 						GameLevel.createInstance(1, 3)));
 			}
@@ -196,7 +193,6 @@ public class ChoiceButton {
 					.getRegionWidth() / 2);
 			this.y = (float) (Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
-			this.rotation = 45;
 			this.region = region;
 
 		}
@@ -206,7 +202,7 @@ public class ChoiceButton {
 		@Override
 		public void draw(SpriteBatch batch, float parentAlpha) {
 
-			if (lock) {
+			if (!lock) {
 				this.setRegion(region[1]);
 			} else {
 				this.setRegion(region[0]);
@@ -217,7 +213,7 @@ public class ChoiceButton {
 
 		@Override
 		public boolean touchDown(float x, float y, int point) {
-			if (!lock) {
+			if (lock) {
 				game.setScreen(GameScreen.getInstance(game,
 						GameLevel.createInstance(1, 4)));
 			}
@@ -239,7 +235,6 @@ public class ChoiceButton {
 					.getRegionWidth() / 2);
 			this.y = (float) (Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
-			this.rotation = 45;
 			this.region = region;
 
 		}
@@ -249,7 +244,7 @@ public class ChoiceButton {
 		@Override
 		public void draw(SpriteBatch batch, float parentAlpha) {
 
-			if (lock) {
+			if (!lock) {
 				this.setRegion(region[1]);
 			} else {
 				this.setRegion(region[0]);
@@ -260,7 +255,7 @@ public class ChoiceButton {
 
 		@Override
 		public boolean touchDown(float x, float y, int point) {
-			if (!lock) {
+			if (lock) {
 				game.setScreen(GameScreen.getInstance(game,
 						GameLevel.createInstance(1, 5)));
 			}
@@ -281,7 +276,6 @@ public class ChoiceButton {
 					.getRegionWidth() / 2);
 			this.y = (float) (Gdx.graphics.getHeight() / 3 - region[0]
 					.getRegionHeight() / 2);
-			this.rotation = 45;
 			this.region = region;
 
 		}
@@ -291,7 +285,7 @@ public class ChoiceButton {
 		@Override
 		public void draw(SpriteBatch batch, float parentAlpha) {
 
-			if (lock) {
+			if (!lock) {
 				this.setRegion(region[1]);
 			} else {
 				this.setRegion(region[0]);
@@ -302,7 +296,7 @@ public class ChoiceButton {
 
 		@Override
 		public boolean touchDown(float x, float y, int point) {
-			if (!lock) {
+			if (lock) {
 				game.setScreen(GameScreen.getInstance(game,
 						GameLevel.createInstance(1, 6)));
 			}

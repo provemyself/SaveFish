@@ -1,0 +1,354 @@
+
+input1.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+artificialthree
+  rotate: false
+  xy: 2, 2
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialtwo
+  rotate: false
+  xy: 484, 2
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialfour
+  rotate: false
+  xy: 2, 324
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialsix
+  rotate: false
+  xy: 2, 646
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialone
+  rotate: false
+  xy: 484, 324
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+artificialfive
+  rotate: false
+  xy: 484, 646
+  size: 480, 320
+  orig: 480, 320
+  offset: 0, 0
+  index: -1
+
+input2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Lfishfiveone
+  rotate: false
+  xy: 2, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Rfishthreetwo
+  rotate: false
+  xy: 276, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Rfishoneone
+  rotate: false
+  xy: 550, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Rfishonetwo
+  rotate: false
+  xy: 2, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishseventwo
+  rotate: false
+  xy: 2, 384
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfisheightone
+  rotate: false
+  xy: 2, 575
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishninetwo
+  rotate: false
+  xy: 2, 766
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishsixtwo
+  rotate: false
+  xy: 276, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishfivetwo
+  rotate: false
+  xy: 550, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Rfishtentwo
+  rotate: false
+  xy: 276, 384
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Rfishthreesthree
+  rotate: false
+  xy: 276, 575
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishnineone
+  rotate: false
+  xy: 276, 766
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishsixone
+  rotate: false
+  xy: 550, 384
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Rfishthreeone
+  rotate: false
+  xy: 550, 575
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishfourtwo
+  rotate: false
+  xy: 550, 766
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+
+input3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pesticideone
+  rotate: false
+  xy: 2, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+pesticidetwo
+  rotate: false
+  xy: 2, 276
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+Lfishsevenone
+  rotate: false
+  xy: 193, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfisheighttwo
+  rotate: false
+  xy: 467, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishtwotwo
+  rotate: false
+  xy: 741, 2
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishfourone
+  rotate: false
+  xy: 193, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Lfishtwoone
+  rotate: false
+  xy: 467, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+Rfishtenone
+  rotate: false
+  xy: 741, 193
+  size: 272, 189
+  orig: 272, 189
+  offset: 0, 0
+  index: -1
+  
+input4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+grassone
+  rotate: false
+  xy: 2, 2
+  size: 600, 600
+  orig: 600, 600
+  offset: 0, 0
+  index: -1
+grassd
+  rotate: false
+  xy: 604, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+grassc
+  rotate: false
+  xy: 795, 2
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+grassb
+  rotate: false
+  xy: 604, 276
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+grassa
+  rotate: false
+  xy: 795, 276
+  size: 189, 272
+  orig: 189, 272
+  offset: 0, 0
+  index: -1
+grasstwo
+  rotate: false
+  xy: 2, 604
+  size: 244, 206
+  orig: 244, 206
+  offset: 0, 0
+  index: -1
+
+input5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pesticide
+  rotate: false
+  xy: 2, 2
+  size: 360, 470
+  orig: 360, 470
+  offset: 0, 0
+  index: -1
+eb
+  rotate: false
+  xy: 2, 474
+  size: 228, 300
+  orig: 228, 300
+  offset: 0, 0
+  index: -1
+rm
+  rotate: false
+  xy: 364, 2
+  size: 254, 259
+  orig: 254, 259
+  offset: 0, 0
+  index: -1
+stoneeleven
+  rotate: false
+  xy: 2, 776
+  size: 254, 199
+  orig: 254, 199
+  offset: 0, 0
+  index: -1
+stoneseven
+  rotate: false
+  xy: 620, 2
+  size: 255, 198
+  orig: 255, 198
+  offset: 0, 0
+  index: -1
+stoneeight
+  rotate: false
+  xy: 364, 263
+  size: 267, 189
+  orig: 267, 189
+  offset: 0, 0
+  index: -1
+stonefour
+  rotate: false
+  xy: 364, 454
+  size: 226, 223
+  orig: 226, 223
+  offset: 0, 0
+  index: -1
+stonesix
+  rotate: false
+  xy: 592, 454
+  size: 241, 209
+  orig: 241, 209
+  offset: 0, 0
+  index: -1
+stonetwo
+  rotate: false
+  xy: 592, 665
+  size: 259, 194
+  orig: 259, 194
+  offset: 0, 0
+  index: -1
+stonenine
+  rotate: false
+  xy: 633, 263
+  size: 197, 132
+  orig: 197, 132
+  offset: 0, 0
+  index: -1
+stonefive
+  rotate: false
+  xy: 877, 2
+  size: 140, 140
+  orig: 140, 140
+  offset: 0, 0
+  index: -1
+thermograph
+  rotate: false
+  xy: 232, 474
+  size: 42, 197
+  orig: 42, 197
+  offset: 0, 0
+  index: -1

@@ -53,9 +53,9 @@ public class PolygonRubbishActor extends GameActor {
 	private Sprite sprite = null;
 
 	private void initSprite() {
-		
+
 		this.sprite = Assets.getInstance().getSprite(
-				Constant.rubbish.PESTICIDE);
+				Constant.rubbish.PESTICIDE_TWO);
 		this.sprite.setScale(0.2f);
 	}
 
@@ -65,15 +65,34 @@ public class PolygonRubbishActor extends GameActor {
 				.setProjectionMatrix(gameMiddleStage.getCamera().combined);
 
 		Vector3 position = new Vector3(body.getPosition().x
-				- ShapeHelper.getRectangleData(shape).x / 2.0f, body.getPosition().y
-				- ShapeHelper.getRectangleData(shape).y / 2.0f, 0);
-		
+				- ShapeHelper.getRectangleData(shape).x / 2.0f,
+				body.getPosition().y - ShapeHelper.getRectangleData(shape).y
+						/ 2.0f, 0);
+
 		this.spriteBatch.begin();
 		this.sprite.rotate(body.getAngle());
-		this.sprite.setPosition(position.x * Constant.physics.RATE,
-				position.y * Constant.physics.RATE - 200);
+		this.sprite.setPosition(position.x * Constant.physics.RATE, position.y
+				* Constant.physics.RATE - 115);
 		this.sprite.draw(spriteBatch);
 		this.spriteBatch.end();
+	}
+
+	@Override
+	public boolean touchDown(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void touchUp(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void touchDragged(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

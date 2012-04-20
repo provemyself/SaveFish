@@ -25,9 +25,11 @@ public class StartActor extends Image {
 		// 设置按钮与屏幕的相对及大小
 		this.x = (float) (Gdx.graphics.getWidth() / 4);
 		this.y = (float) (Gdx.graphics.getHeight() / 3);
-		this.scaleX = (float) (5 * Gdx.graphics.getWidth() / (12 * region[0]
-				.getRegionWidth()));
-		this.scaleY = this.scaleX;
+//		this.scaleX = (float) (5 * Gdx.graphics.getWidth() / (12 * region[0]
+//				.getRegionWidth()));
+//		this.scaleY = this.scaleX;
+		this.scaleX = 0.7f;
+		this.scaleY = 0.7f;
 		this.region = region;
 		this.game = game;
 	}

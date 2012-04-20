@@ -49,8 +49,6 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void render(float delta) {
-		GreenLogger.getInstance().log(Level.INFO, "render world!");
-
 		Gdx.graphics.getGL10().glClear(GL10.GL_COLOR_BUFFER_BIT);
 		this.backGroundStage.render(delta);
 		this.middleStage.render(delta);
@@ -123,8 +121,6 @@ public class GameScreen implements Screen {
 	}
 
 	public GameScreen switchToGameLevel(GameLevel level) {
-		System.out.println("当前关卡： " + "(" + level.getBig() + ", "
-				+ level.getSmall() + ")");
 		if (null != middleStage)
 			middleStage.dispose();
 		try {

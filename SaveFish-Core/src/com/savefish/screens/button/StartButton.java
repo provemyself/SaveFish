@@ -13,6 +13,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.savefish.screens.Select2Screen;
 import com.savefish.screens.SelectScreen;
 
 public class StartButton {
@@ -97,9 +98,10 @@ public class StartButton {
 			super(region[0]);
 			this.x = (float) (7 * Gdx.graphics.getWidth() / 12);
 			this.y = (float) (Gdx.graphics.getHeight() / 4);
-			this.scaleX = (float) (5 * Gdx.graphics.getWidth() / (12 * region[0]
-					.getRegionWidth()));
-			this.scaleY = this.scaleX;
+//			this.scaleX = (float) (5 * Gdx.graphics.getWidth() / (12 * region[0]
+//					.getRegionWidth()));
+//			this.scaleY = this.scaleX;
+//			this.scaleX = this.scaleY = 0.6f;
 			this.region = region;
 
 		}
@@ -135,7 +137,7 @@ public class StartButton {
 
 		@Override
 		public boolean touchDown(float x, float y, int point) {
-			game.setScreen(new SelectScreen(game));
+			game.setScreen(new Select2Screen(game));
 
 			return true;
 

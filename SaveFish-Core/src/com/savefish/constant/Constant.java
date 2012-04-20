@@ -257,5 +257,9 @@ public final class Constant {
 				atlas.findRegion("fish3"), atlas.findRegion("fish4") };
 		public static final TextureRegion fish3Texture[] = {
 				atlas.findRegion("fish5"), atlas.findRegion("fish6") };
+		
+		public static final TextureRegion[] aboutShowTexture = 
+			{atlas.findRegion("aboutShow"),atlas.findRegion("reference")};
+	
 	}
 }

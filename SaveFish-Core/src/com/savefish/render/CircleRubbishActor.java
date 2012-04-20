@@ -52,17 +52,17 @@ public class CircleRubbishActor extends GameActor {
 	private Sprite sprite = null;
 
 	private void initSprite() {
-		String bodyName = (String) body.getUserData();
-		if (RubbishChecker.isRubbishBag(bodyName))
-			this.sprite = Assets.getInstance().getSprite(
-					Constant.rubbish.ELECTRIC_BATTERY);
-		else if (RubbishChecker.isThermograph(bodyName))
-			this.sprite = Assets.getInstance().getSprite(
-					Constant.rubbish.THERMOGRAPH);
-		else if (RubbishChecker.isElectricBattery(bodyName))
-			this.sprite = Assets.getInstance().getSprite(
-					Constant.rubbish.ELECTRIC_BATTERY);
-		else
+//		String bodyName = (String) body.getUserData();
+		// if (RubbishChecker.isRubbishBag(bodyName))
+		// this.sprite = Assets.getInstance().getSprite(
+		// Constant.rubbish.ELECTRIC_BATTERY);
+		// else if (RubbishChecker.isThermograph(bodyName))
+		// this.sprite = Assets.getInstance().getSprite(
+		// Constant.rubbish.THERMOGRAPH);
+		// else if (RubbishChecker.isElectricBattery(bodyName))
+		// this.sprite = Assets.getInstance().getSprite(
+		// Constant.rubbish.ELECTRIC_BATTERY);
+		// else
 			this.sprite = Assets.getInstance().getSprite(
 					Constant.rubbish.RADIOACTIVE_MATERIAL);
 		this.sprite.setScale(0.2f);
@@ -84,5 +84,23 @@ public class CircleRubbishActor extends GameActor {
 				position.y * Constant.physics.RATE - 120);
 		this.sprite.draw(spriteBatch);
 		this.spriteBatch.end();
+	}
+
+	@Override
+	public boolean touchDown(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void touchUp(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void touchDragged(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		
 	}
 }

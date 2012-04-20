@@ -13,12 +13,8 @@ import com.savefish.service.BackgroundMusic;
 
 public class GameControlStage extends Stage {
 
-	private static GameControlStage gameControlStage = null;
-
 	public static GameControlStage getInstance(Game game) {
-		if (null == gameControlStage)
-			gameControlStage = new GameControlStage(game);
-		return gameControlStage;
+		return new GameControlStage(game);
 	}
 
 	private Game game = null;

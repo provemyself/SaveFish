@@ -7,22 +7,16 @@ package com.savefish.service;
  * Date       : 2012/03/08
  *******************************/
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
-import com.savefish.constant.Constant;
 
 public class ParticleManager implements Managable {
 
-	private static ParticleManager particle = null;
-
 	public static ParticleManager getInstance() {
-		if (null == particle)
-			particle = new ParticleManager();
-		return particle;
+		return new ParticleManager();
 	}
 
 	private ParticleManager() {
@@ -59,19 +53,18 @@ public class ParticleManager implements Managable {
 	public void dispose() {
 		this.spriteBatch.dispose();
 		this.particleEffect.dispose();
-		particle = null;
 	}
 
 	private ParticleEffect particleEffect = null;
 
 	private void initParticleEffect() {
-		this.particleEffect = new ParticleEffect();
-		this.particleEffect.load(
-				Gdx.files.internal(Constant.basepath.PARTICLES_BASE_PATH
-						+ Constant.particle.PARTICLE_SIX),
-				Gdx.files.internal(Constant.basepath.PARTICLES_BASE_PATH));
-		particleEffect.setPosition(100f, 100f);
-		particleEffect.setDuration(1);
+		// this.particleEffect = new ParticleEffect();
+		// this.particleEffect.load(
+		// Gdx.files.internal(Constant.basepath.PARTICLES_BASE_PATH
+		// + Constant.particle.PARTICLE_SIX),
+		// Gdx.files.internal(Constant.basepath.PARTICLES_BASE_PATH));
+		// particleEffect.setPosition(100f, 100f);
+		// particleEffect.setDuration(1);
 	}
 
 	private SpriteBatch spriteBatch = null;

@@ -6,12 +6,9 @@ import com.savefish.constant.Constant;
 
 public class SlideSound {
 	public static boolean isEnable = true;
-	private static SlideSound slideSound = null;
 
-	public static SlideSound getInstance() {
-		if (null == slideSound)
-			slideSound = new SlideSound();
-		return slideSound;
+	public static SlideSound createInstance() {
+		return new SlideSound();
 	}
 
 	private Sound sound = null;
@@ -26,6 +23,6 @@ public class SlideSound {
 	}
 
 	public void dispose() {
-		slideSound = null;
+		sound.dispose(); 
 	}
 }

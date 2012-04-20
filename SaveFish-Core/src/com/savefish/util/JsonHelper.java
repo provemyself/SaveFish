@@ -15,7 +15,7 @@ import java.util.logging.Level;
  */
 public class JsonHelper {
 	public static String readFromJson(String jsonFileName) {
-		File file = new File(jsonFileName);
+		File file = new File("scores/" + jsonFileName);
 		InputStream stream = null;
 		String jsonText = "";
 		try {
@@ -50,7 +50,7 @@ public class JsonHelper {
 	public static void writeTojson(String fileName, String content) {
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter(fileName);
+			writer = new FileWriter("scores/" + fileName);
 			writer.write(content);
 		} catch (IOException e) {
 			e.printStackTrace();

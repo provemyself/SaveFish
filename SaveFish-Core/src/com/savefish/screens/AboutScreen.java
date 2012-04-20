@@ -12,6 +12,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.savefish.constant.Constant;
+import com.savefish.screens.button.AboutShow;
 import com.savefish.screens.button.MenuActor;
 
 public class AboutScreen implements Screen {
@@ -19,10 +20,12 @@ public class AboutScreen implements Screen {
 	private Stage stage = null;
 	private MenuActor menuActor = null;
 	private Image bgImage = null;
+	private AboutShow aboutShow = null;
 
 	public AboutScreen(Game game) {
 
 		bgImage = new Image(Constant.asset.bgMainTexture);
+		aboutShow = new AboutShow(Constant.asset.aboutShowTexture);
 		bgImage.height = Gdx.graphics.getHeight();
 		bgImage.width = Gdx.graphics.getWidth();
 		stage = new Stage(Gdx.graphics.getWidth(), Gdx.graphics.getHeight(),
@@ -30,6 +33,7 @@ public class AboutScreen implements Screen {
 		menuActor = new MenuActor(game, Constant.asset.quitActorTexture);
 
 		stage.addActor(bgImage);
+		stage.addActor(aboutShow);
 		stage.addActor(menuActor);
 	}
 

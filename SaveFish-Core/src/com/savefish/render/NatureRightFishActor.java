@@ -85,4 +85,22 @@ public class NatureRightFishActor extends GameActor {
 		this.fishAnimation = new Animation(0.25f, Assets.getInstance()
 				.getNatureRight());
 	}
+
+	@Override
+	public boolean touchDown(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void touchUp(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void touchDragged(float x, float y, int pointer) {
+		// TODO Auto-generated method stub
+		
+	}
 }

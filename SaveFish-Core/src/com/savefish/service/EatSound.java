@@ -6,12 +6,9 @@ import com.savefish.constant.Constant;
 
 public class EatSound {
 	public static boolean isEnable = true;
-	private static EatSound deadSound = null;
 
-	public static EatSound getInstance() {
-		if (null == deadSound)
-			deadSound = new EatSound();
-		return deadSound;
+	public static EatSound createInstance() {
+		return new EatSound();
 	}
 
 	private Sound sound = null;
@@ -30,6 +27,6 @@ public class EatSound {
 	}
 
 	public void dispose() {
-		deadSound = null;
+		sound.dispose();
 	}
 }

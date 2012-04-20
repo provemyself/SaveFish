@@ -5,8 +5,13 @@ import java.util.HashMap;
 import com.savefish.constant.Constant;
 
 public class MapDictionary {
-	private static HashMap<GameLevel, String> dict = new HashMap<GameLevel, String>();
-	static {
+	private HashMap<GameLevel, String> dict = new HashMap<GameLevel, String>();
+
+	public static MapDictionary createInstance() {
+		return new MapDictionary();
+	}
+
+	private MapDictionary() {
 		dict.put(GameLevel.createInstance(1, 1), Constant.map.PREVENT_FIRST);
 		dict.put(GameLevel.createInstance(1, 2), Constant.map.PREVENT_SECOND);
 		dict.put(GameLevel.createInstance(1, 3), Constant.map.PREVENT_THIRD);
@@ -27,7 +32,7 @@ public class MapDictionary {
 	 * @param level
 	 * @return
 	 */
-	public static String getMap(GameLevel level) {
+	public String getMap(GameLevel level) {
 		return dict.get(level);
 	}
 }

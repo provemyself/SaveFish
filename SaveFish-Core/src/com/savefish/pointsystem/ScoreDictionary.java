@@ -5,9 +5,13 @@ import java.util.HashMap;
 import com.savefish.constant.Constant;
 
 public class ScoreDictionary {
-	private static HashMap<String, Integer> dict = new HashMap<String, Integer>();
+	private HashMap<String, Integer> dict = new HashMap<String, Integer>();
 
-	static {
+	public static ScoreDictionary createInstance() {
+		return new ScoreDictionary();
+	}
+
+	private ScoreDictionary() {
 		dict.put(Constant.rubbish.RUBBISH_BAG, 100);
 		dict.put(Constant.rubbish.THERMOGRAPH, 400);
 		dict.put(Constant.rubbish.RADIOACTIVE_MATERIAL, 600);
@@ -20,7 +24,7 @@ public class ScoreDictionary {
 	 * @param rubbishName
 	 * @return
 	 */
-	public static Integer getIncreaseScore(String rubbishName) {
+	public Integer getIncreaseScore(String rubbishName) {
 		if ((null != rubbishName))
 			return dict.get(rubbishName);
 		else

@@ -18,7 +18,6 @@ import com.savefish.render.FishChecker;
 import com.savefish.render.RubbishChecker;
 import com.savefish.render.StoneChecker;
 import com.savefish.service.EatSound;
-import com.savefish.service.ParticleManager;
 import com.savefish.task.DestroyBodyTask;
 import com.savefish.task.FilterBodyTask;
 import com.savefish.task.MoveBodyTask;
@@ -105,9 +104,7 @@ public class CollisionHandler extends CollisionAdapter {
 				&& !BoundaryChecker.isScreenBoundary(bodyBName)
 				&& !StoneChecker.isStone(bodyBName)
 				&& !killedRubbishes.contains(bodyB)) {
-			EatSound.getInstance().play();
-			ParticleManager.getInstance().start();
-			ParticleManager.getInstance().setPosition(bodyB);
+			EatSound.createInstance().play();
 			addDestroyTask(new DestroyBodyTask(bodyB));
 			System.out.println(bodyBName);
 			killedRubbishes.add(bodyB);
@@ -115,9 +112,7 @@ public class CollisionHandler extends CollisionAdapter {
 				&& !BoundaryChecker.isScreenBoundary(bodyAName)
 				&& !StoneChecker.isStone(bodyAName)
 				&& !killedRubbishes.contains(bodyA)) {
-			EatSound.getInstance().play();
-			ParticleManager.getInstance().start();
-			ParticleManager.getInstance().setPosition(bodyA);
+			EatSound.createInstance().play();
 			addDestroyTask(new DestroyBodyTask(bodyA));
 			System.out.println(bodyAName);
 			killedRubbishes.add(bodyA);
